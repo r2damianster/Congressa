@@ -1,0 +1,548 @@
+// V1 EHU — Editorial académico, actualizado al congreso real CIIIES 2026
+// EHU + ULEAM + Colombia + Chile · Educación, innovación, inclusión y sostenibilidad
+
+const V1_EHU = ({ primary = "#1e3a8a" }) => {
+  const c = window.CONTENT_EHU;
+  const s = v1ehuStyles(primary);
+
+  return (
+    <div style={s.root}>
+      {/* Top nav */}
+      <header style={s.nav}>
+        <div style={s.logoWrap}>
+          <div style={s.logoMark}>
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
+              <rect x="2" y="2" width="28" height="28" rx="2" stroke={primary} strokeWidth="1.5" />
+              <path d="M10 22V10h6a4 4 0 010 8h-6M10 16h8" stroke={primary} strokeWidth="1.5" />
+            </svg>
+          </div>
+          <div>
+            <div style={s.logoWord}>Congressa</div>
+            <div style={s.logoSub}>CIIIES · 2026</div>
+          </div>
+        </div>
+        <nav style={s.navLinks}>
+          {Object.entries(c.nav).map(([k, v], i) => (
+            <a key={i} style={s.navLink} href={`#${k}`}>{v}</a>
+          ))}
+        </nav>
+        <div style={s.navRight}>
+          <span style={s.langPill}>ES · EU · EN</span>
+          <button style={s.navCta}>{c.ctas.register} →</button>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section style={s.hero}>
+        <div style={s.heroMeta}>
+          <span style={s.heroKicker}>{c.eventShort}</span>
+          <span style={s.heroDot}>·</span>
+          <span style={s.heroKicker}>{c.dates}</span>
+          <span style={s.heroDot}>·</span>
+          <span style={s.heroKicker}>{c.hybrid}</span>
+        </div>
+
+        <h1 style={s.heroTitle}>
+          Innovación educativa, <em style={s.heroTitleEm}>inclusión</em> y sostenibilidad en Educación Superior
+        </h1>
+
+        <div style={s.heroSubRow}>
+          <div style={s.heroSubKicker}>— {c.subtitle}</div>
+        </div>
+
+        <p style={s.heroLead}>{c.heroLead}</p>
+
+        <div style={s.heroTaglineRow}>
+          <div style={s.heroRule} />
+          <div style={s.heroTagline}>{c.tagline}</div>
+        </div>
+
+        <div style={s.ctaRow}>
+          <button style={s.ctaPrimary}>{c.ctas.register}</button>
+          <button style={s.ctaSecondary}>{c.ctas.submit}</button>
+          <a style={s.ctaText} href="#propuestas">Ver bases de envío →</a>
+        </div>
+
+        <div style={s.heroVenues}>
+          <div style={s.venue}>
+            <div style={s.venueLabel}>Sede 1 · Europa</div>
+            <div style={s.venueName}>Facultad de Educación de Bilbao</div>
+            <div style={s.venueDetail}>Universidad del País Vasco · EHU</div>
+          </div>
+          <div style={s.venueDivider}>↔</div>
+          <div style={s.venue}>
+            <div style={s.venueLabel}>Sede 2 · América Latina</div>
+            <div style={s.venueName}>ULEAM</div>
+            <div style={s.venueDetail}>Universidad Laica Eloy Alfaro de Manabí · Ecuador</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section style={s.stats}>
+        {c.stats.map((st, i) => (
+          <div key={i} style={s.statCell}>
+            <div style={s.statN}>{st.n}</div>
+            <div style={s.statL}>{st.l}</div>
+          </div>
+        ))}
+      </section>
+
+      {/* Presentación + objetivos */}
+      <section style={s.section} id="presentacion">
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>I</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.presentacion.title}</h2>
+            <p style={s.sectionLead}>{c.presentacion.lead}</p>
+          </div>
+        </div>
+        <div style={s.objsGrid}>
+          {c.presentacion.objetivos.map((a, i) => (
+            <article key={i} style={s.axCard}>
+              <div style={s.axNum}>{a.id}</div>
+              <h3 style={s.axTitle}>{a.title}</h3>
+              <p style={s.axDesc}>{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Destinatarios */}
+      <section style={{ ...s.section, background: "#faf7f1" }} id="destinatarios">
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>II</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.destinatarios.title}</h2>
+            <p style={s.sectionLead}>{c.destinatarios.lead}</p>
+          </div>
+        </div>
+        <div style={s.destGrid}>
+          {c.destinatarios.items.map((d, i) => (
+            <div key={i} style={s.destCard}>
+              <div style={s.destNum}>0{i + 1}</div>
+              <div style={s.destText}>{d}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Líneas temáticas */}
+      <section style={s.section}>
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>III</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.lineas.title}</h2>
+            <p style={s.sectionLead}>{c.lineas.lead}</p>
+          </div>
+        </div>
+        <div style={s.lineasGrid}>
+          {c.lineas.items.map((a, i) => (
+            <article key={i} style={s.lineaCard}>
+              <div style={s.axNum}>{a.id}</div>
+              <h3 style={s.axTitle}>{a.title}</h3>
+              <p style={s.axDesc}>{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Formatos */}
+      <section style={{ ...s.section, background: "#faf7f1" }}>
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>IV</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.formatos.title}</h2>
+          </div>
+        </div>
+        <div style={s.formatGrid}>
+          {c.formatos.items.map((f, i) => (
+            <div key={i} style={s.formatCard}>
+              <div style={s.formatHead}>
+                <div style={s.formatName}>{f.f}</div>
+                <div style={s.formatLen}>{f.len}</div>
+              </div>
+              <p style={s.formatDesc}>{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Propuestas / CFP */}
+      <section style={{ ...s.section, background: primary, color: "#fff" }} id="propuestas">
+        <div style={s.sectionHead}>
+          <div style={{ ...s.sectionNumber, color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>V</div>
+          <div>
+            <h2 style={{ ...s.sectionTitle, color: "#fff" }}>{c.propuestas.title}</h2>
+            <p style={{ ...s.sectionLead, color: "rgba(255,255,255,0.75)" }}>{c.propuestas.lead}</p>
+          </div>
+        </div>
+
+        <div style={s.cfpGrid}>
+          <div style={s.cfpTimeline}>
+            {c.propuestas.timeline.map((t, i) => (
+              <div key={i} style={s.cfpStep}>
+                <div style={{
+                  ...s.cfpDot,
+                  background: t.status === "open" ? "#fff" : "transparent",
+                  border: t.status === "open" ? "2px solid #fff" :
+                          t.status === "soon" ? "2px solid rgba(255,255,255,0.5)" :
+                          "2px solid rgba(255,255,255,0.25)",
+                }} />
+                <div style={s.cfpStepBody}>
+                  <div style={s.cfpStepDate}>{t.date}</div>
+                  <div style={s.cfpStepLabel}>{t.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={s.cfpAside}>
+            <div style={s.cfpAsideHead}>Normas de la propuesta</div>
+            <div style={s.normRow}><span style={s.normK}>Idiomas</span><span style={s.normV}>{c.propuestas.normas.idiomas}</span></div>
+            <div style={s.normRow}><span style={s.normK}>Extensión</span><span style={s.normV}>{c.propuestas.normas.extension}</span></div>
+            <div style={s.normRow}><span style={s.normK}>Estructura</span><span style={s.normV}>{c.propuestas.normas.estructura}</span></div>
+            <div style={s.cfpNote}>{c.propuestas.normas.metodologia}</div>
+
+            <div style={s.cfpAsideHead}>Materiales</div>
+            {c.propuestas.materiales.map((m, i) => (
+              <div key={i} style={s.cfpFormat}>
+                <div style={s.cfpFormatName}>{m.tipo}</div>
+                <div style={s.cfpFormatLen}>{m.desc}</div>
+              </div>
+            ))}
+
+            <button style={s.cfpCta}>{c.ctas.submit} →</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Presentación día */}
+      <section style={s.section} id="programa">
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>VI</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.presentacionDia.title}</h2>
+            <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
+          </div>
+        </div>
+        <div style={s.presGrid}>
+          {c.presentacionDia.items.map((it, i) => (
+            <div key={i} style={s.presCard}>
+              <div style={s.presH}>{it.h}</div>
+              <p style={s.presBody}>{it.body}</p>
+            </div>
+          ))}
+        </div>
+        <div style={s.presNota}>
+          <span style={s.presNotaK}>Importante</span> · {c.presentacionDia.nota}
+        </div>
+      </section>
+
+      {/* Publicación */}
+      <section style={{ ...s.section, background: "#faf7f1" }} id="publicacion">
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>VII</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.publicacion.title}</h2>
+            <p style={s.sectionLead}>{c.publicacion.lead}</p>
+          </div>
+        </div>
+
+        <div style={s.pubGrid}>
+          <div style={s.octCard}>
+            <div style={s.octK}>{c.publicacion.octaedro.h}</div>
+            <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
+            <div style={s.octDeadline}>
+              <span style={s.normK}>Fecha límite</span>
+              <span style={s.octDeadlineV}>{c.publicacion.deadline}</span>
+            </div>
+          </div>
+
+          <div style={s.pubNorms}>
+            <div style={s.cfpAsideHead}>Especificaciones</div>
+            <div style={s.normRow}><span style={s.normK}>Formato</span><span style={s.normV}>{c.publicacion.norms.formato}</span></div>
+            <div style={s.normRow}><span style={s.normK}>Extensión</span><span style={s.normV}>{c.publicacion.norms.extension}</span></div>
+            <div style={s.normRow}><span style={s.normK}>Tipografía</span><span style={s.normV}>{c.publicacion.norms.tipografia}</span></div>
+            <div style={s.normRow}><span style={s.normK}>Referencias</span><span style={s.normV}>{c.publicacion.norms.referencias}</span></div>
+            <div style={s.normRow}><span style={s.normK}>Figuras</span><span style={s.normV}>{c.publicacion.norms.figuras}</span></div>
+          </div>
+        </div>
+
+        <div style={s.estructurasRow}>
+          <div style={s.estHead}>Estructura del trabajo en extenso</div>
+          <div style={s.estGrid}>
+            {c.publicacion.estructuras.map((e, i) => (
+              <div key={i} style={s.estCard}>
+                <div style={s.estTipo}>{e.tipo}</div>
+                <div style={s.estBody}>{e.body}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={s.elementosRow}>
+          <div style={s.estHead}>Elementos obligatorios del texto</div>
+          <ul style={s.elList}>
+            {c.publicacion.elementos.map((e, i) => (
+              <li key={i} style={s.elLi}>{e}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Entidades organizadoras */}
+      <section style={s.section}>
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>VIII</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.organizadoras.title}</h2>
+          </div>
+        </div>
+        <div style={s.orgsGrid}>
+          {c.organizadoras.items.map((o, i) => (
+            <div key={i} style={s.orgCard}>
+              <div style={s.orgNum}>0{i + 1}</div>
+              <div style={s.orgName}>{o.name}</div>
+              <div style={s.orgParent}>{o.parent}</div>
+              <div style={s.orgCountry}>{o.country}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Comités */}
+      <section style={{ ...s.section, background: "#faf7f1" }} id="comites">
+        <div style={s.sectionHead}>
+          <div style={s.sectionNumber}>IX</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.comites.title}</h2>
+            <p style={s.sectionLead}>{c.comites.lead}</p>
+          </div>
+        </div>
+        <div style={s.comitesWrap}>
+          {c.comites.grupos.map((g, i) => (
+            <div key={i} style={s.comGrupo}>
+              <div style={s.comGrupoHead}>
+                <div style={s.comGrupoKicker}>0{i + 1} · {g.kicker}</div>
+                <h3 style={s.comGrupoTitle}>{g.nombre}</h3>
+                <div style={s.comGrupoCount}>{g.miembros.length} miembros</div>
+              </div>
+              <div style={s.comList}>
+                {g.miembros.map((m, j) => (
+                  <div key={j} style={s.comRow}>
+                    <div style={s.comName}>{m.n}</div>
+                    <div style={s.comAff}>{m.a}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section style={s.contactSec} id="contacto">
+        <div style={s.contactInner}>
+          <div style={s.contactKicker}>Contacto</div>
+          <h3 style={s.contactH}>¿Dudas sobre el envío o la matrícula?</h3>
+          <a href={`mailto:${c.footer.contact}`} style={s.contactMail}>{c.footer.contact}</a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer style={s.footer}>
+        <div style={s.footerRow}>
+          <div style={s.footerBrand}>
+            <div style={s.logoWord}>Congressa</div>
+            <div style={s.footerTag}>Plataforma de gestión de congresos académicos</div>
+          </div>
+          <div style={s.footerRight}>
+            <div>{c.footer.contact}</div>
+            <div style={s.footerCopy}>{c.footer.copy}</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+const v1ehuStyles = (primary) => ({
+  root: {
+    fontFamily: "'Geist', -apple-system, sans-serif",
+    background: "#fbf9f4",
+    color: "#1a1a1a",
+    width: "100%",
+    minHeight: "100%",
+    fontSize: 15,
+    lineHeight: 1.55,
+  },
+  nav: {
+    display: "flex", alignItems: "center", padding: "22px 64px",
+    borderBottom: "1px solid #e9e2d2",
+    background: "rgba(251,249,244,0.92)", backdropFilter: "blur(10px)",
+    position: "sticky", top: 0, zIndex: 10,
+  },
+  logoWrap: { display: "flex", alignItems: "center", gap: 10 },
+  logoMark: {
+    width: 36, height: 36, border: `1px solid ${primary}`, borderRadius: 4,
+    display: "flex", alignItems: "center", justifyContent: "center",
+  },
+  logoWord: { fontFamily: "'Instrument Serif', serif", fontSize: 20, letterSpacing: -0.2, color: primary },
+  logoSub: { fontSize: 10, letterSpacing: 1, color: "#7a7162", textTransform: "uppercase" },
+  navLinks: { display: "flex", gap: 22, margin: "0 auto" },
+  navLink: { color: "#3a3628", fontSize: 13, textDecoration: "none" },
+  navRight: { display: "flex", alignItems: "center", gap: 14 },
+  langPill: { fontSize: 11, letterSpacing: 1, color: "#7a7162", border: "1px solid #d8cfb8", padding: "4px 10px", borderRadius: 999 },
+  navCta: { background: primary, color: "#fff", border: "none", padding: "10px 18px", borderRadius: 999, fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
+
+  hero: { padding: "80px 64px 48px", maxWidth: 1280, margin: "0 auto" },
+  heroMeta: { display: "flex", alignItems: "center", gap: 12, color: "#7a7162", flexWrap: "wrap" },
+  heroKicker: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4 },
+  heroDot: { color: "#c9bda0" },
+  heroTitle: {
+    fontFamily: "'Instrument Serif', serif",
+    fontSize: 80, lineHeight: 1.0, letterSpacing: -1.8, margin: "24px 0 0",
+    color: "#1a1a1a", fontWeight: 400, maxWidth: 1100, textWrap: "balance",
+  },
+  heroTitleEm: { fontStyle: "italic", color: primary },
+  heroSubRow: { marginTop: 16 },
+  heroSubKicker: { fontFamily: "'Instrument Serif', serif", fontSize: 22, fontStyle: "italic", color: "#5a5244" },
+  heroLead: { marginTop: 28, maxWidth: 660, fontSize: 18, lineHeight: 1.55, color: "#3a3628", textWrap: "pretty" },
+  heroTaglineRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 36 },
+  heroRule: { width: 56, height: 1, background: primary },
+  heroTagline: { fontFamily: "'Instrument Serif', serif", fontSize: 20, fontStyle: "italic", color: primary, maxWidth: 700 },
+  ctaRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 44, flexWrap: "wrap" },
+  ctaPrimary: { background: primary, color: "#fff", border: "none", padding: "14px 28px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500 },
+  ctaSecondary: { background: "transparent", color: "#1a1a1a", border: "1px solid #1a1a1a", padding: "14px 28px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit" },
+  ctaText: { color: primary, fontSize: 14, textDecoration: "none" },
+
+  heroVenues: {
+    marginTop: 64, padding: "32px 36px",
+    background: "#fff", border: "1px solid #e9e2d2", borderRadius: 6,
+    display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 32, alignItems: "center",
+  },
+  venue: {},
+  venueLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b" },
+  venueName: { fontFamily: "'Instrument Serif', serif", fontSize: 28, marginTop: 6, color: primary },
+  venueDetail: { fontSize: 14, color: "#5a5244", marginTop: 4 },
+  venueDivider: { fontFamily: "'Instrument Serif', serif", fontSize: 36, color: "#c9bda0", fontStyle: "italic" },
+
+  stats: {
+    display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
+    borderTop: "1px solid #e9e2d2", borderBottom: "1px solid #e9e2d2",
+    maxWidth: 1280, margin: "0 auto",
+  },
+  statCell: { padding: "36px 40px", borderLeft: "1px solid #e9e2d2" },
+  statN: { fontFamily: "'Instrument Serif', serif", fontSize: 52, color: primary, lineHeight: 1 },
+  statL: { marginTop: 8, fontSize: 13, color: "#7a7162" },
+
+  section: { padding: "96px 64px", maxWidth: 1280, margin: "0 auto" },
+  sectionHead: { display: "flex", gap: 32, marginBottom: 56, alignItems: "flex-start" },
+  sectionNumber: { fontFamily: "'Instrument Serif', serif", fontSize: 24, fontStyle: "italic", color: primary, paddingRight: 20, borderRight: "1px solid #d8cfb8" },
+  sectionTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 44, lineHeight: 1.05, margin: 0, fontWeight: 400, letterSpacing: -0.8 },
+  sectionLead: { marginTop: 10, color: "#7a7162", fontSize: 16, maxWidth: 640 },
+
+  objsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
+  axCard: { padding: "32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, minHeight: 180 },
+  axNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 20 },
+  axTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 24, margin: "0 0 10px", fontWeight: 400 },
+  axDesc: { color: "#5a5244", fontSize: 14, lineHeight: 1.55, margin: 0 },
+
+  destGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
+  destCard: { display: "flex", gap: 20, padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "flex-start" },
+  destNum: { fontFamily: "'Instrument Serif', serif", fontSize: 28, fontStyle: "italic", color: primary, lineHeight: 1 },
+  destText: { fontSize: 15, color: "#3a3628", flex: 1 },
+
+  lineasGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
+  lineaCard: { padding: "32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+
+  formatGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
+  formatCard: { padding: "28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  formatHead: { paddingBottom: 16, marginBottom: 16, borderBottom: "1px dashed #d8cfb8" },
+  formatName: { fontFamily: "'Instrument Serif', serif", fontSize: 24, color: primary },
+  formatLen: { fontSize: 12, color: "#7a7162", fontFamily: "monospace", marginTop: 4 },
+  formatDesc: { fontSize: 14, color: "#5a5244", margin: 0, lineHeight: 1.55 },
+
+  cfpGrid: { display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 64 },
+  cfpTimeline: {},
+  cfpStep: { display: "flex", gap: 20, paddingBottom: 28 },
+  cfpDot: { width: 14, height: 14, borderRadius: 999, marginTop: 4, flexShrink: 0 },
+  cfpStepBody: { flex: 1, borderBottom: "1px solid rgba(255,255,255,0.15)", paddingBottom: 24 },
+  cfpStepDate: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.6)", fontFamily: "monospace" },
+  cfpStepLabel: { fontFamily: "'Instrument Serif', serif", fontSize: 22, marginTop: 6, color: "#fff", lineHeight: 1.25 },
+  cfpAside: { padding: 32, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 4, height: "fit-content" },
+  cfpAsideHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.7)", marginTop: 4, marginBottom: 14 },
+  normRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "10px 0", borderBottom: "1px dashed rgba(255,255,255,0.14)", fontSize: 13 },
+  normK: { color: "rgba(255,255,255,0.55)", textTransform: "uppercase", fontSize: 10, letterSpacing: 1, paddingTop: 2, minWidth: 88 },
+  normV: { color: "#fff", textAlign: "right", flex: 1 },
+  cfpNote: { fontSize: 12, color: "rgba(255,255,255,0.65)", marginTop: 14, fontStyle: "italic", lineHeight: 1.5 },
+  cfpFormat: { padding: "12px 0", borderBottom: "1px dashed rgba(255,255,255,0.14)" },
+  cfpFormatName: { fontFamily: "'Instrument Serif', serif", fontSize: 17, color: "#fff" },
+  cfpFormatLen: { fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 },
+  cfpCta: { marginTop: 24, background: "#fff", color: primary, border: "none", padding: "14px 24px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500, width: "100%" },
+
+  presGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
+  presCard: { padding: "28px", background: "#faf7f1", border: "1px solid #e9e2d2", borderRadius: 4 },
+  presH: { fontFamily: "'Instrument Serif', serif", fontSize: 24, color: primary, marginBottom: 12 },
+  presBody: { fontSize: 14, color: "#3a3628", margin: 0, lineHeight: 1.6 },
+  presNota: { marginTop: 32, padding: "16px 24px", background: "#fff8e6", border: "1px solid #e8d895", borderRadius: 4, fontSize: 14, color: "#5a4a2a" },
+  presNotaK: { fontWeight: 600, color: "#8a6a1a", textTransform: "uppercase", fontSize: 11, letterSpacing: 1, marginRight: 6 },
+
+  pubGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 40 },
+  octCard: { padding: 32, background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
+  octK: { fontFamily: "'Instrument Serif', serif", fontSize: 28, color: primary },
+  octBody: { fontSize: 14, color: "#3a3628", marginTop: 12, lineHeight: 1.6 },
+  octDeadline: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #d8cfb8", display: "flex", justifyContent: "space-between", alignItems: "baseline" },
+  octDeadlineV: { fontFamily: "'Instrument Serif', serif", fontSize: 18, color: primary },
+  pubNorms: { padding: 32, background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+
+  estructurasRow: { paddingTop: 32, borderTop: "1px solid #e9e2d2", marginTop: 8 },
+  estHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginBottom: 16 },
+  estGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
+  estCard: { padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  estTipo: { fontFamily: "'Instrument Serif', serif", fontSize: 18, color: primary, marginBottom: 6 },
+  estBody: { fontSize: 13, color: "#5a5244", lineHeight: 1.55 },
+
+  elementosRow: { marginTop: 40 },
+  elList: { listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 },
+  elLi: { padding: "10px 16px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, fontSize: 13, color: "#3a3628" },
+
+  comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
+  comiteCard: { display: "flex", gap: 20, padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
+  comiteNum: { fontFamily: "'Instrument Serif', serif", fontSize: 22, color: primary },
+  comiteName: { fontSize: 16, color: "#3a3628" },
+
+  orgsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
+  orgCard: { padding: "32px 32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  orgNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 16 },
+  orgName: { fontFamily: "'Instrument Serif', serif", fontSize: 30, color: "#1a1a1a", lineHeight: 1.1 },
+  orgParent: { fontSize: 14, color: primary, marginTop: 6 },
+  orgCountry: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginTop: 12 },
+
+  comitesWrap: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
+  comGrupo: { background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" },
+  comGrupoHead: { padding: "24px 24px 20px", borderBottom: "1px solid #e9e2d2", background: "#fbf9f4" },
+  comGrupoKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace" },
+  comGrupoTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 26, margin: "8px 0 4px", fontWeight: 400 },
+  comGrupoCount: { fontSize: 12, color: "#7a7162", fontStyle: "italic" },
+  comList: { padding: "8px 24px 20px" },
+  comRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2", alignItems: "baseline" },
+  comName: { fontSize: 14, color: "#1a1a1a", flex: 1 },
+  comAff: { fontSize: 11, color: "#7a7162", fontFamily: "monospace", letterSpacing: 0.3, textAlign: "right" },
+
+  contactSec: { background: "#1a1a1a", color: "#fff", padding: "72px 64px" },
+  contactInner: { maxWidth: 1280, margin: "0 auto", textAlign: "center" },
+  contactKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.55)" },
+  contactH: { fontFamily: "'Instrument Serif', serif", fontSize: 40, fontWeight: 400, margin: "12px 0 20px", letterSpacing: -0.6 },
+  contactMail: { fontFamily: "'Instrument Serif', serif", fontSize: 28, color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 6 },
+
+  footer: { padding: "40px 64px", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
+  footerRow: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" },
+  footerBrand: {},
+  footerTag: { fontSize: 12, color: "#7a7162", marginTop: 2 },
+  footerRight: { textAlign: "right", fontSize: 13, color: "#5a5244" },
+  footerCopy: { fontSize: 11, color: "#a69a7b", marginTop: 4, maxWidth: 360 },
+});
+
+window.V1_EHU = V1_EHU;
