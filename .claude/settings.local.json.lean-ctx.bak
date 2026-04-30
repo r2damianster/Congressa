@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(lean-ctx --version)",
+      "Bash(lean-ctx init *)"
+    ]
+  }
+}

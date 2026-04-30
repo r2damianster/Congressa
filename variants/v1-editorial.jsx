@@ -2,9 +2,22 @@
 // Serif para titulares (Instrument Serif), sans-serif para cuerpo (Geist),
 // mucho blanco, acento azul tinta, sensación de revista universitaria.
 
+const useWindowWidth = () => {
+  const [w, setW] = React.useState(typeof window !== 'undefined' ? window.innerWidth : 1280);
+  React.useEffect(() => {
+    const h = () => setW(window.innerWidth);
+    window.addEventListener('resize', h);
+    return () => window.removeEventListener('resize', h);
+  }, []);
+  return w;
+};
+
 const V1 = ({ lang = "es", primary = "#1e3a8a" }) => {
+  const width = useWindowWidth();
+  const isMobile = width < 640;
+  const isTablet = width < 1024;
   const c = window.CONTENT[lang];
-  const s = v1Styles(primary);
+  const s = v1Styles(primary, isMobile, isTablet);
 
   return (
     <div style={s.root}>
@@ -22,13 +35,15 @@ const V1 = ({ lang = "es", primary = "#1e3a8a" }) => {
             <div style={s.logoSub}>CIPP · 2026</div>
           </div>
         </div>
-        <nav style={s.navLinks}>
-          {Object.values(c.nav).map((n, i) => (
-            <a key={i} style={s.navLink} href="#">{n}</a>
-          ))}
-        </nav>
+        {!isTablet && (
+          <nav style={s.navLinks}>
+            {Object.values(c.nav).map((n, i) => (
+              <a key={i} style={s.navLink} href="#">{n}</a>
+            ))}
+          </nav>
+        )}
         <div style={s.navRight}>
-          <span style={s.langPill}>{lang.toUpperCase()}</span>
+          {!isMobile && <span style={s.langPill}>{lang.toUpperCase()}</span>}
           <button style={s.navCta}>{c.ctas.register} →</button>
         </div>
       </header>
@@ -39,8 +54,12 @@ const V1 = ({ lang = "es", primary = "#1e3a8a" }) => {
           <span style={s.heroKicker}>{c.eventShort}</span>
           <span style={s.heroDot}>·</span>
           <span style={s.heroKicker}>{c.dates}</span>
-          <span style={s.heroDot}>·</span>
-          <span style={s.heroKicker}>{c.location}</span>
+          {!isMobile && (
+            <>
+              <span style={s.heroDot}>·</span>
+              <span style={s.heroKicker}>{c.location}</span>
+            </>
+          )}
         </div>
 
         <h1 style={s.heroTitle}>
@@ -237,7 +256,7 @@ const V1 = ({ lang = "es", primary = "#1e3a8a" }) => {
   );
 };
 
-const v1Styles = (primary) => ({
+const v1Styles = (primary, isMobile, isTablet) => ({
   root: {
     fontFamily: "'Geist', -apple-system, sans-serif",
     background: "#fbf9f4",
@@ -246,17 +265,20 @@ const v1Styles = (primary) => ({
     minHeight: "100%",
     fontSize: 15,
     lineHeight: 1.5,
+    overflowX: "hidden",
   },
   nav: {
     display: "flex",
     alignItems: "center",
-    padding: "22px 64px",
+    padding: isMobile ? "14px 20px" : isTablet ? "18px 32px" : "22px 64px",
     borderBottom: "1px solid #e9e2d2",
     background: "rgba(251,249,244,0.92)",
     backdropFilter: "blur(10px)",
     position: "sticky",
     top: 0,
     zIndex: 10,
+    boxSizing: "border-box",
+    width: "100%",
   },
   logoWrap: { display: "flex", alignItems: "center", gap: 10 },
   logoMark: {
@@ -269,42 +291,61 @@ const v1Styles = (primary) => ({
   logoSub: { fontSize: 10, letterSpacing: 1, color: "#7a7162", textTransform: "uppercase" },
   navLinks: { display: "flex", gap: 28, margin: "0 auto" },
   navLink: { color: "#3a3628", fontSize: 14, textDecoration: "none" },
-  navRight: { display: "flex", alignItems: "center", gap: 14 },
+  navRight: { display: "flex", alignItems: "center", gap: 10, marginLeft: "auto", flexShrink: 0 },
   langPill: { fontSize: 11, letterSpacing: 1, color: "#7a7162", border: "1px solid #d8cfb8", padding: "4px 8px", borderRadius: 999 },
   navCta: {
-    background: primary, color: "#fff", border: "none", padding: "10px 18px",
+    background: primary, color: "#fff", border: "none",
+    padding: isMobile ? "8px 14px" : "10px 18px",
     borderRadius: 999, fontSize: 13, cursor: "pointer", fontFamily: "inherit",
   },
 
-  hero: { padding: "80px 64px 48px", maxWidth: 1280, margin: "0 auto" },
-  heroMeta: { display: "flex", alignItems: "center", gap: 12, color: "#7a7162", fontSize: 13, letterSpacing: 0.3 },
+  hero: {
+    padding: isMobile ? "40px 20px 32px" : isTablet ? "60px 32px 40px" : "80px 64px 48px",
+    maxWidth: 1280, margin: "0 auto",
+  },
+  heroMeta: {
+    display: "flex", alignItems: "center", flexWrap: "wrap",
+    gap: isMobile ? 8 : 12, color: "#7a7162", fontSize: 13, letterSpacing: 0.3,
+  },
   heroKicker: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4 },
   heroDot: { color: "#c9bda0" },
   heroTitle: {
     fontFamily: "'Instrument Serif', serif",
-    fontSize: 92, lineHeight: 0.98, letterSpacing: -2, margin: "24px 0 0",
-    color: "#1a1a1a", fontWeight: 400, maxWidth: 1000, textWrap: "balance",
+    fontSize: "clamp(26px, 6.5vw, 92px)",
+    lineHeight: isMobile ? 1.12 : 0.98,
+    letterSpacing: isMobile ? "-0.5px" : "-2px",
+    margin: "24px 0 0",
+    color: "#1a1a1a", fontWeight: 400, maxWidth: 1000,
+    wordBreak: "break-word",
   },
   heroTitleEm: { fontStyle: "italic", color: primary },
   heroLead: {
-    marginTop: 28, maxWidth: 620, fontSize: 18, lineHeight: 1.55, color: "#3a3628", textWrap: "pretty",
+    marginTop: isMobile ? 20 : 28,
+    maxWidth: 620, fontSize: isMobile ? 16 : 18, lineHeight: 1.55, color: "#3a3628",
   },
-  heroTaglineRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 36 },
-  heroRule: { width: 56, height: 1, background: primary },
-  heroTagline: { fontFamily: "'Instrument Serif', serif", fontSize: 22, fontStyle: "italic", color: primary },
-  ctaRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 44 },
+  heroTaglineRow: { display: "flex", alignItems: "center", gap: 16, marginTop: isMobile ? 24 : 36 },
+  heroRule: { width: 56, height: 1, background: primary, flexShrink: 0 },
+  heroTagline: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(15px, 3.5vw, 22px)", fontStyle: "italic", color: primary },
+  ctaRow: {
+    display: "flex", alignItems: "center", flexWrap: "wrap",
+    gap: isMobile ? 12 : 16, marginTop: isMobile ? 28 : 44,
+  },
   ctaPrimary: {
-    background: primary, color: "#fff", border: "none", padding: "14px 28px",
+    background: primary, color: "#fff", border: "none",
+    padding: isMobile ? "12px 22px" : "14px 28px",
     borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500,
   },
   ctaSecondary: {
     background: "transparent", color: "#1a1a1a", border: "1px solid #1a1a1a",
-    padding: "14px 28px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit",
+    padding: isMobile ? "12px 22px" : "14px 28px",
+    borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit",
   },
   ctaText: { color: primary, fontSize: 14, textDecoration: "none" },
 
   heroImage: {
-    marginTop: 72, height: 420, background: "#f5f2ec", borderRadius: 4,
+    marginTop: isMobile ? 40 : 72,
+    height: isMobile ? 200 : 420,
+    background: "#f5f2ec", borderRadius: 4,
     position: "relative", overflow: "hidden", border: "1px solid #e9e2d2",
   },
   heroImageLabel: {
@@ -318,27 +359,54 @@ const v1Styles = (primary) => ({
   },
 
   stats: {
-    display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0,
+    display: "grid",
+    gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
+    gap: 0,
     borderTop: "1px solid #e9e2d2", borderBottom: "1px solid #e9e2d2",
     maxWidth: 1280, margin: "0 auto",
   },
-  statCell: { padding: "36px 40px", borderLeft: "1px solid #e9e2d2" },
-  statN: { fontFamily: "'Instrument Serif', serif", fontSize: 52, color: primary, lineHeight: 1 },
+  statCell: {
+    padding: isMobile ? "24px 20px" : "36px 40px",
+    borderLeft: "1px solid #e9e2d2",
+  },
+  statN: {
+    fontFamily: "'Instrument Serif', serif",
+    fontSize: "clamp(28px, 8vw, 52px)", color: primary, lineHeight: 1,
+  },
   statL: { marginTop: 8, fontSize: 13, color: "#7a7162" },
 
-  section: { padding: "96px 64px", maxWidth: 1280, margin: "0 auto" },
-  sectionHead: { display: "flex", gap: 32, marginBottom: 56, alignItems: "flex-start" },
+  section: {
+    padding: isMobile ? "60px 20px" : isTablet ? "72px 32px" : "96px 64px",
+    maxWidth: 1280, margin: "0 auto",
+  },
+  sectionHead: {
+    display: "flex",
+    flexDirection: isMobile ? "column" : "row",
+    gap: isMobile ? 16 : 32,
+    marginBottom: isMobile ? 32 : 56,
+    alignItems: "flex-start",
+  },
   sectionNumber: {
     fontFamily: "'Instrument Serif', serif", fontSize: 24, fontStyle: "italic",
-    color: primary, paddingRight: 20, borderRight: "1px solid #d8cfb8", minWidth: 0,
+    color: primary,
+    paddingRight: isMobile ? 0 : 20,
+    paddingBottom: isMobile ? 12 : 0,
+    borderRight: isMobile ? "none" : "1px solid #d8cfb8",
+    borderBottom: isMobile ? "1px solid #d8cfb8" : "none",
+    minWidth: 0,
   },
   sectionTitle: {
-    fontFamily: "'Instrument Serif', serif", fontSize: 48, lineHeight: 1.05,
-    margin: 0, fontWeight: 400, letterSpacing: -0.8,
+    fontFamily: "'Instrument Serif', serif",
+    fontSize: "clamp(24px, 5vw, 48px)",
+    lineHeight: 1.05, margin: 0, fontWeight: 400, letterSpacing: -0.8,
   },
   sectionLead: { marginTop: 10, color: "#7a7162", fontSize: 16, maxWidth: 560 },
 
-  axesGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 },
+  axesGrid: {
+    display: "grid",
+    gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
+    gap: 24,
+  },
   axCard: {
     padding: "32px 28px", background: "#fff", border: "1px solid #e9e2d2",
     borderRadius: 4, minHeight: 180,
@@ -350,7 +418,11 @@ const v1Styles = (primary) => ({
   axTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 24, margin: "0 0 10px", fontWeight: 400 },
   axDesc: { color: "#5a5244", fontSize: 14, lineHeight: 1.55, margin: 0 },
 
-  agendaGrid: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 },
+  agendaGrid: {
+    display: "grid",
+    gridTemplateColumns: isMobile ? "1fr" : isTablet ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
+    gap: 24,
+  },
   dayCol: { background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, overflow: "hidden" },
   dayHead: { padding: "20px 20px 16px", borderBottom: "1px solid #e9e2d2", background: "#fbf9f4" },
   dayShort: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary },
@@ -364,7 +436,11 @@ const v1Styles = (primary) => ({
   sessTitle: { fontSize: 14, marginTop: 4, color: "#1a1a1a", lineHeight: 1.35 },
   sessSpeaker: { fontSize: 12, color: "#7a7162", marginTop: 3, fontStyle: "italic" },
 
-  speakersGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 },
+  speakersGrid: {
+    display: "grid",
+    gridTemplateColumns: isMobile ? "1fr" : isTablet ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
+    gap: 32,
+  },
   speakerCard: { display: "flex", flexDirection: "column" },
   speakerPortrait: {
     aspectRatio: "4/5", background: "#ece5d3", borderRadius: 4, position: "relative",
@@ -378,7 +454,11 @@ const v1Styles = (primary) => ({
   speakerRole: { fontSize: 13, color: "#5a5244", marginTop: 2 },
   speakerTopic: { fontSize: 12, color: primary, marginTop: 6, fontStyle: "italic" },
 
-  cfpGrid: { display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 64 },
+  cfpGrid: {
+    display: "grid",
+    gridTemplateColumns: isMobile ? "1fr" : "1.2fr 1fr",
+    gap: isMobile ? 32 : 64,
+  },
   cfpTimeline: { position: "relative" },
   cfpStep: { display: "flex", gap: 20, paddingBottom: 28, position: "relative" },
   cfpDot: {
@@ -418,11 +498,20 @@ const v1Styles = (primary) => ({
     fontFamily: "inherit", fontWeight: 500, width: "100%",
   },
 
-  footer: { padding: "40px 64px", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
-  footerRow: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" },
+  footer: {
+    padding: isMobile ? "32px 20px" : isTablet ? "40px 32px" : "40px 64px",
+    borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto",
+  },
+  footerRow: {
+    display: "flex",
+    flexDirection: isMobile ? "column" : "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    gap: isMobile ? 20 : 0,
+  },
   footerBrand: {},
   footerTag: { fontSize: 12, color: "#7a7162", marginTop: 2 },
-  footerRight: { textAlign: "right", fontSize: 13, color: "#5a5244" },
+  footerRight: { textAlign: isMobile ? "left" : "right", fontSize: 13, color: "#5a5244" },
   footerCopy: { fontSize: 11, color: "#a69a7b", marginTop: 4 },
 });
 
