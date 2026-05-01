@@ -43,7 +43,7 @@ const CONTENT_EHU = {
     ],
   },
   destinatarios: {
-    title: "Personas destinatarias",
+    title: "Público (Dirigido a)",
     lead: "Profesorado y alumnado universitario interesado en la innovación educativa.",
     items: [
       "Profesorado universitario de la EHU, ULEAM, Colombia y Chile",

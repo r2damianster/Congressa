@@ -5,6 +5,25 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
   const c = window.CONTENT_EHU;
   const s = v1ehuStyles(primary);
 
+  const scrollRef = React.useRef(null);
+  React.useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    let autoScrollInterval;
+    const startScroll = () => {
+      autoScrollInterval = setInterval(() => {
+        if (window.innerWidth <= 768) {
+           el.scrollBy({ left: 1, behavior: 'auto' });
+           if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 1) el.scrollLeft = 0;
+        }
+      }, 40);
+    };
+    startScroll();
+    el.addEventListener('touchstart', () => clearInterval(autoScrollInterval), { passive: true });
+    el.addEventListener('touchend', () => { setTimeout(startScroll, 2000); }, { passive: true });
+    return () => clearInterval(autoScrollInterval);
+  }, []);
+
   return (
     <div style={s.root}>
       <style>{`
@@ -37,6 +56,21 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           .section-number { border-right: none !important; border-bottom: 1px solid #d8cfb8; padding-right: 0 !important; padding-bottom: 12px; width: 100%; }
           .oct-deadline { flex-direction: column; gap: 8px; align-items: flex-start !important; }
           .oct-deadline-v { text-align: left !important; }
+          .hero-venues { text-align: center; }
+          .hero-venues .venue { width: 100%; }
+
+          .dest-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          .dest-card {
+            padding: 12px 16px !important;
+          }
+          .dest-num {
+            font-size: 18px !important;
+          }
+
         }
       `}</style>
       {/* Top nav */}
@@ -129,7 +163,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.presentacion.lead}</p>
           </div>
         </div>
-        <div style={s.objsGrid} className="scroll-row">
+        <div style={s.objsGrid} className="scroll-row" ref={scrollRef}>
           {c.presentacion.objetivos.map((a, i) => (
             <article key={i} style={s.axCard}>
               <div style={s.axNum}>{a.id}</div>
@@ -149,10 +183,10 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.destinatarios.lead}</p>
           </div>
         </div>
-        <div style={s.destGrid} className="scroll-row">
+        <div style={s.destGrid} className="dest-grid">
           {c.destinatarios.items.map((d, i) => (
-            <div key={i} style={s.destCard}>
-              <div style={s.destNum}>0{i + 1}</div>
+            <div key={i} style={s.destCard} className="dest-card">
+              <div style={s.destNum} className="dest-num">0{i + 1}</div>
               <div style={s.destText}>{d}</div>
             </div>
           ))}
@@ -168,7 +202,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.lineas.lead}</p>
           </div>
         </div>
-        <div style={s.lineasGrid} className="scroll-row">
+        <div style={s.lineasGrid}>
           {c.lineas.items.map((a, i) => (
             <article key={i} style={s.lineaCard}>
               <div style={s.axNum}>{a.id}</div>
@@ -187,7 +221,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <h2 style={s.sectionTitle}>{c.formatos.title}</h2>
           </div>
         </div>
-        <div style={s.formatGrid} className="scroll-row">
+        <div style={s.formatGrid}>
           {c.formatos.items.map((f, i) => (
             <div key={i} style={s.formatCard}>
               <div style={s.formatHead}>
@@ -258,7 +292,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
           </div>
         </div>
-        <div style={s.presGrid} className="scroll-row">
+        <div style={s.presGrid}>
           {c.presentacionDia.items.map((it, i) => (
             <div key={i} style={s.presCard}>
               <div style={s.presH}>{it.h}</div>
