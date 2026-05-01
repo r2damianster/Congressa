@@ -9,6 +9,24 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
     <div style={s.root}>
       <style>{`
         @media (max-width: 768px) {
+          
+          .scroll-row {
+            display: flex !important;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            margin-right: -16px;
+            padding-right: 16px;
+            padding-bottom: 24px;
+            gap: 16px !important;
+            /* Hide scrollbar */
+            scrollbar-width: none;
+          }
+          .scroll-row::-webkit-scrollbar { display: none; }
+          .scroll-row > * {
+            flex: 0 0 85% !important;
+            scroll-snap-align: center;
+          }
+
           .nav-links, .lang-pill, .venue-divider { display: none !important; }
           .hero-venues, .cfp-grid, .footer-row { flex-direction: column !important; }
           .nav-right { margin-left: auto; }
@@ -111,7 +129,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.presentacion.lead}</p>
           </div>
         </div>
-        <div style={s.objsGrid}>
+        <div style={s.objsGrid} className="scroll-row">
           {c.presentacion.objetivos.map((a, i) => (
             <article key={i} style={s.axCard}>
               <div style={s.axNum}>{a.id}</div>
@@ -131,7 +149,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.destinatarios.lead}</p>
           </div>
         </div>
-        <div style={s.destGrid}>
+        <div style={s.destGrid} className="scroll-row">
           {c.destinatarios.items.map((d, i) => (
             <div key={i} style={s.destCard}>
               <div style={s.destNum}>0{i + 1}</div>
@@ -150,7 +168,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.lineas.lead}</p>
           </div>
         </div>
-        <div style={s.lineasGrid}>
+        <div style={s.lineasGrid} className="scroll-row">
           {c.lineas.items.map((a, i) => (
             <article key={i} style={s.lineaCard}>
               <div style={s.axNum}>{a.id}</div>
@@ -169,7 +187,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <h2 style={s.sectionTitle}>{c.formatos.title}</h2>
           </div>
         </div>
-        <div style={s.formatGrid}>
+        <div style={s.formatGrid} className="scroll-row">
           {c.formatos.items.map((f, i) => (
             <div key={i} style={s.formatCard}>
               <div style={s.formatHead}>
@@ -240,7 +258,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
           </div>
         </div>
-        <div style={s.presGrid}>
+        <div style={s.presGrid} className="scroll-row">
           {c.presentacionDia.items.map((it, i) => (
             <div key={i} style={s.presCard}>
               <div style={s.presH}>{it.h}</div>
@@ -285,7 +303,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
         <div style={s.estructurasRow}>
           <div style={s.estHead}>Estructura del trabajo en extenso</div>
-          <div style={s.estGrid}>
+          <div style={s.estGrid} className="scroll-row">
             {c.publicacion.estructuras.map((e, i) => (
               <div key={i} style={s.estCard}>
                 <div style={s.estTipo}>{e.tipo}</div>
@@ -313,7 +331,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <h2 style={s.sectionTitle}>{c.organizadoras.title}</h2>
           </div>
         </div>
-        <div style={s.orgsGrid}>
+        <div style={s.orgsGrid} className="scroll-row">
           {c.organizadoras.items.map((o, i) => (
             <div key={i} style={s.orgCard}>
               <div style={s.orgNum}>0{i + 1}</div>
@@ -334,7 +352,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.comites.lead}</p>
           </div>
         </div>
-        <div style={s.comitesWrap}>
+        <div style={s.comitesWrap} className="scroll-row">
           {c.comites.grupos.map((g, i) => (
             <div key={i} style={s.comGrupo}>
               <div style={s.comGrupoHead}>
@@ -392,7 +410,7 @@ const v1ehuStyles = (primary) => ({
     lineHeight: 1.55,
   },
   nav: {
-    display: "flex", alignItems: "center", padding: "clamp(16px, 4vw, 22px) clamp(20px, 5vw, 64px)",
+    display: "flex", alignItems: "center", padding: "clamp(16px, 4vw, 22px) clamp(16px, 4vw, 64px)",
     borderBottom: "1px solid #e9e2d2",
     background: "rgba(251,249,244,0.92)", backdropFilter: "blur(10px)",
     position: "sticky", top: 0, zIndex: 10,
@@ -410,7 +428,7 @@ const v1ehuStyles = (primary) => ({
   langPill: { fontSize: 11, letterSpacing: 1, color: "#7a7162", border: "1px solid #d8cfb8", padding: "4px 10px", borderRadius: 999 },
   navCta: { background: primary, color: "#fff", border: "none", padding: "10px 18px", borderRadius: 999, fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
 
-  hero: { padding: "clamp(48px, 8vw, 80px) clamp(20px, 5vw, 64px) clamp(32px, 5vw, 48px)", maxWidth: 1280, margin: "0 auto" },
+  hero: { padding: "clamp(32px, 6vw, 80px) clamp(16px, 4vw, 64px) clamp(32px, 5vw, 48px)", maxWidth: 1280, margin: "0 auto" },
   heroMeta: { display: "flex", alignItems: "center", gap: 12, color: "#7a7162", flexWrap: "wrap" },
   heroKicker: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4 },
   heroDot: { color: "#c9bda0" },
@@ -451,28 +469,28 @@ const v1ehuStyles = (primary) => ({
   statN: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(36px, 6vw, 52px)", color: primary, lineHeight: 1 },
   statL: { marginTop: 8, fontSize: 13, color: "#7a7162" },
 
-  section: { padding: "clamp(56px, 8vw, 96px) clamp(20px, 5vw, 64px)", maxWidth: 1280, margin: "0 auto" },
+  section: { padding: "clamp(32px, 6vw, 96px) clamp(16px, 4vw, 64px)", maxWidth: 1280, margin: "0 auto" },
   sectionHead: { display: "flex", gap: 32, marginBottom: 56, alignItems: "flex-start" },
   sectionNumber: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", fontStyle: "italic", color: primary, paddingRight: 20, borderRight: "1px solid #d8cfb8" },
   sectionTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(32px, 6vw, 44px)", lineHeight: 1.05, margin: 0, fontWeight: 400, letterSpacing: -0.8 },
   sectionLead: { marginTop: 10, color: "#7a7162", fontSize: 16, maxWidth: 640 },
 
   objsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
-  axCard: { padding: "32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, minHeight: 180 },
+  axCard: { padding: "clamp(20px, 4vw, 32px) clamp(16px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, minHeight: 140 },
   axNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 20 },
   axTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", margin: "0 0 10px", fontWeight: 400 },
   axDesc: { color: "#5a5244", fontSize: 14, lineHeight: 1.55, margin: 0 },
 
   destGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
-  destCard: { display: "flex", gap: 20, padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "flex-start" },
+  destCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "flex-start" },
   destNum: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", fontStyle: "italic", color: primary, lineHeight: 1 },
   destText: { fontSize: 15, color: "#3a3628", flex: 1 },
 
   lineasGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  lineaCard: { padding: "32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  lineaCard: { padding: "clamp(20px, 4vw, 32px) clamp(16px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
 
   formatGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  formatCard: { padding: "28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  formatCard: { padding: "clamp(20px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
   formatHead: { paddingBottom: 16, marginBottom: 16, borderBottom: "1px dashed #d8cfb8" },
   formatName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary },
   formatLen: { fontSize: 12, color: "#7a7162", fontFamily: "monospace", marginTop: 4 },
@@ -497,13 +515,13 @@ const v1ehuStyles = (primary) => ({
   cfpCta: { marginTop: 24, background: "#fff", color: primary, border: "none", padding: "14px 24px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500, width: "100%" },
 
   presGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  presCard: { padding: "28px", background: "#faf7f1", border: "1px solid #e9e2d2", borderRadius: 4 },
+  presCard: { padding: "clamp(20px, 4vw, 28px)", background: "#faf7f1", border: "1px solid #e9e2d2", borderRadius: 4 },
   presH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary, marginBottom: 12 },
   presBody: { fontSize: 14, color: "#3a3628", margin: 0, lineHeight: 1.6 },
   presNota: { marginTop: 32, padding: "16px 24px", background: "#fff8e6", border: "1px solid #e8d895", borderRadius: 4, fontSize: 14, color: "#5a4a2a" },
   presNotaK: { fontWeight: 600, color: "#8a6a1a", textTransform: "uppercase", fontSize: 11, letterSpacing: 1, marginRight: 6 },
 
-  pubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginBottom: 40 },
+  pubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 24, marginBottom: 40 },
   octCard: { padding: 32, background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
   octK: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: primary },
   octBody: { fontSize: 14, color: "#3a3628", marginTop: 12, lineHeight: 1.6 },
@@ -514,7 +532,7 @@ const v1ehuStyles = (primary) => ({
   estructurasRow: { paddingTop: 32, borderTop: "1px solid #e9e2d2", marginTop: 8 },
   estHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginBottom: 16 },
   estGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  estCard: { padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  estCard: { padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
   estTipo: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary, marginBottom: 6 },
   estBody: { fontSize: 13, color: "#5a5244", lineHeight: 1.55 },
 
@@ -523,12 +541,12 @@ const v1ehuStyles = (primary) => ({
   elLi: { padding: "10px 16px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, fontSize: 13, color: "#3a3628" },
 
   comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
-  comiteCard: { display: "flex", gap: 20, padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
+  comiteCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
   comiteNum: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", color: primary },
   comiteName: { fontSize: 16, color: "#3a3628" },
 
   orgsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
-  orgCard: { padding: "32px 32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  orgCard: { padding: "clamp(24px, 4vw, 32px) clamp(20px, 4vw, 32px) clamp(20px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
   orgNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 16 },
   orgName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 30px)", color: "#1a1a1a", lineHeight: 1.1 },
   orgParent: { fontSize: 14, color: primary, marginTop: 6 },
@@ -536,7 +554,7 @@ const v1ehuStyles = (primary) => ({
 
   comitesWrap: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
   comGrupo: { background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" },
-  comGrupoHead: { padding: "24px 24px 20px", borderBottom: "1px solid #e9e2d2", background: "#fbf9f4" },
+  comGrupoHead: { padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(16px, 4vw, 20px)", borderBottom: "1px solid #e9e2d2", background: "#fbf9f4" },
   comGrupoKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace" },
   comGrupoTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 26px)", margin: "8px 0 4px", fontWeight: 400 },
   comGrupoCount: { fontSize: 12, color: "#7a7162", fontStyle: "italic" },
@@ -545,13 +563,13 @@ const v1ehuStyles = (primary) => ({
   comName: { fontSize: 14, color: "#1a1a1a", flex: 1 },
   comAff: { fontSize: 11, color: "#7a7162", fontFamily: "monospace", letterSpacing: 0.3, textAlign: "right" },
 
-  contactSec: { background: "#1a1a1a", color: "#fff", padding: "clamp(48px, 8vw, 72px) clamp(20px, 5vw, 64px)" },
+  contactSec: { background: "#1a1a1a", color: "#fff", padding: "clamp(32px, 6vw, 72px) clamp(16px, 4vw, 64px)" },
   contactInner: { maxWidth: 1280, margin: "0 auto", textAlign: "center" },
   contactKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.55)" },
   contactH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(28px, 6vw, 40px)", fontWeight: 400, margin: "12px 0 20px", letterSpacing: -0.6 },
   contactMail: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 6 },
 
-  footer: { padding: "clamp(32px, 5vw, 40px) clamp(20px, 5vw, 64px)", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
+  footer: { padding: "clamp(24px, 5vw, 40px) clamp(16px, 4vw, 64px)", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
   footerRow: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" },
   footerBrand: {},
   footerTag: { fontSize: 12, color: "#7a7162", marginTop: 2 },
