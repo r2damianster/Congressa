@@ -7,6 +7,20 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
   return (
     <div style={s.root}>
+      <style>{`
+        @media (max-width: 768px) {
+          .nav-links, .lang-pill, .venue-divider { display: none !important; }
+          .hero-venues, .cfp-grid, .footer-row { flex-direction: column !important; }
+          .nav-right { margin-left: auto; }
+          .hero-meta, .cta-row { justify-content: center; text-align: center; }
+          .footer-row { text-align: center; align-items: center !important; gap: 24px; }
+          .footer-right { text-align: center !important; }
+          .section-head { flex-direction: column; gap: 16px !important; }
+          .section-number { border-right: none !important; border-bottom: 1px solid #d8cfb8; padding-right: 0 !important; padding-bottom: 12px; width: 100%; }
+          .oct-deadline { flex-direction: column; gap: 8px; align-items: flex-start !important; }
+          .oct-deadline-v { text-align: left !important; }
+        }
+      `}</style>
       {/* Top nav */}
       <header style={s.nav}>
         <div style={s.logoWrap}>
@@ -21,20 +35,20 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <div style={s.logoSub}>CIIIES · 2026</div>
           </div>
         </div>
-        <nav style={s.navLinks}>
+        <nav style={s.navLinks} className="nav-links">
           {Object.entries(c.nav).map(([k, v], i) => (
             <a key={i} style={s.navLink} href={`#${k}`}>{v}</a>
           ))}
         </nav>
         <div style={s.navRight}>
-          <span style={s.langPill}>ES · EU · EN</span>
+          <span style={s.langPill} className="lang-pill">ES · EU · EN</span>
           <button style={s.navCta}>{c.ctas.register} →</button>
         </div>
       </header>
 
       {/* Hero */}
       <section style={s.hero}>
-        <div style={s.heroMeta}>
+        <div style={s.heroMeta} className="hero-meta">
           <span style={s.heroKicker}>{c.eventShort}</span>
           <span style={s.heroDot}>·</span>
           <span style={s.heroKicker}>{c.dates}</span>
@@ -57,19 +71,19 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           <div style={s.heroTagline}>{c.tagline}</div>
         </div>
 
-        <div style={s.ctaRow}>
+        <div style={s.ctaRow} className="cta-row">
           <button style={s.ctaPrimary}>{c.ctas.register}</button>
           <button style={s.ctaSecondary}>{c.ctas.submit}</button>
           <a style={s.ctaText} href="#propuestas">Ver bases de envío →</a>
         </div>
 
-        <div style={s.heroVenues}>
+        <div style={s.heroVenues} className="hero-venues">
           <div style={s.venue}>
             <div style={s.venueLabel}>Sede 1 · Europa</div>
             <div style={s.venueName}>Facultad de Educación de Bilbao</div>
             <div style={s.venueDetail}>Universidad del País Vasco · EHU</div>
           </div>
-          <div style={s.venueDivider}>↔</div>
+          <div style={s.venueDivider} className="venue-divider">↔</div>
           <div style={s.venue}>
             <div style={s.venueLabel}>Sede 2 · América Latina</div>
             <div style={s.venueName}>ULEAM</div>
@@ -90,8 +104,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Presentación + objetivos */}
       <section style={s.section} id="presentacion">
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>I</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">I</div>
           <div>
             <h2 style={s.sectionTitle}>{c.presentacion.title}</h2>
             <p style={s.sectionLead}>{c.presentacion.lead}</p>
@@ -110,8 +124,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Destinatarios */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="destinatarios">
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>II</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">II</div>
           <div>
             <h2 style={s.sectionTitle}>{c.destinatarios.title}</h2>
             <p style={s.sectionLead}>{c.destinatarios.lead}</p>
@@ -129,8 +143,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Líneas temáticas */}
       <section style={s.section}>
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>III</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">III</div>
           <div>
             <h2 style={s.sectionTitle}>{c.lineas.title}</h2>
             <p style={s.sectionLead}>{c.lineas.lead}</p>
@@ -149,8 +163,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Formatos */}
       <section style={{ ...s.section, background: "#faf7f1" }}>
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>IV</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">IV</div>
           <div>
             <h2 style={s.sectionTitle}>{c.formatos.title}</h2>
           </div>
@@ -170,15 +184,15 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Propuestas / CFP */}
       <section style={{ ...s.section, background: primary, color: "#fff" }} id="propuestas">
-        <div style={s.sectionHead}>
-          <div style={{ ...s.sectionNumber, color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>V</div>
+        <div style={s.sectionHead} className="section-head">
+          <div className="section-number" style={{ ...s.sectionNumber, color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>V</div>
           <div>
             <h2 style={{ ...s.sectionTitle, color: "#fff" }}>{c.propuestas.title}</h2>
             <p style={{ ...s.sectionLead, color: "rgba(255,255,255,0.75)" }}>{c.propuestas.lead}</p>
           </div>
         </div>
 
-        <div style={s.cfpGrid}>
+        <div style={s.cfpGrid} className="cfp-grid">
           <div style={s.cfpTimeline}>
             {c.propuestas.timeline.map((t, i) => (
               <div key={i} style={s.cfpStep}>
@@ -219,8 +233,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Presentación día */}
       <section style={s.section} id="programa">
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>VI</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">VI</div>
           <div>
             <h2 style={s.sectionTitle}>{c.presentacionDia.title}</h2>
             <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
@@ -241,8 +255,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Publicación */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="publicacion">
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>VII</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">VII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.publicacion.title}</h2>
             <p style={s.sectionLead}>{c.publicacion.lead}</p>
@@ -253,9 +267,9 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           <div style={s.octCard}>
             <div style={s.octK}>{c.publicacion.octaedro.h}</div>
             <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
-            <div style={s.octDeadline}>
+            <div style={s.octDeadline} className="oct-deadline">
               <span style={s.normK}>Fecha límite</span>
-              <span style={s.octDeadlineV}>{c.publicacion.deadline}</span>
+              <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
             </div>
           </div>
 
@@ -293,8 +307,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Entidades organizadoras */}
       <section style={s.section}>
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>VIII</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">VIII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.organizadoras.title}</h2>
           </div>
@@ -313,8 +327,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Comités */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="comites">
-        <div style={s.sectionHead}>
-          <div style={s.sectionNumber}>IX</div>
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">IX</div>
           <div>
             <h2 style={s.sectionTitle}>{c.comites.title}</h2>
             <p style={s.sectionLead}>{c.comites.lead}</p>
@@ -352,12 +366,12 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
       {/* Footer */}
       <footer style={s.footer}>
-        <div style={s.footerRow}>
+        <div style={s.footerRow} className="footer-row">
           <div style={s.footerBrand}>
             <div style={s.logoWord}>Congressa</div>
             <div style={s.footerTag}>Plataforma de gestión de congresos académicos</div>
           </div>
-          <div style={s.footerRight}>
+          <div style={s.footerRight} className="footer-right">
             <div>{c.footer.contact}</div>
             <div style={s.footerCopy}>{c.footer.copy}</div>
           </div>
@@ -378,7 +392,7 @@ const v1ehuStyles = (primary) => ({
     lineHeight: 1.55,
   },
   nav: {
-    display: "flex", alignItems: "center", padding: "22px 64px",
+    display: "flex", alignItems: "center", padding: "clamp(16px, 4vw, 22px) clamp(20px, 5vw, 64px)",
     borderBottom: "1px solid #e9e2d2",
     background: "rgba(251,249,244,0.92)", backdropFilter: "blur(10px)",
     position: "sticky", top: 0, zIndex: 10,
@@ -388,7 +402,7 @@ const v1ehuStyles = (primary) => ({
     width: 36, height: 36, border: `1px solid ${primary}`, borderRadius: 4,
     display: "flex", alignItems: "center", justifyContent: "center",
   },
-  logoWord: { fontFamily: "'Instrument Serif', serif", fontSize: 20, letterSpacing: -0.2, color: primary },
+  logoWord: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 20px)", letterSpacing: -0.2, color: primary },
   logoSub: { fontSize: 10, letterSpacing: 1, color: "#7a7162", textTransform: "uppercase" },
   navLinks: { display: "flex", gap: 22, margin: "0 auto" },
   navLink: { color: "#3a3628", fontSize: 13, textDecoration: "none" },
@@ -396,35 +410,35 @@ const v1ehuStyles = (primary) => ({
   langPill: { fontSize: 11, letterSpacing: 1, color: "#7a7162", border: "1px solid #d8cfb8", padding: "4px 10px", borderRadius: 999 },
   navCta: { background: primary, color: "#fff", border: "none", padding: "10px 18px", borderRadius: 999, fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
 
-  hero: { padding: "80px 64px 48px", maxWidth: 1280, margin: "0 auto" },
+  hero: { padding: "clamp(48px, 8vw, 80px) clamp(20px, 5vw, 64px) clamp(32px, 5vw, 48px)", maxWidth: 1280, margin: "0 auto" },
   heroMeta: { display: "flex", alignItems: "center", gap: 12, color: "#7a7162", flexWrap: "wrap" },
   heroKicker: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4 },
   heroDot: { color: "#c9bda0" },
   heroTitle: {
     fontFamily: "'Instrument Serif', serif",
-    fontSize: 80, lineHeight: 1.0, letterSpacing: -1.8, margin: "24px 0 0",
+    fontSize: "clamp(40px, 8vw, 80px)", lineHeight: 1.0, letterSpacing: -1.8, margin: "24px 0 0",
     color: "#1a1a1a", fontWeight: 400, maxWidth: 1100, textWrap: "balance",
   },
   heroTitleEm: { fontStyle: "italic", color: primary },
   heroSubRow: { marginTop: 16 },
-  heroSubKicker: { fontFamily: "'Instrument Serif', serif", fontSize: 22, fontStyle: "italic", color: "#5a5244" },
-  heroLead: { marginTop: 28, maxWidth: 660, fontSize: 18, lineHeight: 1.55, color: "#3a3628", textWrap: "pretty" },
+  heroSubKicker: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", fontStyle: "italic", color: "#5a5244" },
+  heroLead: { marginTop: 28, maxWidth: 660, fontSize: "clamp(16px, 3vw, 18px)", lineHeight: 1.55, color: "#3a3628", textWrap: "pretty" },
   heroTaglineRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 36 },
   heroRule: { width: 56, height: 1, background: primary },
-  heroTagline: { fontFamily: "'Instrument Serif', serif", fontSize: 20, fontStyle: "italic", color: primary, maxWidth: 700 },
+  heroTagline: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 20px)", fontStyle: "italic", color: primary, maxWidth: 700 },
   ctaRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 44, flexWrap: "wrap" },
   ctaPrimary: { background: primary, color: "#fff", border: "none", padding: "14px 28px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500 },
   ctaSecondary: { background: "transparent", color: "#1a1a1a", border: "1px solid #1a1a1a", padding: "14px 28px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit" },
   ctaText: { color: primary, fontSize: 14, textDecoration: "none" },
 
   heroVenues: {
-    marginTop: 64, padding: "32px 36px",
+    marginTop: 64, padding: "clamp(20px, 4vw, 32px) clamp(20px, 4vw, 36px)",
     background: "#fff", border: "1px solid #e9e2d2", borderRadius: 6,
-    display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 32, alignItems: "center",
+    display: "grid", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 32, alignItems: "center",
   },
   venue: {},
   venueLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b" },
-  venueName: { fontFamily: "'Instrument Serif', serif", fontSize: 28, marginTop: 6, color: primary },
+  venueName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", marginTop: 6, color: primary },
   venueDetail: { fontSize: 14, color: "#5a5244", marginTop: 4 },
   venueDivider: { fontFamily: "'Instrument Serif', serif", fontSize: 36, color: "#c9bda0", fontStyle: "italic" },
 
@@ -433,25 +447,25 @@ const v1ehuStyles = (primary) => ({
     borderTop: "1px solid #e9e2d2", borderBottom: "1px solid #e9e2d2",
     maxWidth: 1280, margin: "0 auto",
   },
-  statCell: { padding: "36px 40px", borderLeft: "1px solid #e9e2d2" },
-  statN: { fontFamily: "'Instrument Serif', serif", fontSize: 52, color: primary, lineHeight: 1 },
+  statCell: { padding: "clamp(24px, 4vw, 36px) clamp(20px, 4vw, 40px)", borderBottom: "1px solid #e9e2d2", borderLeft: "1px solid #e9e2d2" },
+  statN: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(36px, 6vw, 52px)", color: primary, lineHeight: 1 },
   statL: { marginTop: 8, fontSize: 13, color: "#7a7162" },
 
-  section: { padding: "96px 64px", maxWidth: 1280, margin: "0 auto" },
+  section: { padding: "clamp(56px, 8vw, 96px) clamp(20px, 5vw, 64px)", maxWidth: 1280, margin: "0 auto" },
   sectionHead: { display: "flex", gap: 32, marginBottom: 56, alignItems: "flex-start" },
-  sectionNumber: { fontFamily: "'Instrument Serif', serif", fontSize: 24, fontStyle: "italic", color: primary, paddingRight: 20, borderRight: "1px solid #d8cfb8" },
-  sectionTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 44, lineHeight: 1.05, margin: 0, fontWeight: 400, letterSpacing: -0.8 },
+  sectionNumber: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", fontStyle: "italic", color: primary, paddingRight: 20, borderRight: "1px solid #d8cfb8" },
+  sectionTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(32px, 6vw, 44px)", lineHeight: 1.05, margin: 0, fontWeight: 400, letterSpacing: -0.8 },
   sectionLead: { marginTop: 10, color: "#7a7162", fontSize: 16, maxWidth: 640 },
 
   objsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
   axCard: { padding: "32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, minHeight: 180 },
   axNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 20 },
-  axTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 24, margin: "0 0 10px", fontWeight: 400 },
+  axTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", margin: "0 0 10px", fontWeight: 400 },
   axDesc: { color: "#5a5244", fontSize: 14, lineHeight: 1.55, margin: 0 },
 
   destGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
   destCard: { display: "flex", gap: 20, padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "flex-start" },
-  destNum: { fontFamily: "'Instrument Serif', serif", fontSize: 28, fontStyle: "italic", color: primary, lineHeight: 1 },
+  destNum: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", fontStyle: "italic", color: primary, lineHeight: 1 },
   destText: { fontSize: 15, color: "#3a3628", flex: 1 },
 
   lineasGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
@@ -460,7 +474,7 @@ const v1ehuStyles = (primary) => ({
   formatGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
   formatCard: { padding: "28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
   formatHead: { paddingBottom: 16, marginBottom: 16, borderBottom: "1px dashed #d8cfb8" },
-  formatName: { fontFamily: "'Instrument Serif', serif", fontSize: 24, color: primary },
+  formatName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary },
   formatLen: { fontSize: 12, color: "#7a7162", fontFamily: "monospace", marginTop: 4 },
   formatDesc: { fontSize: 14, color: "#5a5244", margin: 0, lineHeight: 1.55 },
 
@@ -470,7 +484,7 @@ const v1ehuStyles = (primary) => ({
   cfpDot: { width: 14, height: 14, borderRadius: 999, marginTop: 4, flexShrink: 0 },
   cfpStepBody: { flex: 1, borderBottom: "1px solid rgba(255,255,255,0.15)", paddingBottom: 24 },
   cfpStepDate: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.6)", fontFamily: "monospace" },
-  cfpStepLabel: { fontFamily: "'Instrument Serif', serif", fontSize: 22, marginTop: 6, color: "#fff", lineHeight: 1.25 },
+  cfpStepLabel: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", marginTop: 6, color: "#fff", lineHeight: 1.25 },
   cfpAside: { padding: 32, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 4, height: "fit-content" },
   cfpAsideHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.7)", marginTop: 4, marginBottom: 14 },
   normRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "10px 0", borderBottom: "1px dashed rgba(255,255,255,0.14)", fontSize: 13 },
@@ -484,24 +498,24 @@ const v1ehuStyles = (primary) => ({
 
   presGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
   presCard: { padding: "28px", background: "#faf7f1", border: "1px solid #e9e2d2", borderRadius: 4 },
-  presH: { fontFamily: "'Instrument Serif', serif", fontSize: 24, color: primary, marginBottom: 12 },
+  presH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary, marginBottom: 12 },
   presBody: { fontSize: 14, color: "#3a3628", margin: 0, lineHeight: 1.6 },
   presNota: { marginTop: 32, padding: "16px 24px", background: "#fff8e6", border: "1px solid #e8d895", borderRadius: 4, fontSize: 14, color: "#5a4a2a" },
   presNotaK: { fontWeight: 600, color: "#8a6a1a", textTransform: "uppercase", fontSize: 11, letterSpacing: 1, marginRight: 6 },
 
-  pubGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 40 },
+  pubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginBottom: 40 },
   octCard: { padding: 32, background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
-  octK: { fontFamily: "'Instrument Serif', serif", fontSize: 28, color: primary },
+  octK: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: primary },
   octBody: { fontSize: 14, color: "#3a3628", marginTop: 12, lineHeight: 1.6 },
   octDeadline: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #d8cfb8", display: "flex", justifyContent: "space-between", alignItems: "baseline" },
-  octDeadlineV: { fontFamily: "'Instrument Serif', serif", fontSize: 18, color: primary },
+  octDeadlineV: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary },
   pubNorms: { padding: 32, background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
 
   estructurasRow: { paddingTop: 32, borderTop: "1px solid #e9e2d2", marginTop: 8 },
   estHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginBottom: 16 },
   estGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
   estCard: { padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
-  estTipo: { fontFamily: "'Instrument Serif', serif", fontSize: 18, color: primary, marginBottom: 6 },
+  estTipo: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary, marginBottom: 6 },
   estBody: { fontSize: 13, color: "#5a5244", lineHeight: 1.55 },
 
   elementosRow: { marginTop: 40 },
@@ -510,13 +524,13 @@ const v1ehuStyles = (primary) => ({
 
   comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
   comiteCard: { display: "flex", gap: 20, padding: "20px 24px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
-  comiteNum: { fontFamily: "'Instrument Serif', serif", fontSize: 22, color: primary },
+  comiteNum: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", color: primary },
   comiteName: { fontSize: 16, color: "#3a3628" },
 
   orgsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
   orgCard: { padding: "32px 32px 28px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
   orgNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 16 },
-  orgName: { fontFamily: "'Instrument Serif', serif", fontSize: 30, color: "#1a1a1a", lineHeight: 1.1 },
+  orgName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 30px)", color: "#1a1a1a", lineHeight: 1.1 },
   orgParent: { fontSize: 14, color: primary, marginTop: 6 },
   orgCountry: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginTop: 12 },
 
@@ -524,20 +538,20 @@ const v1ehuStyles = (primary) => ({
   comGrupo: { background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" },
   comGrupoHead: { padding: "24px 24px 20px", borderBottom: "1px solid #e9e2d2", background: "#fbf9f4" },
   comGrupoKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace" },
-  comGrupoTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 26, margin: "8px 0 4px", fontWeight: 400 },
+  comGrupoTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 26px)", margin: "8px 0 4px", fontWeight: 400 },
   comGrupoCount: { fontSize: 12, color: "#7a7162", fontStyle: "italic" },
   comList: { padding: "8px 24px 20px" },
   comRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2", alignItems: "baseline" },
   comName: { fontSize: 14, color: "#1a1a1a", flex: 1 },
   comAff: { fontSize: 11, color: "#7a7162", fontFamily: "monospace", letterSpacing: 0.3, textAlign: "right" },
 
-  contactSec: { background: "#1a1a1a", color: "#fff", padding: "72px 64px" },
+  contactSec: { background: "#1a1a1a", color: "#fff", padding: "clamp(48px, 8vw, 72px) clamp(20px, 5vw, 64px)" },
   contactInner: { maxWidth: 1280, margin: "0 auto", textAlign: "center" },
   contactKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.55)" },
-  contactH: { fontFamily: "'Instrument Serif', serif", fontSize: 40, fontWeight: 400, margin: "12px 0 20px", letterSpacing: -0.6 },
-  contactMail: { fontFamily: "'Instrument Serif', serif", fontSize: 28, color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 6 },
+  contactH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(28px, 6vw, 40px)", fontWeight: 400, margin: "12px 0 20px", letterSpacing: -0.6 },
+  contactMail: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 6 },
 
-  footer: { padding: "40px 64px", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
+  footer: { padding: "clamp(32px, 5vw, 40px) clamp(20px, 5vw, 64px)", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
   footerRow: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" },
   footerBrand: {},
   footerTag: { fontSize: 12, color: "#7a7162", marginTop: 2 },
