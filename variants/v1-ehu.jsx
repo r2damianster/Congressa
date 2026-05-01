@@ -16,7 +16,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
            el.scrollBy({ left: 1, behavior: 'auto' });
            if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 1) el.scrollLeft = 0;
         }
-      }, 40);
+      }, 100);
     };
     startScroll();
     el.addEventListener('touchstart', () => clearInterval(autoScrollInterval), { passive: true });
