@@ -88,7 +88,7 @@ const CONTENT_EHU = {
     timeline: [
       { date: "Hasta 15 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
       { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },
-      { date: "Antes del 15 Oct 2026", label: "Matrícula de trabajos aceptados — solo autores con trabajo aprobado", status: "future", url: "https://forms.gle/jeQCEYQ3TjAFGwdR6" },
+      { date: "Antes del 15 Oct 2026", label: "Matrícula de trabajos aceptados — solo autores con trabajo aprobado", status: "future" },
       { date: "Antes del 20 Oct 2026", label: "Envío de material de apoyo a la presentación", status: "future" },
       { date: "28–30 Octubre 2026", label: "Presentación en el congreso (formato híbrido)", status: "future" },
       { date: "Hasta 15 Nov 2026", label: "Envío del trabajo extenso (publicación opcional)", status: "future" },
@@ -108,9 +108,7 @@ const CONTENT_EHU = {
         { f: "Simposio", req: "Resumen general 100 pal. + resúmenes por ponente 150–200 pal." },
       ],
     },
-    materiales: [
-      { tipo: "Matrícula de trabajos aceptados", desc: "Formalizar inscripción tras recibir notificación de aceptación", url: "https://forms.gle/jeQCEYQ3TjAFGwdR6", urlLabel: "Formulario matrícula" },
-    ],
+    materiales: [],
   },
   presentacionDia: {
     title: "Programa",
