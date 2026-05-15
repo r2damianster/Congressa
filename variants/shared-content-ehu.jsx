@@ -18,7 +18,7 @@ const CONTENT_EHU = {
     contacto: "Contacto",
   },
   heroLead:
-    "Tres días de comunicaciones, pósters y simposios sobre innovación educativa, inclusión, sostenibilidad y los Objetivos de Desarrollo Sostenible en la Educación Superior, con doble sede en Bilbao y Manabí.",
+    "Tres días de comunicaciones, pósters y simposios sobre innovación educativa, inclusión, sostenibilidad y los Objetivos de Desarrollo Sostenible en la Educación Superior, con doble sede en Bilbao y Manta.",
   ctas: {
     submit: "Enviar propuesta",
     program: "Ver programa",
@@ -32,7 +32,7 @@ const CONTENT_EHU = {
   ],
   presentacion: {
     title: "Sobre el congreso",
-    lead: 'El congreso internacional “Innovación educativa, Inclusión y Sostenibilidad” crea un entorno en el que educadores y estudiantes de Ecuador y la Universidad del País Vasco (EHU) pueden compartir vivencias y aprender unos de otros.',
+    lead: 'El congreso internacional “Innovación educativa, Inclusión y Sostenibilidad” crea un entorno en el que educadores y estudiantes de Iberoamérica y el mundo pueden compartir vivencias y aprender unos de otros.',
     objetivos: [
       { id: "01", title: "Intercambio cultural internacional", desc: "Facilitar la comprensión de los distintos enfoques educativos y de sostenibilidad en ambos países." },
       { id: "02", title: "Fortalecer habilidades nuevas", desc: "Proporcionar estrategias y metodologías que integren la sostenibilidad en los procesos de enseñanza." },
@@ -109,8 +109,6 @@ const CONTENT_EHU = {
       ],
     },
     materiales: [
-      { tipo: "Formulario de envío", desc: "Enviar propuesta de trabajo", url: "https://forms.gle/er4VkFhmJDhxDDuv6", urlLabel: "Abrir formulario" },
-      { tipo: "Plantilla Canva (Innovaciones)", desc: "Para innovaciones y experiencias didácticas", url: "https://canva.link/g47tvl157m7px79", urlLabel: "Ver plantilla" },
       { tipo: "Matrícula de trabajos aceptados", desc: "Formalizar inscripción tras recibir notificación de aceptación", url: "https://forms.gle/jeQCEYQ3TjAFGwdR6", urlLabel: "Formulario matrícula" },
     ],
   },
@@ -152,7 +150,7 @@ const CONTENT_EHU = {
     title: "Entidades organizadoras",
     items: [
       { name: "Facultad de Educación de Bilbao", parent: "Universidad del País Vasco · EHU", country: "España" },
-      { name: "Universidad Laica Eloy Alfaro", parent: "ULEAM · Facultad de Educación y Turismo · Manabí", country: "Ecuador" },
+      { name: "Universidad Laica Eloy Alfaro", parent: "ULEAM · Facultad de Educación y Turismo · Manta", country: "Ecuador" },
     ],
   },
   comites: {
