@@ -20,7 +20,6 @@ const CONTENT_EHU = {
   heroLead:
     "Tres días de comunicaciones, pósters y simposios sobre innovación educativa, inclusión, sostenibilidad y los Objetivos de Desarrollo Sostenible en la Educación Superior, con doble sede en Bilbao y Manabí.",
   ctas: {
-    register: "Hacer matrícula",
     submit: "Enviar propuesta",
     program: "Ver programa",
     download: "Descargar plantilla",
@@ -64,9 +63,23 @@ const CONTENT_EHU = {
   formatos: {
     title: "Formatos de participación",
     items: [
-      { f: "Comunicación", len: "Presencial u online · 10 min + preguntas", desc: "Presentación oral breve de una experiencia, propuesta o investigación." },
-      { f: "Póster", len: "Cartel · sesión específica", desc: "Exposición resumida en formato de cartel de un trabajo de investigación." },
-      { f: "Simposio", len: "Hasta 60 min · 5 ponentes máx.", desc: "Sesión planificada con coordinador/a en torno a un tema común." },
+      {
+        f: "Comunicación",
+        len: "Presencial (EHU o ULEAM) u online · 15 min",
+        desc: "Presentación oral breve de trabajos teóricos, propuestas o resultados de investigación. Resumen de 200–300 palabras: tema, objetivos, metodología y resultados.",
+      },
+      {
+        f: "Innovaciones o experiencias didácticas",
+        len: "Online · 15 min",
+        desc: "Presentaciones visuales breves que sintetizan de forma clara y estructurada un trabajo de investigación, de innovación o de experiencia relevante. Resumen usando la plantilla oficial.",
+        url: "https://canva.link/g47tvl157m7px79",
+        urlLabel: "Descargar plantilla Canva",
+      },
+      {
+        f: "Simposio",
+        len: "Presencial (EHU o ULEAM) · hasta 60 min",
+        desc: "Sesión temática coordinada. Incluye introducción del coordinador/a, contribuciones complementarias y turno de preguntas. Propuesta: resumen del simposio (100 palabras) + resúmenes de cada intervención (150–200 palabras).",
+      },
     ],
   },
   propuestas: {
@@ -74,10 +87,11 @@ const CONTENT_EHU = {
     lead: "Plazo abierto hasta el 15 de septiembre incluido. Evaluación por pares.",
     timeline: [
       { date: "Hasta 15 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
-      { date: "Tras evaluación", label: "Notificación: aceptación, aceptación con modificaciones o rechazo", status: "soon" },
-      { date: "20 Octubre 2026", label: "Envío de material de apoyo a la presentación", status: "future" },
-      { date: "28–30 Octubre 2026", label: "Presentación en el congreso", status: "future" },
-      { date: "15 Noviembre 2026", label: "Envío del trabajo extenso (publicación opcional)", status: "future" },
+      { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },
+      { date: "Antes del 15 Oct 2026", label: "Matrícula — solo autores con trabajo aceptado", status: "future", url: "https://forms.gle/jeQCEYQ3TjAFGwdR6" },
+      { date: "Antes del 20 Oct 2026", label: "Envío de material de apoyo a la presentación", status: "future" },
+      { date: "28–30 Octubre 2026", label: "Presentación en el congreso (formato híbrido)", status: "future" },
+      { date: "Hasta 15 Nov 2026", label: "Envío del trabajo extenso (publicación opcional)", status: "future" },
     ],
     normas: {
       idiomas: "Euskara, castellano e inglés",
@@ -86,29 +100,16 @@ const CONTENT_EHU = {
       metodologia: "Cuando no sean trabajos estrictamente de investigación, especificar la metodología seguida.",
     },
     materiales: [
-      { tipo: "Formulario de envío", desc: "Hezkuntza inklusio berrikuntza eta jasangarritasunari buruzko nazioarteko kongresua" },
-      { tipo: "Plantilla", desc: "Plantilla para comunicaciones, pósters y simposios" },
-      { tipo: "Matrícula", desc: "forms.gle/jeQCEYQ3TjAFGwdR6" },
+      { tipo: "Formulario de envío", desc: "Enviar propuesta de trabajo", url: "https://forms.gle/er4VkFhmJDhxDDuv6", urlLabel: "Abrir formulario" },
+      { tipo: "Plantilla Canva (Innovaciones)", desc: "Para innovaciones y experiencias didácticas", url: "https://canva.link/g47tvl157m7px79", urlLabel: "Ver plantilla" },
+      { tipo: "Matrícula (solo aceptados)", desc: "Formalizar inscripción tras recibir aceptación", url: "https://forms.gle/jeQCEYQ3TjAFGwdR6", urlLabel: "Formulario matrícula" },
     ],
   },
   presentacionDia: {
-    title: "Presentación de los trabajos aceptados",
-    lead: "Las comunicaciones se presentarán en streaming durante los días del congreso.",
-    items: [
-      {
-        h: "Comunicaciones",
-        body: "Duración máxima de 10 minutos, con turno de preguntas del moderador o asistentes. Se admiten vídeos sincrónicos previamente grabados; el día de la emisión al menos un autor/a debe estar presente.",
-      },
-      {
-        h: "Pósters",
-        body: "La relación definitiva se publicará en la web del congreso. La persona responsable debe estar en la sala asignada al menos 10 minutos antes del inicio de la sesión.",
-      },
-      {
-        h: "Simposios",
-        body: "Mesa de hasta 5 ponentes. El coordinador/a presenta el simposio, organiza los tiempos y modera el diálogo. Duración máxima total —exposiciones y preguntas— de una hora.",
-      },
-    ],
-    nota: "Material de apoyo: enviar antes del 20 de octubre inclusive a ane.gabikagogeaskoa@ehu.eus",
+    title: "Programa",
+    lead: "Próximamente se publicará información detallada sobre el programa y las conferencias.",
+    items: [],
+    nota: "",
   },
   publicacion: {
     title: "Publicación de los trabajos (opcional)",
@@ -222,8 +223,9 @@ const CONTENT_EHU = {
     ],
   },
   footer: {
-    contact: "ane.gabikagogeaskoa@ehu.eus",
-    copy: "© 2026 CIIIES · Organizado por la Facultad de Educación de Bilbao y ULEAM",
+    contact: "arturo.rodriguez@uleam.edu.ec",
+    contact2: "ane.gabikagogeaskoa@ehu.eus",
+    copy: "© 2026 CIIIES · Organizado por la ULEAM y la Facultad de Educación de Bilbao (EHU)",
   },
 };
 

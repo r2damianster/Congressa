@@ -76,16 +76,9 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Top nav */}
       <header style={s.nav}>
         <div style={s.logoWrap}>
-          <div style={s.logoMark}>
-            <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-              <rect x="2" y="2" width="28" height="28" rx="2" stroke={primary} strokeWidth="1.5" />
-              <path d="M10 22V10h6a4 4 0 010 8h-6M10 16h8" stroke={primary} strokeWidth="1.5" />
-            </svg>
-          </div>
-          <div>
-            <div style={s.logoWord}>Congressa</div>
-            <div style={s.logoSub}>CIIIES · 2026</div>
-          </div>
+          <img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.uniLogo} />
+          <div style={s.logoDividerV} />
+          <img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.uniLogo} />
         </div>
         <nav style={s.navLinks} className="nav-links">
           {Object.entries(c.nav).map(([k, v], i) => (
@@ -94,7 +87,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </nav>
         <div style={s.navRight}>
           <span style={s.langPill} className="lang-pill">ES · EU · EN</span>
-          <button style={s.navCta}>{c.ctas.register} →</button>
+          <a href="https://forms.gle/er4VkFhmJDhxDDuv6" style={{ ...s.navCta, textDecoration: "none" }}>{c.ctas.submit} →</a>
         </div>
       </header>
 
@@ -124,19 +117,20 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
 
         <div style={s.ctaRow} className="cta-row">
-          <button style={s.ctaPrimary}>{c.ctas.register}</button>
-          <button style={s.ctaSecondary}>{c.ctas.submit}</button>
+          <a href="https://forms.gle/er4VkFhmJDhxDDuv6" style={{ ...s.ctaPrimary, textDecoration: "none" }}>{c.ctas.submit}</a>
           <a style={s.ctaText} href="#propuestas">Ver bases de envío →</a>
         </div>
 
         <div style={s.heroVenues} className="hero-venues">
           <div style={s.venue}>
+            <img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.venueLogo} />
             <div style={s.venueLabel}>Sede 1 · Europa</div>
             <div style={s.venueName}>Facultad de Educación de Bilbao</div>
             <div style={s.venueDetail}>Universidad del País Vasco · EHU</div>
           </div>
           <div style={s.venueDivider} className="venue-divider">↔</div>
           <div style={s.venue}>
+            <img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.venueLogo} />
             <div style={s.venueLabel}>Sede 2 · América Latina</div>
             <div style={s.venueName}>ULEAM</div>
             <div style={s.venueDetail}>Universidad Laica Eloy Alfaro de Manabí · Ecuador</div>
@@ -229,6 +223,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
                 <div style={s.formatLen}>{f.len}</div>
               </div>
               <p style={s.formatDesc}>{f.desc}</p>
+              {f.url && <a href={f.url} target="_blank" rel="noopener" style={s.formatLink}>{f.urlLabel} →</a>}
             </div>
           ))}
         </div>
@@ -275,10 +270,11 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
               <div key={i} style={s.cfpFormat}>
                 <div style={s.cfpFormatName}>{m.tipo}</div>
                 <div style={s.cfpFormatLen}>{m.desc}</div>
+                {m.url && <a href={m.url} target="_blank" rel="noopener" style={s.cfpFormatLink}>{m.urlLabel} →</a>}
               </div>
             ))}
 
-            <button style={s.cfpCta}>{c.ctas.submit} →</button>
+            <a href="https://forms.gle/er4VkFhmJDhxDDuv6" target="_blank" rel="noopener" style={{ ...s.cfpCta, textDecoration: "none", display: "block", textAlign: "center" }}>{c.ctas.submit} →</a>
           </div>
         </div>
       </section>
@@ -291,17 +287,6 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <h2 style={s.sectionTitle}>{c.presentacionDia.title}</h2>
             <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
           </div>
-        </div>
-        <div style={s.presGrid}>
-          {c.presentacionDia.items.map((it, i) => (
-            <div key={i} style={s.presCard}>
-              <div style={s.presH}>{it.h}</div>
-              <p style={s.presBody}>{it.body}</p>
-            </div>
-          ))}
-        </div>
-        <div style={s.presNota}>
-          <span style={s.presNotaK}>Importante</span> · {c.presentacionDia.nota}
         </div>
       </section>
 
@@ -413,6 +398,9 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           <div style={s.contactKicker}>Contacto</div>
           <h3 style={s.contactH}>¿Dudas sobre el envío o la matrícula?</h3>
           <a href={`mailto:${c.footer.contact}`} style={s.contactMail}>{c.footer.contact}</a>
+          <div style={{ marginTop: 10 }}>
+            <a href={`mailto:${c.footer.contact2}`} style={{ ...s.contactMail, fontSize: "clamp(16px, 3vw, 22px)" }}>{c.footer.contact2}</a>
+          </div>
         </div>
       </section>
 
@@ -424,7 +412,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <div style={s.footerTag}>Plataforma de gestión de congresos académicos</div>
           </div>
           <div style={s.footerRight} className="footer-right">
-            <div>{c.footer.contact}</div>
+            <div><a href={`mailto:${c.footer.contact}`} style={{ color: "inherit", textDecoration: "none" }}>{c.footer.contact}</a></div>
+            <div><a href={`mailto:${c.footer.contact2}`} style={{ color: "inherit", textDecoration: "none" }}>{c.footer.contact2}</a></div>
             <div style={s.footerCopy}>{c.footer.copy}</div>
           </div>
         </div>
@@ -449,13 +438,9 @@ const v1ehuStyles = (primary) => ({
     background: "rgba(251,249,244,0.92)", backdropFilter: "blur(10px)",
     position: "sticky", top: 0, zIndex: 10,
   },
-  logoWrap: { display: "flex", alignItems: "center", gap: 10 },
-  logoMark: {
-    width: 36, height: 36, border: `1px solid ${primary}`, borderRadius: 4,
-    display: "flex", alignItems: "center", justifyContent: "center",
-  },
-  logoWord: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 20px)", letterSpacing: -0.2, color: primary },
-  logoSub: { fontSize: 10, letterSpacing: 1, color: "#7a7162", textTransform: "uppercase" },
+  logoWrap: { display: "flex", alignItems: "center", gap: 12 },
+  uniLogo: { height: 36, width: "auto", objectFit: "contain" },
+  logoDividerV: { width: 1, height: 28, background: "#d8cfb8" },
   navLinks: { display: "flex", gap: 22, margin: "0 auto" },
   navLink: { color: "#3a3628", fontSize: 13, textDecoration: "none" },
   navRight: { display: "flex", alignItems: "center", gap: 14 },
@@ -489,6 +474,7 @@ const v1ehuStyles = (primary) => ({
     display: "grid", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 32, alignItems: "center",
   },
   venue: {},
+  venueLogo: { height: 52, width: "auto", objectFit: "contain", marginBottom: 16, display: "block" },
   venueLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b" },
   venueName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", marginTop: 6, color: primary },
   venueDetail: { fontSize: 14, color: "#5a5244", marginTop: 4 },
@@ -529,6 +515,7 @@ const v1ehuStyles = (primary) => ({
   formatName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary },
   formatLen: { fontSize: 12, color: "#7a7162", fontFamily: "monospace", marginTop: 4 },
   formatDesc: { fontSize: 14, color: "#5a5244", margin: 0, lineHeight: 1.55 },
+  formatLink: { display: "inline-block", marginTop: 10, fontSize: 13, color: primary, textDecoration: "underline", textDecorationColor: "rgba(30,58,138,0.4)", textUnderlineOffset: 3 },
 
   cfpGrid: { display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 64 },
   cfpTimeline: {},
@@ -546,6 +533,7 @@ const v1ehuStyles = (primary) => ({
   cfpFormat: { padding: "12px 0", borderBottom: "1px dashed rgba(255,255,255,0.14)" },
   cfpFormatName: { fontFamily: "'Instrument Serif', serif", fontSize: 17, color: "#fff" },
   cfpFormatLen: { fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 },
+  cfpFormatLink: { fontSize: 12, color: "#fff", marginTop: 6, display: "inline-block", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 3 },
   cfpCta: { marginTop: 24, background: "#fff", color: primary, border: "none", padding: "14px 24px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500, width: "100%" },
 
   presGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
