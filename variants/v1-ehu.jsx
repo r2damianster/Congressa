@@ -87,7 +87,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </nav>
         <div style={s.navRight}>
           <span style={s.langPill} className="lang-pill">ES · EU · EN</span>
-          <a href="https://forms.gle/er4VkFhmJDhxDDuv6" style={{ ...s.navCta, textDecoration: "none" }}>{c.ctas.submit} →</a>
+          <a href="https://forms.gle/er4VkFhmJDhxDDuv6" target="_blank" rel="noopener" style={{ ...s.navCta, textDecoration: "none" }}>{c.ctas.submit} →</a>
         </div>
       </header>
 
@@ -117,7 +117,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
 
         <div style={s.ctaRow} className="cta-row">
-          <a href="https://forms.gle/er4VkFhmJDhxDDuv6" style={{ ...s.ctaPrimary, textDecoration: "none" }}>{c.ctas.submit}</a>
+          <a href="https://forms.gle/er4VkFhmJDhxDDuv6" target="_blank" rel="noopener" style={{ ...s.ctaPrimary, textDecoration: "none" }}>{c.ctas.submit}</a>
           <a style={s.ctaText} href="#propuestas">Ver bases de envío →</a>
         </div>
 
