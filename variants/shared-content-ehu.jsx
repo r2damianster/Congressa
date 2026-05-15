@@ -32,7 +32,7 @@ const CONTENT_EHU = {
   ],
   presentacion: {
     title: "Sobre el congreso",
-    lead: "El congreso internacional “Educación y Sostenibilidad” crea un entorno en el que educadores y estudiantes de Ecuador y la Universidad del País Vasco (EHU) pueden compartir vivencias y aprender unos de otros.",
+    lead: 'El congreso internacional “Innovación educativa, Inclusión y Sostenibilidad” crea un entorno en el que educadores y estudiantes de Ecuador y la Universidad del País Vasco (EHU) pueden compartir vivencias y aprender unos de otros.',
     objetivos: [
       { id: "01", title: "Intercambio cultural internacional", desc: "Facilitar la comprensión de los distintos enfoques educativos y de sostenibilidad en ambos países." },
       { id: "02", title: "Fortalecer habilidades nuevas", desc: "Proporcionar estrategias y metodologías que integren la sostenibilidad en los procesos de enseñanza." },
