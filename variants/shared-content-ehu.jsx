@@ -84,7 +84,7 @@ const CONTENT_EHU = {
   },
   propuestas: {
     title: "Envío de propuestas",
-    lead: "Plazo abierto hasta el 15 de septiembre de 2026. Evaluación por pares.",
+    lead: "Plazo abierto hasta el 15 de septiembre de 2026. Se aceptan propuestas en español, euskara e inglés. Evaluación por pares.",
     timeline: [
       { date: "Hasta 15 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
       { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },

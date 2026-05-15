@@ -260,17 +260,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           </div>
 
           <div style={s.cfpAside}>
-            <div style={s.cfpAsideHead}>Antes de abrir el formulario</div>
-            <div style={s.normRow}><span style={s.normK}>Idiomas</span><span style={s.normV}>{c.propuestas.normas.idiomas}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Evaluación</span><span style={s.normV}>{c.propuestas.normas.evaluacion}</span></div>
-            <div style={s.cfpNote}>Ten a mano:</div>
-            {c.propuestas.normas.checklist.map((item, i) => (
-              <div key={i} style={s.checkRow}>
-                <span style={s.checkMark}>□</span>
-                <span style={s.checkText}>{item}</span>
-              </div>
-            ))}
-            <div style={{ ...s.cfpAsideHead, marginTop: 20 }}>Según tu formato</div>
+            <div style={s.cfpAsideHead}>Según tu formato</div>
             {c.propuestas.normas.porFormato.map((pf, i) => (
               <div key={i} style={s.cfpFormat}>
                 <div style={s.cfpFormatName}>{pf.f}</div>
