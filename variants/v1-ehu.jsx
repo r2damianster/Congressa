@@ -133,7 +133,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.venueLogo} />
             <div style={s.venueLabel}>Sede 2 · América Latina</div>
             <div style={s.venueName}>ULEAM</div>
-            <div style={s.venueDetail}>Universidad Laica Eloy Alfaro de Manabí · Ecuador</div>
+            <div style={s.venueDetail}>Facultad de Educación y Turismo · Manabí, Ecuador</div>
           </div>
         </div>
       </section>

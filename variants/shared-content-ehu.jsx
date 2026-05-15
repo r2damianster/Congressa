@@ -143,7 +143,7 @@ const CONTENT_EHU = {
     title: "Entidades organizadoras",
     items: [
       { name: "Facultad de Educación de Bilbao", parent: "Universidad del País Vasco · EHU", country: "España" },
-      { name: "Universidad Laica Eloy Alfaro", parent: "ULEAM · Manabí", country: "Ecuador" },
+      { name: "Universidad Laica Eloy Alfaro", parent: "ULEAM · Facultad de Educación y Turismo · Manabí", country: "Ecuador" },
     ],
   },
   comites: {
