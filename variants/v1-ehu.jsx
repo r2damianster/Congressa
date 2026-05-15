@@ -90,6 +90,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           <a href="https://forms.gle/er4VkFhmJDhxDDuv6" target="_blank" rel="noopener" style={{ ...s.navCta, textDecoration: "none" }}>{c.ctas.submit} →</a>
         </div>
       </header>
+      <div style={s.navSpacer} />
 
       {/* Hero */}
       <section style={s.hero}>
@@ -446,11 +447,13 @@ const v1ehuStyles = (primary) => ({
     lineHeight: 1.55,
   },
   nav: {
-    display: "flex", alignItems: "center", padding: "clamp(16px, 4vw, 22px) clamp(16px, 4vw, 64px)",
+    display: "flex", alignItems: "center", padding: "clamp(14px, 3vw, 22px) clamp(16px, 4vw, 64px)",
     borderBottom: "1px solid #e9e2d2",
-    background: "rgba(251,249,244,0.92)", backdropFilter: "blur(10px)",
-    position: "sticky", top: 0, zIndex: 10,
+    background: "rgba(251,249,244,0.97)", backdropFilter: "blur(10px)",
+    position: "fixed", top: 0, left: 0, right: 0,
+    zIndex: 100, boxSizing: "border-box",
   },
+  navSpacer: { height: "clamp(64px, 10vw, 80px)" },
   logoWrap: { display: "flex", alignItems: "center", gap: 12 },
   uniLogo: { height: 36, width: "auto", objectFit: "contain" },
   logoDividerV: { width: 1, height: 28, background: "#d8cfb8" },
