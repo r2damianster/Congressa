@@ -324,12 +324,12 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           </div>
 
           <div style={s.pubNorms}>
-            <div style={s.cfpAsideHead}>Especificaciones</div>
-            <div style={s.normRow}><span style={s.normK}>Formato</span><span style={s.normV}>{c.publicacion.norms.formato}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Extensión</span><span style={s.normV}>{c.publicacion.norms.extension}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Tipografía</span><span style={s.normV}>{c.publicacion.norms.tipografia}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Referencias</span><span style={s.normV}>{c.publicacion.norms.referencias}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Figuras</span><span style={s.normV}>{c.publicacion.norms.figuras}</span></div>
+            <div style={s.pubNormHead}>Especificaciones</div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>Formato</span><span style={s.pubNormV}>{c.publicacion.norms.formato}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>Extensión</span><span style={s.pubNormV}>{c.publicacion.norms.extension}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>Tipografía</span><span style={s.pubNormV}>{c.publicacion.norms.tipografia}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>Referencias</span><span style={s.pubNormV}>{c.publicacion.norms.referencias}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>Figuras</span><span style={s.pubNormV}>{c.publicacion.norms.figuras}</span></div>
           </div>
         </div>
 
@@ -410,9 +410,9 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         <div style={s.contactInner}>
           <div style={s.contactKicker}>Contacto</div>
           <h3 style={s.contactH}>¿Dudas sobre el envío o la matrícula?</h3>
-          <a href={`mailto:${c.footer.contact}`} style={s.contactMail}>{c.footer.contact}</a>
-          <div style={{ marginTop: 10 }}>
-            <a href={`mailto:${c.footer.contact2}`} style={{ ...s.contactMail, fontSize: "clamp(16px, 3vw, 22px)" }}>{c.footer.contact2}</a>
+          <a href={`mailto:${c.footer.contactSection}`} style={s.contactMailSm}>{c.footer.contactSection}</a>
+          <div style={{ marginTop: 8 }}>
+            <a href={`mailto:${c.footer.contact2Section}`} style={s.contactMailSm}>{c.footer.contact2Section}</a>
           </div>
         </div>
       </section>
@@ -560,6 +560,10 @@ const v1ehuStyles = (primary) => ({
   presNotaK: { fontWeight: 600, color: "#8a6a1a", textTransform: "uppercase", fontSize: 11, letterSpacing: 1, marginRight: 6 },
 
   pubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 24, marginBottom: 40 },
+  pubNormHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginBottom: 14 },
+  pubNormRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "10px 0", borderBottom: "1px dashed #e9e2d2", fontSize: 13 },
+  pubNormK: { color: "#7a7162", textTransform: "uppercase", fontSize: 10, letterSpacing: 1, paddingTop: 2, minWidth: 88, flexShrink: 0 },
+  pubNormV: { color: "#1a1a1a", textAlign: "right", flex: 1 },
   octCard: { padding: 32, background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
   octK: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: primary },
   octBody: { fontSize: 14, color: "#3a3628", marginTop: 12, lineHeight: 1.6 },
@@ -606,6 +610,7 @@ const v1ehuStyles = (primary) => ({
   contactKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.55)" },
   contactH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(28px, 6vw, 40px)", fontWeight: 400, margin: "12px 0 20px", letterSpacing: -0.6 },
   contactMail: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 6 },
+  contactMailSm: { fontFamily: "'Geist', sans-serif", fontSize: "clamp(14px, 2.5vw, 18px)", color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 4, display: "block" },
 
   footer: { padding: "clamp(24px, 5vw, 40px) clamp(16px, 4vw, 64px)", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
   footerRow: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" },

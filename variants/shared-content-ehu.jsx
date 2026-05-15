@@ -251,7 +251,9 @@ const CONTENT_EHU = {
   footer: {
     contact: "arturo.rodriguez@uleam.edu.ec",
     contact2: "ane.gabikagogeaskoa@ehu.eus",
-    copy: "© 2026 CIIIES · Organizado por la ULEAM y la Facultad de Educación de Bilbao (EHU)",
+    contactSection: "jhonny.villafuerte@uleam.edu.ec",
+    contact2Section: "ane.gabikagogeaskoa@ehu.eus",
+    copy: "© 2026 CIIIES · Organizado por la Facultad de Educación y Turismo (FET) de la ULEAM y la Facultad de Educación de Bilbao (EHU) de la Universidad del País Vasco",
   },
 };
 
