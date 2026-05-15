@@ -76,9 +76,9 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Top nav */}
       <header style={s.nav}>
         <div style={s.logoWrap}>
-          <img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.uniLogo} />
+          <a href="https://www.uleam.edu.ec/" target="_blank" rel="noopener"><img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.uniLogo} /></a>
           <div style={s.logoDividerV} />
-          <img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.uniLogo} />
+          <a href="https://www.ehu.eus/es/" target="_blank" rel="noopener"><img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.uniLogo} /></a>
         </div>
         <nav style={s.navLinks} className="nav-links">
           {Object.entries(c.nav).map(([k, v], i) => (
@@ -123,14 +123,14 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
         <div style={s.heroVenues} className="hero-venues">
           <div style={s.venue}>
-            <img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.venueLogo} />
+            <a href="https://www.ehu.eus/es/" target="_blank" rel="noopener"><img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.venueLogo} /></a>
             <div style={s.venueLabel}>Sede 1 · Europa</div>
             <div style={s.venueName}>Facultad de Educación de Bilbao</div>
             <div style={s.venueDetail}>Universidad del País Vasco · EHU</div>
           </div>
           <div style={s.venueDivider} className="venue-divider">↔</div>
           <div style={s.venue}>
-            <img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.venueLogo} />
+            <a href="https://www.uleam.edu.ec/" target="_blank" rel="noopener"><img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.venueLogo} /></a>
             <div style={s.venueLabel}>Sede 2 · América Latina</div>
             <div style={s.venueName}>ULEAM</div>
             <div style={s.venueDetail}>Facultad de Educación y Turismo · Manabí, Ecuador</div>

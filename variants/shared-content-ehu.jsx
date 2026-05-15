@@ -48,7 +48,7 @@ const CONTENT_EHU = {
       "Docentes e investigadores/as de universidades de España, Ecuador y universidades internacionales colaboradoras",
       "Alumnado de grado y posgrado en proyectos de innovación docente",
       "Profesionales del ámbito escolar y de la Educación Social",
-      "Responsables de practicum, TFG, TFM y Tesis Doctorales",
+      "Responsables de practicum, comunicaciones de Trabajos de Fin de Grado (TFG), Trabajos de Fin de Máster (TFM) y Tesis Doctorales",
     ],
   },
   lineas: {
@@ -84,7 +84,7 @@ const CONTENT_EHU = {
   },
   propuestas: {
     title: "Envío de propuestas",
-    lead: "Plazo abierto hasta el 15 de septiembre incluido. Evaluación por pares.",
+    lead: "Plazo abierto hasta el 15 de septiembre de 2026. Evaluación por pares.",
     timeline: [
       { date: "Hasta 15 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
       { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },
