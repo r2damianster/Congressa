@@ -413,7 +413,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         <div style={s.footerRow} className="footer-row">
           <div style={s.footerBrand}>
             <div style={s.logoWord}>Congressa</div>
-            <div style={s.footerTag}>Plataforma de gestión de congresos académicos (Creado por Arturo Rodríguez)</div>
+            <div style={s.footerTag}>Plataforma de gestión de congresos académicos · <a href="mailto:arturo.rodriguez@uleam.edu.ec" style={{ color: "inherit", textDecoration: "underline" }}>Creado por Arturo Rodríguez</a></div>
           </div>
           <div style={s.footerRight} className="footer-right">
             <div style={{ fontSize: 11, letterSpacing: 1, color: "#a69a7b", textTransform: "uppercase", marginBottom: 4 }}>Contacto CIIIES 2026</div>
