@@ -259,13 +259,26 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           </div>
 
           <div style={s.cfpAside}>
-            <div style={s.cfpAsideHead}>Normas de la propuesta</div>
+            <div style={s.cfpAsideHead}>Antes de abrir el formulario</div>
             <div style={s.normRow}><span style={s.normK}>Idiomas</span><span style={s.normV}>{c.propuestas.normas.idiomas}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Extensión</span><span style={s.normV}>{c.propuestas.normas.extension}</span></div>
-            <div style={s.normRow}><span style={s.normK}>Estructura</span><span style={s.normV}>{c.propuestas.normas.estructura}</span></div>
-            <div style={s.cfpNote}>{c.propuestas.normas.metodologia}</div>
+            <div style={s.normRow}><span style={s.normK}>Evaluación</span><span style={s.normV}>{c.propuestas.normas.evaluacion}</span></div>
+            <div style={s.cfpNote}>Ten a mano:</div>
+            {c.propuestas.normas.checklist.map((item, i) => (
+              <div key={i} style={s.checkRow}>
+                <span style={s.checkMark}>□</span>
+                <span style={s.checkText}>{item}</span>
+              </div>
+            ))}
+            <div style={{ ...s.cfpAsideHead, marginTop: 20 }}>Según tu formato</div>
+            {c.propuestas.normas.porFormato.map((pf, i) => (
+              <div key={i} style={s.cfpFormat}>
+                <div style={s.cfpFormatName}>{pf.f}</div>
+                <div style={s.cfpFormatLen}>{pf.req}</div>
+                {pf.url && <a href={pf.url} target="_blank" rel="noopener" style={s.cfpFormatLink}>Plantilla Canva →</a>}
+              </div>
+            ))}
 
-            <div style={s.cfpAsideHead}>Materiales</div>
+            <div style={s.cfpAsideHead}>Formularios</div>
             {c.propuestas.materiales.map((m, i) => (
               <div key={i} style={s.cfpFormat}>
                 <div style={s.cfpFormatName}>{m.tipo}</div>
@@ -530,6 +543,9 @@ const v1ehuStyles = (primary) => ({
   normK: { color: "rgba(255,255,255,0.55)", textTransform: "uppercase", fontSize: 10, letterSpacing: 1, paddingTop: 2, minWidth: 88 },
   normV: { color: "#fff", textAlign: "right", flex: 1 },
   cfpNote: { fontSize: 12, color: "rgba(255,255,255,0.65)", marginTop: 14, fontStyle: "italic", lineHeight: 1.5 },
+  checkRow: { display: "flex", gap: 8, alignItems: "baseline", padding: "5px 0", borderBottom: "1px dashed rgba(255,255,255,0.1)" },
+  checkMark: { fontSize: 13, color: "rgba(255,255,255,0.5)", flexShrink: 0 },
+  checkText: { fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.4 },
   cfpFormat: { padding: "12px 0", borderBottom: "1px dashed rgba(255,255,255,0.14)" },
   cfpFormatName: { fontFamily: "'Instrument Serif', serif", fontSize: 17, color: "#fff" },
   cfpFormatLen: { fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 },

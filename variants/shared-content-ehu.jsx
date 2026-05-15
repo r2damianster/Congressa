@@ -5,7 +5,7 @@ const CONTENT_EHU = {
   eventShort: "CIIIES 2026",
   eventFull: "Congreso Internacional sobre Innovación educativa, inclusión y sostenibilidad en Educación Superior",
   subtitle: "Intercambio de experiencias",
-  tagline: "Educación y sostenibilidad — un diálogo entre la EHU, ULEAM, Colombia y Chile",
+  tagline: "Un diálogo entre los formadores de docentes de Iberoamérica",
   dates: "28, 29 y 30 de Octubre 2026",
   location: "Facultad de Educación de Bilbao (EHU) · ULEAM (Ecuador)",
   hybrid: "Formato online y presencial · doble sede",
@@ -94,10 +94,19 @@ const CONTENT_EHU = {
       { date: "Hasta 15 Nov 2026", label: "Envío del trabajo extenso (publicación opcional)", status: "future" },
     ],
     normas: {
-      idiomas: "Euskara, español e inglés",
-      extension: "Mín. 200 — máx. 300 palabras",
-      estructura: "Introducción, objetivos, método, resultados y conclusiones",
-      metodologia: "Cuando no sean trabajos estrictamente de investigación, especificar la metodología seguida.",
+      idiomas: "Español · Euskara · English",
+      evaluacion: "Evaluación por pares · Notificación antes del 30 Sep",
+      checklist: [
+        "Nombre, institución y email (propios y de coautores)",
+        "Título de la propuesta",
+        "Línea temática y formato elegidos",
+        "Idioma de presentación",
+      ],
+      porFormato: [
+        { f: "Comunicación", req: "Resumen 200–300 palabras: tema, objetivos, metodología, resultados" },
+        { f: "Innovaciones", req: "PDF desde plantilla Canva", url: "https://canva.link/g47tvl157m7px79" },
+        { f: "Simposio", req: "Resumen general 100 pal. + resúmenes por ponente 150–200 pal." },
+      ],
     },
     materiales: [
       { tipo: "Formulario de envío", desc: "Enviar propuesta de trabajo", url: "https://forms.gle/er4VkFhmJDhxDDuv6", urlLabel: "Abrir formulario" },
