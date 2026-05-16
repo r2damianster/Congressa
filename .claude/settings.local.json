@@ -1,31 +1,35 @@
 {
-  "hooks": {
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "lean-ctx hook rewrite",
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash|bash"
-      },
-      {
-        "hooks": [
-          {
-            "command": "lean-ctx hook redirect",
-            "type": "command"
-          }
-        ],
-        "matcher": "Read|read|ReadFile|read_file|View|view|Grep|grep|Search|search|ListFiles|list_files|ListDirectory|list_directory"
-      }
-    ]
-  },
   "permissions": {
     "allow": [
       "Bash(npm install *)",
       "Bash(lean-ctx --version)",
-      "Bash(lean-ctx init *)"
+      "Bash(lean-ctx init *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\User\\\\.claude\\\\projects\\\\c--Users-User-Documents-Desarrollo-Web-Congress-manager\\\\memory\")",
+      "Bash(Write-Host \"OK\")"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "lean-ctx hook rewrite"
+          }
+        ]
+      },
+      {
+        "matcher": "Read|read|ReadFile|read_file|View|view|Grep|grep|Search|search|ListFiles|list_files|ListDirectory|list_directory",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "lean-ctx hook redirect"
+          }
+        ]
+      }
     ]
   }
 }
