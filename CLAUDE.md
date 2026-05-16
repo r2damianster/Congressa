@@ -2,6 +2,16 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CIIIES 2026 — Regla trilingüe (ES / EU / EN)
+
+`v1-ehu.jsx` y `shared-content-ehu.jsx` son los únicos archivos con contenido en 3 idiomas.
+
+**Regla:** cualquier cambio que afecte contenido visible (textos, labels de navegación, botones, secciones) en el landing CIIIES **debe aplicarse en las 3 versiones** (`es`, `eu`, `en`) dentro de `shared-content-ehu.jsx`.
+
+- Los strings hardcodeados en `v1-ehu.jsx` van a `c.ui.*` o `c.venues.*` — nunca texto fijo.
+- Las listas de miembros (`_ORG`, `_SCI`, `_ED`) y `_ORGS` son compartidas — no se traducen.
+- No commitear hasta verificar que las 3 versiones estén consistentes.
+
 ## Serving locally
 
 There is no build step. Open HTML files directly in a browser **or** serve with a local HTTP server (required for `.design-canvas.state.json` persistence, which uses `fetch()`):
