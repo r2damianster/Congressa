@@ -2,7 +2,8 @@
 // EHU + ULEAM + Colombia + Chile · Educación, innovación, inclusión y sostenibilidad
 
 const V1_EHU = ({ primary = "#1e3a8a" }) => {
-  const c = window.CONTENT_EHU;
+  const [lang, setLang] = React.useState('es');
+  const c = window.CONTENT_EHU[lang];
   const s = v1ehuStyles(primary);
 
   const scrollRef = React.useRef(null);
@@ -86,7 +87,13 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           ))}
         </nav>
         <div style={s.navRight}>
-          <span style={s.langPill} className="lang-pill">ES · EU · EN</span>
+          <div style={s.langToggle} className="lang-pill">
+            {['es', 'eu', 'en'].map(l => (
+              <button key={l} onClick={() => setLang(l)} style={{ ...s.langBtn, ...(lang === l ? { background: primary, color: '#fff' } : {}) }}>
+                {l.toUpperCase()}
+              </button>
+            ))}
+          </div>
           <a href="https://forms.gle/er4VkFhmJDhxDDuv6" target="_blank" rel="noopener" style={{ ...s.navCta, textDecoration: "none" }}>{c.ctas.submit} →</a>
         </div>
       </header>
@@ -103,7 +110,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
 
         <h1 style={s.heroTitle}>
-          Innovación educativa, <em style={s.heroTitleEm}>inclusión</em> y sostenibilidad en Educación Superior
+          {c.heroTitleParts[0]} <em style={s.heroTitleEm}>{c.heroTitleParts[1]}</em> {c.heroTitleParts[2]}
         </h1>
 
         <div style={s.heroSubRow}>
@@ -119,22 +126,22 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
 
         <div style={s.ctaRow} className="cta-row">
           <a href="https://forms.gle/er4VkFhmJDhxDDuv6" target="_blank" rel="noopener" style={{ ...s.ctaPrimary, textDecoration: "none" }}>{c.ctas.submit}</a>
-          <a style={s.ctaText} href="#propuestas">Ver bases de envío →</a>
+          <a style={s.ctaText} href="#propuestas">{c.ui.verBases}</a>
         </div>
 
         <div style={s.heroVenues} className="hero-venues">
           <div style={s.venue}>
             <a href="https://www.ehu.eus/es/" target="_blank" rel="noopener"><img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.venueLogo} /></a>
-            <div style={s.venueLabel}>Sede 1 · Europa</div>
-            <div style={s.venueName}>Facultad de Educación de Bilbao</div>
-            <div style={s.venueDetail}>Universidad del País Vasco · EHU</div>
+            <div style={s.venueLabel}>{c.venues.v1label}</div>
+            <div style={s.venueName}>{c.venues.v1name}</div>
+            <div style={s.venueDetail}>{c.venues.v1detail}</div>
           </div>
           <div style={s.venueDivider} className="venue-divider">↔</div>
           <div style={s.venue}>
             <a href="https://www.uleam.edu.ec/" target="_blank" rel="noopener"><img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.venueLogo} /></a>
-            <div style={s.venueLabel}>Sede 2 · América Latina</div>
-            <div style={s.venueName}>ULEAM</div>
-            <div style={s.venueDetail}>Facultad de Educación y Turismo · Manta, Ecuador</div>
+            <div style={s.venueLabel}>{c.venues.v2label}</div>
+            <div style={s.venueName}>{c.venues.v2name}</div>
+            <div style={s.venueDetail}>{c.venues.v2detail}</div>
           </div>
         </div>
       </section>
@@ -260,7 +267,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           </div>
 
           <div style={s.cfpAside}>
-            <div style={s.cfpAsideHead}>Según tu formato</div>
+            <div style={s.cfpAsideHead}>{c.ui.cfpAside}</div>
             {c.propuestas.normas.porFormato.map((pf, i) => (
               <div key={i} style={s.cfpFormat}>
                 <div style={s.cfpFormatName}>{pf.f}</div>
@@ -269,7 +276,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
               </div>
             ))}
 
-            <div style={s.cfpAsideHead}>Formularios</div>
+            <div style={s.cfpAsideHead}>{c.ui.cfpForms}</div>
             {c.propuestas.materiales.map((m, i) => (
               <div key={i} style={s.cfpFormat}>
                 <div style={s.cfpFormatName}>{m.tipo}</div>
@@ -309,23 +316,23 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <div style={s.octK}>{c.publicacion.octaedro.h}</div>
             <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
             <div style={s.octDeadline} className="oct-deadline">
-              <span style={s.normK}>Fecha límite</span>
+              <span style={s.normK}>{c.ui.pubDeadline}</span>
               <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
             </div>
           </div>
 
           <div style={s.pubNorms}>
-            <div style={s.pubNormHead}>Especificaciones</div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>Formato</span><span style={s.pubNormV}>{c.publicacion.norms.formato}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>Extensión</span><span style={s.pubNormV}>{c.publicacion.norms.extension}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>Tipografía</span><span style={s.pubNormV}>{c.publicacion.norms.tipografia}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>Referencias</span><span style={s.pubNormV}>{c.publicacion.norms.referencias}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>Figuras</span><span style={s.pubNormV}>{c.publicacion.norms.figuras}</span></div>
+            <div style={s.pubNormHead}>{c.ui.pubSpecs}</div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubFormat}</span><span style={s.pubNormV}>{c.publicacion.norms.formato}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubExt}</span><span style={s.pubNormV}>{c.publicacion.norms.extension}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubTypo}</span><span style={s.pubNormV}>{c.publicacion.norms.tipografia}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubRefs}</span><span style={s.pubNormV}>{c.publicacion.norms.referencias}</span></div>
+            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubFigs}</span><span style={s.pubNormV}>{c.publicacion.norms.figuras}</span></div>
           </div>
         </div>
 
         <div style={s.estructurasRow}>
-          <div style={s.estHead}>Estructura del trabajo en extenso</div>
+          <div style={s.estHead}>{c.ui.pubStructureHead}</div>
           <div style={s.estGrid} className="scroll-row">
             {c.publicacion.estructuras.map((e, i) => (
               <div key={i} style={s.estCard}>
@@ -337,7 +344,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
 
         <div style={s.elementosRow}>
-          <div style={s.estHead}>Elementos obligatorios del texto</div>
+          <div style={s.estHead}>{c.ui.pubElemsHead}</div>
           <ul style={s.elList}>
             {c.publicacion.elementos.map((e, i) => (
               <li key={i} style={s.elLi}>{e}</li>
@@ -381,7 +388,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
               <div style={s.comGrupoHead}>
                 <div style={s.comGrupoKicker}>0{i + 1} · {g.kicker}</div>
                 <h3 style={s.comGrupoTitle}>{g.nombre}</h3>
-                <div style={s.comGrupoCount}>{g.miembros.length} miembros</div>
+                <div style={s.comGrupoCount}>{g.miembros.length} {c.ui.membros}</div>
               </div>
               <div style={s.comList}>
                 {g.miembros.map((m, j) => (
@@ -399,8 +406,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Contact CTA */}
       <section style={s.contactSec} id="contacto">
         <div style={s.contactInner}>
-          <div style={s.contactKicker}>Contacto</div>
-          <h3 style={s.contactH}>¿Dudas sobre el envío o la matrícula?</h3>
+          <div style={s.contactKicker}>{c.ui.contactKicker}</div>
+          <h3 style={s.contactH}>{c.ui.contactH}</h3>
           <a href={`mailto:${c.footer.contactSection}`} style={s.contactMailSm}>{c.footer.contactSection}</a>
           <div style={{ marginTop: 8 }}>
             <a href={`mailto:${c.footer.contact2Section}`} style={s.contactMailSm}>{c.footer.contact2Section}</a>
@@ -450,7 +457,8 @@ const v1ehuStyles = (primary) => ({
   navLinks: { display: "flex", gap: 22, margin: "0 auto" },
   navLink: { color: "#3a3628", fontSize: 13, textDecoration: "none" },
   navRight: { display: "flex", alignItems: "center", gap: 14 },
-  langPill: { fontSize: 11, letterSpacing: 1, color: "#7a7162", border: "1px solid #d8cfb8", padding: "4px 10px", borderRadius: 999 },
+  langToggle: { display: "flex", border: "1px solid #d8cfb8", borderRadius: 999, overflow: "hidden" },
+  langBtn: { background: "transparent", border: "none", padding: "5px 10px", fontSize: 11, letterSpacing: 1, color: "#7a7162", cursor: "pointer", fontFamily: "inherit", transition: "background 0.15s, color 0.15s" },
   navCta: { background: primary, color: "#fff", border: "none", padding: "10px 18px", borderRadius: 999, fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
 
   hero: { padding: "clamp(32px, 6vw, 80px) clamp(16px, 4vw, 64px) clamp(32px, 5vw, 48px)", maxWidth: 1280, margin: "0 auto" },
