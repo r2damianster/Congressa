@@ -73,12 +73,22 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           }
 
           .objs-grid {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 12px !important;
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px !important;
           }
           .objs-grid > * {
             min-height: auto !important;
+            padding: 14px 12px !important;
+          }
+
+          .comites-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+          }
+          .comites-wrap > * {
+            width: 100% !important;
           }
 
         }
@@ -358,7 +368,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.comites.lead}</p>
           </div>
         </div>
-        <div style={s.comitesWrap} className="scroll-row">
+        <div style={s.comitesWrap} className="comites-wrap">
           {c.comites.grupos.map((g, i) => (
             <div key={i} style={s.comGrupo}>
               <div style={s.comGrupoHead}>
@@ -366,7 +376,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
                 <h3 style={s.comGrupoTitle}>{g.nombre}</h3>
                 <div style={s.comGrupoCount}>{g.miembros.length} {c.ui.membros}</div>
               </div>
-              <div style={s.comList}>
+              <div style={{ ...s.comList, ...(g.miembros.length > 20 ? { display: "grid", gridTemplateColumns: "repeat(2, 1fr)" } : {}) }}>
                 {g.miembros.map((m, j) => (
                   <div key={j} style={s.comRow}>
                     <div style={s.comName}>{m.n}</div>
