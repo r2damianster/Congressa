@@ -290,10 +290,39 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
       </section>
 
+      {/* Matrícula */}
+      <section style={s.section} id="matricula">
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">VI</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.matricula.title}</h2>
+            <p style={s.sectionLead}>{c.matricula.lead}</p>
+          </div>
+        </div>
+        <div style={s.matCard}>
+          <p style={s.matInstruction}>{c.matricula.instruccion}</p>
+          <div style={s.matFields}>
+            <div style={s.matRow}>
+              <span style={s.matK}>IBAN</span>
+              <span style={s.matV}>{c.matricula.iban}</span>
+            </div>
+            <div style={s.matRow}>
+              <span style={s.matK}>SWIFT / BIC</span>
+              <span style={s.matV}>{c.matricula.swift}</span>
+            </div>
+            <div style={s.matRow}>
+              <span style={s.matK}>{c.matricula.conceptoLabel}</span>
+              <span style={s.matV}>{c.matricula.concepto}</span>
+            </div>
+          </div>
+          <p style={s.matNota}>{c.matricula.nota}</p>
+        </div>
+      </section>
+
       {/* Presentación día */}
       <section style={s.section} id="programa">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VI</div>
+          <div style={s.sectionNumber} className="section-number">VII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.presentacionDia.title}</h2>
             <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
@@ -304,7 +333,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Publicación */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="publicacion">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VII</div>
+          <div style={s.sectionNumber} className="section-number">VIII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.publicacion.title}</h2>
             <p style={s.sectionLead}>{c.publicacion.lead}</p>
@@ -356,7 +385,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Entidades organizadoras */}
       <section style={s.section}>
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VIII</div>
+          <div style={s.sectionNumber} className="section-number">IX</div>
           <div>
             <h2 style={s.sectionTitle}>{c.organizadoras.title}</h2>
           </div>
@@ -376,7 +405,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Comités */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="comites">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">IX</div>
+          <div style={s.sectionNumber} className="section-number">X</div>
           <div>
             <h2 style={s.sectionTitle}>{c.comites.title}</h2>
             <p style={s.sectionLead}>{c.comites.lead}</p>
@@ -582,6 +611,14 @@ const v1ehuStyles = (primary) => ({
   elementosRow: { marginTop: 24 },
   elList: { listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 },
   elLi: { padding: "10px 16px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, fontSize: 13, color: "#3a3628" },
+
+  matCard: { padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: `1px solid ${primary}`, borderRadius: 4, maxWidth: 640 },
+  matInstruction: { fontSize: 15, color: "#3a3628", margin: "0 0 24px" },
+  matFields: { display: "flex", flexDirection: "column", gap: 0 },
+  matRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2" },
+  matK: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", color: "#7a7162", minWidth: 130, flexShrink: 0 },
+  matV: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right" },
+  matNota: { marginTop: 20, fontSize: 13, color: "#7a7162", fontStyle: "italic", lineHeight: 1.55, margin: "20px 0 0" },
 
   comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
   comiteCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
