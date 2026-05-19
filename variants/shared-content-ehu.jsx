@@ -120,7 +120,7 @@ const CONTENT_EHU = {
     stats: [
       { n: "3", l: "Días de congreso" },
       { n: "2", l: "Sedes presenciales" },
-      { n: "4", l: "Países participantes" },
+      { n: "7+", l: "Países participantes" },
       { n: "3", l: "Idiomas aceptados" },
     ],
     ui: {
@@ -165,7 +165,7 @@ const CONTENT_EHU = {
       title: "Líneas temáticas",
       lead: "Tres líneas para presentar trabajos en formato científico.",
       items: [
-        { id: "01", title: "Trabajos teóricos o revisiones", desc: "Sobre temáticas relacionadas con educación y sostenibilidad en la Educación Superior." },
+        { id: "01", title: "Trabajos teóricos o empíricos", desc: "Sobre temáticas relacionadas con educación y sostenibilidad en la Educación Superior." },
         { id: "02", title: "Experiencias prácticas de innovación", desc: "Innovación educativa en el currículum de la Educación Superior." },
         { id: "03", title: "Innovación curricular y comunitaria", desc: "TFG, TFM y Tesis que vinculan la formación con la comunidad, el contexto profesional y los ODS." },
       ],
@@ -180,14 +180,14 @@ const CONTENT_EHU = {
         },
         {
           f: "Innovaciones o experiencias didácticas",
-          len: "Online · 15 min",
+          len: "Presencial (EHU o ULEAM) · 15 min",
           desc: "Presentaciones visuales breves que sintetizan de forma clara y estructurada un trabajo de investigación, de innovación o de experiencia relevante. Resumen usando la plantilla oficial.",
           url: "https://canva.link/g47tvl157m7px79",
           urlLabel: "Descargar plantilla Canva",
         },
         {
           f: "Simposio",
-          len: "Presencial (EHU o ULEAM) · hasta 60 min",
+          len: "Presencial (EHU o ULEAM) u online · hasta 60 min",
           desc: "Sesión temática coordinada. Incluye introducción del coordinador/a, contribuciones complementarias y turno de preguntas. Propuesta: resumen del simposio (100 palabras) + resúmenes de cada intervención (150–200 palabras).",
         },
       ],
@@ -321,7 +321,7 @@ const CONTENT_EHU = {
     stats: [
       { n: "3", l: "Kongresu egun" },
       { n: "2", l: "Egoitza presentzial" },
-      { n: "4", l: "Herrialde parte-hartzaile" },
+      { n: "7+", l: "Herrialde parte-hartzaile" },
       { n: "3", l: "Onartutako hizkuntzak" },
     ],
     ui: {
@@ -366,7 +366,7 @@ const CONTENT_EHU = {
       title: "Ildo tematikoak",
       lead: "Hiru lerro lan zientifiko formatuan aurkezteko.",
       items: [
-        { id: "01", title: "Lan teorikoak eta literaturaren berrikuspenak", desc: "Hezkuntzaren eta jasangarritasunaren arteko elkargunea jorratzen duten ikerketa teorikoak, goi-mailako hezkuntzaren eremuan." },
+        { id: "01", title: "Lan teorikoak edo enpirikoak", desc: "Hezkuntzaren eta jasangarritasunaren arteko elkargunea jorratzen duten ikerketa teorikoak edo enpirikoak, goi-mailako hezkuntzaren eremuan." },
         { id: "02", title: "Hezkuntza-berrikuntzako esperientzia praktikoak", desc: "Jasangarritasuna, ikaskuntza aktiboa edo metodologia eraldatzaileak unibertsitate-curriculumean integratzen dituzten esperientziak." },
         { id: "03", title: "Curriculum-berrikuntza eta lan akademikoak", desc: "GrAL, MAL eta doktorego-tesiak unibertsitate-prestakuntzaren, lanbide-ingurunearen eta GJHen arteko lotura sustatzen dutenak." },
       ],
@@ -381,14 +381,14 @@ const CONTENT_EHU = {
         },
         {
           f: "Berrikuntza edo esperientzia didaktikoak",
-          len: "Online · 15 min",
+          len: "Aurrezkoa (EHU edo ULEAM) · 15 min",
           desc: "15 minutuko aurkezpen bisual laburrak, ikerketa edo berrikuntza-lan bat modu argi eta egituratuan laburbiltzen dutenak. Laburpena txantiloi ofizialaren bidez.",
           url: "https://canva.link/g47tvl157m7px79",
           urlLabel: "Canva txantiloia deskargatu",
         },
         {
           f: "Sinposioa",
-          len: "Aurrezkoa (EHU edo ULEAM) · 60 min arte",
+          len: "Aurrezkoa (EHU edo ULEAM) edo online · 60 min arte",
           desc: "Aldez aurretik koordinatzaileak antolatutako saio tematikoa. Koordinatzailearen sarrera, elkarren osagarri diren ekarpenak eta galdera-txanda. Proposamena: sinposioaren laburpena (100 hitz) + hitzaldi bakoitzarena (150–200 hitz).",
         },
       ],
@@ -522,7 +522,7 @@ const CONTENT_EHU = {
     stats: [
       { n: "3", l: "Congress days" },
       { n: "2", l: "In-person venues" },
-      { n: "4", l: "Participating countries" },
+      { n: "7+", l: "Participating countries" },
       { n: "3", l: "Accepted languages" },
     ],
     ui: {
@@ -567,7 +567,7 @@ const CONTENT_EHU = {
       title: "Thematic lines",
       lead: "Three lines for presenting work in scientific format.",
       items: [
-        { id: "01", title: "Theoretical papers or literature reviews", desc: "On themes related to education and sustainability in Higher Education." },
+        { id: "01", title: "Theoretical or empirical papers", desc: "On themes related to education and sustainability in Higher Education." },
         { id: "02", title: "Practical innovation experiences", desc: "Educational innovation in Higher Education curriculum." },
         { id: "03", title: "Curricular and community innovation", desc: "Bachelor's, master's and doctoral work linking training with the community, professional context and the SDGs." },
       ],
@@ -582,14 +582,14 @@ const CONTENT_EHU = {
         },
         {
           f: "Innovation or didactic experience",
-          len: "Online · 15 min",
+          len: "In-person (EHU or ULEAM) · 15 min",
           desc: "Short visual presentations summarising research, innovation or relevant experience clearly and structuredly. Abstract using the official template.",
           url: "https://canva.link/g47tvl157m7px79",
           urlLabel: "Download Canva template",
         },
         {
           f: "Symposium",
-          len: "In-person (EHU or ULEAM) · up to 60 min",
+          len: "In-person (EHU or ULEAM) or online · up to 60 min",
           desc: "Thematically coordinated session. Includes coordinator introduction, complementary contributions and Q&A. Proposal: symposium abstract (100 words) + individual abstracts (150–200 words).",
         },
       ],
