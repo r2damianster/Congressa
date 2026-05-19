@@ -105,8 +105,8 @@ const CONTENT_EHU = {
     nav: {
       presentacion: "Presentación",
       destinatarios: "Destinatarios",
-      propuestas: "Envío de propuestas",
-      matricula: "Matrícula y publicación",
+      propuestas: "Propuestas",
+      matricula: "Matrícula",
       programa: "Programa",
       contacto: "Contacto",
     },
@@ -305,8 +305,8 @@ const CONTENT_EHU = {
     nav: {
       presentacion: "Aurkezpena",
       destinatarios: "Hartzaileak",
-      propuestas: "Proposamenak bidaltzea",
-      matricula: "Matrikula eta argitalpena",
+      propuestas: "Proposamenak",
+      matricula: "Matrikula",
       programa: "Programa",
       contacto: "Kontaktua",
     },
@@ -505,8 +505,8 @@ const CONTENT_EHU = {
     nav: {
       presentacion: "About",
       destinatarios: "Audience",
-      propuestas: "Submit a Proposal",
-      matricula: "Registration & Publication",
+      propuestas: "Proposals",
+      matricula: "Registration",
       programa: "Programme",
       contacto: "Contact",
     },
