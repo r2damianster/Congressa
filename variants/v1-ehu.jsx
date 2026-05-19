@@ -63,13 +63,22 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           .dest-grid {
             display: flex !important;
             flex-direction: column !important;
-            gap: 12px !important;
+            gap: 6px !important;
           }
           .dest-card {
-            padding: 12px 16px !important;
+            padding: 8px 14px !important;
           }
           .dest-num {
-            font-size: 18px !important;
+            font-size: 16px !important;
+          }
+
+          .format-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 6px !important;
+          }
+          .format-grid > * {
+            padding: 14px 16px !important;
           }
 
           .objs-grid {
@@ -242,7 +251,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <h2 style={s.sectionTitle}>{c.formatos.title}</h2>
           </div>
         </div>
-        <div style={s.formatGrid}>
+        <div style={s.formatGrid} className="format-grid">
           {c.formatos.items.map((f, i) => (
             <div key={i} style={s.formatCard}>
               <div style={s.formatHead}>
