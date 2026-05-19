@@ -349,30 +349,10 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
       </section>
 
-      {/* Entidades organizadoras */}
-      <section style={s.section}>
-        <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VIII</div>
-          <div>
-            <h2 style={s.sectionTitle}>{c.organizadoras.title}</h2>
-          </div>
-        </div>
-        <div style={s.orgsGrid} className="scroll-row">
-          {c.organizadoras.items.map((o, i) => (
-            <div key={i} style={s.orgCard}>
-              <div style={s.orgNum}>0{i + 1}</div>
-              <div style={s.orgName}>{o.name}</div>
-              <div style={s.orgParent}>{o.parent}</div>
-              <div style={s.orgCountry}>{o.country}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Comités */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="comites">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">IX</div>
+          <div style={s.sectionNumber} className="section-number">VIII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.comites.title}</h2>
             <p style={s.sectionLead}>{c.comites.lead}</p>
