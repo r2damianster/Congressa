@@ -299,7 +299,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
       </section>
 
-      {/* Matrícula */}
+      {/* Matrícula y publicación */}
       <section style={s.section} id="matricula">
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">VI</div>
@@ -308,23 +308,33 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.matricula.lead}</p>
           </div>
         </div>
-        <div style={s.matCard}>
-          <p style={s.matInstruction}>{c.matricula.instruccion}</p>
-          <div style={s.matFields}>
-            <div style={s.matRow}>
-              <span style={s.matK}>IBAN</span>
-              <span style={s.matV}>{c.matricula.iban}</span>
+        <div style={s.matPubGrid}>
+          <div style={s.matCard}>
+            <p style={s.matInstruction}>{c.matricula.instruccion}</p>
+            <div style={s.matFields}>
+              <div style={s.matRow}>
+                <span style={s.matK}>IBAN</span>
+                <span style={s.matV}>{c.matricula.iban}</span>
+              </div>
+              <div style={s.matRow}>
+                <span style={s.matK}>SWIFT / BIC</span>
+                <span style={s.matV}>{c.matricula.swift}</span>
+              </div>
+              <div style={s.matRow}>
+                <span style={s.matK}>{c.matricula.conceptoLabel}</span>
+                <span style={s.matV}>{c.matricula.concepto}</span>
+              </div>
             </div>
-            <div style={s.matRow}>
-              <span style={s.matK}>SWIFT / BIC</span>
-              <span style={s.matV}>{c.matricula.swift}</span>
-            </div>
-            <div style={s.matRow}>
-              <span style={s.matK}>{c.matricula.conceptoLabel}</span>
-              <span style={s.matV}>{c.matricula.concepto}</span>
+            <p style={s.matNota}>{c.matricula.nota}</p>
+          </div>
+          <div style={s.octCard}>
+            <div style={s.octK}>{c.publicacion.octaedro.h}</div>
+            <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
+            <div style={s.octDeadline} className="oct-deadline">
+              <span style={s.normK}>{c.ui.pubDeadline}</span>
+              <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
             </div>
           </div>
-          <p style={s.matNota}>{c.matricula.nota}</p>
         </div>
       </section>
 
@@ -339,30 +349,10 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
         </div>
       </section>
 
-      {/* Publicación */}
-      <section style={{ ...s.section, background: "#faf7f1" }} id="publicacion">
-        <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VIII</div>
-          <div>
-            <h2 style={s.sectionTitle}>{c.publicacion.title}</h2>
-            <p style={s.sectionLead}>{c.publicacion.lead}</p>
-          </div>
-        </div>
-
-        <div style={s.octCard}>
-          <div style={s.octK}>{c.publicacion.octaedro.h}</div>
-          <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
-          <div style={s.octDeadline} className="oct-deadline">
-            <span style={s.normK}>{c.ui.pubDeadline}</span>
-            <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
-          </div>
-        </div>
-      </section>
-
       {/* Entidades organizadoras */}
       <section style={s.section}>
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">IX</div>
+          <div style={s.sectionNumber} className="section-number">VIII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.organizadoras.title}</h2>
           </div>
@@ -382,7 +372,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       {/* Comités */}
       <section style={{ ...s.section, background: "#faf7f1" }} id="comites">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">X</div>
+          <div style={s.sectionNumber} className="section-number">IX</div>
           <div>
             <h2 style={s.sectionTitle}>{c.comites.title}</h2>
             <p style={s.sectionLead}>{c.comites.lead}</p>
@@ -589,7 +579,8 @@ const v1ehuStyles = (primary) => ({
   elList: { listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 },
   elLi: { padding: "10px 16px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, fontSize: 13, color: "#3a3628" },
 
-  matCard: { padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: `1px solid ${primary}`, borderRadius: 4, maxWidth: 640 },
+  matPubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 24 },
+  matCard: { padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
   matInstruction: { fontSize: 15, color: "#3a3628", margin: "0 0 24px" },
   matFields: { display: "flex", flexDirection: "column", gap: 0 },
   matRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2" },
