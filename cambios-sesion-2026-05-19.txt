@@ -1,0 +1,90 @@
+RESUMEN DE CAMBIOS — INEDUS 2026 (antes CIIIES)
+Sesión: 2026-05-19
+Archivos modificados: shared-content-ehu.jsx, v1-ehu.jsx, index.html, Landing INEDUS 2026.html
+================================================================
+
+
+1. DATOS BANCARIOS — MATRÍCULA DE EXPOSITORES
+-----------------------------------------------
+Solicitado: incorporar info de pago para autores con trabajo aceptado (fuente: Asier Romero).
+Cambios:
+  - Nuevo bloque "matricula" añadido en los 3 idiomas (ES/EU/EN) en shared-content-ehu.jsx
+  - IBAN: ES34 2095 0292 9010 6117 3778
+  - SWIFT/BIC: BASKES2BXXX
+  - Concepto/Asunto: Congreso_Apellido1NOMBRE
+  - Nota explicativa con ejemplo (RodriguezArturo)
+  - Nueva sección VI "Matrícula" añadida en v1-ehu.jsx con tarjeta estilizada
+  - Nav actualizado (ES: "Matrícula" / EU: "Matrikula" / EN: "Registration")
+  - Secciones anteriores renumeradas: Programa VII, Publicación VIII, Organizadoras IX, Comités X
+
+
+2. ESTADÍSTICAS — PAÍSES PARTICIPANTES
+----------------------------------------
+Solicitado: "4 países" no refleja la realidad (España, Ecuador, Colombia, Argentina, EE.UU., Holanda, Hungría); cambiar a algo más global.
+Cambio: n: "4" → n: "7+" en los 3 idiomas.
+
+
+3. LÍNEA TEMÁTICA 01
+---------------------
+Solicitado: "Trabajos teóricos o revisiones" → "Trabajos teóricos o empíricos".
+Cambios en 3 idiomas:
+  - ES: "Trabajos teóricos o empíricos"
+  - EU: "Lan teorikoak edo enpirikoak"
+  - EN: "Theoretical or empirical papers"
+
+
+4. FORMATOS DE PARTICIPACIÓN — MODALIDAD
+------------------------------------------
+Solicitado: coherencia entre landing y formulario Google.
+  - Innovaciones: cambiado de "Online · 15 min" → "Presencial (EHU o ULEAM) · 15 min"
+  - Simposio: cambiado de solo presencial → "Presencial (EHU o ULEAM) u online · hasta 60 min"
+  - Comunicación: sin cambio (ya era híbrido "Presencial u online · 15 min")
+
+Estado final de modalidades:
+  Comunicación      → Presencial u online
+  Innovaciones      → Solo presencial (EHU o ULEAM)
+  Simposio          → Presencial u online
+
+
+5. CAMBIO DE NOMBRE: CIIIES → INEDUS
+--------------------------------------
+Solicitado: el congreso pasa a llamarse INEDUS (palabras del acrónimo pendientes de confirmar).
+Archivos actualizados:
+  - shared-content-ehu.jsx (eventShort x3, copyright x3, comentario)
+  - v1-ehu.jsx (comentario, "Contacto INEDUS 2026")
+  - index.html (enlace y título de tarjeta)
+  - Landing INEDUS 2026.html (título <title>)
+NOTA: el nombre completo del acrónimo queda pendiente de confirmar.
+
+
+6. SECCIÓN I (PRESENTACIÓN) — MOBILE
+--------------------------------------
+Solicitado: "El punto I no se ve bien cuando accedes por teléfono."
+Causa: los 5 objetivos en scroll horizontal resultaban incómodos en móvil.
+Cambio: clase CSS cambiada de "scroll-row" (scroll horizontal) a "objs-grid" (stack vertical en mobile).
+Nueva regla CSS añadida en el bloque @media (max-width: 768px).
+
+
+7. SECCIÓN PUBLICACIÓN — SIMPLIFICACIÓN
+-----------------------------------------
+Solicitado: "No veo muy práctico que haya tantísima información sobre la publicación en la página principal."
+Cambio: eliminados de v1-ehu.jsx:
+  - Bloque de normas (formato, extensión, tipografía, referencias, figuras)
+  - Bloque de estructuras (investigación / experiencias / teórico-innovación)
+  - Bloque de elementos obligatorios del texto
+Queda: título + lead + tarjeta Octaedro con fecha límite.
+Los detalles de normas siguen en shared-content-ehu.jsx por si se usan en otra vista.
+
+
+8. ORDEN DE IDIOMAS — CONFIRMADO SIN CAMBIO
+---------------------------------------------
+Solicitado: "En la plantilla la primera lengua es el euskera. Tendría que ser el castellano."
+Estado actual verificado: el landing ya inicializa en español (useState('es')) y los botones
+aparecen en orden ES → EU → EN. Sin cambio necesario en el código.
+
+
+================================================================
+PENDIENTE
+  - Nombre completo del acrónimo INEDUS (palabras que componen la sigla)
+  - Verificar coherencia entre landing y formulario Google para el formato de "Innovaciones"
+  - Renombrar el archivo "Landing CIIIES 2026.html" si se desea (actualmente ya actualizado internamente)
