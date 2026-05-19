@@ -1,4 +1,4 @@
-// V1 EHU — Editorial académico, actualizado al congreso real CIIIES 2026
+// V1 EHU — Editorial académico, actualizado al congreso real INEDUS 2026
 // EHU + ULEAM + Colombia + Chile · Educación, innovación, inclusión y sostenibilidad
 
 const V1_EHU = ({ primary = "#1e3a8a" }) => {
@@ -70,6 +70,15 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           }
           .dest-num {
             font-size: 18px !important;
+          }
+
+          .objs-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          .objs-grid > * {
+            min-height: auto !important;
           }
 
         }
@@ -165,7 +174,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.presentacion.lead}</p>
           </div>
         </div>
-        <div style={s.objsGrid} className="scroll-row" ref={scrollRef}>
+        <div style={s.objsGrid} className="objs-grid" ref={scrollRef}>
           {c.presentacion.objetivos.map((a, i) => (
             <article key={i} style={s.axCard}>
               <div style={s.axNum}>{a.id}</div>
@@ -340,45 +349,13 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           </div>
         </div>
 
-        <div style={s.pubGrid}>
-          <div style={s.octCard}>
-            <div style={s.octK}>{c.publicacion.octaedro.h}</div>
-            <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
-            <div style={s.octDeadline} className="oct-deadline">
-              <span style={s.normK}>{c.ui.pubDeadline}</span>
-              <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
-            </div>
+        <div style={s.octCard}>
+          <div style={s.octK}>{c.publicacion.octaedro.h}</div>
+          <p style={s.octBody}>{c.publicacion.octaedro.body}</p>
+          <div style={s.octDeadline} className="oct-deadline">
+            <span style={s.normK}>{c.ui.pubDeadline}</span>
+            <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
           </div>
-
-          <div style={s.pubNorms}>
-            <div style={s.pubNormHead}>{c.ui.pubSpecs}</div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubFormat}</span><span style={s.pubNormV}>{c.publicacion.norms.formato}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubExt}</span><span style={s.pubNormV}>{c.publicacion.norms.extension}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubTypo}</span><span style={s.pubNormV}>{c.publicacion.norms.tipografia}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubRefs}</span><span style={s.pubNormV}>{c.publicacion.norms.referencias}</span></div>
-            <div style={s.pubNormRow}><span style={s.pubNormK}>{c.ui.pubFigs}</span><span style={s.pubNormV}>{c.publicacion.norms.figuras}</span></div>
-          </div>
-        </div>
-
-        <div style={s.estructurasRow}>
-          <div style={s.estHead}>{c.ui.pubStructureHead}</div>
-          <div style={s.estGrid} className="scroll-row">
-            {c.publicacion.estructuras.map((e, i) => (
-              <div key={i} style={s.estCard}>
-                <div style={s.estTipo}>{e.tipo}</div>
-                <div style={s.estBody}>{e.body}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div style={s.elementosRow}>
-          <div style={s.estHead}>{c.ui.pubElemsHead}</div>
-          <ul style={s.elList}>
-            {c.publicacion.elementos.map((e, i) => (
-              <li key={i} style={s.elLi}>{e}</li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -452,7 +429,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <div style={s.footerTag}>Plataforma de gestión de congresos académicos · <a href="mailto:arturo.rodriguez@uleam.edu.ec" style={{ color: "inherit", textDecoration: "underline" }}>Creado por Arturo Rodríguez</a></div>
           </div>
           <div style={s.footerRight} className="footer-right">
-            <div style={{ fontSize: 11, letterSpacing: 1, color: "#a69a7b", textTransform: "uppercase", marginBottom: 4 }}>Contacto CIIIES 2026</div>
+            <div style={{ fontSize: 11, letterSpacing: 1, color: "#a69a7b", textTransform: "uppercase", marginBottom: 4 }}>Contacto INEDUS 2026</div>
             <div><a href={`mailto:${c.footer.contact2}`} style={{ color: "inherit", textDecoration: "none" }}>{c.footer.contact2}</a></div>
             <div style={s.footerCopy}>{c.footer.copy}</div>
           </div>

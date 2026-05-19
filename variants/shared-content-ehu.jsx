@@ -1,4 +1,4 @@
-// Contenido CIIIES 2026 — trilingüe: es / eu / en
+// Contenido INEDUS 2026 — trilingüe: es / eu / en
 // Las listas de miembros son compartidas (no se traducen).
 
 const _ORG = [
@@ -86,7 +86,7 @@ const _ORGS = [
 
 const CONTENT_EHU = {
   es: {
-    eventShort: "CIIIES 2026",
+    eventShort: "INEDUS 2026",
     eventFull: "Congreso Internacional sobre Innovación educativa, inclusión y sostenibilidad en Educación Superior",
     subtitle: "Intercambio de experiencias",
     tagline: "Un diálogo entre los formadores de docentes de Iberoamérica",
@@ -282,12 +282,12 @@ const CONTENT_EHU = {
       contact2: "ane.gabikagogeaskoa@ehu.eus",
       contactSection: "jhonny.villafuerte@uleam.edu.ec",
       contact2Section: "ane.gabikagogeaskoa@ehu.eus",
-      copy: "© 2026 CIIIES · Organizado por la Facultad de Educación y Turismo (FET) de la ULEAM y la Facultad de Educación de Bilbao (EHU) de la Universidad del País Vasco",
+      copy: "© 2026 INEDUS · Organizado por la Facultad de Educación y Turismo (FET) de la ULEAM y la Facultad de Educación de Bilbao (EHU) de la Universidad del País Vasco",
     },
   },
 
   eu: {
-    eventShort: "CIIIES 2026",
+    eventShort: "INEDUS 2026",
     eventFull: "Nazioarteko Kongresua Hezkuntza Berrikuntzari, Inklusioari eta Jasangarritasunari buruz Goi Mailako Hezkuntzan",
     subtitle: "Esperientzien Trukea",
     tagline: "Iberoamerikako irakasle-hezitzaileen arteko elkarrizketa",
@@ -483,12 +483,12 @@ const CONTENT_EHU = {
       contact2: "ane.gabikagogeaskoa@ehu.eus",
       contactSection: "jhonny.villafuerte@uleam.edu.ec",
       contact2Section: "ane.gabikagogeaskoa@ehu.eus",
-      copy: "© 2026 CIIIES · Bilboko Hezkuntza Fakultatea (EHU) eta ULEAM-ek antolatua",
+      copy: "© 2026 INEDUS · Bilboko Hezkuntza Fakultatea (EHU) eta ULEAM-ek antolatua",
     },
   },
 
   en: {
-    eventShort: "CIIIES 2026",
+    eventShort: "INEDUS 2026",
     eventFull: "International Congress on Educational Innovation, Inclusion and Sustainability in Higher Education",
     subtitle: "Exchange of Experiences",
     tagline: "A dialogue among teacher educators from Latin America",
@@ -684,7 +684,7 @@ const CONTENT_EHU = {
       contact2: "ane.gabikagogeaskoa@ehu.eus",
       contactSection: "jhonny.villafuerte@uleam.edu.ec",
       contact2Section: "ane.gabikagogeaskoa@ehu.eus",
-      copy: "© 2026 CIIIES · Organised by the Faculty of Education of Bilbao (EHU) and the Faculty of Education and Tourism (FET) of ULEAM",
+      copy: "© 2026 INEDUS · Organised by the Faculty of Education of Bilbao (EHU) and the Faculty of Education and Tourism (FET) of ULEAM",
     },
   },
 };
