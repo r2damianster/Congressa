@@ -91,13 +91,8 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             padding: 14px 12px !important;
           }
 
-          .comites-wrap {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 16px !important;
-          }
-          .comites-wrap > * {
-            width: 100% !important;
+          .com-all-cols {
+            columns: 1 !important;
           }
 
         }
@@ -377,24 +372,21 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.comites.lead}</p>
           </div>
         </div>
-        <div style={s.comitesWrap} className="comites-wrap">
-          {c.comites.grupos.map((g, i) => (
-            <div key={i} style={s.comGrupo}>
-              <div style={s.comGrupoHead}>
-                <div style={s.comGrupoKicker}>0{i + 1} · {g.kicker}</div>
-                <h3 style={s.comGrupoTitle}>{g.nombre}</h3>
-                <div style={s.comGrupoCount}>{g.miembros.length} {c.ui.membros}</div>
-              </div>
-              <div style={{ ...s.comList, ...(g.miembros.length > 20 ? { display: "grid", gridTemplateColumns: "repeat(2, 1fr)" } : {}) }}>
+        <div style={s.comAllCols} className="com-all-cols">
+          {[1, 0, 2].map((idx, pos) => {
+            const g = c.comites.grupos[idx];
+            return (
+              <React.Fragment key={idx}>
+                <div style={{ ...s.comGroupLabel, ...(pos === 0 ? { marginTop: 0 } : { marginTop: 28 }) }}>{g.nombre}</div>
                 {g.miembros.map((m, j) => (
-                  <div key={j} style={s.comRow}>
+                  <div key={j} style={s.comRowFlat}>
                     <div style={s.comName}>{m.n}</div>
                     <div style={s.comAff}>{m.a}</div>
                   </div>
                 ))}
-              </div>
-            </div>
-          ))}
+              </React.Fragment>
+            );
+          })}
         </div>
       </section>
 
@@ -609,6 +601,10 @@ const v1ehuStyles = (primary) => ({
   comRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2", alignItems: "baseline" },
   comName: { fontSize: 14, color: "#1a1a1a", flex: 1 },
   comAff: { fontSize: 11, color: "#7a7162", fontFamily: "monospace", letterSpacing: 0.3, textAlign: "right" },
+
+  comAllCols: { columns: 3, columnGap: 40, columnRule: "1px solid #e9e2d2" },
+  comGroupLabel: { fontSize: 10, letterSpacing: 1.8, textTransform: "uppercase", color: primary, fontFamily: "monospace", paddingBottom: 8, borderBottom: `2px solid ${primary}`, breakInside: "avoid", breakAfter: "avoid", display: "block" },
+  comRowFlat: { display: "flex", justifyContent: "space-between", gap: 12, padding: "7px 0", borderBottom: "1px dashed #e9e2d2", alignItems: "baseline", breakInside: "avoid" },
 
   contactSec: { background: "#1a1a1a", color: "#fff", padding: "clamp(32px, 6vw, 72px) clamp(16px, 4vw, 64px)" },
   contactInner: { maxWidth: 1280, margin: "0 auto", textAlign: "center" },
