@@ -295,7 +295,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
               <div key={i} style={s.cfpFormat}>
                 <div style={s.cfpFormatName}>{pf.f}</div>
                 <div style={s.cfpFormatLen}>{pf.req}</div>
-                {pf.url && <a href={pf.url} target="_blank" rel="noopener" style={s.cfpFormatLink}>Plantilla Canva →</a>}
+                {pf.url && <a href={pf.url} target="_blank" rel="noopener" style={s.cfpFormatLink}>Plantilla →</a>}
               </div>
             ))}
 

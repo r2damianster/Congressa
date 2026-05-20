@@ -181,8 +181,8 @@ const CONTENT_EHU = {
           f: "Innovaciones o experiencias didácticas",
           len: "Presencial (EHU o ULEAM) · 15 min",
           desc: "Presentaciones visuales breves que sintetizan de forma clara y estructurada un trabajo de investigación, de innovación o de experiencia relevante. Resumen usando la plantilla oficial.",
-          url: "https://canva.link/g47tvl157m7px79",
-          urlLabel: "Descargar plantilla Canva",
+          url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx",
+          urlLabel: "Descargar plantilla",
         },
         {
           f: "Simposio",
@@ -213,7 +213,7 @@ const CONTENT_EHU = {
         ],
         porFormato: [
           { f: "Comunicación", req: "Resumen 200–300 palabras: tema, objetivos, metodología, resultados" },
-          { f: "Innovaciones", req: "PDF desde plantilla Canva", url: "https://canva.link/g47tvl157m7px79" },
+          { f: "Innovaciones", req: "PDF desde plantilla oficial", url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx" },
           { f: "Simposio", req: "Resumen general 100 pal. + resúmenes por ponente 150–200 pal." },
         ],
       },
@@ -381,8 +381,8 @@ const CONTENT_EHU = {
           f: "Berrikuntza edo esperientzia didaktikoak",
           len: "Aurrezkoa (EHU edo ULEAM) · 15 min",
           desc: "15 minutuko aurkezpen bisual laburrak, ikerketa edo berrikuntza-lan bat modu argi eta egituratuan laburbiltzen dutenak. Laburpena txantiloi ofizialaren bidez.",
-          url: "https://canva.link/g47tvl157m7px79",
-          urlLabel: "Canva txantiloia deskargatu",
+          url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx",
+          urlLabel: "Txantiloia deskargatu",
         },
         {
           f: "Sinposioa",
@@ -413,7 +413,7 @@ const CONTENT_EHU = {
         ],
         porFormato: [
           { f: "Komunikazioa", req: "Laburpena 200–300 hitz: gaia, helburuak, metodologia, emaitzak" },
-          { f: "Berrikuntzak", req: "PDF Canva txantiloitik", url: "https://canva.link/g47tvl157m7px79" },
+          { f: "Berrikuntzak", req: "PDF txantiloi ofizialetik", url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx" },
           { f: "Sinposioa", req: "Laburpen orokorra 100 hitz + ponente bakoitzeko laburpena 150–200 hitz" },
         ],
       },
@@ -581,8 +581,8 @@ const CONTENT_EHU = {
           f: "Innovation or didactic experience",
           len: "In-person (EHU or ULEAM) · 15 min",
           desc: "Short visual presentations summarising research, innovation or relevant experience clearly and structuredly. Abstract using the official template.",
-          url: "https://canva.link/g47tvl157m7px79",
-          urlLabel: "Download Canva template",
+          url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx",
+          urlLabel: "Download template",
         },
         {
           f: "Symposium",
@@ -613,7 +613,7 @@ const CONTENT_EHU = {
         ],
         porFormato: [
           { f: "Paper", req: "Abstract 200–300 words: topic, objectives, methodology, results" },
-          { f: "Innovation", req: "PDF from Canva template", url: "https://canva.link/g47tvl157m7px79" },
+          { f: "Innovation", req: "PDF from official template", url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx" },
           { f: "Symposium", req: "General abstract 100 words + per-speaker abstracts 150–200 words" },
         ],
       },
