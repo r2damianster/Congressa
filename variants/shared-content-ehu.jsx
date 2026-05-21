@@ -110,7 +110,7 @@ const CONTENT_EHU = {
       programa: "Programa",
       contacto: "Contacto",
     },
-    heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa, inclusión, sostenibilidad y los Objetivos de Desarrollo Sostenible en la Educación Superior, con doble sede en Bilbao y Manta.",
+    heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa y sostenibilidad en el marco de los Objetivos de Desarrollo Sostenible en la Educación Superior, con doble sede en Bilbao y Manta.",
     ctas: {
       submit: "Enviar propuesta",
       program: "Ver programa",
@@ -310,7 +310,7 @@ const CONTENT_EHU = {
       programa: "Programa",
       contacto: "Kontaktua",
     },
-    heroLead: "Hiru eguneko komunikazioak, posterrak eta sinposioak hezkuntza-berrikuntzari, inklusioari, jasangarritasunari eta Garapen Jasangarrirako Helburuei buruz Goi Mailako Hezkuntzan, bi egoitza nagusirekin Bilbon eta Mantan.",
+    heroLead: "Hiru eguneko komunikazioak, posterrak eta sinposioak hezkuntza-berrikuntzari eta jasangarritasunari buruz, Garapen Jasangarrirako Helburuen esparruan Goi Mailako Hezkuntzan, bi egoitza nagusirekin Bilbon eta Mantan.",
     ctas: {
       submit: "Proposamena bidali",
       program: "Programa ikusi",
@@ -341,7 +341,7 @@ const CONTENT_EHU = {
     },
     presentacion: {
       title: "Kongresua",
-      lead: "«Hezkuntza berrikuntza, inklusioa eta iraunkortasuna Goi Mailako Hezkuntzan» programaren helburua parte hartzaileek beren esperientziak partekatu eta elkarrengandik ikasi ahal izatea da, horretarako ingurune bat sortuz.",
+      lead: "«Hezkuntza berrikuntza eta iraunkortasuna Goi Mailako Hezkuntzan» programaren helburua parte hartzaileek beren esperientziak partekatu eta elkarrengandik ikasi ahal izatea da, horretarako ingurune bat sortuz.",
       objetivos: [
         { id: "01", title: "Nazioarteko kultura-trukea", desc: "Bi herrialdeetan hartutako hezkuntza eta iraunkortasun ikuspegiak ulertzen laguntzea." },
         { id: "02", title: "Trebetasun berriak indartzea", desc: "Irakatsi eta ikasteko prozesuetan iraunkortasuna integratuko duten estrategiak eta metodologiak ematea." },
@@ -510,7 +510,7 @@ const CONTENT_EHU = {
       programa: "Programme",
       contacto: "Contact",
     },
-    heroLead: "Three days of papers, posters and symposia on educational innovation, inclusion, sustainability and the Sustainable Development Goals in Higher Education, with dual venues in Bilbao and Manta.",
+    heroLead: "Three days of papers, posters and symposia on educational innovation and sustainability within the framework of the Sustainable Development Goals in Higher Education, with dual venues in Bilbao and Manta.",
     ctas: {
       submit: "Submit proposal",
       program: "View programme",

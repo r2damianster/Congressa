@@ -109,8 +109,8 @@ Irudiak, taulak edo grafikoak sartu nahi badira, jatorrizkoak eta egilearen/egil
 |  | 10:30-11:00 | \- | Pausa para café |  |
 |  | 11:00-12:30 | \- | Sesiones locales (Bilbao) | Comunicaciones  |
 |  | 12:30-13:30 | \- | Simposio(Bilbao) |  |
-|  | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta | Conferencia internacional a cargo de un ponente propuesto por la ULEAM (temática: Educación, iclusion y sostenibilidad en la Educación Superior) |
-|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda conjunta | Cuatro ponentes (dos por la EHU/dos por la ULEAM)  Temática: Educación, inclusion y sostenibilidad en la Educación Superior) |
+|  | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta | Conferencia internacional a cargo de un ponente propuesto por la ULEAM (temática: Educación y sostenibilidad en la Educación Superior) |
+|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda conjunta | Cuatro ponentes (dos por la EHU/dos por la ULEAM)  Temática: Educación y sostenibilidad en la Educación Superior) |
 |  | \- | 10:30-11:00 | Pausa para café |  |
 |  | \- | 11:00-112:30 14h30-16h30 | Sesiones locales (Manta)  |  Actividades a organizar por cada carrera. |
 | **30 oct** | 09:30-11:00 | \- | Sesiones locales (Bilbao) | comunicaciones |

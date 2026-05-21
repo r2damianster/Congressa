@@ -1,5 +1,5 @@
 // V1 EHU — Editorial académico, actualizado al congreso real INEDUS 2026
-// EHU + ULEAM + Colombia + Chile · Educación, innovación, inclusión y sostenibilidad
+// EHU + ULEAM + Colombia + Chile · Educación, innovación y sostenibilidad
 
 const V1_EHU = ({ primary = "#1e3a8a" }) => {
   const [lang, setLang] = React.useState('es');
