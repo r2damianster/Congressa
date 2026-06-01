@@ -72,7 +72,7 @@ const _ED = [
   { n: "Isra Alonso", a: "EHU" },
   { n: "Jorge Corral", a: "ULEAM" },
   { n: "Maitane Picaza", a: "EHU" },
-  { n: "Monica Eliece", a: "Universidad de Deusto" },
+  { n: "Mónica Elices", a: "Universidad de Deusto" },
   { n: "Monike Gezuraga", a: "EHU" },
   { n: "Nagore Ozerinjauregi", a: "EHU" },
   { n: "Nahia Idoiaga", a: "EHU" },
