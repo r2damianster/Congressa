@@ -2,12 +2,6 @@
   "rewrites": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "inedus.net" }],
-      "destination": "/Landing INEDUS 2026.html"
-    },
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "www.inedus.net" }],
       "destination": "/Landing INEDUS 2026.html"
     }
   ]
