@@ -3,6 +3,7 @@
 
 const _ORG = [
   { n: "Amaia Eiguren", a: "EHU" },
+  { n: "Pedro Quijije Anchiundia", a: "ULEAM" },
   { n: "Asier Romero", a: "EHU" },
   { n: "Diana Zambrano", a: "ULEAM" },
   { n: "German Carrera", a: "ULEAM" },
@@ -12,7 +13,6 @@ const _ORG = [
   { n: "Lewin Pérez", a: "ULEAM" },
   { n: "Mari Mar Boillos", a: "EHU" },
   { n: "Nahia Idoiaga", a: "EHU" },
-  { n: "Pedro Quijije Anchiundia", a: "ULEAM" },
 ];
 
 const _SCI = [
