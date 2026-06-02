@@ -44,7 +44,7 @@ const _SCI = [
   { n: "Lady Vanessa Mendoza", a: "ULEAM" },
   { n: "Leire Darretxe", a: "EHU" },
   { n: "Maitane Picaza", a: "EHU" },
-  { n: "María Asunción Rojas", a: "Universidad de Guayaquil" },
+  { n: "María Asunción Rojas", a: "Instituto Tecnológico Superior Blue Hill College" },
   { n: "María del Mar Román García", a: "UNED" },
   { n: "Miguel Cartaya", a: "ULEAM" },
   { n: "Nagore Ozerinjauregi", a: "EHU" },

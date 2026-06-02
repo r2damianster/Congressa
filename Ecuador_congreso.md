@@ -218,7 +218,7 @@ Eder Intriago, Kansas State University (USA)
 
 Antonieta Morales, Universidad de Guayaquil (Ecuador)
 
-Maria Asunción Rojas, Universidad de Guayaquil (Ecuador)
+Maria Asunción Rojas, Instituto Tecnológico Superior Blue Hill College (Ecuador)
 
 Pablo Teneglia, Universidad de Córdoba (Argentina)
 
