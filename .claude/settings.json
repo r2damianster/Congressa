@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git commit -m ' *)",
       "Bash(node \"c:/Users/User/Documents/Desarrollo Web/Congress_manager/.claude/hooks/trilingual-check.js\")",
-      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('c:/Users/User/Documents/Desarrollo Web/Congress_manager/.claude/settings.local.json','utf8'\\)\\); console.log\\('JSON OK'\\)\")"
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('c:/Users/User/Documents/Desarrollo Web/Congress_manager/.claude/settings.local.json','utf8'\\)\\); console.log\\('JSON OK'\\)\")",
+      "mcp__claude_ai_Vercel__list_projects"
     ]
   }
 }
