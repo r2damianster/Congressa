@@ -222,6 +222,14 @@ const CONTENT_EHU = {
     matricula: {
       title: "Matrícula y publicación",
       lead: "El pago de la matrícula no se realizará hasta la aceptación del trabajo. Todos los firmantes del trabajo (autores) deberán inscribirse y abonar la cuota de matrícula. Plazo: antes del 15 de octubre. Envío del trabajo completo (opcional) hasta el 15 de noviembre.",
+      tarifasTitle: "Cuotas de matriculación",
+      tarifasNota: "La aceptación de las propuestas se hará efectiva mediante la inscripción antes del 15 de octubre. Todos los autores deberán formalizar su matrícula.",
+      tarifas: [
+        { label: "Profesionales del ámbito de la educación formal y la educación social, y personas desempleadas", price: "GRATIS", note: "Plazas limitadas" },
+        { label: "Profesorado e investigadores/as de EHU y ULEAM", price: "25 €" },
+        { label: "Profesorado e investigadores/as universitarios/as", price: "50 €" },
+        { label: "Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia", price: "25 €" },
+      ],
       instruccion: "El pago debe realizarse mediante transferencia bancaria a la siguiente cuenta:",
       iban: "ES34 2095 0292 9010 6117 3778",
       swift: "BASKES2BXXX",
@@ -422,6 +430,14 @@ const CONTENT_EHU = {
     matricula: {
       title: "Matrikula eta argitalpena",
       lead: "Matrikularen ordainketa ez da egingo lana onartu arte. Lanaren sinatzaile guztiek (egileek) matrikula egin eta kuota ordaindu beharko dute. Epea: urriaren 15a baino lehen. Lan osoa (aukerakoa) azaroaren 15a arte.",
+      tarifasTitle: "Matrikula-kuotak",
+      tarifasNota: "Proposamenen onarpena urriaren 15a baino lehen egindako izena ematean bihurtuko da eraginkor. Egile guztiek matrikula formalizatu beharko dute.",
+      tarifas: [
+        { label: "Hezkuntza formaleko eta gizarte-hezkuntzako profesionalak, eta langabeak", price: "DOAN", note: "Plaza mugatuak" },
+        { label: "EHUko eta ULEAMeko irakasle eta ikertzaileak", price: "25 €" },
+        { label: "Unibertsitateko irakasle eta ikertzaileak", price: "50 €" },
+        { label: "Ipar eta Erdialdeko Amerika, Afrika eta Asiako unibertsitateetako irakasle eta ikertzaileak", price: "25 €" },
+      ],
       instruccion: "Ordainketa bankuko transferentziaren bidez egin behar da kontu honetara:",
       iban: "ES34 2095 0292 9010 6117 3778",
       swift: "BASKES2BXXX",
@@ -622,6 +638,14 @@ const CONTENT_EHU = {
     matricula: {
       title: "Registration & Publication",
       lead: "Registration payment will not be processed until the work is accepted. All co-authors must register and pay the registration fee. Deadline: before 15 October. Full paper submission (optional) before 15 November.",
+      tarifasTitle: "Registration fees",
+      tarifasNota: "Acceptance of proposals becomes effective upon registration before 15 October. All authors must complete their registration.",
+      tarifas: [
+        { label: "Professionals in formal education and social education, and unemployed persons", price: "FREE", note: "Limited places" },
+        { label: "Faculty and researchers at EHU and ULEAM", price: "€25" },
+        { label: "Faculty and researchers at universities (general)", price: "€50" },
+        { label: "Faculty and researchers from universities in North and Central America, Africa and Asia", price: "€25" },
+      ],
       instruccion: "Payment must be made by bank transfer to the following account:",
       iban: "ES34 2095 0292 9010 6117 3778",
       swift: "BASKES2BXXX",

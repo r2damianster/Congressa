@@ -322,6 +322,24 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <p style={s.sectionLead}>{c.matricula.lead}</p>
           </div>
         </div>
+        {/* Tarifas */}
+        <div style={s.tarifasBlock}>
+          <p style={s.tarifasTitle}>{c.matricula.tarifasTitle}</p>
+          <p style={s.tarifasNota}>{c.matricula.tarifasNota}</p>
+          {c.matricula.tarifas.map((t, i) => {
+            const isFree = t.price === "GRATIS" || t.price === "FREE" || t.price === "DOAN";
+            return (
+              <div key={i} style={s.tarifaRow}>
+                <span style={s.tarifaLabel}>
+                  {t.label}
+                  {t.note && <span style={s.tarifaRowNote}> — {t.note}</span>}
+                </span>
+                <span style={isFree ? s.tarifaPriceFree : s.tarifaPrice}>{t.price}</span>
+              </div>
+            );
+          })}
+        </div>
+
         <div style={s.matPubGrid}>
           <div style={s.matCard}>
             <p style={s.matInstruction}>{c.matricula.instruccion}</p>
@@ -578,6 +596,15 @@ const v1ehuStyles = (primary) => ({
   matK: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", color: "#7a7162", minWidth: 130, flexShrink: 0 },
   matV: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right" },
   matNota: { marginTop: 20, fontSize: 13, color: "#7a7162", fontStyle: "italic", lineHeight: 1.55, margin: "20px 0 0" },
+
+  tarifasBlock: { marginBottom: 28, padding: "clamp(24px, 4vw, 32px)", background: "#fbf9f4", border: "1px solid #e9e2d2", borderRadius: 4 },
+  tarifasTitle: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace", margin: "0 0 8px" },
+  tarifasNota: { fontSize: 14, color: "#3a3628", lineHeight: 1.5, margin: "0 0 20px" },
+  tarifaRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 24, padding: "12px 0", borderBottom: "1px dashed #e9e2d2" },
+  tarifaLabel: { fontSize: 14, color: "#3a3628", lineHeight: 1.4, flex: 1 },
+  tarifaRowNote: { fontSize: 12, color: "#7a7162", fontStyle: "italic" },
+  tarifaPrice: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 },
+  tarifaPriceFree: { fontFamily: "monospace", fontSize: 15, color: "#1e6b3e", fontWeight: 700, textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 },
 
   comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
   comiteCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
