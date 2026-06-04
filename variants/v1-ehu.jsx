@@ -100,6 +100,8 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Top nav */}
       <header style={s.nav}>
         <div style={s.logoWrap}>
+          <img src="./LOGOINEDUS.jpeg" alt="INEDUS 2026" style={s.inedusLogo} />
+          <div style={s.logoDividerV} />
           <a href="https://www.uleam.edu.ec/" target="_blank" rel="noopener"><img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.uniLogo} /></a>
           <div style={s.logoDividerV} />
           <a href="https://www.ehu.eus/es/" target="_blank" rel="noopener"><img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.uniLogo} /></a>
@@ -200,7 +202,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       </section>
 
       {/* Destinatarios */}
-      <section style={{ ...s.section, background: "#F1F5F9" }} id="destinatarios">
+      <section style={{ ...s.section, background: "#F7F8FA" }} id="destinatarios">
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">II</div>
           <div>
@@ -239,7 +241,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       </section>
 
       {/* Formatos */}
-      <section style={{ ...s.section, background: "#F1F5F9" }}>
+      <section style={{ ...s.section, background: "#F7F8FA" }}>
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">IV</div>
           <div>
@@ -382,7 +384,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       </section>
 
       {/* Comités */}
-      <section style={{ ...s.section, background: "#F1F5F9" }} id="comites">
+      <section style={{ ...s.section, background: "#F7F8FA" }} id="comites">
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">VIII</div>
           <div>
@@ -443,7 +445,7 @@ const accent = "#3A9ECC";
 return ({
   root: {
     fontFamily: "'Geist', -apple-system, sans-serif",
-    background: "#F8FAFC",
+    background: "#FFFFFF",
     color: "#1a1a1a",
     width: "100%",
     minHeight: "100%",
@@ -453,13 +455,14 @@ return ({
   nav: {
     display: "flex", alignItems: "center", padding: "clamp(14px, 3vw, 22px) clamp(16px, 4vw, 64px)",
     borderBottom: "1px solid #E2E8F0",
-    background: "rgba(248,250,252,0.97)", backdropFilter: "blur(10px)",
+    background: "rgba(255,255,255,0.97)", backdropFilter: "blur(10px)",
     position: "fixed", top: 0, left: 0, right: 0,
     zIndex: 100, boxSizing: "border-box",
   },
   navSpacer: { height: "clamp(64px, 10vw, 80px)" },
   logoWrap: { display: "flex", alignItems: "center", gap: 12 },
-  uniLogo: { height: 36, width: "auto", objectFit: "contain" },
+  inedusLogo: { height: 44, width: "auto", objectFit: "contain", maxWidth: 140 },
+  uniLogo: { height: 32, width: "auto", objectFit: "contain" },
   logoDividerV: { width: 1, height: 28, background: "#CBD5E1" },
   navLinks: { display: "flex", gap: 14, margin: "0 auto", flexShrink: 1, flexWrap: "nowrap", overflow: "hidden" },
   navLink: { color: "#334155", fontSize: 12, textDecoration: "none", whiteSpace: "nowrap" },
@@ -561,7 +564,7 @@ return ({
   cfpCta: { marginTop: 24, background: "#fff", color: primary, border: "none", padding: "14px 24px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500, width: "100%" },
 
   presGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  presCard: { padding: "clamp(20px, 4vw, 28px)", background: "#F1F5F9", border: "1px solid #E2E8F0", borderRadius: 4 },
+  presCard: { padding: "clamp(20px, 4vw, 28px)", background: "#F7F8FA", border: "1px solid #E2E8F0", borderRadius: 4 },
   presH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary, marginBottom: 12 },
   presBody: { fontSize: 14, color: "#334155", margin: 0, lineHeight: 1.6 },
   presNota: { marginTop: 32, padding: "16px 24px", background: "#fff8e6", border: "1px solid #e8d895", borderRadius: 4, fontSize: 14, color: "#5a4a2a" },
@@ -599,7 +602,7 @@ return ({
   matV: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right" },
   matNota: { marginTop: 20, fontSize: 13, color: "#64748B", fontStyle: "italic", lineHeight: 1.55, margin: "20px 0 0" },
 
-  tarifasBlock: { marginBottom: 28, padding: "clamp(24px, 4vw, 32px)", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 4 },
+  tarifasBlock: { marginBottom: 28, padding: "clamp(24px, 4vw, 32px)", background: "#FFFFFF", border: "1px solid #E2E8F0", borderRadius: 4 },
   tarifasTitle: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: accent, fontFamily: "monospace", margin: "0 0 8px" },
   tarifasNota: { fontSize: 14, color: "#334155", lineHeight: 1.5, margin: "0 0 20px" },
   tarifaRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 24, padding: "12px 0", borderBottom: "1px dashed #E2E8F0" },
@@ -622,7 +625,7 @@ return ({
 
   comitesWrap: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
   comGrupo: { background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" },
-  comGrupoHead: { padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(16px, 4vw, 20px)", borderBottom: "1px solid #E2E8F0", background: "#F8FAFC" },
+  comGrupoHead: { padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(16px, 4vw, 20px)", borderBottom: "1px solid #E2E8F0", background: "#FFFFFF" },
   comGrupoKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace" },
   comGrupoTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 26px)", margin: "8px 0 4px", fontWeight: 400 },
   comGrupoCount: { fontSize: 12, color: "#64748B", fontStyle: "italic" },
