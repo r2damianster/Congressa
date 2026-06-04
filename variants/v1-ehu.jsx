@@ -105,6 +105,8 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
           <a href="https://www.uleam.edu.ec/" target="_blank" rel="noopener"><img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.uniLogo} /></a>
           <div style={s.logoDividerV} />
           <a href="https://www.ehu.eus/es/" target="_blank" rel="noopener"><img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.uniLogo} /></a>
+          <div style={s.logoDividerV} />
+          <a href="https://www.ehu.eus/es/web/bilboko-hezkuntza-fakultatea/kideon.-inklusio-giza-hezitzailea." target="_blank" rel="noopener"><img src="./GrupodeInvestigaciónKideON-EHU.jpeg" alt="KideON EHU" style={s.uniLogo} /></a>
         </div>
         <nav style={s.navLinks} className="nav-links">
           {Object.entries(c.nav).map(([k, v], i) => (
