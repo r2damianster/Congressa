@@ -222,7 +222,7 @@ Maria Asunción Rojas, Instituto Tecnológico Superior Blue Hill College (Ecuado
 
 Pablo Teneglia, Universidad de Córdoba (Argentina)
 
-Diana Concha, Mg. Red COMEDI
+Diana Concha, Mg. Red COMEDHI
 
 Diana Katherine Gonzalez, PhD. UCEVA Colombia 
 

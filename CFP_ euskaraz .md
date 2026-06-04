@@ -171,7 +171,7 @@ Eder Intriago, Kansas State University (USA)
 Antonieta Morales, Universidad de Guayaquil (Ecuador)  
 Maria Asunción Rojas, Instituto Tecnológico Superior Blue Hill College (Ecuador)  
 Pablo Teneglia, Universidad de Córdoba (Argentina)  
-Diana Concha, Mg. Red COMEDI  
+Diana Concha, Mg. Red COMEDHI  
 Diana Katherine Gonzalez, PhD. UCEVA Colombia   
 Andrea Soto, PhD. UCEVA Colombia  
 Anna Maria Escofet Roig, Universidad de Barcelona  

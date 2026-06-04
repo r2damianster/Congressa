@@ -26,7 +26,7 @@ const _SCI = [
   { n: "Asier Romero", a: "EHU" },
   { n: "Brenda Nazarena Bär Kwast", a: "Universidad de Barcelona" },
   { n: "Cristina Arriaga", a: "EHU" },
-  { n: "Diana Concha", a: "Red COMEDI" },
+  { n: "Diana Concha", a: "Red COMEDHI" },
   { n: "Diana Katherine González", a: "UCEVA" },
   { n: "Eder Intriago", a: "Kansas State University" },
   { n: "Elena López de Arana Prado", a: "Universidad Autónoma de Madrid" },
