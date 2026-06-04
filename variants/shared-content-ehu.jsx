@@ -221,7 +221,7 @@ const CONTENT_EHU = {
     },
     matricula: {
       title: "Matrícula y publicación",
-      lead: "El pago de la matrícula no se realizará hasta la aceptación del trabajo. Todos los firmantes del trabajo (autores) deberán inscribirse y abonar la cuota de matrícula. Plazo: antes del 15 de octubre. Envío del trabajo completo (opcional) hasta el 15 de noviembre.",
+      lead: "El pago de la matrícula no se realizará hasta la aceptación del trabajo. Todos los firmantes del trabajo (autores) deberán inscribirse y abonar la cuota de matrícula. No hay límite de firmantes. Plazo: antes del 15 de octubre. Envío del trabajo completo (opcional) hasta el 15 de noviembre.",
       tarifasTitle: "Cuotas de matriculación",
       tarifasNota: "La aceptación de las propuestas se hará efectiva mediante la inscripción antes del 15 de octubre. Todos los autores deberán formalizar su matrícula.",
       tarifas: [
@@ -429,7 +429,7 @@ const CONTENT_EHU = {
     },
     matricula: {
       title: "Matrikula eta argitalpena",
-      lead: "Matrikularen ordainketa ez da egingo lana onartu arte. Lanaren sinatzaile guztiek (egileek) matrikula egin eta kuota ordaindu beharko dute. Epea: urriaren 15a baino lehen. Lan osoa (aukerakoa) azaroaren 15a arte.",
+      lead: "Matrikularen ordainketa ez da egingo lana onartu arte. Lanaren sinatzaile guztiek (egileek) matrikula egin eta kuota ordaindu beharko dute. Ez dago sinatzaile-mugarik. Epea: urriaren 15a baino lehen. Lan osoa (aukerakoa) azaroaren 15a arte.",
       tarifasTitle: "Matrikula-kuotak",
       tarifasNota: "Proposamenen onarpena urriaren 15a baino lehen egindako izena ematean bihurtuko da eraginkor. Egile guztiek matrikula formalizatu beharko dute.",
       tarifas: [
@@ -637,7 +637,7 @@ const CONTENT_EHU = {
     },
     matricula: {
       title: "Registration & Publication",
-      lead: "Registration payment will not be processed until the work is accepted. All co-authors must register and pay the registration fee. Deadline: before 15 October. Full paper submission (optional) before 15 November.",
+      lead: "Registration payment will not be processed until the work is accepted. All co-authors must register and pay the registration fee. There is no limit on the number of co-authors. Deadline: before 15 October. Full paper submission (optional) before 15 November.",
       tarifasTitle: "Registration fees",
       tarifasNota: "Acceptance of proposals becomes effective upon registration before 15 October. All authors must complete their registration.",
       tarifas: [
