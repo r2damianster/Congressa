@@ -1,7 +1,7 @@
 // V1 EHU — Editorial académico, actualizado al congreso real INEDUS 2026
 // EHU + ULEAM + Colombia + Chile · Educación, innovación y sostenibilidad
 
-const V1_EHU = ({ primary = "#1e3a8a" }) => {
+const V1_EHU = ({ primary = "#1A3A6B" }) => {
   const [lang, setLang] = React.useState('es');
   const c = window.CONTENT_EHU[lang];
   const s = v1ehuStyles(primary);
@@ -54,7 +54,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
           .footer-row { text-align: center; align-items: center !important; gap: 24px; }
           .footer-right { text-align: center !important; }
           .section-head { flex-direction: column; gap: 16px !important; }
-          .section-number { border-right: none !important; border-bottom: 1px solid #d8cfb8; padding-right: 0 !important; padding-bottom: 12px; width: 100%; }
+          .section-number { border-right: none !important; border-bottom: 1px solid #CBD5E1; padding-right: 0 !important; padding-bottom: 12px; width: 100%; }
           .oct-deadline { flex-direction: column; gap: 8px; align-items: flex-start !important; }
           .oct-deadline-v { text-align: left !important; }
           .hero-venues { text-align: center; }
@@ -200,7 +200,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       </section>
 
       {/* Destinatarios */}
-      <section style={{ ...s.section, background: "#faf7f1" }} id="destinatarios">
+      <section style={{ ...s.section, background: "#F1F5F9" }} id="destinatarios">
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">II</div>
           <div>
@@ -239,7 +239,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       </section>
 
       {/* Formatos */}
-      <section style={{ ...s.section, background: "#faf7f1" }}>
+      <section style={{ ...s.section, background: "#F1F5F9" }}>
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">IV</div>
           <div>
@@ -382,7 +382,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
       </section>
 
       {/* Comités */}
-      <section style={{ ...s.section, background: "#faf7f1" }} id="comites">
+      <section style={{ ...s.section, background: "#F1F5F9" }} id="comites">
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">VIII</div>
           <div>
@@ -428,7 +428,7 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
             <div style={s.footerTag}>Plataforma de gestión de congresos académicos · <a href="mailto:arturo.rodriguez@uleam.edu.ec" style={{ color: "inherit", textDecoration: "underline" }}>Creado por Arturo Rodríguez</a></div>
           </div>
           <div style={s.footerRight} className="footer-right">
-            <div style={{ fontSize: 11, letterSpacing: 1, color: "#a69a7b", textTransform: "uppercase", marginBottom: 4 }}>Contacto INEDUS 2026</div>
+            <div style={{ fontSize: 11, letterSpacing: 1, color: "#94A3B8", textTransform: "uppercase", marginBottom: 4 }}>Contacto INEDUS 2026</div>
             <div><a href={`mailto:${c.footer.contact2}`} style={{ color: "inherit", textDecoration: "none" }}>{c.footer.contact2}</a></div>
             <div style={s.footerCopy}>{c.footer.copy}</div>
           </div>
@@ -438,10 +438,12 @@ const V1_EHU = ({ primary = "#1e3a8a" }) => {
   );
 };
 
-const v1ehuStyles = (primary) => ({
+const v1ehuStyles = (primary) => {
+const accent = "#3A9ECC";
+return ({
   root: {
     fontFamily: "'Geist', -apple-system, sans-serif",
-    background: "#fbf9f4",
+    background: "#F8FAFC",
     color: "#1a1a1a",
     width: "100%",
     minHeight: "100%",
@@ -450,26 +452,26 @@ const v1ehuStyles = (primary) => ({
   },
   nav: {
     display: "flex", alignItems: "center", padding: "clamp(14px, 3vw, 22px) clamp(16px, 4vw, 64px)",
-    borderBottom: "1px solid #e9e2d2",
-    background: "rgba(251,249,244,0.97)", backdropFilter: "blur(10px)",
+    borderBottom: "1px solid #E2E8F0",
+    background: "rgba(248,250,252,0.97)", backdropFilter: "blur(10px)",
     position: "fixed", top: 0, left: 0, right: 0,
     zIndex: 100, boxSizing: "border-box",
   },
   navSpacer: { height: "clamp(64px, 10vw, 80px)" },
   logoWrap: { display: "flex", alignItems: "center", gap: 12 },
   uniLogo: { height: 36, width: "auto", objectFit: "contain" },
-  logoDividerV: { width: 1, height: 28, background: "#d8cfb8" },
+  logoDividerV: { width: 1, height: 28, background: "#CBD5E1" },
   navLinks: { display: "flex", gap: 14, margin: "0 auto", flexShrink: 1, flexWrap: "nowrap", overflow: "hidden" },
-  navLink: { color: "#3a3628", fontSize: 12, textDecoration: "none", whiteSpace: "nowrap" },
+  navLink: { color: "#334155", fontSize: 12, textDecoration: "none", whiteSpace: "nowrap" },
   navRight: { display: "flex", alignItems: "center", gap: 14, flexShrink: 0 },
-  langToggle: { display: "flex", border: "1px solid #d8cfb8", borderRadius: 999, overflow: "hidden" },
-  langBtn: { background: "transparent", border: "none", padding: "5px 10px", fontSize: 11, letterSpacing: 1, color: "#7a7162", cursor: "pointer", fontFamily: "inherit", transition: "background 0.15s, color 0.15s" },
+  langToggle: { display: "flex", border: "1px solid #CBD5E1", borderRadius: 999, overflow: "hidden" },
+  langBtn: { background: "transparent", border: "none", padding: "5px 10px", fontSize: 11, letterSpacing: 1, color: "#64748B", cursor: "pointer", fontFamily: "inherit", transition: "background 0.15s, color 0.15s" },
   navCta: { background: primary, color: "#fff", border: "none", padding: "10px 18px", borderRadius: 999, fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
 
   hero: { padding: "clamp(32px, 6vw, 80px) clamp(16px, 4vw, 64px) clamp(32px, 5vw, 48px)", maxWidth: 1280, margin: "0 auto" },
-  heroMeta: { display: "flex", alignItems: "center", gap: 12, color: "#7a7162", flexWrap: "wrap" },
-  heroKicker: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4 },
-  heroDot: { color: "#c9bda0" },
+  heroMeta: { display: "flex", alignItems: "center", gap: 12, color: "#64748B", flexWrap: "wrap" },
+  heroKicker: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4, color: accent },
+  heroDot: { color: "#94A3B8" },
   heroTitle: {
     fontFamily: "'Instrument Serif', serif",
     fontSize: "clamp(40px, 8vw, 80px)", lineHeight: 1.0, letterSpacing: -1.8, margin: "16px 0 0",
@@ -477,8 +479,8 @@ const v1ehuStyles = (primary) => ({
   },
   heroTitleEm: { fontStyle: "italic", color: primary },
   heroSubRow: { marginTop: 16 },
-  heroSubKicker: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", fontStyle: "italic", color: "#5a5244" },
-  heroLead: { marginTop: 20, maxWidth: 660, fontSize: "clamp(16px, 3vw, 18px)", lineHeight: 1.55, color: "#3a3628", textWrap: "pretty" },
+  heroSubKicker: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", fontStyle: "italic", color: "#475569" },
+  heroLead: { marginTop: 20, maxWidth: 660, fontSize: "clamp(16px, 3vw, 18px)", lineHeight: 1.55, color: "#334155", textWrap: "pretty" },
   heroTaglineRow: { display: "flex", alignItems: "center", gap: 16, marginTop: 24 },
   heroRule: { width: 56, height: 1, background: primary },
   heroTagline: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 20px)", fontStyle: "italic", color: primary, maxWidth: 700 },
@@ -489,52 +491,52 @@ const v1ehuStyles = (primary) => ({
 
   heroVenues: {
     marginTop: 40, padding: "clamp(16px, 3vw, 24px) clamp(16px, 4vw, 32px)",
-    background: "#fff", border: "1px solid #e9e2d2", borderRadius: 6,
+    background: "#fff", border: "1px solid #E2E8F0", borderRadius: 6,
     display: "grid", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 32, alignItems: "center",
   },
   venue: {},
   venueLogo: { height: 52, width: "auto", objectFit: "contain", marginBottom: 16, display: "block" },
-  venueLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b" },
+  venueLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8" },
   venueName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", marginTop: 6, color: primary },
-  venueDetail: { fontSize: 14, color: "#5a5244", marginTop: 4 },
-  venueDivider: { fontFamily: "'Instrument Serif', serif", fontSize: 36, color: "#c9bda0", fontStyle: "italic" },
+  venueDetail: { fontSize: 14, color: "#475569", marginTop: 4 },
+  venueDivider: { fontFamily: "'Instrument Serif', serif", fontSize: 36, color: "#94A3B8", fontStyle: "italic" },
 
   stats: {
     display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
-    borderTop: "1px solid #e9e2d2", borderBottom: "1px solid #e9e2d2",
+    borderTop: "1px solid #E2E8F0", borderBottom: "1px solid #E2E8F0",
     maxWidth: 1280, margin: "0 auto",
   },
-  statCell: { padding: "clamp(24px, 4vw, 36px) clamp(20px, 4vw, 40px)", borderBottom: "1px solid #e9e2d2", borderLeft: "1px solid #e9e2d2" },
+  statCell: { padding: "clamp(24px, 4vw, 36px) clamp(20px, 4vw, 40px)", borderBottom: "1px solid #E2E8F0", borderLeft: "1px solid #E2E8F0" },
   statN: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(36px, 6vw, 52px)", color: primary, lineHeight: 1 },
-  statL: { marginTop: 8, fontSize: 13, color: "#7a7162" },
+  statL: { marginTop: 8, fontSize: 13, color: "#64748B" },
 
   section: { padding: "clamp(24px, 5vw, 64px) clamp(16px, 4vw, 64px)", maxWidth: 1280, margin: "0 auto" },
   sectionHead: { display: "flex", gap: 32, marginBottom: 36, alignItems: "flex-start" },
-  sectionNumber: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", fontStyle: "italic", color: primary, paddingRight: 20, borderRight: "1px solid #d8cfb8" },
+  sectionNumber: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", fontStyle: "italic", color: primary, paddingRight: 20, borderRight: "1px solid #CBD5E1" },
   sectionTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(32px, 6vw, 44px)", lineHeight: 1.05, margin: 0, fontWeight: 400, letterSpacing: -0.8 },
-  sectionLead: { marginTop: 10, color: "#7a7162", fontSize: 16, maxWidth: 640 },
+  sectionLead: { marginTop: 10, color: "#64748B", fontSize: 16, maxWidth: 640 },
 
   objsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
-  axCard: { padding: "clamp(20px, 4vw, 32px) clamp(16px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, minHeight: 140 },
-  axNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 10 },
+  axCard: { padding: "clamp(20px, 4vw, 32px) clamp(16px, 4vw, 28px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, minHeight: 140 },
+  axNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: accent, letterSpacing: 2, marginBottom: 10 },
   axTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", margin: "0 0 10px", fontWeight: 400 },
-  axDesc: { color: "#5a5244", fontSize: 14, lineHeight: 1.55, margin: 0 },
+  axDesc: { color: "#475569", fontSize: 14, lineHeight: 1.55, margin: 0 },
 
   destGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
-  destCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "flex-start" },
+  destCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, alignItems: "flex-start" },
   destNum: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", fontStyle: "italic", color: primary, lineHeight: 1 },
-  destText: { fontSize: 15, color: "#3a3628", flex: 1 },
+  destText: { fontSize: 15, color: "#334155", flex: 1 },
 
   lineasGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  lineaCard: { padding: "clamp(20px, 4vw, 32px) clamp(16px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  lineaCard: { padding: "clamp(20px, 4vw, 32px) clamp(16px, 4vw, 28px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
 
   formatGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  formatCard: { padding: "clamp(20px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
-  formatHead: { paddingBottom: 16, marginBottom: 16, borderBottom: "1px dashed #d8cfb8" },
+  formatCard: { padding: "clamp(20px, 4vw, 28px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
+  formatHead: { paddingBottom: 16, marginBottom: 16, borderBottom: "1px dashed #CBD5E1" },
   formatName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary },
-  formatLen: { fontSize: 12, color: "#7a7162", fontFamily: "monospace", marginTop: 4 },
-  formatDesc: { fontSize: 14, color: "#5a5244", margin: 0, lineHeight: 1.55 },
-  formatLink: { display: "inline-block", marginTop: 10, fontSize: 13, color: primary, textDecoration: "underline", textDecorationColor: "rgba(30,58,138,0.4)", textUnderlineOffset: 3 },
+  formatLen: { fontSize: 12, color: "#64748B", fontFamily: "monospace", marginTop: 4 },
+  formatDesc: { fontSize: 14, color: "#475569", margin: 0, lineHeight: 1.55 },
+  formatLink: { display: "inline-block", marginTop: 10, fontSize: 13, color: primary, textDecoration: "underline", textDecorationColor: "rgba(26,58,107,0.4)", textUnderlineOffset: 3 },
 
   cfpGrid: { display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 40 },
   cfpTimeline: {},
@@ -559,79 +561,79 @@ const v1ehuStyles = (primary) => ({
   cfpCta: { marginTop: 24, background: "#fff", color: primary, border: "none", padding: "14px 24px", borderRadius: 999, fontSize: 14, cursor: "pointer", fontFamily: "inherit", fontWeight: 500, width: "100%" },
 
   presGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  presCard: { padding: "clamp(20px, 4vw, 28px)", background: "#faf7f1", border: "1px solid #e9e2d2", borderRadius: 4 },
+  presCard: { padding: "clamp(20px, 4vw, 28px)", background: "#F1F5F9", border: "1px solid #E2E8F0", borderRadius: 4 },
   presH: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(20px, 4vw, 24px)", color: primary, marginBottom: 12 },
-  presBody: { fontSize: 14, color: "#3a3628", margin: 0, lineHeight: 1.6 },
+  presBody: { fontSize: 14, color: "#334155", margin: 0, lineHeight: 1.6 },
   presNota: { marginTop: 32, padding: "16px 24px", background: "#fff8e6", border: "1px solid #e8d895", borderRadius: 4, fontSize: 14, color: "#5a4a2a" },
   presNotaK: { fontWeight: 600, color: "#8a6a1a", textTransform: "uppercase", fontSize: 11, letterSpacing: 1, marginRight: 6 },
 
   pubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 24, marginBottom: 40 },
-  pubNormHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginBottom: 14 },
-  pubNormRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "10px 0", borderBottom: "1px dashed #e9e2d2", fontSize: 13 },
-  pubNormK: { color: "#7a7162", textTransform: "uppercase", fontSize: 10, letterSpacing: 1, paddingTop: 2, minWidth: 88, flexShrink: 0 },
+  pubNormHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 14 },
+  pubNormRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "10px 0", borderBottom: "1px dashed #E2E8F0", fontSize: 13 },
+  pubNormK: { color: "#64748B", textTransform: "uppercase", fontSize: 10, letterSpacing: 1, paddingTop: 2, minWidth: 88, flexShrink: 0 },
   pubNormV: { color: "#1a1a1a", textAlign: "right", flex: 1 },
   octCard: { padding: 32, background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
   octK: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: primary },
-  octBody: { fontSize: 14, color: "#3a3628", marginTop: 12, lineHeight: 1.6 },
-  octDeadline: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #d8cfb8", display: "flex", justifyContent: "space-between", alignItems: "baseline" },
+  octBody: { fontSize: 14, color: "#334155", marginTop: 12, lineHeight: 1.6 },
+  octDeadline: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #CBD5E1", display: "flex", justifyContent: "space-between", alignItems: "baseline" },
   octDeadlineV: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary },
-  pubNorms: { padding: 32, background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  pubNorms: { padding: 32, background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
 
-  estructurasRow: { paddingTop: 32, borderTop: "1px solid #e9e2d2", marginTop: 8 },
-  estHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginBottom: 16 },
+  estructurasRow: { paddingTop: 32, borderTop: "1px solid #E2E8F0", marginTop: 8 },
+  estHead: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 16 },
   estGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  estCard: { padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  estCard: { padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
   estTipo: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary, marginBottom: 6 },
-  estBody: { fontSize: 13, color: "#5a5244", lineHeight: 1.55 },
+  estBody: { fontSize: 13, color: "#475569", lineHeight: 1.55 },
 
   elementosRow: { marginTop: 24 },
   elList: { listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 },
-  elLi: { padding: "10px 16px", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, fontSize: 13, color: "#3a3628" },
+  elLi: { padding: "10px 16px", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, fontSize: 13, color: "#334155" },
 
   matPubGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: 24 },
   matCard: { padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: `1px solid ${primary}`, borderRadius: 4 },
-  matInstruction: { fontSize: 15, color: "#3a3628", margin: "0 0 24px" },
+  matInstruction: { fontSize: 15, color: "#334155", margin: "0 0 24px" },
   matFields: { display: "flex", flexDirection: "column", gap: 0 },
-  matRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2" },
-  matK: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", color: "#7a7162", minWidth: 130, flexShrink: 0 },
+  matRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, padding: "12px 0", borderBottom: "1px dashed #E2E8F0" },
+  matK: { fontSize: 11, letterSpacing: 1.2, textTransform: "uppercase", color: "#64748B", minWidth: 130, flexShrink: 0 },
   matV: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right" },
-  matNota: { marginTop: 20, fontSize: 13, color: "#7a7162", fontStyle: "italic", lineHeight: 1.55, margin: "20px 0 0" },
+  matNota: { marginTop: 20, fontSize: 13, color: "#64748B", fontStyle: "italic", lineHeight: 1.55, margin: "20px 0 0" },
 
-  tarifasBlock: { marginBottom: 28, padding: "clamp(24px, 4vw, 32px)", background: "#fbf9f4", border: "1px solid #e9e2d2", borderRadius: 4 },
-  tarifasTitle: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace", margin: "0 0 8px" },
-  tarifasNota: { fontSize: 14, color: "#3a3628", lineHeight: 1.5, margin: "0 0 20px" },
-  tarifaRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 24, padding: "12px 0", borderBottom: "1px dashed #e9e2d2" },
-  tarifaLabel: { fontSize: 14, color: "#3a3628", lineHeight: 1.4, flex: 1 },
-  tarifaRowNote: { fontSize: 12, color: "#7a7162", fontStyle: "italic" },
+  tarifasBlock: { marginBottom: 28, padding: "clamp(24px, 4vw, 32px)", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 4 },
+  tarifasTitle: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: accent, fontFamily: "monospace", margin: "0 0 8px" },
+  tarifasNota: { fontSize: 14, color: "#334155", lineHeight: 1.5, margin: "0 0 20px" },
+  tarifaRow: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 24, padding: "12px 0", borderBottom: "1px dashed #E2E8F0" },
+  tarifaLabel: { fontSize: 14, color: "#334155", lineHeight: 1.4, flex: 1 },
+  tarifaRowNote: { fontSize: 12, color: "#64748B", fontStyle: "italic" },
   tarifaPrice: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 },
   tarifaPriceFree: { fontFamily: "monospace", fontSize: 15, color: "#1e6b3e", fontWeight: 700, textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 },
 
   comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
-  comiteCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, alignItems: "center" },
+  comiteCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, alignItems: "center" },
   comiteNum: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", color: primary },
-  comiteName: { fontSize: 16, color: "#3a3628" },
+  comiteName: { fontSize: 16, color: "#334155" },
 
   orgsGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 },
-  orgCard: { padding: "clamp(24px, 4vw, 32px) clamp(20px, 4vw, 32px) clamp(20px, 4vw, 28px)", background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4 },
+  orgCard: { padding: "clamp(24px, 4vw, 32px) clamp(20px, 4vw, 32px) clamp(20px, 4vw, 28px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
   orgNum: { fontFamily: "'Instrument Serif', serif", fontSize: 13, color: primary, letterSpacing: 2, marginBottom: 10 },
   orgName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 30px)", color: "#1a1a1a", lineHeight: 1.1 },
   orgParent: { fontSize: 14, color: primary, marginTop: 6 },
-  orgCountry: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase", color: "#a69a7b", marginTop: 12 },
+  orgCountry: { fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginTop: 12 },
 
   comitesWrap: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 },
-  comGrupo: { background: "#fff", border: "1px solid #e9e2d2", borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" },
-  comGrupoHead: { padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(16px, 4vw, 20px)", borderBottom: "1px solid #e9e2d2", background: "#fbf9f4" },
+  comGrupo: { background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, overflow: "hidden", display: "flex", flexDirection: "column" },
+  comGrupoHead: { padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(16px, 4vw, 20px)", borderBottom: "1px solid #E2E8F0", background: "#F8FAFC" },
   comGrupoKicker: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: primary, fontFamily: "monospace" },
   comGrupoTitle: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 26px)", margin: "8px 0 4px", fontWeight: 400 },
-  comGrupoCount: { fontSize: 12, color: "#7a7162", fontStyle: "italic" },
+  comGrupoCount: { fontSize: 12, color: "#64748B", fontStyle: "italic" },
   comList: { padding: "8px 24px 20px" },
-  comRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "12px 0", borderBottom: "1px dashed #e9e2d2", alignItems: "baseline" },
+  comRow: { display: "flex", justifyContent: "space-between", gap: 16, padding: "12px 0", borderBottom: "1px dashed #E2E8F0", alignItems: "baseline" },
   comName: { fontSize: 14, color: "#1a1a1a", flex: 1 },
-  comAff: { fontSize: 11, color: "#7a7162", fontFamily: "monospace", letterSpacing: 0.3, textAlign: "right" },
+  comAff: { fontSize: 11, color: "#64748B", fontFamily: "monospace", letterSpacing: 0.3, textAlign: "right" },
 
-  comAllCols: { columns: 3, columnGap: 40, columnRule: "1px solid #e9e2d2" },
+  comAllCols: { columns: 3, columnGap: 40, columnRule: "1px solid #E2E8F0" },
   comGroupLabel: { fontSize: 10, letterSpacing: 1.8, textTransform: "uppercase", color: primary, fontFamily: "monospace", paddingBottom: 8, borderBottom: `2px solid ${primary}`, breakInside: "avoid", breakAfter: "avoid", display: "block" },
-  comRowFlat: { display: "flex", justifyContent: "space-between", gap: 12, padding: "7px 0", borderBottom: "1px dashed #e9e2d2", alignItems: "baseline", breakInside: "avoid" },
+  comRowFlat: { display: "flex", justifyContent: "space-between", gap: 12, padding: "7px 0", borderBottom: "1px dashed #E2E8F0", alignItems: "baseline", breakInside: "avoid" },
 
   contactSec: { background: "#1a1a1a", color: "#fff", padding: "clamp(32px, 6vw, 72px) clamp(16px, 4vw, 64px)" },
   contactInner: { maxWidth: 1280, margin: "0 auto", textAlign: "center" },
@@ -640,12 +642,13 @@ const v1ehuStyles = (primary) => ({
   contactMail: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 6 },
   contactMailSm: { fontFamily: "'Geist', sans-serif", fontSize: "clamp(14px, 2.5vw, 18px)", color: "#fff", textDecoration: "underline", textDecorationColor: "rgba(255,255,255,0.4)", textUnderlineOffset: 4, display: "block" },
 
-  footer: { padding: "clamp(24px, 5vw, 40px) clamp(16px, 4vw, 64px)", borderTop: "1px solid #e9e2d2", maxWidth: 1280, margin: "0 auto" },
+  footer: { padding: "clamp(24px, 5vw, 40px) clamp(16px, 4vw, 64px)", borderTop: "1px solid #E2E8F0", maxWidth: 1280, margin: "0 auto" },
   footerRow: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" },
   footerBrand: {},
-  footerTag: { fontSize: 12, color: "#7a7162", marginTop: 2 },
-  footerRight: { textAlign: "right", fontSize: 13, color: "#5a5244" },
-  footerCopy: { fontSize: 11, color: "#a69a7b", marginTop: 4, maxWidth: 360 },
+  footerTag: { fontSize: 12, color: "#64748B", marginTop: 2 },
+  footerRight: { textAlign: "right", fontSize: 13, color: "#475569" },
+  footerCopy: { fontSize: 11, color: "#94A3B8", marginTop: 4, maxWidth: 360 },
 });
+};
 
 window.V1_EHU = V1_EHU;
