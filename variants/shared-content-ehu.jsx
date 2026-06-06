@@ -236,6 +236,14 @@ const CONTENT_EHU = {
       concepto: "Congreso_Apellido1NOMBRE",
       conceptoLabel: "Concepto / Asunto",
       nota: "Sustituye «Apellido1NOMBRE» por tu primer apellido y nombre, sin espacios. Ejemplo: Congreso_RodriguezArturo",
+      pasos: [
+        { n: "1", texto: "Envía tu propuesta antes del 15 de septiembre" },
+        { n: "2", texto: "Espera el correo de aceptación (sept.–oct.)" },
+        { n: "3", texto: "Completa el formulario de matrícula antes del 15 de octubre" },
+        { n: "4", texto: "Realiza la transferencia bancaria con el concepto indicado" },
+      ],
+      ctaMatricula: "Formulario de matrícula",
+      ctaMatriculaHref: "https://forms.gle/jeQCEYQ3TjAFGwdR6",
     },
     presentacionDia: {
       title: "Programa",
@@ -444,6 +452,14 @@ const CONTENT_EHU = {
       concepto: "Congreso_Abizen1IZENA",
       conceptoLabel: "Kontzeptua / Gaia",
       nota: "«Abizen1IZENA» zure lehen abizena eta izena jarri, hutsune gabe. Adibidez: Congreso_RodriguezArturo",
+      pasos: [
+        { n: "1", texto: "Bidali zure proposamena irailaren 15a baino lehen" },
+        { n: "2", texto: "Itxaron onartze-mezu elektronikoa (irail.–urri.)" },
+        { n: "3", texto: "Bete matrikula-inprimakia urriaren 15a baino lehen" },
+        { n: "4", texto: "Egin bankuko transferentzia adierazitako kontzeptuarekin" },
+      ],
+      ctaMatricula: "Matrikula-inprimakia",
+      ctaMatriculaHref: "https://forms.gle/jeQCEYQ3TjAFGwdR6",
     },
     presentacionDia: {
       title: "Programa",
@@ -652,6 +668,14 @@ const CONTENT_EHU = {
       concepto: "Congreso_Surname1NAME",
       conceptoLabel: "Reference / Subject",
       nota: "Replace «Surname1NAME» with your first surname and first name, no spaces. Example: Congreso_RodriguezArturo",
+      pasos: [
+        { n: "1", texto: "Submit your proposal before 15 September" },
+        { n: "2", texto: "Wait for the acceptance email (Sept.–Oct.)" },
+        { n: "3", texto: "Complete the registration form before 15 October" },
+        { n: "4", texto: "Make the bank transfer with the indicated reference" },
+      ],
+      ctaMatricula: "Registration form",
+      ctaMatriculaHref: "https://forms.gle/jeQCEYQ3TjAFGwdR6",
     },
     presentacionDia: {
       title: "Programme",

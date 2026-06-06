@@ -326,6 +326,17 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
             <p style={s.sectionLead}>{c.matricula.lead}</p>
           </div>
         </div>
+        {/* Pasos */}
+        <div style={s.pasosBlock}>
+          {c.matricula.pasos.map((p, i) => (
+            <div key={i} style={s.pasoRow}>
+              <span style={s.pasoN}>{p.n}</span>
+              <span style={s.pasoTexto}>{p.texto}</span>
+            </div>
+          ))}
+          <a href={c.matricula.ctaMatriculaHref} target="_blank" rel="noopener" style={s.matCta}>{c.matricula.ctaMatricula} →</a>
+        </div>
+
         {/* Tarifas */}
         <div style={s.tarifasBlock}>
           <p style={s.tarifasTitle}>{c.matricula.tarifasTitle}</p>
@@ -612,6 +623,12 @@ return ({
   tarifaRowNote: { fontSize: 12, color: "#64748B", fontStyle: "italic" },
   tarifaPrice: { fontFamily: "monospace", fontSize: 15, color: primary, textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 },
   tarifaPriceFree: { fontFamily: "monospace", fontSize: 15, color: "#1e6b3e", fontWeight: 700, textAlign: "right", whiteSpace: "nowrap", flexShrink: 0 },
+
+  pasosBlock: { marginBottom: 28, padding: "clamp(20px, 4vw, 28px)", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 4 },
+  pasoRow: { display: "flex", alignItems: "flex-start", gap: 16, padding: "10px 0", borderBottom: "1px solid #F1F5F9" },
+  pasoN: { flexShrink: 0, width: 28, height: 28, borderRadius: "50%", background: primary, color: "#fff", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, fontFamily: "monospace" },
+  pasoTexto: { fontSize: 15, color: "#334155", lineHeight: 1.5, paddingTop: 4 },
+  matCta: { display: "inline-block", marginTop: 20, padding: "10px 20px", background: primary, color: "#fff", fontSize: 13, fontWeight: 600, textDecoration: "none", borderRadius: 2, letterSpacing: 0.5 },
 
   comiteGrid: { display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 },
   comiteCard: { display: "flex", gap: 20, padding: "clamp(16px, 4vw, 20px) clamp(16px, 4vw, 24px)", background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4, alignItems: "center" },
