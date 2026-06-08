@@ -87,10 +87,10 @@ const _ORGS = [
 const CONTENT_EHU = {
   es: {
     eventShort: "INEDUS 2026",
-    eventFull: "Congreso Internacional de Innovación Educativa y Sostenibilidad en Educación Superior",
+    eventFull: "Congreso Internacional de Innovación Educativa, Inclusión y Sostenibilidad en Educación Superior",
     subtitle: "Intercambio de experiencias",
     tagline: "Un diálogo entre los formadores de docentes de Iberoamérica",
-    heroTitleParts: ["Innovación Educativa", "y Sostenibilidad", "en Educación Superior"],
+    heroTitleParts: ["Innovación Educativa", "Inclusión y Sostenibilidad", "en Educación Superior"],
     dates: "28, 29 y 30 de Octubre 2026",
     location: "Facultad de Educación de Bilbao (EHU) · ULEAM (Ecuador)",
     hybrid: "Formato online y presencial · doble sede",
@@ -303,10 +303,10 @@ const CONTENT_EHU = {
 
   eu: {
     eventShort: "INEDUS 2026",
-    eventFull: "Nazioarteko Kongresua Hezkuntza Berrikuntzan eta Jasangarritasunean Goi Mailako Hezkuntzan",
+    eventFull: "Nazioarteko Kongresua Hezkuntza Berrikuntzan, Inklusioan eta Jasangarritasunean Goi Mailako Hezkuntzan",
     subtitle: "Esperientzien Trukea",
     tagline: "Iberoamerikako irakasle-hezitzaileen arteko elkarrizketa",
-    heroTitleParts: ["Hezkuntza Berrikuntza", "eta Jasangarritasuna", "Goi Mailako Hezkuntzan"],
+    heroTitleParts: ["Hezkuntza Berrikuntza", "Inklusioa eta Jasangarritasuna", "Goi Mailako Hezkuntzan"],
     dates: "Urriak 28, 29 eta 30, 2026",
     location: "Bilboko Hezkuntza Fakultatea (EHU) · ULEAM (Ecuador)",
     hybrid: "Online eta presentzial formatua · bi egoitza",
@@ -519,10 +519,10 @@ const CONTENT_EHU = {
 
   en: {
     eventShort: "INEDUS 2026",
-    eventFull: "International Congress on Educational Innovation and Sustainability in Higher Education",
+    eventFull: "International Congress on Educational Innovation, Inclusion and Sustainability in Higher Education",
     subtitle: "Exchange of Experiences",
     tagline: "A dialogue among teacher educators from Latin America",
-    heroTitleParts: ["Educational Innovation", "and Sustainability", "in Higher Education"],
+    heroTitleParts: ["Educational Innovation", "Inclusion and Sustainability", "in Higher Education"],
     dates: "October 28–30, 2026",
     location: "Faculty of Education of Bilbao (EHU) · ULEAM (Ecuador)",
     hybrid: "Hybrid format · dual venue",
