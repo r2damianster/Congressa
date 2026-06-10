@@ -186,7 +186,7 @@ const CONTENT_EHU = {
           f: "Innovaciones o experiencias didácticas",
           len: "Presencial (EHU o ULEAM) · 15 min",
           desc: "Presentaciones visuales breves que sintetizan de forma clara y estructurada un trabajo de investigación, de innovación o de experiencia relevante. Resumen usando la plantilla oficial.",
-          url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx",
+          url: "Template_Abstract.docx",
           urlLabel: "Descargar plantilla",
         },
         {
@@ -218,7 +218,7 @@ const CONTENT_EHU = {
         ],
         porFormato: [
           { f: "Comunicación", req: "Resumen 200–300 palabras: tema, objetivos, metodología, resultados" },
-          { f: "Innovaciones", req: "PDF desde plantilla oficial", url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx" },
+          { f: "Innovaciones", req: "Word desde plantilla oficial", url: "Template_Abstract.docx" },
           { f: "Simposio", req: "Resumen general 100 pal. + resúmenes por ponente 150–200 pal." },
         ],
       },
@@ -258,13 +258,13 @@ const CONTENT_EHU = {
     },
     publicacion: {
       title: "Publicación de los trabajos (opcional)",
-      lead: "Edición de un libro con la Editorial Octaedro. Todos los autores matriculados recibirán una copia en PDF.",
+      lead: "Edición de un libro con la Editorial Octaedro. Todos los autores matriculados recibirán una copia en PDF. Tras la aceptación de la ponencia, podrás descargar la plantilla Octaedro para redactar y enviar el trabajo extenso.",
       octaedro: {
         h: "Editorial Octaedro",
         body: "Editorial de prestigio nacional. Posición 48 de 272 en la clasificación general del Scholarly Publishers Indicators. En el área de educación, posición 12 de 94.",
       },
       deadline: "15 de noviembre de 2026 — entrega del trabajo extenso",
-      plantillaUrl: "Plantilla_Congreso_Octaedro.docx",
+      plantillaUrl: "Template_Extenso.docx",
       plantillaLabel: "Descargar plantilla",
       norms: {
         formato: "Microsoft Word · plantilla del congreso",
@@ -404,7 +404,7 @@ const CONTENT_EHU = {
           f: "Berrikuntza edo esperientzia didaktikoak",
           len: "Aurrezkoa (EHU edo ULEAM) · 15 min",
           desc: "15 minutuko aurkezpen bisual laburrak, ikerketa edo berrikuntza-lan bat modu argi eta egituratuan laburbiltzen dutenak. Laburpena txantiloi ofizialaren bidez.",
-          url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx",
+          url: "Template_Abstract.docx",
           urlLabel: "Txantiloia deskargatu",
         },
         {
@@ -436,7 +436,7 @@ const CONTENT_EHU = {
         ],
         porFormato: [
           { f: "Komunikazioa", req: "Laburpena 200–300 hitz: gaia, helburuak, metodologia, emaitzak" },
-          { f: "Berrikuntzak", req: "PDF txantiloi ofizialetik", url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx" },
+          { f: "Berrikuntzak", req: "Word txantiloi ofizialetik", url: "Template_Abstract.docx" },
           { f: "Sinposioa", req: "Laburpen orokorra 100 hitz + ponente bakoitzeko laburpena 150–200 hitz" },
         ],
       },
@@ -476,13 +476,13 @@ const CONTENT_EHU = {
     },
     publicacion: {
       title: "Lanen argitalpena (aukerakoa)",
-      lead: "Octaedro argitaletxearekin liburu bat argitaratzea. Matrikulatutako egile guztiek liburuaren kopia bat jasoko dute PDF formatuan.",
+      lead: "Octaedro argitaletxearekin liburu bat argitaratzea. Matrikulatutako egile guztiek liburuaren kopia bat jasoko dute PDF formatuan. Ponentzia onartu ondoren, Octaedro txantiloia deskargatu ahal izango duzu lan osoa idazteko eta bidaltzeko.",
       octaedro: {
         h: "Octaedro argitaletxea",
         body: "Izen nazionaleko argitaletxea. Scholarly Publishers Indicators-en sailkapen orokorrean 272tik 48. postuan dago. Hezkuntzaren arloan, 94tik 12. postuan.",
       },
       deadline: "2026ko azaroaren 15a — lan osoaren entrega",
-      plantillaUrl: "Plantilla_Congreso_Octaedro.docx",
+      plantillaUrl: "Template_Extenso.docx",
       plantillaLabel: "Txantiloia deskargatu",
       norms: {
         formato: "Microsoft Word · kongresuaren txantiloia",
@@ -622,7 +622,7 @@ const CONTENT_EHU = {
           f: "Innovation or didactic experience",
           len: "In-person (EHU or ULEAM) · 15 min",
           desc: "Short visual presentations summarising research, innovation or relevant experience clearly and structuredly. Abstract using the official template.",
-          url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx",
+          url: "Template_Abstract.docx",
           urlLabel: "Download template",
         },
         {
@@ -654,7 +654,7 @@ const CONTENT_EHU = {
         ],
         porFormato: [
           { f: "Paper", req: "Abstract 200–300 words: topic, objectives, methodology, results" },
-          { f: "Innovation", req: "PDF from official template", url: "Plantilla%20Innovaciones%20y%20experiencias%20did%C3%A1cticas%20(1).docx" },
+          { f: "Innovation", req: "Word from official template", url: "Template_Abstract.docx" },
           { f: "Symposium", req: "General abstract 100 words + per-speaker abstracts 150–200 words" },
         ],
       },
@@ -694,13 +694,13 @@ const CONTENT_EHU = {
     },
     publicacion: {
       title: "Publication (optional)",
-      lead: "Book published with Editorial Octaedro. All registered authors receive a PDF copy.",
+      lead: "Book published with Editorial Octaedro. All registered authors receive a PDF copy. Once your paper is accepted, you can download the Octaedro template to write and submit the full paper.",
       octaedro: {
         h: "Editorial Octaedro",
         body: "National publisher of prestige. Ranked 48 out of 272 in the Scholarly Publishers Indicators general ranking. Position 12 out of 94 in education.",
       },
       deadline: "15 November 2026 — full paper submission",
-      plantillaUrl: "Plantilla_Congreso_Octaedro.docx",
+      plantillaUrl: "Template_Extenso.docx",
       plantillaLabel: "Download template",
       norms: {
         formato: "Microsoft Word · congress template",
