@@ -264,6 +264,8 @@ const CONTENT_EHU = {
         body: "Editorial de prestigio nacional. Posición 48 de 272 en la clasificación general del Scholarly Publishers Indicators. En el área de educación, posición 12 de 94.",
       },
       deadline: "15 de noviembre de 2026 — entrega del trabajo extenso",
+      plantillaUrl: "Plantilla_Congreso_Octaedro.docx",
+      plantillaLabel: "Descargar plantilla",
       norms: {
         formato: "Microsoft Word · plantilla del congreso",
         extension: "10–20 páginas · 4 000–8 000 palabras",
@@ -480,6 +482,8 @@ const CONTENT_EHU = {
         body: "Izen nazionaleko argitaletxea. Scholarly Publishers Indicators-en sailkapen orokorrean 272tik 48. postuan dago. Hezkuntzaren arloan, 94tik 12. postuan.",
       },
       deadline: "2026ko azaroaren 15a — lan osoaren entrega",
+      plantillaUrl: "Plantilla_Congreso_Octaedro.docx",
+      plantillaLabel: "Txantiloia deskargatu",
       norms: {
         formato: "Microsoft Word · kongresuaren txantiloia",
         extension: "10–20 orrialde · 4 000–8 000 hitz",
@@ -696,6 +700,8 @@ const CONTENT_EHU = {
         body: "National publisher of prestige. Ranked 48 out of 272 in the Scholarly Publishers Indicators general ranking. Position 12 out of 94 in education.",
       },
       deadline: "15 November 2026 — full paper submission",
+      plantillaUrl: "Plantilla_Congreso_Octaedro.docx",
+      plantillaLabel: "Download template",
       norms: {
         formato: "Microsoft Word · congress template",
         extension: "10–20 pages · 4,000–8,000 words",

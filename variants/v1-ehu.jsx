@@ -381,6 +381,9 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
               <span style={s.normK}>{c.ui.pubDeadline}</span>
               <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
             </div>
+            {c.publicacion.plantillaUrl && (
+              <a href={c.publicacion.plantillaUrl} target="_blank" rel="noopener" style={s.octPlantillaLink}>{c.publicacion.plantillaLabel} →</a>
+            )}
           </div>
         </div>
       </section>
@@ -593,6 +596,7 @@ return ({
   octBody: { fontSize: 14, color: "#334155", marginTop: 12, lineHeight: 1.6 },
   octDeadline: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #CBD5E1", display: "flex", justifyContent: "space-between", alignItems: "baseline" },
   octDeadlineV: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary },
+  octPlantillaLink: { fontSize: 12, color: primary, marginTop: 12, display: "inline-block", textDecoration: "underline", textDecorationColor: "rgba(0,0,0,0.25)", textUnderlineOffset: 3 },
   pubNorms: { padding: 32, background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
 
   estructurasRow: { paddingTop: 32, borderTop: "1px solid #E2E8F0", marginTop: 8 },
