@@ -98,7 +98,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
           }
 
           .agenda-hdr, .agenda-row {
-            grid-template-columns: 76px 1fr 76px !important;
+            grid-template-columns: 76px 76px 1fr !important;
             padding: 10px 12px !important;
           }
           .speaker-bio-row {
@@ -424,8 +424,8 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
               <div style={s.agendaTable}>
                 <div style={s.agendaHeaderRow} className="agenda-hdr">
                   <div>{al.bilbao}</div>
-                  <div style={{ padding: '0 16px' }}>{al.session}</div>
-                  <div style={{ textAlign: 'right' }}>{al.manta}</div>
+                  <div>{al.manta}</div>
+                  <div style={{ paddingLeft: '16px' }}>{al.session}</div>
                 </div>
                 {dayData.sessions.map((session, si) => {
                   const isPausa = session.type === 'pausa';
@@ -436,7 +436,8 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
                     <React.Fragment key={si}>
                       <div style={{ ...s.agendaRow, background: rowBg }} className="agenda-row">
                         <div style={s.agendaColTime}>{session.timeEHU || '—'}</div>
-                        <div style={s.agendaColSession}>
+                        <div style={s.agendaColTime}>{session.timeManta || '—'}</div>
+                        <div style={{ ...s.agendaColSession, paddingLeft: 16 }}>
                           <div style={{ ...s.agendaTypeTag, color: typeColor }}>{session.title[lang]}</div>
                           {session.description[lang] ? <p style={s.agendaDesc}>{session.description[lang]}</p> : null}
                           {session.speakers.length > 0 && (
@@ -457,7 +458,6 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
                             </div>
                           )}
                         </div>
-                        <div style={{ ...s.agendaColTime, textAlign: 'right' }}>{session.timeManta || '—'}</div>
                       </div>
                       {session.speakers.map(id => {
                         if (openSpeaker !== id) return null;
@@ -752,8 +752,8 @@ return ({
   agendaDayMeta: { fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace' },
   agendaDayNum: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(18px, 3vw, 24px)', color: '#fff', fontStyle: 'italic' },
   agendaTable: { border: '1px solid #E2E8F0', borderTop: 'none', borderRadius: '0 0 4px 4px', overflow: 'hidden' },
-  agendaHeaderRow: { display: 'grid', gridTemplateColumns: '130px 1fr 130px', padding: '9px 20px', background: '#F7F8FA', borderBottom: '1px solid #E2E8F0', fontSize: 10, letterSpacing: 1.5, textTransform: 'uppercase', color: '#94A3B8', fontFamily: 'monospace' },
-  agendaRow: { display: 'grid', gridTemplateColumns: '130px 1fr 130px', padding: '14px 20px', borderBottom: '1px dashed #E2E8F0', alignItems: 'start' },
+  agendaHeaderRow: { display: 'grid', gridTemplateColumns: '130px 130px 1fr', padding: '9px 20px', background: '#F7F8FA', borderBottom: '1px solid #E2E8F0', fontSize: 10, letterSpacing: 1.5, textTransform: 'uppercase', color: '#94A3B8', fontFamily: 'monospace' },
+  agendaRow: { display: 'grid', gridTemplateColumns: '130px 130px 1fr', padding: '14px 20px', borderBottom: '1px dashed #E2E8F0', alignItems: 'start' },
   agendaColTime: { fontFamily: 'monospace', fontSize: 12, color: '#64748B', paddingTop: 3, lineHeight: 1.5 },
   agendaColSession: { padding: '0 16px' },
   agendaTypeTag: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(15px, 2.5vw, 18px)', lineHeight: 1.2, marginBottom: 2 },
