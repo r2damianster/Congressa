@@ -3,6 +3,7 @@
 
 const V1_EHU = ({ primary = "#1A3A6B" }) => {
   const [lang, setLang] = React.useState('es');
+  const [openSpeaker, setOpenSpeaker] = React.useState(null);
   const c = window.CONTENT_EHU[lang];
   const s = v1ehuStyles(primary);
 
@@ -93,6 +94,16 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
 
           .com-all-cols {
             columns: 1 !important;
+          }
+
+          .agenda-hdr, .agenda-row {
+            grid-template-columns: 76px 1fr 76px !important;
+            padding: 10px 12px !important;
+          }
+          .speaker-bio-row {
+            grid-template-columns: 60px 1fr 24px !important;
+            gap: 12px !important;
+            padding: 14px 12px !important;
           }
 
         }
@@ -388,7 +399,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
         </div>
       </section>
 
-      {/* Presentación día */}
+      {/* Programa / Agenda */}
       <section style={s.section} id="programa">
         <div style={s.sectionHead} className="section-head">
           <div style={s.sectionNumber} className="section-number">VII</div>
@@ -397,6 +408,80 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
             <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
           </div>
         </div>
+
+        {window.PROGRAMA && window.PROGRAMA.map((dayData, di) => {
+          const al = c.presentacionDia.agendaLabels;
+          const monthLabel = lang === 'eu' ? 'urr.' : 'oct';
+          const typeColors = { apertura: accent, plenaria: primary, mesa: '#2E7D5E', cierre: primary, local: '#64748B', pausa: '#94A3B8' };
+          return (
+            <div key={di} style={s.agendaDay}>
+              <div style={s.agendaDayBar}>
+                <span style={s.agendaDayMeta}>{al.day}</span>
+                <span style={s.agendaDayNum}>{dayData.day} {monthLabel}</span>
+                <span style={{ ...s.agendaDayMeta, marginLeft: 'auto' }}>2026</span>
+              </div>
+              <div style={s.agendaTable}>
+                <div style={s.agendaHeaderRow} className="agenda-hdr">
+                  <div>{al.bilbao}</div>
+                  <div style={{ padding: '0 16px' }}>{al.session}</div>
+                  <div style={{ textAlign: 'right' }}>{al.manta}</div>
+                </div>
+                {dayData.sessions.map((session, si) => {
+                  const isPausa = session.type === 'pausa';
+                  const isJoint = session.venue === 'conjunta';
+                  const rowBg = isPausa ? '#F7F8FA' : isJoint ? '#fff' : '#FAFBFC';
+                  const typeColor = typeColors[session.type] || '#64748B';
+                  return (
+                    <React.Fragment key={si}>
+                      <div style={{ ...s.agendaRow, background: rowBg }} className="agenda-row">
+                        <div style={s.agendaColTime}>{session.timeEHU || '—'}</div>
+                        <div style={s.agendaColSession}>
+                          <div style={{ ...s.agendaTypeTag, color: typeColor }}>{session.title[lang]}</div>
+                          {session.description[lang] ? <p style={s.agendaDesc}>{session.description[lang]}</p> : null}
+                          {session.speakers.length > 0 && (
+                            <div style={s.speakerBtns}>
+                              {session.speakers.map(id => {
+                                const p = window.PONENTES && window.PONENTES[id];
+                                if (!p) return null;
+                                const isOpen = openSpeaker === id;
+                                return (
+                                  <button key={id} style={{ ...s.speakerBtn, ...(isOpen ? s.speakerBtnOn : {}) }}
+                                    onClick={() => setOpenSpeaker(isOpen ? null : id)}>
+                                    <span>{p.name}</span>
+                                    <span style={s.speakerBtnInst}>· {p.institution}</span>
+                                    <span style={{ fontSize: 9, opacity: 0.55 }}>{isOpen ? '▲' : '▼'}</span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                        <div style={{ ...s.agendaColTime, textAlign: 'right' }}>{session.timeManta || '—'}</div>
+                      </div>
+                      {session.speakers.map(id => {
+                        if (openSpeaker !== id) return null;
+                        const p = window.PONENTES && window.PONENTES[id];
+                        if (!p) return null;
+                        return (
+                          <div key={id} style={s.speakerBioRow} className="speaker-bio-row">
+                            <img src={p.photo} alt={p.name} style={s.speakerPhoto}
+                              onError={e => { e.target.style.display = 'none'; }} />
+                            <div>
+                              <div style={s.speakerBioName}>{p.name}</div>
+                              <div style={s.speakerBioInst}>{p.institution}</div>
+                              <p style={s.speakerBioText}>{p.bio}</p>
+                            </div>
+                            <button style={s.speakerBioClose} onClick={() => setOpenSpeaker(null)}>✕</button>
+                          </div>
+                        );
+                      })}
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </section>
 
       {/* Comités */}
@@ -660,6 +745,28 @@ return ({
   comAllCols: { columns: 3, columnGap: 40, columnRule: "1px solid #E2E8F0" },
   comGroupLabel: { fontSize: 10, letterSpacing: 1.8, textTransform: "uppercase", color: primary, fontFamily: "monospace", paddingBottom: 8, borderBottom: `2px solid ${primary}`, breakInside: "avoid", breakAfter: "avoid", display: "block" },
   comRowFlat: { display: "flex", justifyContent: "space-between", gap: 12, padding: "7px 0", borderBottom: "1px dashed #E2E8F0", alignItems: "baseline", breakInside: "avoid" },
+
+  agendaDay: { marginBottom: 40 },
+  agendaDayBar: { display: 'flex', alignItems: 'center', gap: 14, padding: '10px 20px', background: primary, borderRadius: '4px 4px 0 0' },
+  agendaDayMeta: { fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace' },
+  agendaDayNum: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(18px, 3vw, 24px)', color: '#fff', fontStyle: 'italic' },
+  agendaTable: { border: '1px solid #E2E8F0', borderTop: 'none', borderRadius: '0 0 4px 4px', overflow: 'hidden' },
+  agendaHeaderRow: { display: 'grid', gridTemplateColumns: '130px 1fr 130px', padding: '9px 20px', background: '#F7F8FA', borderBottom: '1px solid #E2E8F0', fontSize: 10, letterSpacing: 1.5, textTransform: 'uppercase', color: '#94A3B8', fontFamily: 'monospace' },
+  agendaRow: { display: 'grid', gridTemplateColumns: '130px 1fr 130px', padding: '14px 20px', borderBottom: '1px dashed #E2E8F0', alignItems: 'start' },
+  agendaColTime: { fontFamily: 'monospace', fontSize: 12, color: '#64748B', paddingTop: 3, lineHeight: 1.5 },
+  agendaColSession: { padding: '0 16px' },
+  agendaTypeTag: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(15px, 2.5vw, 18px)', lineHeight: 1.2, marginBottom: 2 },
+  agendaDesc: { fontSize: 13, color: '#64748B', margin: '4px 0 8px', lineHeight: 1.5 },
+  speakerBtns: { display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 8 },
+  speakerBtn: { display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fff', border: '1px solid #CBD5E1', borderRadius: 3, padding: '5px 10px', fontSize: 12, color: '#334155', cursor: 'pointer', fontFamily: 'inherit', lineHeight: 1.3, transition: 'background 0.15s, color 0.15s' },
+  speakerBtnOn: { background: primary, color: '#fff', borderColor: primary },
+  speakerBtnInst: { color: '#94A3B8', fontSize: 11 },
+  speakerBioRow: { display: 'grid', gridTemplateColumns: '80px 1fr 28px', gap: 20, padding: '18px 20px 18px 24px', background: '#EFF4FF', borderBottom: '1px solid #D4DBEF', alignItems: 'start' },
+  speakerPhoto: { width: 80, height: 90, objectFit: 'cover', borderRadius: 3 },
+  speakerBioName: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(17px, 2.5vw, 20px)', color: primary, marginBottom: 2 },
+  speakerBioInst: { fontSize: 11, color: '#64748B', fontFamily: 'monospace', letterSpacing: 0.5, marginBottom: 8, textTransform: 'uppercase' },
+  speakerBioText: { fontSize: 13, color: '#334155', lineHeight: 1.65, margin: 0 },
+  speakerBioClose: { background: 'transparent', border: 'none', color: '#94A3B8', fontSize: 15, cursor: 'pointer', padding: '2px 4px', fontFamily: 'inherit' },
 
   contactSec: { background: "#1a1a1a", color: "#fff", padding: "clamp(32px, 6vw, 72px) clamp(16px, 4vw, 64px)" },
   contactInner: { maxWidth: 1280, margin: "0 auto", textAlign: "center" },
