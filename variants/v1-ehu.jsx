@@ -439,6 +439,9 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
                         <div style={s.agendaColTime}>{session.timeManta || '—'}</div>
                         <div style={{ ...s.agendaColSession, paddingLeft: 16 }}>
                           <div style={{ ...s.agendaTypeTag, color: typeColor }}>{session.title[lang]}</div>
+                          {session.venue === 'conjunta' && session.type !== 'pausa' && (
+                            <span style={{ display:'inline-block', marginTop:4, marginBottom:2, fontSize:10, fontWeight:600, letterSpacing:0.5, color:'#fff', background:'#2E7D5E', borderRadius:4, padding:'2px 7px' }}>{al.hybrid}</span>
+                          )}
                           {session.description[lang] ? <p style={s.agendaDesc}>{session.description[lang]}</p> : null}
                           {session.speakers.length > 0 && (
                             <div style={s.speakerBtns}>
