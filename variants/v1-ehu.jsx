@@ -6,6 +6,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
   const [openSpeaker, setOpenSpeaker] = React.useState(null);
   const c = window.CONTENT_EHU[lang];
   const s = v1ehuStyles(primary);
+  const accent = "#3A9ECC";
 
   const scrollRef = React.useRef(null);
   React.useEffect(() => {
