@@ -100,9 +100,9 @@ const CONTENT_EHU = {
     location: "Facultad de Educación de Bilbao (EHU) · ULEAM (Ecuador)",
     hybrid: "Formato online y presencial · doble sede",
     venues: {
-      v1label: "Sede 1 · Europa",
+      v1label: "Sede principal · Europa",
       v1name: "Facultad de Educación de Bilbao",
-      v1detail: "Universidad del País Vasco · EHU",
+      v1detail: "Universidad del País Vasco · EHU — retransmisión online para todas las personas matriculadas",
       v2label: "Sede 2 · América Latina",
       v2name: "ULEAM",
       v2detail: "Facultad de Educación y Turismo · Manta, Ecuador",
@@ -115,7 +115,7 @@ const CONTENT_EHU = {
       programa: "Programa",
       contacto: "Contacto",
     },
-    heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa y sostenibilidad en el marco de los Objetivos de Desarrollo Sostenible en la Educación Superior, con doble sede en Bilbao y Manta.",
+    heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa y sostenibilidad en el marco de los Objetivos de Desarrollo Sostenible en la Educación Superior. Sede principal en la Facultad de Educación de Bilbao (EHU), desde donde se retransmitirá en línea a todas las personas matriculadas, y sede presencial en Manta (ULEAM).",
     ctas: {
       submit: "Enviar propuesta",
       program: "Ver programa",
@@ -328,9 +328,9 @@ const CONTENT_EHU = {
     location: "Bilboko Hezkuntza Fakultatea (EHU) · ULEAM (Ecuador)",
     hybrid: "Online eta presentzial formatua · bi egoitza",
     venues: {
-      v1label: "1. egoitza · Europa",
+      v1label: "Egoitza nagusia · Europa",
       v1name: "Bilboko Hezkuntza Fakultatea",
-      v1detail: "Euskal Herriko Unibertsitatea · EHU",
+      v1detail: "Euskal Herriko Unibertsitatea · EHU — online erretransmisioa matrikulatutako pertsona guztientzat",
       v2label: "2. egoitza · Latinoamerika",
       v2name: "ULEAM",
       v2detail: "Hezkuntza eta Turismo Fakultatea · Manta, Ecuador",
@@ -343,7 +343,7 @@ const CONTENT_EHU = {
       programa: "Programa",
       contacto: "Kontaktua",
     },
-    heroLead: "Hiru eguneko komunikazioak, posterrak eta sinposioak hezkuntza-berrikuntzari eta jasangarritasunari buruz, Garapen Jasangarrirako Helburuen esparruan Goi Mailako Hezkuntzan, bi egoitza nagusirekin Bilbon eta Mantan.",
+    heroLead: "Hiru eguneko komunikazioak, posterrak eta sinposioak hezkuntza-berrikuntzari eta jasangarritasunari buruz, Garapen Jasangarrirako Helburuen esparruan Goi Mailako Hezkuntzan. Egoitza nagusia Bilboko Hezkuntza Fakultatean (EHU) dago, eta handik online erretransmisioa egingo da matrikulatutako pertsona guztientzat; bigarren egoitza presentziala Mantan (ULEAM) izango da.",
     ctas: {
       submit: "Proposamena bidali",
       program: "Programa ikusi",
@@ -556,9 +556,9 @@ const CONTENT_EHU = {
     location: "Faculty of Education of Bilbao (EHU) · ULEAM (Ecuador)",
     hybrid: "Hybrid format · dual venue",
     venues: {
-      v1label: "Venue 1 · Europe",
+      v1label: "Main venue · Europe",
       v1name: "Faculty of Education of Bilbao",
-      v1detail: "University of the Basque Country · UPV/EHU",
+      v1detail: "University of the Basque Country · UPV/EHU — online broadcast for all registered participants",
       v2label: "Venue 2 · Latin America",
       v2name: "ULEAM",
       v2detail: "Faculty of Education and Tourism · Manta, Ecuador",
@@ -571,7 +571,7 @@ const CONTENT_EHU = {
       programa: "Programme",
       contacto: "Contact",
     },
-    heroLead: "Three days of papers, posters and symposia on educational innovation and sustainability within the framework of the Sustainable Development Goals in Higher Education, with dual venues in Bilbao and Manta.",
+    heroLead: "Three days of papers, posters and symposia on educational innovation and sustainability within the framework of the Sustainable Development Goals in Higher Education. Main venue at the Faculty of Education of Bilbao (UPV/EHU), which will broadcast online to all registered participants, with a second in-person venue in Manta (ULEAM).",
     ctas: {
       submit: "Submit proposal",
       program: "View programme",
