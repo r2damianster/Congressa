@@ -154,7 +154,7 @@ Amaia Eiguren
 
 Mari Mar Boillos
 
-Pedro Quijije Anchiundia, PhD Decano ULEAM
+Pedro Quijije Anchundia, PhD Decano ULEAM
 
 Jhonny Villafuerte, PhD ULEAM
 

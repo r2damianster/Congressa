@@ -3,7 +3,7 @@
 
 const _ORG = [
   { n: "Amaia Eiguren", a: "EHU" },
-  { n: "Pedro Quijije Anchiundia", a: "ULEAM" },
+  { n: "Pedro Quijije Anchundia", a: "ULEAM" },
   { n: "Asier Romero", a: "EHU" },
   { n: "Diana Zambrano", a: "ULEAM" },
   { n: "German Carrera", a: "ULEAM" },
