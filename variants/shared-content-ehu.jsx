@@ -22,6 +22,7 @@ const _SCI = [
   { n: "Angela Saiz Linares", a: "Universidad de Cantabria" },
   { n: "Anna Maria Escofet Roig", a: "Universidad de Barcelona" },
   { n: "Antonieta Morales", a: "Universidad de Guayaquil" },
+  { n: "Magali Arteaga Sarmiento", a: "Universidad de Azuay" },
   { n: "Arturo Rodríguez", a: "ULEAM" },
   { n: "Asier Romero", a: "EHU" },
   { n: "Brenda Nazarena Bär Kwast", a: "Universidad de Barcelona" },
@@ -61,6 +62,7 @@ const _SCI = [
   { n: "Pilar Folgueiras", a: "Universidad de Barcelona" },
   { n: "Saioa Bilbao", a: "EHU" },
   { n: "Sebastià Verger", a: "Universidad de las Islas Baleares" },
+  { n: "Rubén Villarroel", a: "Universidad Técnica de Oruro" },
 ];
 
 const _ED = [
