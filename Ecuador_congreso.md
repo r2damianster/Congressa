@@ -6,7 +6,7 @@ Participantes: docentes, investigadores/as y alumnado de la EHU, de la ULEAM y d
 
 Fechas: **28, 29 y 30 de octubre**
 
-Resumen: El congreso internacional titulado "Innovación educativa y sostenibilidad en Educación Superior. Intercambio de experiencias" tiene como objetivo crear un entorno en el que educadores y estudiantes de la Universidad ULEAM en Ecuador, de la Universidad del País Vasco (EHU) y de otras universidades extranjeras invitadas puedan compartir sus vivencias y aprender mutuamente. 
+Resumen: El congreso internacional titulado "Innovación educativa, Inclusión y sostenibilidad en Educación Superior. Intercambio de experiencias" tiene como objetivo crear un entorno en el que educadores y estudiantes de la Universidad ULEAM en Ecuador, de la Universidad del País Vasco (EHU) y de otras universidades extranjeras invitadas puedan compartir sus vivencias y aprender mutuamente. 
 
 Los objetivos principales del congreso son: 
 

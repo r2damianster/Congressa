@@ -117,7 +117,7 @@ const CONTENT_EHU = {
       programa: "Programa",
       contacto: "Contacto",
     },
-    heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa y sostenibilidad en el marco de los Objetivos de Desarrollo Sostenible en la Educación Superior. Sede principal en la Facultad de Educación de Bilbao (EHU), desde donde se retransmitirá en línea a todas las personas matriculadas, y sede presencial en Manta (ULEAM).",
+    heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa, inclusión y sostenibilidad en el marco de los Objetivos de Desarrollo Sostenible en la Educación Superior. Sede principal en la Facultad de Educación de Bilbao (EHU), desde donde se retransmitirá en línea a todas las personas matriculadas, y sede presencial en Manta (ULEAM).",
     ctas: {
       submit: "Enviar propuesta",
       program: "Ver programa",
