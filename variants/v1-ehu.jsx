@@ -453,7 +453,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
                                   <button key={id} style={{ ...s.speakerBtn, ...(isOpen ? s.speakerBtnOn : {}) }}
                                     onClick={() => setOpenSpeaker(isOpen ? null : id)}>
                                     <span>{p.name}</span>
-                                    <span style={s.speakerBtnInst}>· {p.institution}</span>
+                                    {p.institution && <span style={s.speakerBtnInst}>· {p.institution}</span>}
                                     <span style={{ fontSize: 9, opacity: 0.55 }}>{isOpen ? '▲' : '▼'}</span>
                                   </button>
                                 );
@@ -472,7 +472,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
                               onError={e => { e.target.style.display = 'none'; }} />
                             <div>
                               <div style={s.speakerBioName}>{p.name}</div>
-                              <div style={s.speakerBioInst}>{p.institution}</div>
+                              {p.institution && <div style={s.speakerBioInst}>{p.institution}</div>}
                               <p style={s.speakerBioText}>{p.bio}</p>
                             </div>
                             <button style={s.speakerBioClose} onClick={() => setOpenSpeaker(null)}>✕</button>

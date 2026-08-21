@@ -114,8 +114,8 @@ const PONENTES = {
 
   'mirian-gallegos': {
     name: 'Mirian Gallegos',
-    institution: 'Universidad Politécnica Salesiana',
-    bio: 'Doctora e investigadora ecuatoriana vinculada a la Universidad Politécnica Salesiana (UPS). Su línea de trabajo principal se centra en la educación inclusiva, la pedagogía y la atención a la discapacidad en el ámbito de la educación superior.',
+    institution: '',
+    bio: 'Doctora e investigadora ecuatoriana. Su línea de trabajo principal se centra en la educación inclusiva, la pedagogía y la atención a la discapacidad en el ámbito de la educación superior.',
     photo: 'ponentes/fotos/mirian-gallegos.png',
   },
 
