@@ -16,7 +16,7 @@ const PONENTES = {
   'jorge-ivan-pincay': {
     name: 'Jorge Iván Pincay Ponce',
     institution: 'ULEAM',
-    bio: 'Investigador y profesor en la Facultad de Ciencias Informáticas en la ULEAM. Cuenta con un Doctorado en Ciencias Informáticas y maestrías internacionales enfocadas en el desarrollo de software y gestión de TICs. Su producción científica destaca por publicaciones y libros sobre inteligencia artificial, minería de datos y accesibilidad web.',
+    bio: 'Investigador y profesor en el área de Informática, vinculado principalmente a la Universidad Laica Eloy Alfaro de Manabí (ULEAM). Su línea de investigación principal se enfoca en la inteligencia artificial, la ingeniería de software y la minería de datos. Cuenta con una producción científica de 50 publicaciones, un índice h de 8 (Google Scholar) y trabajos destacados en revistas y congresos internacionales sobre analítica de datos educativos y socioeconómicos, aprendizaje automático (machine learning) y accesibilidad web.',
     photo: 'ponentes/fotos/jorge-ivan-pincay.png',
   },
 
@@ -39,7 +39,7 @@ const PONENTES = {
   'lewin-perez': {
     name: 'Lewin José Pérez Plata',
     institution: 'ULEAM',
-    bio: 'Profesor, investigador y especialista en Educación Física con una sólida trayectoria en el ámbito de las ciencias de la motricidad humana, la pedagogía deportiva y el bienestar social. Actualmente ejerce su labor académica y científica en la Universidad Laica Eloy Alfaro de Manabí (ULEAM) en Manta, Ecuador.',
+    bio: 'Profesor de Educación Física con Maestría en Enseñanza de la Educación Física y Doctorado en Ciencias de la Motricidad Humana. Docente de nacionalidad venezolana en ejercicio en la Universidad Laica Eloy Alfaro de Manabí (ULEAM), con más de 15 años de experiencia en distintos niveles educativos. Investigador y conferencista internacional, miembro de la Red LEA. Sus líneas de investigación son la educación y el currículo, las innovaciones pedagógicas y el entrenamiento deportivo. Cuenta con más de 15 publicaciones académicas.',
     photo: 'ponentes/fotos/lewin-perez.png',
   },
 
@@ -62,7 +62,7 @@ const PONENTES = {
   'jeovanny-benacidez': {
     name: 'Jeovanny Moisés Benacidez Bailón',
     institution: 'Universidad Técnica de Manabí',
-    bio: 'Vicedecano y profesor titular a tiempo completo en la Universidad Técnica de Manabí. Ejerce la docencia y la investigación científica en la carrera de Pedagogía de la Lengua y la Literatura. Además, desarrolla una activa carrera profesional como escritor de novelas y cuentos galardonados internacionalmente.',
+    bio: 'Escritor y profesor universitario ecuatoriano. Ganador del Premio Nacional de Literatura Miguel Riofrío 2019 por su novela «Pilares de la noche vana» y del Premio Nacional de Literatura Bienal de Narrativa Eliécer Cárdenas 2023 por «Las palabras del aire vacío. La novela de Kafka». Es Doctor en Comunicación por la Universidad Nacional de La Plata (UNLP, Argentina) y realizó un posdoctorado en Historia en el Instituto de Estudios Latinoamericanos de la Freie Universität Berlin (Alemania). Vicedecano de la Carrera de Pedagogía de la Lengua y Literatura de la Universidad Técnica de Manabí, posee además un Máster en Edición por la Universidad Complutense de Madrid, un Máster en Escritura Creativa por la Universidad Internacional de La Rioja y un Máster en Docencia e Investigación Educativa.',
     photo: 'ponentes/fotos/jeovanny-benacidez.png',
   },
 
@@ -92,14 +92,14 @@ const PONENTES = {
   'paola-diaz': {
     name: 'Paola Natasha Díaz Rodríguez',
     institution: 'ULEAM',
-    bio: 'Docente titular principal en la carrera de Hospitalidad y Hotelería de la ULEAM. Cuenta con cerca de 30 años de trayectoria académica y está acreditada como investigadora por la SENESCYT, con múltiples publicaciones científicas y un libro sobre Gestión Documental. Lidera proyectos institucionales de vinculación con la sociedad enfocados en el desarrollo del turismo local, el emprendimiento y la inclusión social en la provincia de Manabí.',
+    bio: 'Doctora en Ciencias Económicas con mención en Turismo por la Universidad de La Habana (Cuba) y Magíster en Gestión Turística. Con cerca de 30 años de trayectoria en educación inicial, media y superior, es docente titular principal de la Facultad de Hotelería y Turismo de la Universidad Laica Eloy Alfaro de Manabí (ULEAM). Especialista en Diseño Curricular por Competencias e investigadora acreditada por la SENESCYT, es autora de publicaciones científicas en turismo, educación e inclusión y de un libro sobre Gestión Documental. Lidera programas institucionales de inclusión, entre ellos el Centro de Observación y Apoyo Inclusivo (COAI), y se desempeña como conferencista nacional e internacional.',
     photo: 'ponentes/fotos/paola-diaz.png',
   },
 
   'gloria-alcivar': {
     name: 'Gloria Anabel Alcívar Pincay',
     institution: 'ULEAM',
-    bio: 'Profesora e investigadora en la Universidad Laica Eloy Alfaro de Manabí (ULEAM). Su labor profesional se concentra principalmente en la Facultad de Ciencias de la Educación, donde su línea de investigación y producción científica está fuertemente orientada hacia la educación inclusiva, la discapacidad y la atención a las necesidades educativas especiales.',
+    bio: 'Ingeniera en Sistemas, Magíster en Educación Especial con mención en Educación de las Personas con Discapacidad Visual por la Universidad Politécnica Salesiana, Magíster en Psicopedagogía por la Universidad de La Rioja y Doctora en Ciencias Sociales y Jurídicas por la Universidad de Córdoba (España). Cuenta con diplomados en TIC para la atención a la diversidad, trastorno del espectro autista, discapacidad intelectual y dificultades del aprendizaje. Lidera el grupo de investigación INADDE (Inclusión y Atención a la Diversidad para el Desarrollo) y el Grupo de Investigación para la Educación Inclusiva de Niños con TEA (IETEA).',
     photo: 'ponentes/fotos/gloria-alcivar.png',
   },
 
@@ -138,7 +138,7 @@ const PONENTES = {
   'xavier-cobena': {
     name: 'Xavier Alfredo Cobeña Andrade',
     institution: 'GOPA Infra / GOPA Tech',
-    bio: 'Ingeniero, consultor de desarrollo internacional y académico ecuatoriano con destacada trayectoria en la intersección de la gestión de proyectos, las políticas públicas y la sostenibilidad. Colabora con la firma global GOPA Infra / GOPA Tech como especialista internacional en acceso a financiamiento y estructuración de proyectos de infraestructura y transición energética.',
+    bio: 'Ingeniero en Administración por la PUCE, Doctor en Estudios Internacionales por FLACSO Ecuador, Máster en Planificación Territorial y Gestión Ambiental por la Universidad de Barcelona y Administrador de Proyectos certificado por el Tec de Monterrey. Combina la investigación con la consultoría internacional para GOPA Tech y organismos como GIZ y ONU-Hábitat, liderando estudios sobre desarrollo territorial, cambio climático, energía y financiamiento en América Latina. En el servicio público ecuatoriano se ha desempeñado como Coordinador Zonal del Ministerio de Inclusión Económica y Social, Director Zonal de SENPLADES, Asesor del Ministerio de Coordinación de Política Económica, Viceministro de Vivienda y miembro del Directorio del Banco de Desarrollo del Ecuador. Cuenta con más de 10 publicaciones académicas y ha sido docente e investigador invitado en FLACSO Ecuador, la PUCE, la ULEAM y la Universidad Técnica de Manabí.',
     photo: 'ponentes/fotos/xavier-cobena.png',
   },
 
