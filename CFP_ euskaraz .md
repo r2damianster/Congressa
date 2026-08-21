@@ -15,7 +15,7 @@ Hauek dira helburu nagusiak:
 3\) Elkarlaneko ekimenak garatzea: Parte-hartzaileak motibatzea ingurumen eta kultura-jasangarritasunerako erronkei heltzen dieten proiektuetan batera lan egitera, bai toki-mailan, bai maila globalean;  
 4\) Ingurumen-hezkuntzari buruzko kontzientzia sortzea: Espainian eta Ekuadorren hezkuntza-testuinguru desberdinetara egokitutako gai ekologikoetan herritarrak trebatzearen garrantzia azpimarratzea, bai eta horrek komunitatean duen eragina aztertzea ere;  
 5\) Lankidetza-sare bat ezartzea: Iraunkortasunarekin eta etengabeko ikaskuntzarekin konprometitutako irakasleak eta ikasleak konektatzea.  
-6\) Ekitatea eta kalitatezko hezkuntzarako benetako sarbidea bermatuko duten ikaskuntza-ingurune unibertsalen diseinua sustatzea, hezkuntza-berrikuntzak eta jasangarritasun-estrategiek goi-mailako hezkuntzan oztopo fisikoak, kognitiboak eta kulturalak ezabatzeko tresna gisa balio dezaketela aztertuz.
+6\) Inklusioa eta ekitatea bermatuko duten, kalitatezko hezkuntzarako benetako sarbidea ziurtatuko duten ikaskuntza-ingurune unibertsalak diseinatzea sustatzea, hezkuntza-berrikuntzak eta jasangarritasun-estrategiek goi-mailako hezkuntzan oztopo fisikoak, kognitiboak eta kulturalak ezabatzeko tresna gisa balio dezaketela aztertuz.
 
 **KONGRESUKO HARTZAILEAK** 
 

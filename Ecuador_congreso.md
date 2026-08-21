@@ -1,4 +1,4 @@
-﻿Título del Congreso: **Congreso Internacional sobre Innovación educativa y sostenibilidad en Educación Superior. Intercambio de experiencias**
+﻿Título del Congreso: **Congreso Internacional sobre Innovación Educativa, Inclusión y Sostenibilidad en Educación Superior. Intercambio de experiencias**
 
 Lugar: Formato online y presencial con dos sedes en la Facultad de Educación de Bilbao de la EHU y en la ULEAM
 
@@ -20,7 +20,7 @@ Los objetivos principales del congreso son:
 
 \5) Establecer una red de colaboración: Conectar a docentes y estudiantes comprometidos con la sostenibilidad y el aprendizaje continuo\.
 
-\6) Promover el diseño de entornos de aprendizaje universales que garanticen la equidad y el acceso efectivo a una educación de calidad, analizando cómo la innovación educativa y las estrategias de sostenibilidad pueden servir como herramientas para eliminar barreras físicas, cognitivas y culturales en la Educación Superior\.
+\6) Promover el diseño de entornos de aprendizaje universales e inclusivos que garanticen la equidad y el acceso efectivo a una educación de calidad, analizando cómo la innovación educativa y las estrategias de sostenibilidad pueden servir como herramientas para eliminar barreras físicas, cognitivas y culturales en la Educación Superior\.
 
 **PERSONAS DESTINATARIAS**
 

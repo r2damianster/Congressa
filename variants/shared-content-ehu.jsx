@@ -94,7 +94,7 @@ const _ORGS = [
 const CONTENT_EHU = {
   es: {
     eventShort: "INEDUS 2026",
-    eventFull: "Congreso Internacional de Innovación Educativa, Inclusión y Sostenibilidad en Educación Superior",
+    eventFull: "Congreso Internacional sobre Innovación Educativa, Inclusión y Sostenibilidad en Educación Superior. Intercambio de experiencias",
     subtitle: "Intercambio de experiencias",
     tagline: "Un diálogo entre los formadores de docentes de Iberoamérica",
     heroTitleParts: ["Innovación Educativa", "Inclusión y Sostenibilidad", "en Educación Superior"],
@@ -322,7 +322,7 @@ const CONTENT_EHU = {
 
   eu: {
     eventShort: "INEDUS 2026",
-    eventFull: "Nazioarteko Kongresua Hezkuntza Berrikuntzan, Inklusioan eta Jasangarritasunean Goi Mailako Hezkuntzan",
+    eventFull: "Nazioarteko Kongresua Hezkuntza Berrikuntzari, Inklusioari eta Jasangarritasunari buruz Goi Mailako Hezkuntzan. Esperientzien Trukea",
     subtitle: "Esperientzien Trukea",
     tagline: "Iberoamerikako irakasle-hezitzaileen arteko elkarrizketa",
     heroTitleParts: ["Hezkuntza Berrikuntza", "Inklusioa eta Jasangarritasuna", "Goi Mailako Hezkuntzan"],
@@ -550,7 +550,7 @@ const CONTENT_EHU = {
 
   en: {
     eventShort: "INEDUS 2026",
-    eventFull: "International Congress on Educational Innovation, Inclusion and Sustainability in Higher Education",
+    eventFull: "International Congress on Educational Innovation, Inclusion and Sustainability in Higher Education. Exchange of Experiences",
     subtitle: "Exchange of Experiences",
     tagline: "A dialogue among teacher educators from Latin America",
     heroTitleParts: ["Educational Innovation", "Inclusion and Sustainability", "in Higher Education"],
