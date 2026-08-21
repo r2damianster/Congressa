@@ -16,7 +16,7 @@ const PONENTES = {
   'jorge-ivan-pincay': {
     name: 'Jorge Iván Pincay Ponce',
     institution: 'ULEAM',
-    bio: 'Investigador y profesor en el área de Informática, vinculado principalmente a la Universidad Laica Eloy Alfaro de Manabí (ULEAM). Su línea de investigación principal se enfoca en la inteligencia artificial, la ingeniería de software y la minería de datos. Cuenta con una producción científica de 50 publicaciones, un índice h de 8 (Google Scholar) y trabajos destacados en revistas y congresos internacionales sobre analítica de datos educativos y socioeconómicos, aprendizaje automático (machine learning) y accesibilidad web.',
+    bio: 'Doctor en Ciencias Informáticas, investigador y profesor en el área de Informática, vinculado principalmente a la Universidad Laica Eloy Alfaro de Manabí (ULEAM). Su línea de investigación principal se enfoca en la inteligencia artificial, la ingeniería de software y la minería de datos. Cuenta con una producción científica de 50 publicaciones, un índice h de 8 (Google Scholar) y trabajos destacados en revistas y congresos internacionales sobre analítica de datos educativos y socioeconómicos, aprendizaje automático (machine learning) y accesibilidad web.',
     photo: 'ponentes/fotos/jorge-ivan-pincay.png',
   },
 
@@ -39,7 +39,7 @@ const PONENTES = {
   'lewin-perez': {
     name: 'Lewin José Pérez Plata',
     institution: 'ULEAM',
-    bio: 'Profesor de Educación Física con Maestría en Enseñanza de la Educación Física y Doctorado en Ciencias de la Motricidad Humana. Docente de nacionalidad venezolana en ejercicio en la Universidad Laica Eloy Alfaro de Manabí (ULEAM), con más de 15 años de experiencia en distintos niveles educativos. Investigador y conferencista internacional, miembro de la Red LEA. Sus líneas de investigación son la educación y el currículo, las innovaciones pedagógicas y el entrenamiento deportivo. Cuenta con más de 15 publicaciones académicas.',
+    bio: 'Doctor en Ciencias de la Motricidad Humana y Magíster en Enseñanza de la Educación Física. Profesor de Educación Física de nacionalidad venezolana, en ejercicio en la Universidad Laica Eloy Alfaro de Manabí (ULEAM), con más de 15 años de experiencia en distintos niveles educativos. Investigador y conferencista internacional, miembro de la Red LEA. Sus líneas de investigación son la educación y el currículo, las innovaciones pedagógicas y el entrenamiento deportivo. Cuenta con más de 15 publicaciones académicas.',
     photo: 'ponentes/fotos/lewin-perez.png',
   },
 
