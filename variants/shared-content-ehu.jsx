@@ -54,6 +54,7 @@ const _SCI = [
   { n: "Nagore Ozerinjauregi", a: "EHU" },
   { n: "Nahia Idoiaga", a: "EHU" },
   { n: "Naiara Berasategi", a: "EHU" },
+  { n: "Naiara Ozamiz Etxebarria", a: "EHU" },
   { n: "Nekane Beloki", a: "EHU" },
   { n: "Noelia Ceballos López", a: "Universidad de Cantabria" },
   { n: "Oihane Korres Alonso", a: "Universidad de Deusto" },
