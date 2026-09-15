@@ -201,9 +201,9 @@ const CONTENT_EHU = {
     },
     propuestas: {
       title: "Envío de propuestas",
-      lead: "Plazo abierto hasta el 15 de septiembre de 2026. Se aceptan propuestas en español, euskara e inglés. Evaluación por pares.",
+      lead: "Plazo abierto hasta el 30 de septiembre de 2026. Se aceptan propuestas en español, euskara e inglés. Evaluación por pares.",
       timeline: [
-        { date: "Hasta 15 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
+        { date: "Hasta 30 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
         { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },
         { date: "Antes del 15 Oct 2026", label: "Matrícula de trabajos aceptados — solo autores con trabajo aprobado", status: "future" },
         { date: "Antes del 20 Oct 2026", label: "Envío de material de apoyo a la presentación", status: "future" },
@@ -245,7 +245,7 @@ const CONTENT_EHU = {
       conceptoLabel: "Concepto / Asunto",
       nota: "Sustituye «Apellido1NOMBRE» por tu primer apellido y nombre, sin espacios. Ejemplo: Congreso_RodriguezArturo",
       pasos: [
-        { n: "1", texto: "Envía tu propuesta antes del 15 de septiembre" },
+        { n: "1", texto: "Envía tu propuesta antes del 30 de septiembre" },
         { n: "2", texto: "Espera el correo de aceptación (sept.–oct.)" },
         { n: "3", texto: "Completa el formulario de matrícula antes del 15 de octubre" },
         { n: "4", texto: "Realiza la transferencia bancaria con el concepto indicado" },
@@ -429,9 +429,9 @@ const CONTENT_EHU = {
     },
     propuestas: {
       title: "Proposamenak bidaltzea",
-      lead: "Lanak aurkezteko epea irailaren 15era arte egongo da zabalik. Proposamenak euskaraz, gaztelaniaz eta ingelesez onartzen dira. Pareka ebaluatuko dira.",
+      lead: "Lanak aurkezteko epea irailaren 30era arte egongo da zabalik. Proposamenak euskaraz, gaztelaniaz eta ingelesez onartzen dira. Pareka ebaluatuko dira.",
       timeline: [
-        { date: "Irailaren 15a arte", label: "Proposamenak bidaltzeko epea", status: "open" },
+        { date: "Irailaren 30a arte", label: "Proposamenak bidaltzeko epea", status: "open" },
         { date: "Irailaren 30a arte", label: "Jakinarazpena: onarpena, berrikuspena edo errefusapena", status: "soon" },
         { date: "Urriaren 15a baino lehen", label: "Matrikula — onartutako lanen egileak soilik", status: "future" },
         { date: "Urriaren 20a baino lehen", label: "Aurkezpenerako material lagungarria bidaltzea", status: "future" },
@@ -473,7 +473,7 @@ const CONTENT_EHU = {
       conceptoLabel: "Kontzeptua / Gaia",
       nota: "«Abizen1IZENA» zure lehen abizena eta izena jarri, hutsune gabe. Adibidez: Congreso_RodriguezArturo",
       pasos: [
-        { n: "1", texto: "Bidali zure proposamena irailaren 15a baino lehen" },
+        { n: "1", texto: "Bidali zure proposamena irailaren 30a baino lehen" },
         { n: "2", texto: "Itxaron onartze-mezu elektronikoa (irail.–urri.)" },
         { n: "3", texto: "Bete matrikula-inprimakia urriaren 15a baino lehen" },
         { n: "4", texto: "Egin bankuko transferentzia adierazitako kontzeptuarekin" },
@@ -657,9 +657,9 @@ const CONTENT_EHU = {
     },
     propuestas: {
       title: "Submitting Proposals",
-      lead: "Open until 15 September 2026. Proposals accepted in Spanish, Basque (Euskara) and English. Peer review.",
+      lead: "Open until 30 September 2026. Proposals accepted in Spanish, Basque (Euskara) and English. Peer review.",
       timeline: [
-        { date: "Until 15 Sep 2026", label: "Proposal submission deadline", status: "open" },
+        { date: "Until 30 Sep 2026", label: "Proposal submission deadline", status: "open" },
         { date: "Until 30 Sep 2026", label: "Notification: acceptance, revision or rejection", status: "soon" },
         { date: "Before 15 Oct 2026", label: "Registration for accepted authors only", status: "future" },
         { date: "Before 20 Oct 2026", label: "Submission of presentation support materials", status: "future" },
@@ -701,7 +701,7 @@ const CONTENT_EHU = {
       conceptoLabel: "Reference / Subject",
       nota: "Replace «Surname1NAME» with your first surname and first name, no spaces. Example: Congreso_RodriguezArturo",
       pasos: [
-        { n: "1", texto: "Submit your proposal before 15 September" },
+        { n: "1", texto: "Submit your proposal before 30 September" },
         { n: "2", texto: "Wait for the acceptance email (Sept.–Oct.)" },
         { n: "3", texto: "Complete the registration form before 15 October" },
         { n: "4", texto: "Make the bank transfer with the indicated reference" },
