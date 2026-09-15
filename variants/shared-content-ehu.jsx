@@ -201,9 +201,9 @@ const CONTENT_EHU = {
     },
     propuestas: {
       title: "Envío de propuestas",
-      lead: "Plazo abierto hasta el 30 de septiembre de 2026. Se aceptan propuestas en español, euskara e inglés. Evaluación por pares.",
+      lead: "Plazo ampliado hasta el 30 de septiembre de 2026. Se aceptan propuestas en español, euskara e inglés. Evaluación por pares.",
       timeline: [
-        { date: "Hasta 30 Sep 2026", label: "Cierre de envío de propuestas", status: "open" },
+        { date: "Hasta 30 Sep 2026 (ampliado)", label: "Cierre de envío de propuestas", status: "open" },
         { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },
         { date: "Antes del 15 Oct 2026", label: "Matrícula de trabajos aceptados — solo autores con trabajo aprobado", status: "future" },
         { date: "Antes del 20 Oct 2026", label: "Envío de material de apoyo a la presentación", status: "future" },
@@ -429,9 +429,9 @@ const CONTENT_EHU = {
     },
     propuestas: {
       title: "Proposamenak bidaltzea",
-      lead: "Lanak aurkezteko epea irailaren 30era arte egongo da zabalik. Proposamenak euskaraz, gaztelaniaz eta ingelesez onartzen dira. Pareka ebaluatuko dira.",
+      lead: "Lanak aurkezteko epea irailaren 30era arte luzatu da. Proposamenak euskaraz, gaztelaniaz eta ingelesez onartzen dira. Pareka ebaluatuko dira.",
       timeline: [
-        { date: "Irailaren 30a arte", label: "Proposamenak bidaltzeko epea", status: "open" },
+        { date: "Irailaren 30a arte (luzatua)", label: "Proposamenak bidaltzeko epea", status: "open" },
         { date: "Irailaren 30a arte", label: "Jakinarazpena: onarpena, berrikuspena edo errefusapena", status: "soon" },
         { date: "Urriaren 15a baino lehen", label: "Matrikula — onartutako lanen egileak soilik", status: "future" },
         { date: "Urriaren 20a baino lehen", label: "Aurkezpenerako material lagungarria bidaltzea", status: "future" },
@@ -657,9 +657,9 @@ const CONTENT_EHU = {
     },
     propuestas: {
       title: "Submitting Proposals",
-      lead: "Open until 30 September 2026. Proposals accepted in Spanish, Basque (Euskara) and English. Peer review.",
+      lead: "Deadline extended to 30 September 2026. Proposals accepted in Spanish, Basque (Euskara) and English. Peer review.",
       timeline: [
-        { date: "Until 30 Sep 2026", label: "Proposal submission deadline", status: "open" },
+        { date: "Until 30 Sep 2026 (extended)", label: "Proposal submission deadline", status: "open" },
         { date: "Until 30 Sep 2026", label: "Notification: acceptance, revision or rejection", status: "soon" },
         { date: "Before 15 Oct 2026", label: "Registration for accepted authors only", status: "future" },
         { date: "Before 20 Oct 2026", label: "Submission of presentation support materials", status: "future" },
