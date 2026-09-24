@@ -37,6 +37,17 @@ const ROLLUP_SIZES = [
   { id: "a3", widthCm: 29.7, heightCm: 42, group: "a", label: "A3" },
 ];
 
+const ROLLUP_SIZES_LANDSCAPE = [
+  { id: "h-a0", widthCm: 118.9, heightCm: 84.1, group: "a", label: "A0" },
+  { id: "h-a1", widthCm: 84.1, heightCm: 59.4, group: "a", label: "A1" },
+  { id: "h-a2", widthCm: 59.4, heightCm: 42, group: "a", label: "A2" },
+  { id: "h-a3", widthCm: 42, heightCm: 29.7, group: "a", label: "A3" },
+  { id: "h-a4", widthCm: 29.7, heightCm: 21, group: "a", label: "A4" },
+  { id: "h-120x80", widthCm: 120, heightCm: 80, group: "rollup" },
+  { id: "h-90x60", widthCm: 90, heightCm: 60, group: "rollup" },
+  { id: "h-200x85", widthCm: 200, heightCm: 85, group: "rollup" },
+];
+
 // ── Carga de recursos ────────────────────────────────────────────────────────
 
 const fetchAsDataUrl = async (url) => {
@@ -165,7 +176,7 @@ const plenarySpeakerNames = (dayNumber) => {
 // ── Bloques del diseño ───────────────────────────────────────────────────────
 // Cada bloque devuelve { height, elements } en coordenadas locales (y = 0 arriba del bloque).
 
-const buildLayoutBlocks = ({ fonts, logos, content, designWidth }) => {
+const buildLayoutBlocks = ({ fonts, logos, content, designWidth, venueLayout = "cards" }) => {
   const rollup = content.rollup;
   const margin = 72;
   const contentWidth = designWidth - margin * 2;
@@ -222,7 +233,37 @@ const buildLayoutBlocks = ({ fonts, logos, content, designWidth }) => {
   };
 
   // Sedes
+  const buildVenuesRows = () => {
+    const cardGap = 24;
+    const cardPadding = 30;
+    const logoColumnWidth = 150;
+    const logoHeight = 110;
+    const textX = margin + cardPadding + logoColumnWidth + 24;
+    const textWidth = designWidth - margin - cardPadding - textX;
+    const venueDefinitions = [
+      { label: content.venues.v1label, name: content.venues.v1name, detail: rollup.v1short, logo: logos.ehu },
+      { label: content.venues.v2label, name: content.venues.v2name, detail: content.venues.v2detail, logo: logos.uleam },
+    ];
+    let cursorY = 0;
+    const elements = [];
+    venueDefinitions.forEach((definition) => {
+      const label = paragraph(fonts.sansBold, definition.label.toUpperCase(), { x: textX, top: cardPadding, size: 19, fill: ROLLUP_ACCENT, anchor: "start", maxWidth: textWidth, tracking: 2.5, lineHeight: 28 });
+      const name = paragraph(fonts.serif, definition.name, { x: textX, top: cardPadding + label.height + 8, size: 44, fill: ROLLUP_PRIMARY, anchor: "start", maxWidth: textWidth, lineHeight: 50 });
+      const detail = paragraph(fonts.sans, definition.detail, { x: textX, top: cardPadding + label.height + 8 + name.height + 6, size: 24, fill: ROLLUP_MUTED, anchor: "start", maxWidth: textWidth, lineHeight: 32 });
+      const cardHeight = Math.max(logoHeight, label.height + 8 + name.height + 6 + detail.height) + cardPadding * 2;
+      const logoWidth = logoWidthFor(definition.logo, logoHeight);
+      elements.push(
+        { kind: "rect", x: margin, y: cursorY, width: contentWidth, height: cardHeight, radius: 22, fill: "#FFFFFF", stroke: "#D9E2EF", strokeWidth: 2 },
+        { kind: "image", href: definition.logo.href, x: margin + cardPadding + (logoColumnWidth - logoWidth) / 2, y: cursorY + (cardHeight - logoHeight) / 2, width: logoWidth, height: logoHeight },
+        ...[...label.elements, ...name.elements, ...detail.elements].map((element) => ({ ...element, transformY: cursorY }))
+      );
+      cursorY += cardHeight + cardGap;
+    });
+    return { height: cursorY - cardGap, elements };
+  };
+
   const buildVenues = () => {
+    if (venueLayout === "rows") return buildVenuesRows();
     const cardGap = 24;
     const cardWidth = (contentWidth - cardGap) / 2;
     const cardPadding = 30;
@@ -393,7 +434,95 @@ const buildLayoutBlocks = ({ fonts, logos, content, designWidth }) => {
     return { height: bandHeight + stripHeight, elements };
   };
 
+  // Cabecera apaisada: logo · título · fechas en una sola franja
+  const buildHeaderWide = () => {
+    const elements = [];
+    const padding = 56;
+    const logoPillWidth = 300;
+    const logoInnerWidth = logoPillWidth - 40;
+    const logoInnerHeight = (logos.inedus.height / logos.inedus.width) * logoInnerWidth;
+    const logoPillHeight = logoInnerHeight + 40;
+    const datesWidth = 430;
+    const titleX = margin + logoPillWidth + 70;
+    const titleWidth = designWidth - margin - datesWidth - 70 - titleX;
+    const datesCenterX = designWidth - margin - datesWidth / 2;
+
+    const kicker = paragraph(fonts.sansBold, rollup.kicker.toUpperCase(), { x: titleX, top: 0, size: 24, fill: ROLLUP_ACCENT_LIGHT, anchor: "start", maxWidth: titleWidth, tracking: 6, lineHeight: 34 });
+    const titleParts = content.heroTitleParts;
+    const titleSize = fitTextSize(fonts.serif, titleParts, 92, titleWidth);
+    let titleTop = kicker.height + 12;
+    const titleLines = titleParts.map((part, partIndex) => {
+      const isLast = partIndex === titleParts.length - 1;
+      const line = paragraph(isLast ? fonts.serifItalic : fonts.serif, part, { x: titleX, top: titleTop, size: titleSize, fill: isLast ? ROLLUP_ACCENT_LIGHT : "#FFFFFF", anchor: "start", maxWidth: titleWidth * 1.2, lineHeight: titleSize * 1.08 });
+      titleTop += line.height;
+      return line;
+    });
+    const titleStackHeight = titleTop;
+
+    const dateBig = paragraph(fonts.serif, rollup.dateBig, { x: datesCenterX, top: 0, size: 150, fill: "#FFFFFF", maxWidth: datesWidth, lineHeight: 140 });
+    const dateMonth = paragraph(fonts.sansBold, rollup.dateMonth.toUpperCase(), { x: datesCenterX, top: dateBig.height + 2, size: 30, fill: ROLLUP_ACCENT_LIGHT, maxWidth: datesWidth, tracking: 7, lineHeight: 42 });
+    const dateHybrid = paragraph(fonts.sansBold, content.hybrid, { x: datesCenterX, top: dateBig.height + dateMonth.height + 22, size: 24, fill: "#CBD9F0", maxWidth: datesWidth, lineHeight: 34 });
+    const datesStackHeight = dateBig.height + dateMonth.height + 22 + dateHybrid.height;
+
+    const bandHeight = padding * 2 + Math.max(logoPillHeight, titleStackHeight, datesStackHeight);
+    const centered = (stackHeight) => (bandHeight - stackHeight) / 2;
+    const shift = (paragraphResult, offsetY) => paragraphResult.elements.map((element) => ({ ...element, transformY: offsetY }));
+
+    elements.push({ kind: "rect", x: 0, y: 0, width: designWidth, height: bandHeight, fill: ROLLUP_PRIMARY });
+    elements.push({ kind: "rect", x: 0, y: bandHeight, width: designWidth, height: 14, fill: ROLLUP_ACCENT });
+    elements.push({ kind: "rect", x: margin, y: centered(logoPillHeight), width: logoPillWidth, height: logoPillHeight, radius: 20, fill: "#FFFFFF" });
+    elements.push({ kind: "image", href: logos.inedus.href, x: margin + 20, y: centered(logoPillHeight) + 20, width: logoInnerWidth, height: logoInnerHeight });
+    const titleOffset = centered(titleStackHeight);
+    elements.push(...shift(kicker, titleOffset));
+    titleLines.forEach((line) => elements.push(...shift(line, titleOffset)));
+    const datesOffset = centered(datesStackHeight);
+    elements.push(...shift(dateBig, datesOffset), ...shift(dateMonth, datesOffset), ...shift(dateHybrid, datesOffset));
+    elements.push({ kind: "rect", x: designWidth - margin - datesWidth - 35, y: datesOffset + 10, width: 2, height: datesStackHeight - 20, fill: ROLLUP_ACCENT_LIGHT, opacity: 0.35 });
+    return { height: bandHeight + 14, elements };
+  };
+
+  // Pie apaisado: QR · web · logos en una sola franja
+  const buildFooterWide = () => {
+    const elements = [];
+    const bandPadding = 40;
+    const qrCardSide = 210;
+    const bandHeight = bandPadding * 2 + qrCardSide;
+    elements.push({ kind: "rect", x: 0, y: 0, width: designWidth, height: bandHeight, fill: ROLLUP_PRIMARY });
+    elements.push({ kind: "rect", x: margin, y: bandPadding, width: qrCardSide, height: qrCardSide, radius: 20, fill: "#FFFFFF" });
+    elements.push({ kind: "path", d: qrPathData(ROLLUP_URL, margin + 18, bandPadding + 18, qrCardSide - 36), fill: ROLLUP_PRIMARY });
+
+    const logoHeight = 84;
+    const logoOrder = ["inedus", "uleam", "ehu", "kideon"];
+    const logoWidths = logoOrder.map((logoName) => logoWidthFor(logos[logoName], logoHeight));
+    const logoGap = 36;
+    const panelPadding = 34;
+    const panelWidth = logoWidths.reduce((total, width) => total + width, 0) + logoGap * (logoOrder.length - 1) + panelPadding * 2;
+    const panelHeight = logoHeight + panelPadding * 2;
+    const panelX = designWidth - margin - panelWidth;
+    const panelY = (bandHeight - panelHeight) / 2;
+    elements.push({ kind: "rect", x: panelX, y: panelY, width: panelWidth, height: panelHeight, radius: 20, fill: "#FFFFFF" });
+    let logoX = panelX + panelPadding;
+    logoOrder.forEach((logoName, logoIndex) => {
+      elements.push({ kind: "image", href: logos[logoName].href, x: logoX, y: panelY + panelPadding, width: logoWidths[logoIndex], height: logoHeight });
+      logoX += logoWidths[logoIndex] + logoGap;
+    });
+
+    const textX = margin + qrCardSide + 50;
+    const textWidth = panelX - 50 - textX;
+    const scan = paragraph(fonts.sansBold, rollup.scan.toUpperCase(), { x: textX, top: 0, size: 22, fill: ROLLUP_ACCENT_LIGHT, anchor: "start", maxWidth: textWidth, tracking: 3, lineHeight: 32 });
+    const webSize = fitTextSize(fonts.serifItalic, [rollup.web], 80, textWidth);
+    const web = paragraph(fonts.serifItalic, rollup.web, { x: textX, top: 0, size: webSize, fill: "#FFFFFF", anchor: "start", maxWidth: textWidth * 1.2, lineHeight: webSize * 1.15 });
+    const contact = paragraph(fonts.sans, content.footer.contact2, { x: textX, top: 0, size: 24, fill: "#CBD9F0", anchor: "start", maxWidth: textWidth, lineHeight: 34 });
+    const stackHeight = scan.height + 10 + web.height + 14 + contact.height;
+    const stackTop = (bandHeight - stackHeight) / 2;
+    const shift = (paragraphResult, offsetY) => paragraphResult.elements.map((element) => ({ ...element, transformY: stackTop + offsetY }));
+    elements.push(...shift(scan, 0), ...shift(web, scan.height + 10), ...shift(contact, scan.height + 10 + web.height + 14));
+    return { height: bandHeight, elements };
+  };
+
   return {
+    headerWide: buildHeaderWide(),
+    footerWide: buildFooterWide(),
     header: buildHeader(),
     dates: buildDates(),
     venues: buildVenues(),
@@ -460,12 +589,75 @@ const composeRollup = ({ fonts, logos, content, widthCm, heightCm }) => {
   return { designWidth, designHeight, placed, dropped: DROP_ORDER, overflow: true };
 };
 
+const LANDSCAPE_DESIGN_WIDTHS = [1700, 1850, 2000, 2200, 2400, 2650, 2900, 3200, 3600, 4000];
+const COLUMN_MARGIN = 72;
+const COLUMN_GAP = 48;
+
+const composeLandscape = ({ fonts, logos, content, widthCm, heightCm }) => {
+  const aspectRatio = heightCm / widthCm;
+  const stackColumn = (blocks) => {
+    let cursorY = 0;
+    const placedColumn = blocks.map((block) => {
+      const placedBlock = { block, y: cursorY };
+      cursorY += block.height + MIN_GAP;
+      return placedBlock;
+    });
+    return { placedColumn, height: cursorY - MIN_GAP };
+  };
+  for (const dropStats of [false, true]) {
+    for (const designWidth of LANDSCAPE_DESIGN_WIDTHS) {
+      const designHeight = designWidth * aspectRatio;
+      const columnWidth = (designWidth - COLUMN_MARGIN * 2 - COLUMN_GAP * 2) / 3;
+      const wide = buildLayoutBlocks({ fonts, logos, content, designWidth, venueLayout: "rows" });
+      const narrow = buildLayoutBlocks({ fonts, logos, content, designWidth: columnWidth + COLUMN_MARGIN * 2, venueLayout: "rows" });
+      const columnDefinitions = [
+        dropStats ? [narrow.venues] : [narrow.venues, narrow.stats],
+        [narrow.lines],
+        [narrow.program],
+      ].map(stackColumn);
+      const bodyHeight = Math.max(...columnDefinitions.map((column) => column.height));
+      const freeSpace = designHeight - wide.headerWide.height - wide.footerWide.height - bodyHeight;
+      if (freeSpace >= MIN_GAP * 2) {
+        const gap = freeSpace / 2;
+        const bodyTop = wide.headerWide.height + gap;
+        const placed = [
+          { id: "header", x: 0, y: 0, elements: wide.headerWide.elements, height: wide.headerWide.height },
+          ...columnDefinitions.flatMap((column, columnIndex) =>
+            column.placedColumn.map((entry, entryIndex) => ({
+              id: `column-${columnIndex}-${entryIndex}`,
+              x: columnIndex * (columnWidth + COLUMN_GAP) + COLUMN_MARGIN - COLUMN_MARGIN,
+              y: bodyTop + entry.y,
+              elements: entry.block.elements,
+              height: entry.block.height,
+            }))
+          ),
+          { id: "footer", x: 0, y: designHeight - wide.footerWide.height, elements: wide.footerWide.elements, height: wide.footerWide.height },
+        ];
+        return { designWidth, designHeight, placed, dropped: dropStats ? ["stats"] : [], overflow: false };
+      }
+    }
+  }
+  // No cabe ni comprimido: mínimo imprescindible
+  const designWidth = LANDSCAPE_DESIGN_WIDTHS[LANDSCAPE_DESIGN_WIDTHS.length - 1];
+  const designHeight = designWidth * aspectRatio;
+  const wide = buildLayoutBlocks({ fonts, logos, content, designWidth, venueLayout: "rows" });
+  return {
+    designWidth, designHeight, overflow: true, dropped: DROP_ORDER,
+    placed: [
+      { id: "header", x: 0, y: 0, elements: wide.headerWide.elements, height: wide.headerWide.height },
+      { id: "footer", x: 0, y: designHeight - wide.footerWide.height, elements: wide.footerWide.elements, height: wide.footerWide.height },
+    ],
+  };
+};
+
+const composeForSize = (options) => (options.heightCm < options.widthCm ? composeLandscape(options) : composeRollup(options));
+
 // ── Render SVG ───────────────────────────────────────────────────────────────
 
 const renderElement = (element, elementIndex) => {
   const translate = element.transformY ? `translate(0 ${element.transformY})` : undefined;
   if (element.kind === "rect") {
-    return <rect key={elementIndex} x={element.x} y={element.y} width={element.width} height={element.height} rx={element.radius || 0} fill={element.fill || "none"} stroke={element.stroke} strokeWidth={element.strokeWidth} />;
+    return <rect key={elementIndex} x={element.x} y={element.y} width={element.width} height={element.height} rx={element.radius || 0} fill={element.fill || "none"} fillOpacity={element.opacity} stroke={element.stroke} strokeWidth={element.strokeWidth} />;
   }
   if (element.kind === "image") {
     return <image key={elementIndex} href={element.href} x={element.x} y={element.y} width={element.width} height={element.height} preserveAspectRatio="xMidYMid meet" />;
@@ -477,7 +669,7 @@ const RollUpSvg = React.forwardRef(({ layout, label }, svgRef) => (
   <svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox={`0 0 ${layout.designWidth} ${layout.designHeight}`} role="img" aria-label={label} style={{ display: "block", width: "100%", height: "100%" }}>
     <rect x="0" y="0" width={layout.designWidth} height={layout.designHeight} fill={ROLLUP_PAPER} />
     {layout.placed.map((block) => (
-      <g key={block.id} transform={`translate(0 ${block.y})`}>{block.elements.map(renderElement)}</g>
+      <g key={block.id} transform={`translate(${block.x || 0} ${block.y})`}>{block.elements.map(renderElement)}</g>
     ))}
   </svg>
 ));
@@ -563,6 +755,7 @@ const RollUpPage = () => {
   const [lang, setLang] = React.useState("es");
   const [assets, setAssets] = React.useState(null);
   const [loadFailed, setLoadFailed] = React.useState(false);
+  const [orientation, setOrientation] = React.useState("portrait");
   const [sizeId, setSizeId] = React.useState("85x200");
   const [customWidthCm, setCustomWidthCm] = React.useState(85);
   const [customHeightCm, setCustomHeightCm] = React.useState(200);
@@ -581,10 +774,10 @@ const RollUpPage = () => {
 
   const selectedSize = sizeId === "custom"
     ? { widthCm: Math.min(300, Math.max(20, Number(customWidthCm) || 85)), heightCm: Math.min(400, Math.max(20, Number(customHeightCm) || 200)) }
-    : ROLLUP_SIZES.find((size) => size.id === sizeId);
+    : [...ROLLUP_SIZES, ...ROLLUP_SIZES_LANDSCAPE].find((size) => size.id === sizeId);
 
   const layout = React.useMemo(
-    () => (assets ? composeRollup({ fonts: assets.fonts, logos: assets.logos, content, widthCm: selectedSize.widthCm, heightCm: selectedSize.heightCm }) : null),
+    () => (assets ? composeForSize({ fonts: assets.fonts, logos: assets.logos, content, widthCm: selectedSize.widthCm, heightCm: selectedSize.heightCm }) : null),
     [assets, content, selectedSize.widthCm, selectedSize.heightCm]
   );
 
@@ -606,7 +799,12 @@ const RollUpPage = () => {
     }
   };
 
-  const groupedSizes = { rollup: ROLLUP_SIZES.filter((size) => size.group === "rollup"), a: ROLLUP_SIZES.filter((size) => size.group === "a") };
+  const sizesForOrientation = orientation === "portrait" ? ROLLUP_SIZES : ROLLUP_SIZES_LANDSCAPE;
+  const groupedSizes = { rollup: sizesForOrientation.filter((size) => size.group === "rollup"), a: sizesForOrientation.filter((size) => size.group === "a") };
+  const chooseOrientation = (nextOrientation) => {
+    setOrientation(nextOrientation);
+    setSizeId(nextOrientation === "portrait" ? "85x200" : "h-a1");
+  };
 
   const sizeButton = (size) => (
     <button key={size.id} onClick={() => setSizeId(size.id)} className={`chip ${sizeId === size.id ? "on" : ""}`}>{sizeLabel(size)}</button>
@@ -666,7 +864,15 @@ const RollUpPage = () => {
         </div>
 
         <div>
-          <div className="label">{ui.size} · {ui.rollups}</div>
+          <div className="label">{ui.orientation}</div>
+          <div className="lang">
+            <button className={orientation === "portrait" ? "on" : ""} onClick={() => chooseOrientation("portrait")}>{ui.portraitLabel}</button>
+            <button className={orientation === "landscape" ? "on" : ""} onClick={() => chooseOrientation("landscape")}>{ui.landscapeLabel}</button>
+          </div>
+        </div>
+
+        <div>
+          <div className="label">{ui.size} · {orientation === "portrait" ? ui.rollups : ui.posters}</div>
           <div className="row">{groupedSizes.rollup.map(sizeButton)}</div>
           <div className="label" style={{ marginTop: 14 }}>{ui.a4}</div>
           <div className="row">{groupedSizes.a.map(sizeButton)}</div>
@@ -704,4 +910,4 @@ const RollUpPage = () => {
   );
 };
 
-Object.assign(window, { RollUpPage, composeRollup, ROLLUP_SIZES });
+Object.assign(window, { RollUpPage, composeRollup, composeLandscape, ROLLUP_SIZES, ROLLUP_SIZES_LANDSCAPE });

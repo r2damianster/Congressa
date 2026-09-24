@@ -90,7 +90,7 @@ Standalone self-contained HTML files (`v1.html`, `v2.html`, `v3.html` and their 
 `rollup.jsx` dibuja el roll up como **SVG con el texto convertido a trazados** (opentype.js, fuentes Geist e Instrument Serif desde jsDelivr), de modo que el SVG y el PDF no dependen de fuentes instaladas. PDF con jsPDF + svg2pdf.js a tamaño físico exacto (mm); PNG rasterizando el SVG (máx. 3600 px de lado); el QR (`https://www.inedus.net`) se genera vectorial con qrcode-generator.
 
 - Textos: `rollup` dentro de cada idioma en `shared-content-ehu.jsx` (mismas reglas trilingües). El programa sale de `programa.jsx` / `ponentes.jsx` (ponentes plenarios).
-- Medidas: `ROLLUP_SIZES` en `rollup.jsx` (+ medida personalizada). `composeRollup` prueba anchos de diseño crecientes y descarta bloques opcionales (cifras → líneas temáticas → programa) si no caben.
+- Medidas: `ROLLUP_SIZES` (vertical) y `ROLLUP_SIZES_LANDSCAPE` (horizontal: A0–A4, 120×80, 90×60, 200×85) en `rollup.jsx`, más medida personalizada. Alto < ancho → `composeLandscape` (franja superior + 3 columnas + pie); si no, `composeRollup`. `composeRollup` prueba anchos de diseño crecientes y descarta bloques opcionales (cifras → líneas temáticas → programa) si no caben.
 - Requiere servir por HTTP (usa `fetch()` para incrustar los logos): `python -m http.server`. Ruta en producción vía `vercel.json`.
 
 ### Pendiente
