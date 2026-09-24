@@ -33,6 +33,7 @@ python -m http.server
 | `index.html` | Hub landing — links to individual congress landings |
 | `Landing CIPP 2026.html` | I Congreso Internacional de Pedagogía y Psicodidáctica — 3 design variants on a canvas |
 | `Landing INEDUS 2026.html` | INEDUS 2026 landing |
+| `Roll Up INEDUS 2026.html` | Página `/rollup`: roll up de INEDUS descargable en PDF / SVG / PNG (ES/EU/EN, varias medidas) |
 
 ### Core framework files (loaded by every landing)
 
@@ -83,3 +84,15 @@ Standalone self-contained HTML files (`v1.html`, `v2.html`, `v3.html` and their 
 - **Script load order matters.** In any HTML file, `design-canvas.jsx` and `tweaks-panel.jsx` must load before variant files. Variant files must load before the inline `<script type="text/babel">` that mounts the app.
 - **`EDITMODE-BEGIN` / `EDITMODE-END` markers** wrap the tweaks default JSON. The host runtime rewrites this block on disk when the user changes a tweak. Keep the markers on the same line as the object braces.
 - **Fonts:** CIPP landing uses Geist + Geist Mono + Instrument Serif. Index uses Outfit + Plus Jakarta Sans. Don't swap them between contexts.
+
+## Roll up (`/rollup`)
+
+`rollup.jsx` dibuja el roll up como **SVG con el texto convertido a trazados** (opentype.js, fuentes Geist e Instrument Serif desde jsDelivr), de modo que el SVG y el PDF no dependen de fuentes instaladas. PDF con jsPDF + svg2pdf.js a tamaño físico exacto (mm); PNG rasterizando el SVG (máx. 3600 px de lado); el QR (`https://www.inedus.net`) se genera vectorial con qrcode-generator.
+
+- Textos: `rollup` dentro de cada idioma en `shared-content-ehu.jsx` (mismas reglas trilingües). El programa sale de `programa.jsx` / `ponentes.jsx` (ponentes plenarios).
+- Medidas: `ROLLUP_SIZES` en `rollup.jsx` (+ medida personalizada). `composeRollup` prueba anchos de diseño crecientes y descarta bloques opcionales (cifras → líneas temáticas → programa) si no caben.
+- Requiere servir por HTTP (usa `fetch()` para incrustar los logos): `python -m http.server`. Ruta en producción vía `vercel.json`.
+
+### Pendiente
+
+- **Logos vectoriales (SVG/PDF)**: INEDUS (`LOGOINEDUS.jpeg`, 1422×592), KideON (`KideON-EHU.jpeg`, 1178×384), ULEAM (`LOGO-ULEAM-VERTICAL.png`) y EHU (`miniatura_EHU_logotipo.png`, 363×363) son mapas de bits y se pixelan en tamaños grandes (roll up de 85×200 cm y A0/A1). Conseguir los originales vectoriales con las instituciones, guardarlos como `.svg` y cambiar `ROLLUP_LOGO_FILES` en `rollup.jsx` (el resto del código ya usa el ancho/alto de cada imagen). Prioridad: EHU (la peor, 363 px).

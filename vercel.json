@@ -10,6 +10,10 @@
     {
       "source": "/home",
       "destination": "/Landing INEDUS 2026.html"
+    },
+    {
+      "source": "/rollup",
+      "destination": "/Roll Up INEDUS 2026.html"
     }
   ]
 }

@@ -537,6 +537,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
           <div style={s.footerRight} className="footer-right">
             <div style={{ fontSize: 11, letterSpacing: 1, color: "#94A3B8", textTransform: "uppercase", marginBottom: 4 }}>Contacto INEDUS 2026</div>
             <div><a href={`mailto:${c.footer.contact2}`} style={{ color: "inherit", textDecoration: "none" }}>{c.footer.contact2}</a></div>
+            <div style={{ marginTop: 6 }}><a href="/rollup" style={{ color: "inherit", fontSize: 12, textDecoration: "underline" }}>{c.rollup.ui.linkLabel}</a></div>
             <div style={s.footerCopy}>{c.footer.copy}</div>
           </div>
         </div>
