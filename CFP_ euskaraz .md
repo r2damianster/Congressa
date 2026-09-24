@@ -100,26 +100,28 @@ Irudiak, taulak edo grafikoak sartu nahi badira, jatorrizkoak eta egilearen/egil
 
 | Día | Hora Bilbao | Hora Manta | Tipo de sesión | Descripción |
 | :---- | :---- | :---- | :---- | :---- |
-| **28 oct** | 15:00-15:30 | 08:00-08:30 | Apertura conjunta | Inauguración institucional EHU-ULEAM (Vicerrector, decanos, etc.) Acto dirigido por Jhonny y Asier |
-|  | 15:30-16:30 | 08:30-09:30 | Plenaria conjunta | Dos Conferencias internacionales a cargo de un ponente propuesto por la EHU y otro por la ULEAM (temática: Retos de la innovación educativa en el currículo universitario) Fernando Trujillo (Universidad de Granada) José Antonio Marín  (Universidad de Granada) |
-|  | 16:30-17:30 | 09:30-10:30 | Mesa redonda conjunta | Cuatro ponentes (dos por la EHU/dos por la ULEAM) Temática: Retos de la innovación educativa en el currículo universitario Itziar Kerexeta (EHU) |
-|  | \- | 10:30-11:00 | Pausa para café |  |
-|  | \- | 11:00-112:30 14h30-16h30 | Sesiones locales (Manta)  |  Actividades a organizar por cada carrera. |
-| **29 oct** | 09:00-10:30 | \- | Sesiones locales (Bilbao) | Experiencias |
-|  | 10:30-11:00 | \- | Pausa para café |  |
-|  | 11:00-12:30 | \- | Sesiones locales (Bilbao) | Comunicaciones  |
-|  | 12:30-13:30 | \- | Simposio(Bilbao) |  |
-|  | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta | Conferencia internacional a cargo de un ponente propuesto por la ULEAM (temática: Educación y sostenibilidad en la Educación Superior) |
-|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda conjunta | Cuatro ponentes (dos por la EHU/dos por la ULEAM)  Temática: Educación y sostenibilidad en la Educación Superior) |
-|  | \- | 10:30-11:00 | Pausa para café |  |
-|  | \- | 11:00-112:30 14h30-16h30 | Sesiones locales (Manta)  |  Actividades a organizar por cada carrera. |
-| **30 oct** | 09:30-11:00 | \- | Sesiones locales (Bilbao) | comunicaciones |
-|  | 11:00-11:30 | \- | Pausa para café |  |
-|  | 11:30-13:00 | \- | Sesiones locales (Bilbao) | comunicaciones |
-|  | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta  | Conferencia internacional a cargo de un ponente propuesto por la EHU (temática: La investigación conectada con los ODS y el entorno) |
-|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda de cierre conjunta | Cuatro ponentes (dos por la EHU/dos por la ULEAM)  Temática: La investigación conectada con los ODS y el entorno) |
-|  | \- | 11:00-112:30 14h30-16h00 | Sesiones locales (Manta)  |  Actividades a organizar por cada carrera. |
-|  |  | 16h00-16h30 |  | Cierre del congreso |
+| **28 oct** | 15:00-15:30 | 08:00-08:30 | Apertura conjunta | Inauguración institucional EHU-ULEAM (vicerrectores, decanos). Maestros de ceremonia: Jhonny Villafuerte y Asier Romero |
+|  | 15:30-16:30 | 08:30-09:30 | Plenaria conjunta (híbrido Bilbao y Manta) | José Antonio Marín (Universidad de Granada), Jorge Iván Pincay Ponce (ULEAM) |
+|  | 16:30-17:30 | 09:30-10:30 | Mesa redonda conjunta (híbrido Bilbao y Manta) | Retos de la innovación educativa en el currículo universitario. Ponentes: José Ignacio Rivas-Flores (Universidad de Málaga), Lewin José Pérez Plata (ULEAM), Rosa Jhessenia Sacoto (ULEAM) |
+|  | - | 10:30-11:00 | Pausa para café (Manta) |  |
+|  | - | 11:00-12:30 y 14:30-16:30 | Sesiones locales (Manta) | Actividades a organizar por cada carrera. |
+|  | 17:30-18:00 | - | Pausa para café (Bilbao) |  |
+|  | 18:00-19:00 | - | Sesiones locales (Bilbao) Sala 1 | Experiencias e innovaciones didácticas |
+|  | 18:00-19:00 | - | Sesiones locales (Bilbao) Sala 2 | Comunicaciones |
+|  | 18:00-19:00 | - | Simposio (Bilbao) Sala 3 | Simposio presencial/online |
+| **29 oct** | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta (híbrido Bilbao y Manta) | Educación, inclusión y sostenibilidad en la Educación Superior. Ponentes: Marta Sandoval (Universidad Autónoma de Madrid), Jeovanny Moisés Benacidez Bailón (Universidad Técnica de Manabí) |
+|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda conjunta (híbrido Bilbao y Manta) | Educación, inclusión y sostenibilidad en la Educación Superior. Ponentes: Nahia Idoiaga (UPV/EHU), Denisse Quijada Sánchez (Universidad de Chile), Joserra Díez (UPV/EHU), Paola Natasha Díaz Rodríguez (ULEAM), Gloria Anabel Alcívar Pincay (ULEAM) |
+|  | - | 10:30-11:00 | Pausa para café (Manta) |  |
+|  | - | 11:00-12:30 y 14:30-16:30 | Sesiones locales (Manta) | Actividades a organizar por cada carrera. |
+|  | 17:30-18:00 | - | Pausa para café (Bilbao) |  |
+|  | 18:00-19:00 | - | Sesiones locales (Bilbao) Sala 1 | Comunicaciones |
+|  | 18:00-19:00 | - | Sesiones locales (Bilbao) Sala 2 | Comunicaciones |
+|  | 19:00-19:30 | - | Cierre del congreso | Clausura institucional |
+| **30 oct** | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta (híbrido Bilbao y Manta) | La investigación conectada con los ODS y el entorno. Ponentes: Estibaliz Sáez de Cámara (UPV/EHU), Mirian Gallegos |
+|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda de cierre conjunta (híbrido Bilbao y Manta) | La investigación conectada con los ODS y el entorno. Ponentes: Alejandro R. Rodríguez Martín (Universidad de Oviedo), Monique Leivas Vargas (Universitat de València), Xavier Alfredo Cobeña Andrade (GOPA Infra / GOPA Tech), Juan Alberto Figueroa Pico (ULEAM) |
+|  | - | 11:00-12:30 y 14:30-16:00 | Sesiones locales (Manta) | Actividades a organizar por cada carrera. |
+|  | - | 16:00-16:30 | Cierre del congreso (Manta) |  |
+|  | 17:30-18:00 | - | Cierre del congreso | Clausura institucional |
 
 **SAIOEN AZALPENA:**
 

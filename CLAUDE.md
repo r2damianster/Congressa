@@ -60,6 +60,19 @@ Each file is a self-contained React component loaded as `<script type="text/babe
 | `v3-dense.jsx` | Dense informative — dashboard style, monospaced, data-first |
 | `v1-ehu.jsx` | UPV/EHU-branded variant of V1 |
 
+### Programa y ponentes (INEDUS)
+
+**`programa.jsx`** — `window.PROGRAMA`: sesiones por día (28, 29, 30 oct). Cada sesión: `timeEHU` (hora Bilbao, CET), `timeManta` (ECT = Bilbao − 6 h), `type` (`apertura|plenaria|mesa|local|pausa|cierre`), `venue` (`conjunta|bilbao|manta`), `title`/`description` en `es/eu/en`, `speakers` (IDs de `ponentes.jsx`). Lo renderiza la sección VII de `v1-ehu.jsx`.
+**`ponentes.jsx`** — `window.PONENTES`: fichas (nombre, institución, bio, foto). Una ficha puede existir sin aparecer en el programa.
+
+Reglas del programa (vigentes desde `Programa_cambios.docx`, 2026-09-24):
+- Fuente de verdad: el programa que envía la dirección del congreso. Las tablas de `Ecuador_congreso.md` y `CFP_ euskaraz .md` deben coincidir con `programa.jsx`.
+- Las sesiones locales de Bilbao son solo a las 18:00–19:00 (día 28: Salas 1–3; día 29: Salas 1–2; día 30: ninguna). Café Bilbao 17:30–18:00 los días 28 y 29. Sin hora Manta (`timeManta: null`).
+- Manta (café 10:30–11:00, sesiones locales, cierre del día 30) no cambia salvo instrucción expresa.
+- Cierres: día 29 19:00–19:30 y día 30 17:30–18:00, conjuntos. El cierre de Manta del día 30 (16:00–16:30) se mantiene.
+- Mesa del día 28: 3 ponentes (Urtza Garay ya no participa, confirmado).
+- Al cambiar el programa hay que tocar las 3 lenguas y no commitear sin verificar consistencia.
+
 ### Exports (`exports/`)
 
 Standalone self-contained HTML files (`v1.html`, `v2.html`, `v3.html` and their `-print` versions). No external dependencies — everything inlined.

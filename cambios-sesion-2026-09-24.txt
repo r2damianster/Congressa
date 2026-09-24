@@ -1,0 +1,19 @@
+CAMBIOS DE SESION 2026-09-24 — Programa INEDUS 2026
+======================================================
+Origen: Programa_cambios.docx (director del congreso).
+
+programa.jsx
+  Dia 28: mesa redonda sin Urtza Garay (3 ponentes); cafe Bilbao 17:30-18:00;
+          sesiones locales Bilbao 18:00-19:00 en Sala 1 (experiencias), Sala 2 (comunicaciones), Sala 3 (simposio presencial/online).
+  Dia 29: se quitan las sesiones locales y el simposio de la manana en Bilbao; cafe 17:30-18:00;
+          Sala 1 y Sala 2 (comunicaciones) 18:00-19:00; nuevo cierre conjunto 19:00-19:30.
+  Dia 30: se quitan las sesiones locales y el cafe de la manana en Bilbao; cierre conjunto 17:30-18:00.
+  Manta: sin cambios (cafe, sesiones locales y cierre del dia 30 16:00-16:30 se mantienen).
+
+Documentacion actualizada
+  Ecuador_congreso.md y CFP_ euskaraz .md: tabla de estructura del programa reescrita segun el nuevo programa.
+  CLAUDE.md: nueva seccion "Programa y ponentes" con estructura de programa.jsx y reglas vigentes.
+
+Pendiente
+  - Confirmar con el director si se mantiene el cierre de Manta del dia 30 (hay dos filas de cierre).
+  - CFP en euskera: la tabla del programa sigue con textos en castellano (ya lo estaba).
