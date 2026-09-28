@@ -178,7 +178,7 @@ Itziar Kerexeta, Euskal Herriko Unibertsitatea (EHU)
 
 Saioa Bilbao, Euskal Herriko Unibertsitatea (EHU)
 
-Estibaliz Amenarro, Euskal Herriko Unibertsitatea (EHU)
+Estibaliz Amenabarro Iraola, Euskal Herriko Unibertsitatea (EHU)
 
 Naiara Berasategi, Euskal Herriko Unibertsitatea (EHU)
 
@@ -256,7 +256,7 @@ Angela Saiz Linares (Universidad de Cantabria)
 
 Monike Gezuraga
 
-Estibaliz Amenarro
+Estibaliz Amenabarro Iraola
 
 Naiara Berasategi
 

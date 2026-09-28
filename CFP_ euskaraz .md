@@ -150,7 +150,7 @@ Iñigo Rodríguez, Euskal Herriko Unibertsitatea (EHU)
 Leire Darretxe, Euskal Herriko Unibertsitatea (EHU)  
 Itziar Kerexeta, Euskal Herriko Unibertsitatea (EHU)  
 Saioa Bilbao, Euskal Herriko Unibertsitatea (EHU)  
-Estibaliz Amenarro, Euskal Herriko Unibertsitatea (EHU)  
+Estibaliz Amenabarro Iraola, Euskal Herriko Unibertsitatea (EHU)  
 Naiara Berasategi, Euskal Herriko Unibertsitatea (EHU)  
 Idoia Legorburu, Euskal Herriko Unibertsitatea (EHU)  
 Maitane Picaza, Euskal Herriko Unibertsitatea (EHU)  
@@ -187,7 +187,7 @@ Oihane Korres Alonso (Universidad de Deusto)
 
 **ARGITALPEN-BATZORDEA**  
 Monike Gezuraga  
-Estibaliz Amenarro  
+Estibaliz Amenabarro Iraola  
 Naiara Berasategi  
 Idoia Legorburu  
 Maitane Picaza  
