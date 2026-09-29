@@ -117,11 +117,11 @@ Irudiak, taulak edo grafikoak sartu nahi badira, jatorrizkoak eta egilearen/egil
 |  | 18:00-19:00 | - | Sesiones locales (Bilbao) Sala 1 | Comunicaciones |
 |  | 18:00-19:00 | - | Sesiones locales (Bilbao) Sala 2 | Comunicaciones |
 |  | 19:00-19:30 | - | Cierre del congreso | Clausura institucional |
-| **30 oct** | 15:00-16:00 | 08:00-09:00 | Plenaria conjunta (híbrido Bilbao y Manta) | La investigación conectada con los ODS y el entorno. Ponentes: Estibaliz Sáez de Cámara (UPV/EHU), Mirian Gallegos |
-|  | 16:00-17:30 | 09:00-10:30 | Mesa redonda de cierre conjunta (híbrido Bilbao y Manta) | La investigación conectada con los ODS y el entorno. Ponentes: Alejandro R. Rodríguez Martín (Universidad de Oviedo), Monique Leivas Vargas (Universitat de València), Xavier Alfredo Cobeña Andrade (GOPA Infra / GOPA Tech), Juan Alberto Figueroa Pico (ULEAM) |
-|  | - | 11:00-12:30 y 14:30-16:00 | Sesiones locales (Manta) | Actividades a organizar por cada carrera. |
-|  | - | 16:00-16:30 | Cierre del congreso (Manta) |  |
-|  | 17:30-18:00 | - | Cierre del congreso | Clausura institucional |
+| **30 oct** | 16:00-17:00 | 09:00-10:00 | Plenaria conjunta (híbrido Bilbao y Manta) | La investigación conectada con los ODS y el entorno. Ponentes: Estibaliz Sáez de Cámara (UPV/EHU), Mirian Gallegos |
+|  | 17:00-18:30 | 10:00-11:30 | Mesa redonda de cierre conjunta (híbrido Bilbao y Manta) | La investigación conectada con los ODS y el entorno. Ponentes: Alejandro R. Rodríguez Martín (Universidad de Oviedo), Monique Leivas Vargas (Universitat de València), Xavier Alfredo Cobeña Andrade (GOPA Infra / GOPA Tech), Juan Alberto Figueroa Pico (ULEAM) |
+|  | - | 12:00-13:30 y 15:30-17:00 | Sesiones locales (Manta) | Actividades a organizar por cada carrera. |
+|  | - | 17:00-17:30 | Cierre del congreso (Manta) |  |
+|  | 18:30-19:00 | - | Cierre del congreso | Clausura institucional |
 
 **SAIOEN AZALPENA:**
 

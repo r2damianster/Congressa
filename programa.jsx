@@ -293,8 +293,8 @@ const PROGRAMA = [
     day: '30',
     sessions: [
       {
-        timeEHU: '15:00–16:00',
-        timeManta: '08:00–09:00',
+        timeEHU: '16:00–17:00',
+        timeManta: '09:00–10:00',
         type: 'plenaria',
         venue: 'conjunta',
         title: {
@@ -310,8 +310,8 @@ const PROGRAMA = [
         speakers: ['estibaliz-saez', 'mirian-gallegos'],
       },
       {
-        timeEHU: '16:00–17:30',
-        timeManta: '09:00–10:30',
+        timeEHU: '17:00–18:30',
+        timeManta: '10:00–11:30',
         type: 'mesa',
         venue: 'conjunta',
         title: {
@@ -328,7 +328,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: null,
-        timeManta: '11:00–12:30 · 14:30–16:00',
+        timeManta: '12:00–13:30 · 15:30–17:00',
         type: 'local',
         venue: 'manta',
         title: {
@@ -345,7 +345,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: null,
-        timeManta: '16:00–16:30',
+        timeManta: '17:00–17:30',
         type: 'cierre',
         venue: 'manta',
         title: {
@@ -357,7 +357,7 @@ const PROGRAMA = [
         speakers: [],
       },
       {
-        timeEHU: '17:30–18:00',
+        timeEHU: '18:30–19:00',
         timeManta: null,
         type: 'cierre',
         venue: 'conjunta',
