@@ -116,7 +116,56 @@ const CONTENT_EHU = {
       propuestas: "Propuestas",
       matricula: "Matrícula",
       programa: "Programa",
+      archivos: "★ Plantillas y archivos",
       contacto: "Contacto",
+    },
+    files: {
+      pageTitle: "Plantillas y archivos",
+      pageLead: "Material público y descargable del congreso INEDUS 2026: plantillas para presentar y enviar trabajos, y recursos de difusión.",
+      back: "← Volver al congreso",
+      linkLabel: "★ Plantillas y archivos",
+      navLabel: "★ Plantillas y archivos",
+      groups: [
+        {
+          title: "Presentación en el congreso",
+          items: [
+            {
+              kind: "PPTX",
+              title: "Plantilla de diapositivas",
+              desc: "Formato 16:9 con los colores y logos de INEDUS 2026: portada, separadores de sección, introducción, metodología, resultados, conclusiones y cierre.",
+              links: [{ label: "Español", href: "PLANTILLA_PPT/INEDUS2026_plantilla_ES.pptx" }, { label: "Euskara", href: "PLANTILLA_PPT/INEDUS2026_plantilla_EU.pptx" }, { label: "English", href: "PLANTILLA_PPT/INEDUS2026_plantilla_EN.pptx" }],
+            },
+          ],
+        },
+        {
+          title: "Envío de trabajos",
+          items: [
+            {
+              kind: "DOCX",
+              title: "Plantilla de resumen (abstract)",
+              desc: "Plantilla oficial para comunicaciones, pósters y experiencias de innovación. Trilingüe ES / EU / EN.",
+              links: [{ label: "Descargar", href: "Template_Abstract.docx" }],
+            },
+            {
+              kind: "DOCX",
+              title: "Plantilla de texto extenso",
+              desc: "Plantilla oficial para la publicación opcional de los trabajos (Editorial Octaedro).",
+              links: [{ label: "Descargar", href: "Template_Extenso.docx" }],
+            },
+          ],
+        },
+        {
+          title: "Difusión",
+          items: [
+            {
+              kind: "PDF · SVG · PNG",
+              title: "Roll up del congreso",
+              desc: "Genera el roll up en tu idioma y medida, listo para imprenta.",
+              links: [{ label: "Abrir generador", href: "/rollup", internal: true }],
+            },
+          ],
+        },
+      ],
     },
     heroLead: "Tres días de comunicaciones, pósters y simposios sobre innovación educativa, inclusión y sostenibilidad en el marco de los Objetivos de Desarrollo Sostenible en la Educación Superior. Sede principal en la Facultad de Educación de Bilbao (EHU), desde donde se retransmitirá en línea a todas las personas matriculadas, y sede presencial en Manta (ULEAM).",
     ctas: {
@@ -348,8 +397,6 @@ const CONTENT_EHU = {
         rollups: "Roll up",
         orientation: "Orientación", portraitLabel: "Vertical", landscapeLabel: "Horizontal", posters: "Póster / plotter",
         linkLabel: "Roll up para imprimir",
-        templateLabel: "Plantilla de diapositivas (PPTX)",
-        templateFile: "PLANTILLA_PPT/INEDUS2026_plantilla_ES.pptx",
       },
     },
     footer: {
@@ -384,7 +431,56 @@ const CONTENT_EHU = {
       propuestas: "Proposamenak",
       matricula: "Matrikula",
       programa: "Programa",
+      archivos: "★ Txantiloiak eta fitxategiak",
       contacto: "Kontaktua",
+    },
+    files: {
+      pageTitle: "Txantiloiak eta fitxategiak",
+      pageLead: "INEDUS 2026 kongresuko material publikoa eta deskargagarria: lanak aurkezteko eta bidaltzeko txantiloiak, eta hedapen-baliabideak.",
+      back: "← Kongresura itzuli",
+      linkLabel: "★ Txantiloiak eta fitxategiak",
+      navLabel: "★ Txantiloiak eta fitxategiak",
+      groups: [
+        {
+          title: "Kongresuko aurkezpena",
+          items: [
+            {
+              kind: "PPTX",
+              title: "Diapositiba-txantiloia",
+              desc: "16:9 formatua, INEDUS 2026ko koloreekin eta logoekin: azala, atal-bereizleak, sarrera, metodologia, emaitzak, ondorioak eta amaiera.",
+              links: [{ label: "Español", href: "PLANTILLA_PPT/INEDUS2026_plantilla_ES.pptx" }, { label: "Euskara", href: "PLANTILLA_PPT/INEDUS2026_plantilla_EU.pptx" }, { label: "English", href: "PLANTILLA_PPT/INEDUS2026_plantilla_EN.pptx" }],
+            },
+          ],
+        },
+        {
+          title: "Lanak bidaltzea",
+          items: [
+            {
+              kind: "DOCX",
+              title: "Laburpen-txantiloia (abstract)",
+              desc: "Komunikazio, poster eta berrikuntza-esperientzietarako txantiloi ofiziala. Hirurhizkuntzakoa: ES / EU / EN.",
+              links: [{ label: "Deskargatu", href: "Template_Abstract.docx" }],
+            },
+            {
+              kind: "DOCX",
+              title: "Testu osoaren txantiloia",
+              desc: "Lanak argitaratzeko aukerako txantiloi ofiziala (Octaedro argitaletxea).",
+              links: [{ label: "Deskargatu", href: "Template_Extenso.docx" }],
+            },
+          ],
+        },
+        {
+          title: "Hedapena",
+          items: [
+            {
+              kind: "PDF · SVG · PNG",
+              title: "Kongresuaren roll up-a",
+              desc: "Sortu roll up-a zure hizkuntzan eta neurrian, inprentarako prest.",
+              links: [{ label: "Ireki sortzailea", href: "/rollup", internal: true }],
+            },
+          ],
+        },
+      ],
     },
     heroLead: "Hiru eguneko komunikazioak, posterrak eta sinposioak hezkuntza-berrikuntzari eta jasangarritasunari buruz, Garapen Jasangarrirako Helburuen esparruan Goi Mailako Hezkuntzan. Egoitza nagusia Bilboko Hezkuntza Fakultatean (EHU) dago, eta handik online erretransmisioa egingo da matrikulatutako pertsona guztientzat; bigarren egoitza presentziala Mantan (ULEAM) izango da.",
     ctas: {
@@ -616,8 +712,6 @@ const CONTENT_EHU = {
         rollups: "Roll up",
         orientation: "Orientazioa", portraitLabel: "Bertikala", landscapeLabel: "Horizontala", posters: "Poster / plotterra",
         linkLabel: "Inprimatzeko roll up-a",
-        templateLabel: "Diapositiba-txantiloia (PPTX)",
-        templateFile: "PLANTILLA_PPT/INEDUS2026_plantilla_EU.pptx",
       },
     },
     footer: {
@@ -652,7 +746,56 @@ const CONTENT_EHU = {
       propuestas: "Proposals",
       matricula: "Registration",
       programa: "Programme",
+      archivos: "★ Templates & files",
       contacto: "Contact",
+    },
+    files: {
+      pageTitle: "Templates and files",
+      pageLead: "Public, downloadable material for INEDUS 2026: templates for presenting and submitting work, and promotional resources.",
+      back: "← Back to the congress",
+      linkLabel: "★ Templates & files",
+      navLabel: "★ Templates & files",
+      groups: [
+        {
+          title: "Congress presentation",
+          items: [
+            {
+              kind: "PPTX",
+              title: "Slide template",
+              desc: "16:9 format with the colours and logos of INEDUS 2026: cover, section dividers, introduction, methodology, results, conclusions and closing.",
+              links: [{ label: "Español", href: "PLANTILLA_PPT/INEDUS2026_plantilla_ES.pptx" }, { label: "Euskara", href: "PLANTILLA_PPT/INEDUS2026_plantilla_EU.pptx" }, { label: "English", href: "PLANTILLA_PPT/INEDUS2026_plantilla_EN.pptx" }],
+            },
+          ],
+        },
+        {
+          title: "Submitting work",
+          items: [
+            {
+              kind: "DOCX",
+              title: "Abstract template",
+              desc: "Official template for papers, posters and innovation experiences. Trilingual ES / EU / EN.",
+              links: [{ label: "Download", href: "Template_Abstract.docx" }],
+            },
+            {
+              kind: "DOCX",
+              title: "Full paper template",
+              desc: "Official template for the optional publication of papers (Editorial Octaedro).",
+              links: [{ label: "Download", href: "Template_Extenso.docx" }],
+            },
+          ],
+        },
+        {
+          title: "Promotion",
+          items: [
+            {
+              kind: "PDF · SVG · PNG",
+              title: "Congress roll-up banner",
+              desc: "Generate the roll-up in your language and size, print-ready.",
+              links: [{ label: "Open generator", href: "/rollup", internal: true }],
+            },
+          ],
+        },
+      ],
     },
     heroLead: "Three days of papers, posters and symposia on educational innovation and sustainability within the framework of the Sustainable Development Goals in Higher Education. Main venue at the Faculty of Education of Bilbao (UPV/EHU), which will broadcast online to all registered participants, with a second in-person venue in Manta (ULEAM).",
     ctas: {
@@ -884,8 +1027,6 @@ const CONTENT_EHU = {
         rollups: "Roll up",
         orientation: "Orientation", portraitLabel: "Portrait", landscapeLabel: "Landscape", posters: "Poster / plotter",
         linkLabel: "Printable roll-up banner",
-        templateLabel: "Slide template (PPTX)",
-        templateFile: "PLANTILLA_PPT/INEDUS2026_plantilla_EN.pptx",
       },
     },
     footer: {
@@ -899,3 +1040,17 @@ const CONTENT_EHU = {
 };
 
 window.CONTENT_EHU = CONTENT_EHU;
+
+// Idioma elegido: se comparte entre la landing y /archivos (?lang=xx tiene prioridad)
+window.getInitialLang = () => {
+  try {
+    const queryLang = new URLSearchParams(window.location.search).get('lang');
+    if (CONTENT_EHU[queryLang]) return queryLang;
+    const storedLang = window.localStorage.getItem('inedus-lang');
+    if (CONTENT_EHU[storedLang]) return storedLang;
+  } catch (error) { /* sin acceso a storage: idioma por defecto */ }
+  return 'es';
+};
+window.saveLang = (lang) => {
+  try { window.localStorage.setItem('inedus-lang', lang); } catch (error) { /* ignorar */ }
+};

@@ -34,6 +34,7 @@ python -m http.server
 | `Landing CIPP 2026.html` | I Congreso Internacional de Pedagogía y Psicodidáctica — 3 design variants on a canvas |
 | `Landing INEDUS 2026.html` | INEDUS 2026 landing |
 | `Roll Up INEDUS 2026.html` | Página `/rollup`: roll up de INEDUS descargable en PDF / SVG / PNG (ES/EU/EN, varias medidas) |
+| `Archivos INEDUS 2026.html` | Página pública `/archivos` (★ en el menú): plantillas y archivos descargables. Catálogo en `CONTENT_EHU[lang].files` (`shared-content-ehu.jsx`, ES/EU/EN); render en `archivos.jsx`. Para añadir un archivo: ponerlo en el repo y agregar un ítem al grupo correspondiente en las 3 lenguas |
 
 ### Core framework files (loaded by every landing)
 

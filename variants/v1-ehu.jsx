@@ -2,7 +2,7 @@
 // EHU + ULEAM + Colombia + Chile · Educación, innovación y sostenibilidad
 
 const V1_EHU = ({ primary = "#1A3A6B" }) => {
-  const [lang, setLang] = React.useState('es');
+  const [lang, setLang] = React.useState(window.getInitialLang);
   const [openSpeaker, setOpenSpeaker] = React.useState(null);
   const c = window.CONTENT_EHU[lang];
   const s = v1ehuStyles(primary);
@@ -122,13 +122,15 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
         </div>
         <nav style={s.navLinks} className="nav-links">
           {Object.entries(c.nav).map(([k, v], i) => (
-            <a key={i} style={s.navLink} href={`#${k}`}>{v}</a>
+            k === 'archivos'
+              ? <a key={i} style={s.navLinkStar} href={`/archivos?lang=${lang}`}>{v}</a>
+              : <a key={i} style={s.navLink} href={`#${k}`}>{v}</a>
           ))}
         </nav>
         <div style={s.navRight}>
           <div style={s.langToggle} className="lang-pill">
             {['es', 'eu', 'en'].map(l => (
-              <button key={l} onClick={() => setLang(l)} style={{ ...s.langBtn, ...(lang === l ? { background: primary, color: '#fff' } : {}) }}>
+              <button key={l} onClick={() => { setLang(l); window.saveLang(l); }} style={{ ...s.langBtn, ...(lang === l ? { background: primary, color: '#fff' } : {}) }}>
                 {l.toUpperCase()}
               </button>
             ))}
@@ -538,7 +540,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
             <div style={{ fontSize: 11, letterSpacing: 1, color: "#94A3B8", textTransform: "uppercase", marginBottom: 4 }}>Contacto INEDUS 2026</div>
             <div><a href={`mailto:${c.footer.contact2}`} style={{ color: "inherit", textDecoration: "none" }}>{c.footer.contact2}</a></div>
             <div style={{ marginTop: 6 }}><a href="/rollup" style={{ color: "inherit", fontSize: 12, textDecoration: "underline" }}>{c.rollup.ui.linkLabel}</a></div>
-            <div style={{ marginTop: 6 }}><a href={c.rollup.ui.templateFile} download style={{ color: "inherit", fontSize: 12, textDecoration: "underline" }}>{c.rollup.ui.templateLabel}</a></div>
+            <div style={{ marginTop: 6 }}><a href={`/archivos?lang=${lang}`} style={{ color: "inherit", fontSize: 12, textDecoration: "underline" }}>{c.files.linkLabel}</a></div>
             <div style={s.footerCopy}>{c.footer.copy}</div>
           </div>
         </div>
@@ -573,6 +575,7 @@ return ({
   logoDividerV: { width: 1, height: 28, background: "#CBD5E1" },
   navLinks: { display: "flex", gap: 14, margin: "0 auto", flexShrink: 1, flexWrap: "nowrap", overflow: "hidden" },
   navLink: { color: "#334155", fontSize: 12, textDecoration: "none", whiteSpace: "nowrap" },
+  navLinkStar: { color: "#2A78B0", fontSize: 12, fontWeight: 600, textDecoration: "none", whiteSpace: "nowrap" },
   navRight: { display: "flex", alignItems: "center", gap: 14, flexShrink: 0 },
   langToggle: { display: "flex", border: "1px solid #CBD5E1", borderRadius: 999, overflow: "hidden" },
   langBtn: { background: "transparent", border: "none", padding: "5px 10px", fontSize: 11, letterSpacing: 1, color: "#64748B", cursor: "pointer", fontFamily: "inherit", transition: "background 0.15s, color 0.15s" },
