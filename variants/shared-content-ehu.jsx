@@ -348,6 +348,8 @@ const CONTENT_EHU = {
         rollups: "Roll up",
         orientation: "Orientación", portraitLabel: "Vertical", landscapeLabel: "Horizontal", posters: "Póster / plotter",
         linkLabel: "Roll up para imprimir",
+        templateLabel: "Plantilla de diapositivas (PPTX)",
+        templateFile: "PLANTILLA_PPT/INEDUS2026_plantilla_ES.pptx",
       },
     },
     footer: {
@@ -614,6 +616,8 @@ const CONTENT_EHU = {
         rollups: "Roll up",
         orientation: "Orientazioa", portraitLabel: "Bertikala", landscapeLabel: "Horizontala", posters: "Poster / plotterra",
         linkLabel: "Inprimatzeko roll up-a",
+        templateLabel: "Diapositiba-txantiloia (PPTX)",
+        templateFile: "PLANTILLA_PPT/INEDUS2026_plantilla_EU.pptx",
       },
     },
     footer: {
@@ -880,6 +884,8 @@ const CONTENT_EHU = {
         rollups: "Roll up",
         orientation: "Orientation", portraitLabel: "Portrait", landscapeLabel: "Landscape", posters: "Poster / plotter",
         linkLabel: "Printable roll-up banner",
+        templateLabel: "Slide template (PPTX)",
+        templateFile: "PLANTILLA_PPT/INEDUS2026_plantilla_EN.pptx",
       },
     },
     footer: {
