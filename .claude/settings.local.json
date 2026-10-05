@@ -9,7 +9,9 @@
       "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\User\\\\.claude\\\\projects\\\\c--Users-User-Documents-Desarrollo-Web-Congress-manager\\\\memory\")",
       "Bash(Write-Host \"OK\")",
       "PowerShell(graphify *)",
-      "PowerShell(code-review-graph *)"
+      "PowerShell(code-review-graph *)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "ClaudeInChromeDomain(localhost:8765)"
     ]
   },
   "enabledMcpjsonServers": [
