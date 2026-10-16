@@ -75,7 +75,7 @@ Las tarifas de matriculación son las siguientes:
 
 Las propuestas aceptadas se presentarán durante los días de celebración del congreso en formato híbrido, combinando participación presencial y en línea, a través de las plataformas digitales que determine la organización.
 
-La relación definitiva de comunicaciones se publicará en la web del Congreso. El material de apoyo a la presentación  deberá enviarse **antes del 20 de octubre inclusive** a la siguiente dirección de correo electrónico: <ane.gabikagogeaskoa@ehu.eus>. La persona responsable de la exposición deberá estar presente en la sala asignada, al menos, 10 minutos antes del inicio de la sesión.
+La relación definitiva de comunicaciones se publicará en la web del Congreso. El material de apoyo a la presentación  deberá enviarse **antes del 27 de octubre inclusive** a la siguiente dirección de correo electrónico: <ane.gabikagogeaskoa@ehu.eus>. La persona responsable de la exposición deberá estar presente en la sala asignada, al menos, 10 minutos antes del inicio de la sesión.
 
 **PUBLICACIÓN DE LOS TRABAJOS (OPCIONAL)**
 

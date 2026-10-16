@@ -67,7 +67,7 @@ Matrikulazio-tarifak honako hauek dira:
 **ONARTUTAKO LANAK KONGRESUAN AURKEZTEA**  
 Onartutako proposamenak biltzarra egiten den egunetan aurkeztuko dira, formatu hibridoan, aurrez aurreko eta lineako parte-hartzea uztartuz, erakundeak zehazten dituen plataforma digitalen bidez.
 
-Jakinarazpenen behin betiko zerrenda kongresuaren webgunean argitaratuko da. Aurkezpenerako material lagungarria **urriaren 20a baino lehen bidali beharko da**, egun hori barne, helbide elektroniko honetara: ane.gabikagogeaskoa@ehu.eus   
+Jakinarazpenen behin betiko zerrenda kongresuaren webgunean argitaratuko da. Aurkezpenerako material lagungarria **urriaren 27a baino lehen bidali beharko da**, egun hori barne, helbide elektroniko honetara: ane.gabikagogeaskoa@ehu.eus   
 Erakusketaren arduradunak esleitutako aretoan egon beharko du, gutxienez, saioa hasi baino 10 minutu lehenago.
 
 **LANAK ARGITARATZEA (AUKERAKOA)**  
