@@ -61,7 +61,7 @@ Para cualquier duda podéis contactar con el siguiente email: <ane.gabikagogeask
 
 **MATRICULACIÓN (Comisión económica)**
 
-La aceptación de las propuestas se hará efectiva mediante la inscripción en el congreso **antes del 15 de octubre**. Todos los autores deberán formalizar su matrícula.
+La aceptación de las propuestas se hará efectiva mediante la inscripción en el congreso **antes del 27 de octubre**. Todos los autores deberán formalizar su matrícula.
 
 Las tarifas de matriculación son las siguientes:
 
@@ -69,6 +69,7 @@ Las tarifas de matriculación son las siguientes:
 1) Profesorado e investigadores/as de la EHU y ULEAM: 25€
 1) Profesorado e investigadores/as universitários\*: 50€
 1) Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia: 25€
+1) Personas que asistan solo como oyentes: GRATIS (no se expedirá ningún certificado solo por asistir)
 
 **PRESENTACIÓN EN EL CONGRESO DE LOS TRABAJOS ACEPTADOS**
 
@@ -320,7 +321,7 @@ Comisiones implicadas: Científica + Comunicación (coordinadas)
 
 Necesitamos: Definir claramente plazos para revisores (máx. 7 días)
 
-**FASE 4: INSCRIPCIÓN Y PROGRAMA** (1 al 15 de octubre)
+**FASE 4: INSCRIPCIÓN Y PROGRAMA** (1 al 27 de octubre)
 
 - Pago de matrículas
 - Construcción del programa definitivo

@@ -180,6 +180,9 @@ const CONTENT_EHU = {
       { n: "3", l: "Idiomas aceptados" },
     ],
     ui: {
+      programaProvisionalTitulo: "Programa provisional de comunicaciones",
+      programaProvisionalTexto: "Programa provisional de comunicaciones del congreso desde la EHU (Leioa).",
+      programaProvisionalCta: "Descargar PDF",
       cfpAside: "Según tu formato",
       cfpForms: "Formularios",
       contactKicker: "Contacto",
@@ -254,7 +257,7 @@ const CONTENT_EHU = {
       timeline: [
         { date: "Hasta 30 Sep 2026 (ampliado)", label: "Cierre de envío de propuestas", status: "open" },
         { date: "Hasta 30 Sep 2026", label: "Notificación: aceptación, revisión o rechazo", status: "soon" },
-        { date: "Antes del 15 Oct 2026", label: "Matrícula de trabajos aceptados — solo autores con trabajo aprobado", status: "future" },
+        { date: "Antes del 27 Oct 2026", label: "Matrícula de trabajos aceptados — solo autores con trabajo aprobado", status: "future" },
         { date: "Antes del 20 Oct 2026", label: "Envío de material de apoyo a la presentación", status: "future" },
         { date: "28–30 Octubre 2026", label: "Presentación en el congreso (formato híbrido)", status: "future" },
         { date: "Hasta 15 Nov 2026", label: "Envío del trabajo extenso (publicación opcional)", status: "future" },
@@ -278,14 +281,15 @@ const CONTENT_EHU = {
     },
     matricula: {
       title: "Matrícula y publicación",
-      lead: "El pago de la matrícula no se realizará hasta la aceptación del trabajo. Todos los firmantes del trabajo (autores) deberán inscribirse y abonar la cuota de matrícula. No hay límite de firmantes. Plazo: antes del 15 de octubre. Envío del trabajo completo (opcional) hasta el 15 de noviembre.",
+      lead: "El pago de la matrícula no se realizará hasta la aceptación del trabajo. Todos los firmantes del trabajo (autores) deberán inscribirse y abonar la cuota de matrícula. No hay límite de firmantes. Plazo: antes del 27 de octubre. Envío del trabajo completo (opcional) hasta el 15 de noviembre.",
       tarifasTitle: "Cuotas de matriculación",
-      tarifasNota: "La aceptación de las propuestas se hará efectiva mediante la inscripción antes del 15 de octubre. Todos los autores deberán formalizar su matrícula.",
+      tarifasNota: "La aceptación de las propuestas se hará efectiva mediante la inscripción antes del 27 de octubre. Todos los autores deberán formalizar su matrícula.",
       tarifas: [
         { label: "Profesionales del ámbito de la educación formal y la educación social, y personas desempleadas", price: "GRATIS", note: "Plazas limitadas" },
         { label: "Profesorado e investigadores/as de EHU y ULEAM", price: "25 €" },
         { label: "Profesorado e investigadores/as universitarios/as", price: "50 €" },
         { label: "Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia", price: "25 €" },
+        { label: "Personas que asistan solo como oyentes", price: "GRATIS", note: "No se expedirá ningún certificado solo por asistir" },
       ],
       instruccion: "El pago debe realizarse mediante transferencia bancaria a la siguiente cuenta:",
       iban: "ES34 2095 0292 9010 6117 3778",
@@ -296,7 +300,7 @@ const CONTENT_EHU = {
       pasos: [
         { n: "1", texto: "Envía tu propuesta antes del 30 de septiembre" },
         { n: "2", texto: "Espera el correo de aceptación (sept.–oct.)" },
-        { n: "3", texto: "Completa el formulario de matrícula antes del 15 de octubre" },
+        { n: "3", texto: "Completa el formulario de matrícula antes del 27 de octubre" },
         { n: "4", texto: "Realiza la transferencia bancaria con el concepto indicado" },
       ],
       ctaMatricula: "Formulario de matrícula",
@@ -495,6 +499,9 @@ const CONTENT_EHU = {
       { n: "3", l: "Onartutako hizkuntzak" },
     ],
     ui: {
+      programaProvisionalTitulo: "Komunikazioen behin-behineko programa",
+      programaProvisionalTexto: "Kongresuko komunikazioen behin-behineko programa, EHUtik (Leioa).",
+      programaProvisionalCta: "PDFa deskargatu",
       cfpAside: "Zure formatuaren arabera",
       cfpForms: "Inprimakiak",
       contactKicker: "Kontaktua",
@@ -569,7 +576,7 @@ const CONTENT_EHU = {
       timeline: [
         { date: "Irailaren 30a arte (luzatua)", label: "Proposamenak bidaltzeko epea", status: "open" },
         { date: "Irailaren 30a arte", label: "Jakinarazpena: onarpena, berrikuspena edo errefusapena", status: "soon" },
-        { date: "Urriaren 15a baino lehen", label: "Matrikula — onartutako lanen egileak soilik", status: "future" },
+        { date: "Urriaren 27a baino lehen", label: "Matrikula — onartutako lanen egileak soilik", status: "future" },
         { date: "Urriaren 20a baino lehen", label: "Aurkezpenerako material lagungarria bidaltzea", status: "future" },
         { date: "Urriak 28–30", label: "Kongresuan aurkeztea (formatu hibridoan)", status: "future" },
         { date: "Azaroaren 15a arte", label: "Lan osoaren bidalketa (argitalpena, aukerakoa)", status: "future" },
@@ -593,14 +600,15 @@ const CONTENT_EHU = {
     },
     matricula: {
       title: "Matrikula eta argitalpena",
-      lead: "Matrikularen ordainketa ez da egingo lana onartu arte. Lanaren sinatzaile guztiek (egileek) matrikula egin eta kuota ordaindu beharko dute. Ez dago sinatzaile-mugarik. Epea: urriaren 15a baino lehen. Lan osoa (aukerakoa) azaroaren 15a arte.",
+      lead: "Matrikularen ordainketa ez da egingo lana onartu arte. Lanaren sinatzaile guztiek (egileek) matrikula egin eta kuota ordaindu beharko dute. Ez dago sinatzaile-mugarik. Epea: urriaren 27a baino lehen. Lan osoa (aukerakoa) azaroaren 15a arte.",
       tarifasTitle: "Matrikula-kuotak",
-      tarifasNota: "Proposamenen onarpena urriaren 15a baino lehen egindako izena ematean bihurtuko da eraginkor. Egile guztiek matrikula formalizatu beharko dute.",
+      tarifasNota: "Proposamenen onarpena urriaren 27a baino lehen egindako izena ematean bihurtuko da eraginkor. Egile guztiek matrikula formalizatu beharko dute.",
       tarifas: [
         { label: "Hezkuntza formaleko eta gizarte-hezkuntzako profesionalak, eta langabeak", price: "DOAN", note: "Plaza mugatuak" },
         { label: "EHUko eta ULEAMeko irakasle eta ikertzaileak", price: "25 €" },
         { label: "Unibertsitateko irakasle eta ikertzaileak", price: "50 €" },
         { label: "Ipar eta Erdialdeko Amerika, Afrika eta Asiako unibertsitateetako irakasle eta ikertzaileak", price: "25 €" },
+        { label: "Entzule gisa soilik etortzen diren pertsonak", price: "DOAN", note: "Bertaratzeagatik soilik ez da ziurtagiririk emango" },
       ],
       instruccion: "Ordainketa bankuko transferentziaren bidez egin behar da kontu honetara:",
       iban: "ES34 2095 0292 9010 6117 3778",
@@ -611,7 +619,7 @@ const CONTENT_EHU = {
       pasos: [
         { n: "1", texto: "Bidali zure proposamena irailaren 30a baino lehen" },
         { n: "2", texto: "Itxaron onartze-mezu elektronikoa (irail.–urri.)" },
-        { n: "3", texto: "Bete matrikula-inprimakia urriaren 15a baino lehen" },
+        { n: "3", texto: "Bete matrikula-inprimakia urriaren 27a baino lehen" },
         { n: "4", texto: "Egin bankuko transferentzia adierazitako kontzeptuarekin" },
       ],
       ctaMatricula: "Matrikula-inprimakia",
@@ -810,6 +818,9 @@ const CONTENT_EHU = {
       { n: "3", l: "Accepted languages" },
     ],
     ui: {
+      programaProvisionalTitulo: "Provisional programme of papers",
+      programaProvisionalTexto: "Provisional programme of papers for the congress from the EHU (Leioa).",
+      programaProvisionalCta: "Download PDF",
       cfpAside: "By format",
       cfpForms: "Forms",
       contactKicker: "Contact",
@@ -884,7 +895,7 @@ const CONTENT_EHU = {
       timeline: [
         { date: "Until 30 Sep 2026 (extended)", label: "Proposal submission deadline", status: "open" },
         { date: "Until 30 Sep 2026", label: "Notification: acceptance, revision or rejection", status: "soon" },
-        { date: "Before 15 Oct 2026", label: "Registration for accepted authors only", status: "future" },
+        { date: "Before 27 Oct 2026", label: "Registration for accepted authors only", status: "future" },
         { date: "Before 20 Oct 2026", label: "Submission of presentation support materials", status: "future" },
         { date: "28–30 October 2026", label: "Congress presentations (hybrid format)", status: "future" },
         { date: "Until 15 Nov 2026", label: "Full paper submission (optional publication)", status: "future" },
@@ -908,14 +919,15 @@ const CONTENT_EHU = {
     },
     matricula: {
       title: "Registration & Publication",
-      lead: "Registration payment will not be processed until the work is accepted. All co-authors must register and pay the registration fee. There is no limit on the number of co-authors. Deadline: before 15 October. Full paper submission (optional) before 15 November.",
+      lead: "Registration payment will not be processed until the work is accepted. All co-authors must register and pay the registration fee. There is no limit on the number of co-authors. Deadline: before 27 October. Full paper submission (optional) before 15 November.",
       tarifasTitle: "Registration fees",
-      tarifasNota: "Acceptance of proposals becomes effective upon registration before 15 October. All authors must complete their registration.",
+      tarifasNota: "Acceptance of proposals becomes effective upon registration before 27 October. All authors must complete their registration.",
       tarifas: [
         { label: "Professionals in formal education and social education, and unemployed persons", price: "FREE", note: "Limited places" },
         { label: "Faculty and researchers at EHU and ULEAM", price: "€25" },
         { label: "Faculty and researchers at universities (general)", price: "€50" },
         { label: "Faculty and researchers from universities in North and Central America, Africa and Asia", price: "€25" },
+        { label: "People attending as listeners only", price: "FREE", note: "No certificate will be issued for attendance alone" },
       ],
       instruccion: "Payment must be made by bank transfer to the following account:",
       iban: "ES34 2095 0292 9010 6117 3778",
@@ -926,7 +938,7 @@ const CONTENT_EHU = {
       pasos: [
         { n: "1", texto: "Submit your proposal before 30 September" },
         { n: "2", texto: "Wait for the acceptance email (Sept.–Oct.)" },
-        { n: "3", texto: "Complete the registration form before 15 October" },
+        { n: "3", texto: "Complete the registration form before 27 October" },
         { n: "4", texto: "Make the bank transfer with the indicated reference" },
       ],
       ctaMatricula: "Registration form",

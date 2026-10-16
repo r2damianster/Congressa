@@ -140,6 +140,13 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       </header>
       <div style={s.navSpacer} />
 
+      {/* Aviso: programa provisional de comunicaciones (PDF) */}
+      <div style={s.programNotice} className="program-notice">
+        <span style={s.programNoticeBadge}>{c.ui.programaProvisionalTitulo}</span>
+        <span style={s.programNoticeText}>{c.ui.programaProvisionalTexto}</span>
+        <a href="./Programa_provisional_INEDUS2026.pdf" target="_blank" rel="noopener" style={s.programNoticeCta}>{c.ui.programaProvisionalCta} →</a>
+      </div>
+
       {/* Hero */}
       <section style={s.hero}>
         <div style={s.heroMeta} className="hero-meta">
@@ -591,6 +598,10 @@ return ({
     color: "#1a1a1a", fontWeight: 400, maxWidth: 1100, textWrap: "balance",
   },
   heroTitleEm: { fontStyle: "italic", color: primary },
+  programNotice: { display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "8px 16px", padding: "12px clamp(16px, 4vw, 64px)", background: primary, color: "#fff", fontSize: 14, lineHeight: 1.4 },
+  programNoticeBadge: { textTransform: "uppercase", fontSize: 11, letterSpacing: 1.4, fontWeight: 600, background: "rgba(255,255,255,0.18)", padding: "4px 10px", borderRadius: 999 },
+  programNoticeText: { textAlign: "center" },
+  programNoticeCta: { color: "#fff", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: 3 },
   heroSubRow: { marginTop: 16 },
   heroSubKicker: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 4vw, 22px)", fontStyle: "italic", color: "#475569" },
   heroLead: { marginTop: 20, maxWidth: 660, fontSize: "clamp(16px, 3vw, 18px)", lineHeight: 1.55, color: "#334155", textWrap: "pretty" },

@@ -22,6 +22,7 @@ const ROLLUP_LOGO_FILES = {
   kideon: "KideON-EHU.jpeg",
   uleam: "LOGO-ULEAM-VERTICAL.png",
   ehu: "miniatura_EHU_logotipo.png",
+  facultad: "LOGO-EHU-Bilbao-Facultad.png",
 };
 
 // Medidas en cm (ancho × alto)
@@ -416,7 +417,7 @@ const buildLayoutBlocks = ({ fonts, logos, content, designWidth, venueLayout = "
     // Franja blanca con logos
     const stripPadding = 44;
     const logoHeight = 96;
-    const logoOrder = ["inedus", "uleam", "ehu", "kideon"];
+    const logoOrder = ["inedus", "uleam", "facultad", "kideon"];
     const logoWidths = logoOrder.map((logoName) => logoWidthFor(logos[logoName], logoHeight));
     const totalLogoWidth = logoWidths.reduce((total, width) => total + width, 0);
     const logoGap = Math.max(24, (contentWidth - totalLogoWidth) / (logoOrder.length - 1));
@@ -492,7 +493,7 @@ const buildLayoutBlocks = ({ fonts, logos, content, designWidth, venueLayout = "
     elements.push({ kind: "path", d: qrPathData(ROLLUP_URL, margin + 18, bandPadding + 18, qrCardSide - 36), fill: ROLLUP_PRIMARY });
 
     const logoHeight = 84;
-    const logoOrder = ["inedus", "uleam", "ehu", "kideon"];
+    const logoOrder = ["inedus", "uleam", "facultad", "kideon"];
     const logoWidths = logoOrder.map((logoName) => logoWidthFor(logos[logoName], logoHeight));
     const logoGap = 36;
     const panelPadding = 34;

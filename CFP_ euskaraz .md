@@ -54,14 +54,15 @@ Zalantzarik izanez gero, jarri harremanetan helbide elektroniko honekin: ane.gab
 
 **MATRIKULAZIOA (Batzorde ekonomikoa)**
 
-Proposamenen onarpena urriaren 15a baino lehen izena emanda gauzatuko da. Egile guztiek matrikula egin beharko dute.
+Proposamenen onarpena urriaren 27a baino lehen izena emanda gauzatuko da. Egile guztiek matrikula egin beharko dute.
 
 Matrikulazio-tarifak honako hauek dira:
 
 1) Hezkuntza formalaren eta gizarte-hezkuntzaren arloko profesionalak eta langabeak: DOAN (plaza mugatuak)  
 2) EHUko eta ULEAMeko irakasle eta ikertzaileak: 25 €  
 3) Unibertsitateko irakasle eta ikertzaileak\*: 50 €  
-4) Ipar Amerikako eta Erdialdeko Amerikako, Afrikako eta Asiako unibertsitateetako irakasleak eta ikertzaileak: 25 €
+4) Ipar Amerikako eta Erdialdeko Amerikako, Afrikako eta Asiako unibertsitateetako irakasleak eta ikertzaileak: 25 €  
+5) Entzule gisa soilik etortzen diren pertsonak: DOAN (bertaratzeagatik soilik ez da ziurtagiririk emango)
 
 **ONARTUTAKO LANAK KONGRESUAN AURKEZTEA**  
 Onartutako proposamenak biltzarra egiten den egunetan aurkeztuko dira, formatu hibridoan, aurrez aurreko eta lineako parte-hartzea uztartuz, erakundeak zehazten dituen plataforma digitalen bidez.
