@@ -148,9 +148,15 @@ const CONTENT_EHU = {
             },
             {
               kind: "DOCX",
-              title: "Plantilla de texto extenso",
-              desc: "Plantilla oficial para la publicación opcional de los trabajos (Editorial Octaedro).",
+              title: "Plantilla de publicación: comunicación",
+              desc: "Modalidad 1 de la publicación opcional (Editorial Octaedro): trabajo académico o de investigación, 4 000–8 000 palabras.",
               links: [{ label: "Descargar", href: "Template_Extenso.docx" }],
+            },
+            {
+              kind: "DOCX",
+              title: "Plantilla de publicación: innovación didáctica",
+              desc: "Modalidad 2 de la publicación opcional (Editorial Octaedro): innovación didáctica en Educación Superior, máximo 3 000 palabras con referencias.",
+              links: [{ label: "Descargar", href: "Template_Innovacion.docx" }],
             },
           ],
         },
@@ -324,14 +330,27 @@ const CONTENT_EHU = {
     },
     publicacion: {
       title: "Publicación de los trabajos (opcional)",
-      lead: "Edición de un libro con la Editorial Octaedro. Todos los autores matriculados recibirán una copia en PDF. Tras la aceptación de la ponencia, podrás descargar la plantilla Octaedro para redactar y enviar el trabajo extenso.",
+      lead: "Edición de un libro con la Editorial Octaedro. Todos los autores matriculados recibirán una copia en PDF. Hay dos modalidades de trabajo, cada una con su plantilla oficial; todas las personas firmantes deben haber abonado su matrícula para optar a la publicación.",
       octaedro: {
         h: "Editorial Octaedro",
         body: "Editorial de prestigio nacional. Posición 48 de 272 en la clasificación general del Scholarly Publishers Indicators. En el área de educación, posición 12 de 94.",
       },
       deadline: "15 de noviembre de 2026 — entrega del trabajo extenso",
-      plantillaUrl: "Template_Extenso.docx",
-      plantillaLabel: "Descargar plantilla",
+      modalidades: [
+        { h: "Modalidad 1 · Comunicación", body: "Trabajo académico o de investigación. Plantilla oficial, 4 000–8 000 palabras (10–20 páginas).", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Descargar plantilla de comunicación" },
+        { h: "Modalidad 2 · Innovación didáctica en Educación Superior", body: "Experiencias y propuestas de innovación educativa en el ámbito universitario. Plantilla específica, máximo 3 000 palabras, referencias incluidas.", plantillaUrl: "Template_Innovacion.docx", plantillaLabel: "Descargar plantilla de innovación didáctica" },
+      ],
+      plazoNota: "Plazo definitivo: los trabajos recibidos después del 15 de noviembre de 2026 no serán valorados para su publicación.",
+      revisionNota: "A partir del 15 de noviembre el equipo editorial revisará los trabajos recibidos. La entrega no implica aceptación automática: queda sujeta a la revisión editorial.",
+      matriculaPub: {
+        h: "Matrícula para optar a la publicación",
+        items: [
+        { who: "Profesorado e investigadores/as de EHU y ULEAM", fee: "25 € por persona" },
+        { who: "Profesorado e investigadores/as universitarios/as", fee: "50 € por persona" },
+        { who: "Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia", fee: "25 € por persona" },
+        ],
+        nota: "Todas las personas que figuren como autoras y firmen el trabajo deben haber abonado individualmente su matrícula, sea cual sea el número de autores/as de la contribución.",
+      },
       norms: {
         formato: "Microsoft Word · plantilla del congreso",
         extension: "10–20 páginas · 4 000–8 000 palabras",
@@ -467,9 +486,15 @@ const CONTENT_EHU = {
             },
             {
               kind: "DOCX",
-              title: "Testu osoaren txantiloia",
-              desc: "Lanak argitaratzeko aukerako txantiloi ofiziala (Octaedro argitaletxea).",
+              title: "Argitalpen-txantiloia: komunikazioa",
+              desc: "Aukerako argitalpenaren 1. modalitatea (Octaedro argitaletxea): lan akademikoa edo ikerketa-lana, 4.000–8.000 hitz.",
               links: [{ label: "Deskargatu", href: "Template_Extenso.docx" }],
+            },
+            {
+              kind: "DOCX",
+              title: "Argitalpen-txantiloia: berrikuntza didaktikoa",
+              desc: "Aukerako argitalpenaren 2. modalitatea (Octaedro argitaletxea): Goi-mailako Hezkuntzako berrikuntza didaktikoa, gehienez 3.000 hitz erreferentziak barne.",
+              links: [{ label: "Deskargatu", href: "Template_Innovacion.docx" }],
             },
           ],
         },
@@ -643,14 +668,27 @@ const CONTENT_EHU = {
     },
     publicacion: {
       title: "Lanen argitalpena (aukerakoa)",
-      lead: "Octaedro argitaletxearekin liburu bat argitaratzea. Matrikulatutako egile guztiek liburuaren kopia bat jasoko dute PDF formatuan. Ponentzia onartu ondoren, Octaedro txantiloia deskargatu ahal izango duzu lan osoa idazteko eta bidaltzeko.",
+      lead: "Octaedro argitaletxearekin liburu bat argitaratzea. Matrikulatutako egile guztiek liburuaren kopia bat jasoko dute PDF formatuan. Bi lan-modalitate daude, bakoitzak bere txantiloi ofizialarekin; argitalpenean parte hartu ahal izateko, sinatzaile guztiek matrikula ordainduta izan behar dute.",
       octaedro: {
         h: "Octaedro argitaletxea",
         body: "Izen nazionaleko argitaletxea. Scholarly Publishers Indicators-en sailkapen orokorrean 272tik 48. postuan dago. Hezkuntzaren arloan, 94tik 12. postuan.",
       },
       deadline: "2026ko azaroaren 15a — lan osoaren entrega",
-      plantillaUrl: "Template_Extenso.docx",
-      plantillaLabel: "Txantiloia deskargatu",
+      modalidades: [
+        { h: "1. modalitatea · Komunikazioa", body: "Lan akademikoa edo ikerketa-lana. Txantiloi ofiziala, 4.000–8.000 hitz (10–20 orrialde).", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Komunikazioen txantiloia deskargatu" },
+        { h: "2. modalitatea · Goi-mailako Hezkuntzako berrikuntza didaktikoa", body: "Unibertsitate-eremuko hezkuntza-berrikuntzako esperientziak eta proposamenak. Txantiloi espezifikoa, gehienez 3.000 hitz, erreferentziak barne.", plantillaUrl: "Template_Innovacion.docx", plantillaLabel: "Berrikuntza didaktikoaren txantiloia deskargatu" },
+      ],
+      plazoNota: "Epe behin betikoa: 2026ko azaroaren 15etik aurrera jasotako lanak ez dira argitaratzeko ebaluatuko.",
+      revisionNota: "Azaroaren 15etik aurrera, argitalpen-taldeak jasotako lanak berrikusiko ditu. Lana entregatzeak ez du esan nahi automatikoki onartuko denik: argitalpen-berrikuspenaren mende dago.",
+      matriculaPub: {
+        h: "Argitalpenean parte hartzeko matrikula",
+        items: [
+        { who: "EHUko eta ULEAMeko irakasle eta ikertzaileak", fee: "25 € pertsonako" },
+        { who: "Unibertsitateetako irakasle eta ikertzaileak", fee: "50 € pertsonako" },
+        { who: "Ipar eta Erdialdeko Amerikako, Afrikako eta Asiako unibertsitateetako irakasle eta ikertzaileak", fee: "25 € pertsonako" },
+        ],
+        nota: "Lanaren egile gisa agertzen diren eta lana sinatzen duten pertsona guztiek banaka ordaindu behar dute matrikula, ekarpenak egile kopuru zenbatekoa duela ere.",
+      },
       norms: {
         formato: "Microsoft Word · kongresuaren txantiloia",
         extension: "10–20 orrialde · 4 000–8 000 hitz",
@@ -786,9 +824,15 @@ const CONTENT_EHU = {
             },
             {
               kind: "DOCX",
-              title: "Full paper template",
-              desc: "Official template for the optional publication of papers (Editorial Octaedro).",
+              title: "Publication template: paper",
+              desc: "Type 1 of the optional publication (Editorial Octaedro): academic or research work, 4,000–8,000 words.",
               links: [{ label: "Download", href: "Template_Extenso.docx" }],
+            },
+            {
+              kind: "DOCX",
+              title: "Publication template: teaching innovation",
+              desc: "Type 2 of the optional publication (Editorial Octaedro): teaching innovation in Higher Education, maximum 3,000 words including references.",
+              links: [{ label: "Download", href: "Template_Innovacion.docx" }],
             },
           ],
         },
@@ -962,14 +1006,27 @@ const CONTENT_EHU = {
     },
     publicacion: {
       title: "Publication (optional)",
-      lead: "Book published with Editorial Octaedro. All registered authors receive a PDF copy. Once your paper is accepted, you can download the Octaedro template to write and submit the full paper.",
+      lead: "Book published with Editorial Octaedro. All registered authors receive a PDF copy. There are two submission types, each with its own official template; every signing author must have paid their registration fee to be eligible for publication.",
       octaedro: {
         h: "Editorial Octaedro",
         body: "National publisher of prestige. Ranked 48 out of 272 in the Scholarly Publishers Indicators general ranking. Position 12 out of 94 in education.",
       },
       deadline: "15 November 2026 — full paper submission",
-      plantillaUrl: "Template_Extenso.docx",
-      plantillaLabel: "Download template",
+      modalidades: [
+        { h: "Type 1 · Paper", body: "Academic or research work. Official template, 4,000–8,000 words (10–20 pages).", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Download paper template" },
+        { h: "Type 2 · Teaching innovation in Higher Education", body: "Educational innovation experiences and proposals in the university context. Specific template, maximum 3,000 words, references included.", plantillaUrl: "Template_Innovacion.docx", plantillaLabel: "Download teaching innovation template" },
+      ],
+      plazoNota: "Final deadline: works received after 15 November 2026 will not be considered for publication.",
+      revisionNota: "From 15 November the editorial team will review the works received. Submission does not imply automatic acceptance: it is subject to editorial review.",
+      matriculaPub: {
+        h: "Registration fee to be eligible for publication",
+        items: [
+        { who: "Teachers and researchers from EHU and ULEAM", fee: "€25 per person" },
+        { who: "University teachers and researchers", fee: "€50 per person" },
+        { who: "Teachers and researchers from universities in North and Central America, Africa and Asia", fee: "€25 per person" },
+        ],
+        nota: "Every person listed as an author who signs the work must have paid their registration fee individually, regardless of the number of authors of the contribution.",
+      },
       norms: {
         formato: "Microsoft Word · congress template",
         extension: "10–20 pages · 4,000–8,000 words",

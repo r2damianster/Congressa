@@ -402,9 +402,27 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
               <span style={s.normK}>{c.ui.pubDeadline}</span>
               <span style={s.octDeadlineV} className="oct-deadline-v">{c.publicacion.deadline}</span>
             </div>
-            {c.publicacion.plantillaUrl && (
-              <a href={c.publicacion.plantillaUrl} target="_blank" rel="noopener" style={s.octPlantillaLink}>{c.publicacion.plantillaLabel} →</a>
-            )}
+            <p style={s.octNote}>{c.publicacion.plazoNota}</p>
+            <p style={s.octNote}>{c.publicacion.revisionNota}</p>
+            <div style={s.octModalities}>
+              {c.publicacion.modalidades.map((modality, modalityIndex) => (
+                <div key={modalityIndex} style={s.octModality}>
+                  <div style={s.octModalityTitle}>{modality.h}</div>
+                  <p style={s.octModalityBody}>{modality.body}</p>
+                  <a href={modality.plantillaUrl} target="_blank" rel="noopener" style={s.octPlantillaLink}>{modality.plantillaLabel} →</a>
+                </div>
+              ))}
+            </div>
+            <div style={s.octFees}>
+              <div style={s.octModalityTitle}>{c.publicacion.matriculaPub.h}</div>
+              {c.publicacion.matriculaPub.items.map((feeItem, feeIndex) => (
+                <div key={feeIndex} style={s.octFeeRow}>
+                  <span>{feeItem.who}</span>
+                  <span style={s.octFeeValue}>{feeItem.fee}</span>
+                </div>
+              ))}
+              <p style={s.octNote}>{c.publicacion.matriculaPub.nota}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -701,6 +719,14 @@ return ({
   octBody: { fontSize: 14, color: "#334155", marginTop: 12, lineHeight: 1.6 },
   octDeadline: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #CBD5E1", display: "flex", justifyContent: "space-between", alignItems: "baseline" },
   octDeadlineV: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(16px, 3vw, 18px)", color: primary },
+  octNote: { fontSize: 13, color: "#475569", marginTop: 14, lineHeight: 1.6 },
+  octModalities: { marginTop: 24, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 },
+  octModality: { padding: 20, background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: 4 },
+  octModalityTitle: { fontFamily: "'Instrument Serif', serif", fontSize: 18, color: primary },
+  octModalityBody: { fontSize: 13, color: "#334155", marginTop: 8, lineHeight: 1.6 },
+  octFees: { marginTop: 24, paddingTop: 20, borderTop: "1px dashed #CBD5E1" },
+  octFeeRow: { display: "flex", justifyContent: "space-between", gap: 16, fontSize: 13, color: "#334155", padding: "8px 0", borderBottom: "1px solid #EEF2F6" },
+  octFeeValue: { fontWeight: 600, color: primary, whiteSpace: "nowrap" },
   octPlantillaLink: { fontSize: 12, color: primary, marginTop: 12, display: "inline-block", textDecoration: "underline", textDecorationColor: "rgba(0,0,0,0.25)", textUnderlineOffset: 3 },
   pubNorms: { padding: 32, background: "#fff", border: "1px solid #E2E8F0", borderRadius: 4 },
 
