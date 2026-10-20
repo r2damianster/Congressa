@@ -73,9 +73,20 @@ Erakusketaren arduradunak esleitutako aretoan egon beharko du, gutxienez, saioa 
 **LANAK ARGITARATZEA (AUKERAKOA)**  
 Kongresuan komunikazioekin parte hartzen duten egileek, nahi izanez gero, beren lanaren bertsio luzea argitaratu ahal izango dute Octaedro argitaletxearen liburu batean. Kongresuan matrikulatutako egile guztiek liburuaren kopia bat jasoko dute PDF formatuan.  
 Octaedro izen nazionaleko argitaletxea da; Scholarly Publishers Indicators-en kokatzen da, argitaletxeen sailkapen orokorrean, 272tik 48an. Hezkuntzaren arloan 12\. postuan dago, 94tik.  
-Lana liburu honetan luze eta zabal argitaratu nahi duten egileek azken dokumentua idatzi eta azaroaren 15a baino lehen bidali beharko dute. Dokumentu guztiak adituek ebaluatuko dituzte argitaratu aurretik. Egileek konpromisoa hartzen dute dokumentua binaka berrikusi ostean beharrezko aldaketak egiteko. Lan bat bidaltzeak berekin dakar editoreen jarraibideak betetzea eta kongresua argitaratzeko arauak onartzea.
+Lana liburu honetan luze eta zabal argitaratu nahi duten egileek azken dokumentua idatzi eta **2026ko azaroaren 15a baino lehen** bidali beharko dute. Epe hori behin betikoa da: data horren ondoren jasotako lanak ez dira argitaratzeko ebaluatuko. Azaroaren 15etik aurrera, argitalpen-taldeak jasotako lanak berrikusiko ditu; lana entregatzeak ez du esan nahi automatikoki onartuko denik. Dokumentu guztiak adituek ebaluatuko dituzte argitaratu aurretik. Egileek konpromisoa hartzen dute dokumentua binaka berrikusi ostean beharrezko aldaketak egiteko. Lan bat bidaltzeak berekin dakar editoreen jarraibideak betetzea eta kongresua argitaratzeko arauak onartzea.
 
-Lan osoek kongresuaren txantiloiaren formatua errespetatu behar dute (.doc formatuko lan-txantiloia deskargatu), eta gutxienez 10 orrialde eta gehienez 20 orrialde izan behar dituzte, 4.000 eta 8.000 hitz artean. Microsoft Word-en idatzi behar da.
+Argitaratzeko bi modalitate daude, bakoitza bere txantiloi ofizialarekin (kongresuaren webgunean eskuragarri, "Txantiloiak eta fitxategiak" atalean):
+
+* **1. modalitatea. Komunikazioa** (lan akademikoa edo ikerketa-lana): `Template_Extenso.docx` txantiloia, 4.000 eta 8.000 hitz artekoa (10-20 orrialde). Microsoft Word-en idatzi behar da.
+* **2. modalitatea. Goi-mailako Hezkuntzako berrikuntza didaktikoko ekarpena**: `Template_Innovacion.docx` txantiloia, gehienez 3.000 hitz, erreferentzia bibliografikoak barne.
+
+Ezinbestekoa da dagokion txantiloiko egitura-, luzera- eta formatu-jarraibideak errespetatzea.
+
+**Argitalpenerako matrikula.** Lanaren egile gisa agertzen diren eta lana sinatzen duten pertsona guztiek banaka ordaindu beharko dute matrikula, ekarpenak egile kopuru zenbatekoa duela ere:
+
+* EHUko eta ULEAMeko irakasle eta ikertzaileak: 25 € pertsonako.
+* Unibertsitateetako irakasle eta ikertzaileak: 50 € pertsonako.
+* Ipar eta Erdialdeko Amerikako, Afrikako eta Asiako unibertsitateetako irakasle eta ikertzaileak: 25 € pertsonako.
 
 Lanaren egitura zabala honako hau izango da, ekarpen motaren arabera:
 

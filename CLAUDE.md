@@ -78,6 +78,14 @@ Reglas del programa (vigentes desde `Programa_cambios.docx`, 2026-09-24):
 - Mesa del día 28: 3 ponentes (Urtza Garay ya no participa, confirmado).
 - Al cambiar el programa hay que tocar las 3 lenguas y no commitear sin verificar consistencia.
 
+### Publicación Octaedro (INEDUS)
+
+Sección `publicacion` de cada idioma en `shared-content-ehu.jsx`; la pinta `v1-ehu.jsx` (tarjeta `octCard`). Reglas vigentes desde el correo de Ane (2026-10-20, copia en `scraps/Email_Octaedro.docx`):
+- Plazo definitivo **15-nov-2026**; lo recibido después no se valora. Entrega ≠ aceptación (revisión editorial).
+- Dos modalidades, cada una con su plantilla (`modalidades[]`): Comunicación → `Template_Extenso.docx` (4.000–8.000 palabras); Innovación didáctica en Educación Superior → `Template_Innovacion.docx` (máx. 3.000 palabras con referencias). Ambas también en el catálogo `files` de `/archivos`.
+- Matrícula para publicar, por cada autor/a firmante (`matriculaPub`): EHU y ULEAM 25 €; otras universidades 50 €; América del Norte y Central, África y Asia 25 €.
+- `Ecuador_congreso.md` y `CFP_ euskaraz .md` deben coincidir con esto. Los bloques `norms`, `estructuras` y `elementos` de `publicacion` ya no se muestran en la web.
+
 ### Exports (`exports/`)
 
 Standalone self-contained HTML files (`v1.html`, `v2.html`, `v3.html` and their `-print` versions). No external dependencies — everything inlined.

@@ -83,9 +83,20 @@ Los autores que participen con comunicaciones en el congreso, si lo desean, podr
 
 Octaedro es una editorial de prestigio nacional; se sitúa en el Scholarly Publishers Indicators en la posición 48 de 272 en la clasificación general de editoriales. En el área de educación ocupa la posición 12 de 94.
 
-El/los autor/es que deseen publicar el trabajo en extenso en este libro deberán redactar el documento final y enviarlo antes del 15 de noviembre. Todos los documentos serán evaluados por expertos antes de su publicación. Los autores se comprometen a modificar el documento tras su revisión por pares. El envío de un trabajo implica seguir las indicaciones de los editores y aceptar las normas de publicación del congreso.
+El/los autor/es que deseen publicar el trabajo en extenso en este libro deberán redactar el documento final y enviarlo **antes del 15 de noviembre de 2026**. Este plazo es definitivo: los trabajos recibidos después de esa fecha no serán valorados para su publicación. A partir del 15 de noviembre el equipo editorial revisará los trabajos recibidos; la entrega no implica aceptación automática. Todos los documentos serán evaluados por expertos antes de su publicación. Los autores se comprometen a modificar el documento tras su revisión por pares. El envío de un trabajo implica seguir las indicaciones de los editores y aceptar las normas de publicación del congreso.
 
-Los trabajos completos deben respetar el formato de la plantilla del congreso (descargar [plantilla](http://astialdikongresua.eus/wp-content/uploads/2018/10/plantilla.docx)  de trabajo en formato .doc) y tener una extensión mínima de 10 páginas y máxima de 20 páginas, entre 4.000 y 8.000 palabras. Se debe escribir en Microsoft Word.
+Hay dos modalidades de publicación, cada una con su plantilla oficial (disponibles en la web del congreso, en "Plantillas y archivos"):
+
+- **Modalidad 1. Comunicación** (trabajo académico o de investigación): plantilla `Template_Extenso.docx`, extensión de entre 4.000 y 8.000 palabras (10-20 páginas). Se debe escribir en Microsoft Word.
+- **Modalidad 2. Aportación de innovación didáctica en Educación Superior**: plantilla `Template_Innovacion.docx`, extensión máxima de 3.000 palabras, incluidas las referencias bibliográficas.
+
+Es imprescindible respetar las indicaciones de estructura, extensión y formato de la plantilla correspondiente.
+
+**Matrícula para optar a la publicación.** Todas las personas que figuren como autoras y firmen el trabajo deberán haber abonado individualmente la matrícula, sea cual sea el número de autores/as de la contribución:
+
+- Profesorado e investigadores/as de EHU y ULEAM: 25 € por persona.
+- Profesorado e investigadores/as universitarios/as: 50 € por persona.
+- Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia: 25 € por persona.
 
 La estructura del trabajo en extenso será la siguiente, según el tipo de aportación:
 
