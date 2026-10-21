@@ -342,6 +342,8 @@ const CONTENT_EHU = {
       ],
       plazoNota: "Plazo definitivo: los trabajos recibidos después del 15 de noviembre de 2026 no serán valorados para su publicación.",
       revisionNota: "A partir del 15 de noviembre el equipo editorial revisará los trabajos recibidos. La entrega no implica aceptación automática: queda sujeta a la revisión editorial.",
+      envioNota: "Envío de los trabajos: los trabajos para Octaedro deben enviarse directamente por correo electrónico a Ane Gabikagogeaskoa:",
+      envioEmail: "ane.gabikagogeaskoa@ehu.eus",
       matriculaPub: {
         h: "Matrícula para optar a la publicación",
         items: [
@@ -680,6 +682,8 @@ const CONTENT_EHU = {
       ],
       plazoNota: "Epe behin betikoa: 2026ko azaroaren 15etik aurrera jasotako lanak ez dira argitaratzeko ebaluatuko.",
       revisionNota: "Azaroaren 15etik aurrera, argitalpen-taldeak jasotako lanak berrikusiko ditu. Lana entregatzeak ez du esan nahi automatikoki onartuko denik: argitalpen-berrikuspenaren mende dago.",
+      envioNota: "Lanen bidalketa: Octaedrorako lanak zuzenean helbide elektroniko honetara bidali behar dira, Ane Gabikagogeaskoari:",
+      envioEmail: "ane.gabikagogeaskoa@ehu.eus",
       matriculaPub: {
         h: "Argitalpenean parte hartzeko matrikula",
         items: [
@@ -1018,6 +1022,8 @@ const CONTENT_EHU = {
       ],
       plazoNota: "Final deadline: works received after 15 November 2026 will not be considered for publication.",
       revisionNota: "From 15 November the editorial team will review the works received. Submission does not imply automatic acceptance: it is subject to editorial review.",
+      envioNota: "Submission: papers for Octaedro must be sent directly by email to Ane Gabikagogeaskoa:",
+      envioEmail: "ane.gabikagogeaskoa@ehu.eus",
       matriculaPub: {
         h: "Registration fee to be eligible for publication",
         items: [

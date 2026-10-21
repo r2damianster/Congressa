@@ -404,6 +404,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
             </div>
             <p style={s.octNote}>{c.publicacion.plazoNota}</p>
             <p style={s.octNote}>{c.publicacion.revisionNota}</p>
+            <p style={s.octNote}>{c.publicacion.envioNota} <a href={`mailto:${c.publicacion.envioEmail}`} style={s.octPlantillaLink}>{c.publicacion.envioEmail}</a></p>
             <div style={s.octModalities}>
               {c.publicacion.modalidades.map((modality, modalityIndex) => (
                 <div key={modalityIndex} style={s.octModality}>
