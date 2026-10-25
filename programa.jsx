@@ -10,7 +10,7 @@ const PROGRAMA = [
     day: '28',
     sessions: [
       {
-        timeEHU: '14:00–14:30',
+        timeEHU: '15:00–15:30',
         timeManta: '09:00–09:30',
         type: 'apertura',
         venue: 'conjunta',
@@ -27,7 +27,7 @@ const PROGRAMA = [
         speakers: [],
       },
       {
-        timeEHU: '14:30–15:30',
+        timeEHU: '15:30–16:30',
         timeManta: '09:30–10:30',
         type: 'plenaria',
         venue: 'conjunta',
@@ -44,7 +44,7 @@ const PROGRAMA = [
         speakers: ['jose-antonio-marin', 'jorge-ivan-pincay'],
       },
       {
-        timeEHU: '15:30–16:30',
+        timeEHU: '16:30–17:30',
         timeManta: '10:30–11:30',
         type: 'mesa',
         venue: 'conjunta',
@@ -160,7 +160,7 @@ const PROGRAMA = [
     day: '29',
     sessions: [
       {
-        timeEHU: '14:00–15:00',
+        timeEHU: '15:00–16:00',
         timeManta: '09:00–10:00',
         type: 'plenaria',
         venue: 'conjunta',
@@ -177,7 +177,7 @@ const PROGRAMA = [
         speakers: ['marta-sandoval', 'jeovanny-benacidez'],
       },
       {
-        timeEHU: '15:00–16:30',
+        timeEHU: '16:00–17:30',
         timeManta: '10:00–11:30',
         type: 'mesa',
         venue: 'conjunta',
