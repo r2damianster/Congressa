@@ -72,7 +72,7 @@ Each file is a self-contained React component loaded as `<script type="text/babe
 Reglas del programa (vigentes desde `Programa_cambios.docx`, 2026-09-24):
 - Fuente de verdad: el programa que envía la dirección del congreso. Las tablas de `Ecuador_congreso.md` y `CFP_ euskaraz .md` deben coincidir con `programa.jsx`.
 - Las sesiones locales de Bilbao son solo a las 18:00–19:00 (día 28: Salas 1–3; día 29: Salas 1–2; día 30: ninguna). Café Bilbao 17:30–18:00 los días 28 y 29. Sin hora Manta (`timeManta: null`).
-- Manta (café 10:30–11:00 días 28–29) no cambia salvo instrucción expresa.
+- **Cambio horario de invierno (2026-10-25):** Europa pasa a CET (dif. con Manta = 6 h). Bilbao no cambia; Manta días 28–29 +1 h: inicio 09:00, café Manta 11:30–12:00, locales Manta 12:00–13:30 · 15:30–17:00 (igual que día 30).
 - **Cambio del 2026-09-29 (Asier; Jhonny confirmó Manta):** todo el día 30 se retrasa 1 h en ambas sedes. Plenaria 16:00–17:00 (Manta 09:00–10:00), mesa 17:00–18:30 (Manta 10:00–11:30), locales Manta 12:00–13:30 · 15:30–17:00, cierre Manta 17:00–17:30, cierre conjunto 18:30–19:00 (Bilbao). Motivo: problema con una ponente plenaria (pendiente confirmar si cambian `speakers`).
 - Cierre día 29: 19:00–19:30, conjunto.
 - Mesa del día 28: 3 ponentes (Urtza Garay ya no participa, confirmado).

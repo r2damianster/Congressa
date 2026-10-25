@@ -11,7 +11,7 @@ const PROGRAMA = [
     sessions: [
       {
         timeEHU: '15:00–15:30',
-        timeManta: '08:00–08:30',
+        timeManta: '09:00–09:30',
         type: 'apertura',
         venue: 'conjunta',
         title: {
@@ -28,7 +28,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: '15:30–16:30',
-        timeManta: '08:30–09:30',
+        timeManta: '09:30–10:30',
         type: 'plenaria',
         venue: 'conjunta',
         title: {
@@ -45,7 +45,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: '16:30–17:30',
-        timeManta: '09:30–10:30',
+        timeManta: '10:30–11:30',
         type: 'mesa',
         venue: 'conjunta',
         title: {
@@ -62,7 +62,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: null,
-        timeManta: '10:30–11:00',
+        timeManta: '11:30–12:00',
         type: 'pausa',
         venue: 'manta',
         title: { es: 'Pausa para café', eu: 'Kafea', en: 'Coffee break' },
@@ -71,7 +71,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: null,
-        timeManta: '11:00–12:30 · 14:30–16:30',
+        timeManta: '12:00–13:30 · 15:30–17:00',
         type: 'local',
         venue: 'manta',
         title: {
@@ -161,7 +161,7 @@ const PROGRAMA = [
     sessions: [
       {
         timeEHU: '15:00–16:00',
-        timeManta: '08:00–09:00',
+        timeManta: '09:00–10:00',
         type: 'plenaria',
         venue: 'conjunta',
         title: {
@@ -178,7 +178,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: '16:00–17:30',
-        timeManta: '09:00–10:30',
+        timeManta: '10:00–11:30',
         type: 'mesa',
         venue: 'conjunta',
         title: {
@@ -195,7 +195,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: null,
-        timeManta: '10:30–11:00',
+        timeManta: '11:30–12:00',
         type: 'pausa',
         venue: 'manta',
         title: { es: 'Pausa para café', eu: 'Kafea', en: 'Coffee break' },
@@ -204,7 +204,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: null,
-        timeManta: '11:00–12:30 · 14:30–16:30',
+        timeManta: '12:00–13:30 · 15:30–17:00',
         type: 'local',
         venue: 'manta',
         title: {
