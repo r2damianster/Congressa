@@ -294,7 +294,7 @@ const PROGRAMA = [
     sessions: [
       {
         timeEHU: '16:00–17:00',
-        timeManta: '09:00–10:00',
+        timeManta: '10:00–11:00',
         type: 'plenaria',
         venue: 'conjunta',
         title: {
@@ -311,7 +311,7 @@ const PROGRAMA = [
       },
       {
         timeEHU: '17:00–18:30',
-        timeManta: '10:00–11:30',
+        timeManta: '11:00–12:30',
         type: 'mesa',
         venue: 'conjunta',
         title: {
