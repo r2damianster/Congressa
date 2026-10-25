@@ -5,6 +5,108 @@
 // type: 'apertura' | 'plenaria' | 'mesa' | 'local' | 'pausa' | 'cierre'
 // venue: 'conjunta' | 'bilbao' | 'manta'
 
+// Sesiones simultáneas de Bilbao (docx de la dirección, "INEDUS GAZ"): 6 sesiones por día, una por aula.
+// kind: 'presencial' | 'online' | 'experiencias' | 'simposio'
+const SESSION_KINDS = {
+  presencial: {
+    es: 'Comunicaciones presenciales',
+    eu: 'Komunikazio presentzialak',
+    en: 'In-person papers',
+  },
+  online: {
+    es: 'Comunicaciones online',
+    eu: 'Online komunikazioak',
+    en: 'Online papers',
+  },
+  experiencias: {
+    es: 'Experiencias e innovaciones didácticas (online)',
+    eu: 'Esperientziak eta berrikuntza didaktikoak (online)',
+    en: 'Didactic experiences and innovations (online)',
+  },
+  simposio: {
+    es: 'Simposio presencial',
+    eu: 'Sinposio presentziala',
+    en: 'In-person symposium',
+  },
+};
+
+const ROOMS = {
+  s02: { es: 'Aula 1S02', eu: '1S02 gela', en: 'Room 1S02' },
+  s03: { es: 'Aula 1S03', eu: '1S03 gela', en: 'Room 1S03' },
+  s04: { es: 'Aula 1S04', eu: '1S04 gela', en: 'Room 1S04' },
+  s05: { es: 'Aula 1S05', eu: '1S05 gela', en: 'Room 1S05' },
+  txillardegi: { es: 'Aula Txillardegi (Hefa I)', eu: 'Txillardegi gela (Hefa I)', en: 'Txillardegi room (Hefa I)' },
+  polivalente: { es: 'Aula polivalente (Hefa I)', eu: 'Gela polibalentea (Hefa I)', en: 'Multipurpose room (Hefa I)' },
+  juliana: { es: 'Juliana aretoa (Sala Juliana)', eu: 'Juliana aretoa', en: 'Juliana hall' },
+};
+
+const THEME_DAY_28 = {
+  es: 'Retos de la innovación educativa en el currículo universitario.',
+  eu: 'Unibertsitate-curriculumeko hezkuntza-berrikuntzaren erronkak.',
+  en: 'Challenges of educational innovation in the university curriculum.',
+};
+
+const THEME_DAY_29 = {
+  es: 'Educación, inclusión y sostenibilidad en la Educación Superior.',
+  eu: 'Hezkuntza, inklusioa eta jasangarritasuna Goi Mailako Hezkuntzan.',
+  en: 'Education, inclusion and sustainability in Higher Education.',
+};
+
+const SYMPOSIUM_DAY_28 = {
+  es: 'SUSIEE: sostenibilidad e interculturalidad en la educación y atención a la primera infancia de 0 a 3 años.',
+  eu: 'SUSIEE: jasangarritasuna eta kulturartekotasuna 0-3 urteko lehen haurtzaroko hezkuntzan eta arretan.',
+  en: 'SUSIEE: sustainability and interculturality in the education and care of early childhood (ages 0–3).',
+};
+
+const SYMPOSIUM_DAY_29 = {
+  es: 'Educación para la paz, cultura para la paz y transformación territorial en contextos rurales: manifestaciones, impactos y desafíos.',
+  eu: 'Bakerako hezkuntza, bakearen kultura eta lurralde-eraldaketa landa-testuinguruetan: adierazpenak, eraginak eta erronkak.',
+  en: 'Education for peace, culture of peace and territorial transformation in rural contexts: manifestations, impacts and challenges.',
+};
+
+const SESSION_ROOMS_DAY_28 = [
+  { kind: 'presencial', room: ROOMS.s02 },
+  { kind: 'presencial', room: ROOMS.s03 },
+  { kind: 'online', room: ROOMS.txillardegi },
+  { kind: 'online', room: ROOMS.s05 },
+  { kind: 'experiencias', room: ROOMS.s04 },
+  { kind: 'simposio', room: ROOMS.juliana, symposium: SYMPOSIUM_DAY_28 },
+];
+
+const SESSION_ROOMS_DAY_29 = [
+  { kind: 'presencial', room: ROOMS.s02 },
+  { kind: 'presencial', room: ROOMS.s03 },
+  { kind: 'online', room: ROOMS.txillardegi },
+  { kind: 'online', room: ROOMS.polivalente },
+  { kind: 'experiencias', room: ROOMS.s04 },
+  { kind: 'simposio', room: ROOMS.juliana, symposium: SYMPOSIUM_DAY_29 },
+];
+
+function buildBilbaoLocalSessions(sessionRooms, theme, timeEHU) {
+  return sessionRooms.map((sessionRoom, sessionIndex) => {
+    const kindLabel = SESSION_KINDS[sessionRoom.kind];
+    const sessionNumber = sessionIndex + 1;
+    const focus = sessionRoom.symposium || theme;
+    return {
+      timeEHU,
+      timeManta: null,
+      type: 'local',
+      venue: 'bilbao',
+      title: {
+        es: `Sesión ${sessionNumber} · ${sessionRoom.room.es}`,
+        eu: `${sessionNumber}. saioa · ${sessionRoom.room.eu}`,
+        en: `Session ${sessionNumber} · ${sessionRoom.room.en}`,
+      },
+      description: {
+        es: `${kindLabel.es}. ${focus.es}`,
+        eu: `${kindLabel.eu}. ${focus.eu}`,
+        en: `${kindLabel.en}. ${focus.en}`,
+      },
+      speakers: [],
+    };
+  });
+}
+
 const PROGRAMA = [
   {
     day: '28',
@@ -20,9 +122,9 @@ const PROGRAMA = [
           en: 'Joint opening ceremony',
         },
         description: {
-          es: 'Inauguración institucional EHU-ULEAM (vicerrectores, decanos). Maestros de ceremonia: Jhonny Villafuerte · Asier Romero',
-          eu: 'EHU-ULEAM inaugurazio instituzionala (errektoreordeak, dekanoak). Ekitaldi-gidariak: Jhonny Villafuerte · Asier Romero',
-          en: 'Institutional opening EHU-ULEAM (vice-rectors, deans). Masters of ceremony: Jhonny Villafuerte · Asier Romero',
+          es: 'Inauguración institucional EHU-ULEAM. Participan: Joserra Díez (decano de la Facultad de Educación de Bilbao, EHU), Urtza Garay (vicerrectora de grado y transformación digital, EHU) y Pedro Jacinto Quijije (decano de la Facultad de Educación y Turismo, ULEAM). Presentan: Asier Romero (EHU) y Jhonny Villafuerte (ULEAM).',
+          eu: 'EHU-ULEAM inaugurazio instituzionala. Parte hartzen dute: Joserra Díez (Bilboko Hezkuntza Fakultateko dekanoa, EHU), Urtza Garay (graduko eta eraldaketa digitaleko errektoreordea, EHU) eta Pedro Jacinto Quijije (Hezkuntza eta Turismo Fakultateko dekanoa, ULEAM). Aurkezleak: Asier Romero (EHU) eta Jhonny Villafuerte (ULEAM).',
+          en: 'Institutional opening EHU-ULEAM. Participants: Joserra Díez (Dean, Faculty of Education of Bilbao, EHU), Urtza Garay (Vice-Rector for Undergraduate Studies and Digital Transformation, EHU) and Pedro Jacinto Quijije (Dean, Faculty of Education and Tourism, ULEAM). Hosts: Asier Romero (EHU) and Jhonny Villafuerte (ULEAM).',
         },
         speakers: [],
       },
@@ -37,9 +139,9 @@ const PROGRAMA = [
           en: 'Plenary lectures',
         },
         description: {
-          es: 'Ponencias internacionales a cargo de expertos en tecnología educativa e innovación digital.',
-          eu: 'Hezkuntza teknologia eta berrikuntza digitaleko adituek emandako nazioarteko hitzaldiak.',
-          en: 'International lectures by experts in educational technology and digital innovation.',
+          es: 'Retos de la innovación educativa en el currículo universitario.',
+          eu: 'Unibertsitate-curriculumeko hezkuntza-berrikuntzaren erronkak.',
+          en: 'Challenges of educational innovation in the university curriculum.',
         },
         speakers: ['jose-antonio-marin', 'jorge-ivan-pincay'],
       },
@@ -54,11 +156,11 @@ const PROGRAMA = [
           en: 'Joint roundtable',
         },
         description: {
-          es: 'Retos de la innovación educativa en el currículo universitario. Tres ponentes.',
-          eu: 'Unibertsitate-curriculumeko hezkuntza-berrikuntzaren erronkak. Hiru hizlari.',
-          en: 'Challenges of educational innovation in the university curriculum. Three speakers.',
+          es: 'Retos de la innovación educativa en el currículo universitario. Cuatro ponentes (dos EHU · dos ULEAM).',
+          eu: 'Unibertsitate-curriculumeko hezkuntza-berrikuntzaren erronkak. Lau hizlari (bi EHU · bi ULEAM).',
+          en: 'Challenges of educational innovation in the university curriculum. Four speakers (two EHU · two ULEAM).',
         },
-        speakers: ['jose-ignacio-rivas', 'lewin-perez', 'rosa-sacoto'],
+        speakers: ['jose-ignacio-rivas', 'karmele-artano', 'lewin-perez', 'rosa-sacoto'],
       },
       {
         timeEHU: null,
@@ -103,57 +205,7 @@ const PROGRAMA = [
         },
         speakers: [],
       },
-      {
-        timeEHU: '18:00–19:00',
-        timeManta: null,
-        type: 'local',
-        venue: 'bilbao',
-        title: {
-          es: 'Sesiones locales (Bilbao) · Sala 1',
-          eu: 'Tokiko saioak (Bilbao) · 1. gela',
-          en: 'Local sessions (Bilbao) · Room 1',
-        },
-        description: {
-          es: 'Experiencias e innovaciones didácticas.',
-          eu: 'Esperientziak eta berrikuntza didaktikoak.',
-          en: 'Experiences and didactic innovations.',
-        },
-        speakers: [],
-      },
-      {
-        timeEHU: '18:00–19:00',
-        timeManta: null,
-        type: 'local',
-        venue: 'bilbao',
-        title: {
-          es: 'Sesiones locales (Bilbao) · Sala 2',
-          eu: 'Tokiko saioak (Bilbao) · 2. gela',
-          en: 'Local sessions (Bilbao) · Room 2',
-        },
-        description: {
-          es: 'Comunicaciones.',
-          eu: 'Komunikazioak.',
-          en: 'Communications.',
-        },
-        speakers: [],
-      },
-      {
-        timeEHU: '18:00–19:00',
-        timeManta: null,
-        type: 'local',
-        venue: 'bilbao',
-        title: {
-          es: 'Simposio (Bilbao) · Sala 3',
-          eu: 'Sinposioa (Bilbao) · 3. gela',
-          en: 'Symposium (Bilbao) · Room 3',
-        },
-        description: {
-          es: 'Simposio presencial/online.',
-          eu: 'Sinposio presentziala/online.',
-          en: 'In-person/online symposium.',
-        },
-        speakers: [],
-      },
+      ...buildBilbaoLocalSessions(SESSION_ROOMS_DAY_28, THEME_DAY_28, '18:00–19:45'),
     ],
   },
   {
@@ -236,57 +288,7 @@ const PROGRAMA = [
         },
         speakers: [],
       },
-      {
-        timeEHU: '18:00–19:00',
-        timeManta: null,
-        type: 'local',
-        venue: 'bilbao',
-        title: {
-          es: 'Sesiones locales (Bilbao) · Sala 1',
-          eu: 'Tokiko saioak (Bilbao) · 1. gela',
-          en: 'Local sessions (Bilbao) · Room 1',
-        },
-        description: {
-          es: 'Comunicaciones.',
-          eu: 'Komunikazioak.',
-          en: 'Communications.',
-        },
-        speakers: [],
-      },
-      {
-        timeEHU: '18:00–19:00',
-        timeManta: null,
-        type: 'local',
-        venue: 'bilbao',
-        title: {
-          es: 'Sesiones locales (Bilbao) · Sala 2',
-          eu: 'Tokiko saioak (Bilbao) · 2. gela',
-          en: 'Local sessions (Bilbao) · Room 2',
-        },
-        description: {
-          es: 'Comunicaciones.',
-          eu: 'Komunikazioak.',
-          en: 'Communications.',
-        },
-        speakers: [],
-      },
-      {
-        timeEHU: '19:00–19:30',
-        timeManta: null,
-        type: 'cierre',
-        venue: 'conjunta',
-        title: {
-          es: 'Cierre del congreso',
-          eu: 'Kongresua itxi',
-          en: 'Closing of the congress',
-        },
-        description: {
-          es: 'Clausura institucional.',
-          eu: 'Itxiera instituzionala.',
-          en: 'Institutional closing.',
-        },
-        speakers: [],
-      },
+      ...buildBilbaoLocalSessions(SESSION_ROOMS_DAY_29, THEME_DAY_29, '18:00–19:30'),
     ],
   },
   {

@@ -36,6 +36,13 @@ const PONENTES = {
     photo: 'ponentes/fotos/jose-ignacio-rivas.png',
   },
 
+  'karmele-artano': {
+    name: 'Karmele Artano',
+    institution: 'UPV/EHU',
+    bio: '',
+    photo: 'ponentes/fotos/karmele-artano.png',
+  },
+
   'lewin-perez': {
     name: 'Lewin José Pérez Plata',
     institution: 'ULEAM',
