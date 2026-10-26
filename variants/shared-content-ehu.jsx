@@ -161,6 +161,17 @@ const CONTENT_EHU = {
           ],
         },
         {
+          title: "Para estudiantes",
+          items: [
+            {
+              kind: "DOCX",
+              title: "Actividad estudiantil: Mi ruta por el congreso",
+              desc: "Plantilla breve (2–3 páginas) para evidenciar con fotos las sesiones a las que asististe cada día (28, 29 y 30 oct), tu participación y su conexión con tus asignaturas. Cada docente la califica en su asignatura.",
+              links: [{ label: "Descargar", href: "Template_Mi_Ruta.docx" }],
+            },
+          ],
+        },
+        {
           title: "Difusión",
           items: [
             {
@@ -505,6 +516,17 @@ const CONTENT_EHU = {
           ],
         },
         {
+          title: "Ikasleentzat",
+          items: [
+            {
+              kind: "DOCX",
+              title: "Ikasleen jarduera: Nire ibilbidea kongresuan",
+              desc: "Txantiloi laburra (2–3 orrialde) egunero (urriaren 28, 29 eta 30) parte hartutako saioak, zure parte-hartzea eta zure irakasgaiekiko lotura argazkiekin dokumentatzeko. Gaztelaniaz; irakasle bakoitzak bere irakasgaian kalifikatzen du.",
+              links: [{ label: "Deskargatu", href: "Template_Mi_Ruta.docx" }],
+            },
+          ],
+        },
+        {
           title: "Hedapena",
           items: [
             {
@@ -845,6 +867,17 @@ const CONTENT_EHU = {
               title: "Publication template: teaching innovation",
               desc: "Type 2 of the optional publication (Editorial Octaedro): teaching innovation in Higher Education, maximum 3,000 words including references.",
               links: [{ label: "Download", href: "Template_Innovacion.docx" }],
+            },
+          ],
+        },
+        {
+          title: "For students",
+          items: [
+            {
+              kind: "DOCX",
+              title: "Student activity: My route through the congress",
+              desc: "Short template (2–3 pages) to document with photos the sessions attended each day (28, 29 and 30 Oct), your participation and the link to your subjects. Spanish; graded by each teacher in their own subject.",
+              links: [{ label: "Download", href: "Template_Mi_Ruta.docx" }],
             },
           ],
         },
