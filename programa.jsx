@@ -122,9 +122,9 @@ const PROGRAMA = [
           en: 'Joint opening ceremony',
         },
         description: {
-          es: 'Inauguración institucional EHU-ULEAM. Participan: Joserra Díez (decano de la Facultad de Educación de Bilbao, EHU), Urtza Garay (vicerrectora de grado y transformación digital, EHU) y Pedro Jacinto Quijije (decano de la Facultad de Educación y Turismo, ULEAM). Presentan: Asier Romero (EHU) y Jhonny Villafuerte (ULEAM).',
-          eu: 'EHU-ULEAM inaugurazio instituzionala. Parte hartzen dute: Joserra Díez (Bilboko Hezkuntza Fakultateko dekanoa, EHU), Urtza Garay (graduko eta eraldaketa digitaleko errektoreordea, EHU) eta Pedro Jacinto Quijije (Hezkuntza eta Turismo Fakultateko dekanoa, ULEAM). Aurkezleak: Asier Romero (EHU) eta Jhonny Villafuerte (ULEAM).',
-          en: 'Institutional opening EHU-ULEAM. Participants: Joserra Díez (Dean, Faculty of Education of Bilbao, EHU), Urtza Garay (Vice-Rector for Undergraduate Studies and Digital Transformation, EHU) and Pedro Jacinto Quijije (Dean, Faculty of Education and Tourism, ULEAM). Hosts: Asier Romero (EHU) and Jhonny Villafuerte (ULEAM).',
+          es: 'Inauguración institucional EHU-ULEAM. Participan: Joserra Díez (decano de la Facultad de Educación de Bilbao, EHU), Asier Blas (vicerrector de estudiantes y compromiso social, EHU) y Pedro Jacinto Quijije (decano de la Facultad de Educación y Turismo, ULEAM). Presentan: Asier Romero (EHU) y Jhonny Villafuerte (ULEAM).',
+          eu: 'EHU-ULEAM inaugurazio instituzionala. Parte hartzen dute: Joserra Díez (Bilboko Hezkuntza Fakultateko dekanoa, EHU), Asier Blas (ikasleen eta konpromiso sozialaren errektoreordea, EHU) eta Pedro Jacinto Quijije (Hezkuntza eta Turismo Fakultateko dekanoa, ULEAM). Aurkezleak: Asier Romero (EHU) eta Jhonny Villafuerte (ULEAM).',
+          en: 'Institutional opening EHU-ULEAM. Participants: Joserra Díez (Dean, Faculty of Education of Bilbao, EHU), Asier Blas (Vice-Rector for Students and Social Engagement, EHU) and Pedro Jacinto Quijije (Dean, Faculty of Education and Tourism, ULEAM). Hosts: Asier Romero (EHU) and Jhonny Villafuerte (ULEAM).',
         },
         speakers: [],
       },
