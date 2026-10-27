@@ -150,7 +150,13 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
         <span style={s.programNoticeBadge}>{c.ui.programaEcuadorTitulo}</span>
         <span style={s.programNoticeText}>{c.ui.programaEcuadorTexto}</span>
         <a href="./Programa_Jornada_Manana_INEDUS2026.pdf" target="_blank" rel="noopener" style={s.programNoticeCta}>{c.ui.programaEcuadorMananaCta} →</a>
-        <a href="./Programa_Sesiones_Locales_Manta_INEDUS2026.pdf" target="_blank" rel="noopener" style={s.programNoticeCta}>{c.ui.programaEcuadorLocalesCta} →</a>
+        {[
+          { href: "./D%C3%ADa%201%20%C2%B7%2028%20de%20octubre.pdf", label: c.ui.programaEcuadorDia1Cta },
+          { href: "./D%C3%ADa%202%20%C2%B7%2029%20de%20octubre.pdf", label: c.ui.programaEcuadorDia2Cta },
+          { href: "./D%C3%ADa%203%20%C2%B7%2030%20de%20octubre.pdf", label: c.ui.programaEcuadorDia3Cta },
+        ].map(dayProgram => (
+          <a key={dayProgram.href} href={dayProgram.href} target="_blank" rel="noopener" style={s.programNoticeCta}>{dayProgram.label} →</a>
+        ))}
       </div>
 
       {/* Hero */}
