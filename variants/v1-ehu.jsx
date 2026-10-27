@@ -140,11 +140,11 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       </header>
       <div style={s.navSpacer} />
 
-      {/* Aviso: programa provisional de comunicaciones (PDF) */}
+      {/* Aviso: programa de comunicaciones (PDF) */}
       <div style={s.programNotice} className="program-notice">
-        <span style={s.programNoticeBadge}>{c.ui.programaProvisionalTitulo}</span>
-        <span style={s.programNoticeText}>{c.ui.programaProvisionalTexto}</span>
-        <a href="./Programa_provisional_INEDUS2026.pdf" target="_blank" rel="noopener" style={s.programNoticeCta}>{c.ui.programaProvisionalCta} →</a>
+        <span style={s.programNoticeBadge}>{c.ui.programaComunicacionesTitulo}</span>
+        <span style={s.programNoticeText}>{c.ui.programaComunicacionesTexto}</span>
+        <a href="./Programa_INEDUS2026.pdf" target="_blank" rel="noopener" style={s.programNoticeCta}>{c.ui.programaComunicacionesCta} →</a>
       </div>
       <div style={s.programNotice} className="program-notice">
         <span style={s.programNoticeBadge}>{c.ui.programaEcuadorTitulo}</span>
