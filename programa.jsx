@@ -68,19 +68,19 @@ const SYMPOSIUM_DAY_29 = {
 const SESSION_ROOMS_DAY_28 = [
   { kind: 'presencial', room: ROOMS.s02 },
   { kind: 'presencial', room: ROOMS.s03 },
-  { kind: 'online', room: ROOMS.txillardegi },
-  { kind: 'online', room: ROOMS.s05 },
-  { kind: 'experiencias', room: ROOMS.s04 },
-  { kind: 'simposio', room: ROOMS.juliana, symposium: SYMPOSIUM_DAY_28 },
+  { kind: 'online', room: ROOMS.txillardegi, link: 'https://teams.microsoft.com/meet/3957241534347398?p=Zbv87XDxgkjvMowVbr' },
+  { kind: 'online', room: ROOMS.s05, link: 'https://teams.microsoft.com/meet/3682380026945637?p=vbLv4wTcDYBhCmLvfO' },
+  { kind: 'experiencias', room: ROOMS.s04, link: 'https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmM5NTUwNmYtZDI5My00NWZiLTg4MzAtNmViNGI1ZTM3YzZl%40thread.v2/0?context=%7b%22Tid%22%3a%2283c2d98e-37ae-46c5-a435-b7f2d378a5fe%22%2c%22Oid%22%3a%22f148f3e0-c75e-45d5-86b4-2c66cfa06823%22%7d' },
+  { kind: 'simposio', room: ROOMS.juliana, symposium: SYMPOSIUM_DAY_28, link: 'https://ehutb.ehu.eus/canal2' },
 ];
 
 const SESSION_ROOMS_DAY_29 = [
   { kind: 'presencial', room: ROOMS.s02 },
   { kind: 'presencial', room: ROOMS.s03 },
-  { kind: 'online', room: ROOMS.txillardegi },
-  { kind: 'online', room: ROOMS.polivalente },
-  { kind: 'experiencias', room: ROOMS.s04 },
-  { kind: 'simposio', room: ROOMS.juliana, symposium: SYMPOSIUM_DAY_29 },
+  { kind: 'online', room: ROOMS.txillardegi, link: 'https://teams.microsoft.com/meet/3188289602152374?p=n5NcRCCOLq4E9AldUq' },
+  { kind: 'online', room: ROOMS.polivalente, link: 'https://teams.microsoft.com/meet/3773912691050419?p=d3cddguQKK63Z3mepa' },
+  { kind: 'experiencias', room: ROOMS.s04, link: 'https://teams.microsoft.com/meet/3193833260175701?p=1nrx6cYZmGP7EaWC23' },
+  { kind: 'simposio', room: ROOMS.juliana, symposium: SYMPOSIUM_DAY_29, link: 'https://ehutb.ehu.eus/canal2' },
 ];
 
 function buildBilbaoLocalSessions(sessionRooms, theme, timeEHU) {
@@ -104,6 +104,7 @@ function buildBilbaoLocalSessions(sessionRooms, theme, timeEHU) {
         en: `${kindLabel.en}. ${focus.en}`,
       },
       speakers: [],
+      ...(sessionRoom.link ? { link: sessionRoom.link } : {}),
     };
   });
 }
@@ -117,6 +118,7 @@ const PROGRAMA = [
         timeManta: '09:00–09:30',
         type: 'apertura',
         venue: 'conjunta',
+        link: 'https://ehutb.ehu.eus/canal2',
         title: {
           es: 'Apertura conjunta',
           eu: 'Irekiera bateratua',
@@ -134,6 +136,7 @@ const PROGRAMA = [
         timeManta: '09:30–10:30',
         type: 'plenaria',
         venue: 'conjunta',
+        link: 'https://ehutb.ehu.eus/canal2',
         title: {
           es: 'Ponencias plenarias',
           eu: 'Hitzaldi plenarioak',
@@ -151,6 +154,7 @@ const PROGRAMA = [
         timeManta: '10:30–11:30',
         type: 'mesa',
         venue: 'conjunta',
+        link: 'https://ehutb.ehu.eus/canal2',
         title: {
           es: 'Mesa redonda conjunta',
           eu: 'Mahai-inguru bateratua',
@@ -217,6 +221,7 @@ const PROGRAMA = [
         timeManta: '09:00–10:00',
         type: 'plenaria',
         venue: 'conjunta',
+        link: 'https://teams.microsoft.com/meet/366123532648701?p=SKNsUdkIrcfJNOMgqh',
         title: {
           es: 'Ponencias plenarias',
           eu: 'Hitzaldi plenarioak',
@@ -234,6 +239,7 @@ const PROGRAMA = [
         timeManta: '10:00–11:30',
         type: 'mesa',
         venue: 'conjunta',
+        link: 'https://teams.microsoft.com/meet/366123532648701?p=SKNsUdkIrcfJNOMgqh',
         title: {
           es: 'Mesa redonda conjunta',
           eu: 'Mahai-inguru bateratua',
@@ -300,6 +306,7 @@ const PROGRAMA = [
         timeManta: '10:00–11:00',
         type: 'plenaria',
         venue: 'conjunta',
+        link: 'https://ehutb.ehu.eus/canal2',
         title: {
           es: 'Ponencias plenarias',
           eu: 'Hitzaldi plenarioak',
@@ -317,6 +324,7 @@ const PROGRAMA = [
         timeManta: '11:00–12:30',
         type: 'mesa',
         venue: 'conjunta',
+        link: 'https://ehutb.ehu.eus/canal2',
         title: {
           es: 'Mesa redonda de cierre',
           eu: 'Itxiera mahai-ingurua',
@@ -364,6 +372,7 @@ const PROGRAMA = [
         timeManta: null,
         type: 'cierre',
         venue: 'conjunta',
+        link: 'https://ehutb.ehu.eus/canal2',
         title: {
           es: 'Cierre del congreso',
           eu: 'Kongresua itxi',
