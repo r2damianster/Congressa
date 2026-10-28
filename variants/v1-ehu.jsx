@@ -69,7 +69,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
           }
 
           .nav-links, .lang-pill, .venue-divider { display: none !important; }
-          .hero-venues, .cfp-grid, .footer-row { flex-direction: column !important; }
+          .cfp-grid, .footer-row { flex-direction: column !important; }
           .nav-right { margin-left: auto; }
           .hero-meta, .cta-row { justify-content: center; text-align: center; }
           .footer-row { text-align: center; align-items: center !important; gap: 24px; }
@@ -78,7 +78,11 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
           .section-number { border-right: none !important; border-bottom: 1px solid #CBD5E1; padding-right: 0 !important; padding-bottom: 12px; width: 100%; }
           .oct-deadline { flex-direction: column; gap: 8px; align-items: flex-start !important; }
           .oct-deadline-v { text-align: left !important; }
-          .hero-venues { text-align: center; }
+          .hero-venues { gap: 16px !important; }
+          .hero-venues .venue-detail { display: none; }
+        }
+        @media (max-width: 480px) {
+          .hero-venues { flex-direction: column; text-align: center; }
           .hero-venues .venue { width: 100%; }
 
           .dest-grid {
@@ -209,18 +213,18 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
         </div>
 
         <div style={s.heroVenues} className="hero-venues">
-          <div style={s.venue}>
+          <div style={s.venue} className="venue">
             <a href="https://www.ehu.eus/es/" target="_blank" rel="noopener"><img src="./miniatura_EHU_logotipo.png" alt="EHU" style={s.venueLogo} /></a>
             <div style={s.venueLabel}>{c.venues.v1label}</div>
             <div style={s.venueName}>{c.venues.v1name}</div>
-            <div style={s.venueDetail}>{c.venues.v1detail}</div>
+            <div style={s.venueDetail} className="venue-detail">{c.venues.v1detail}</div>
           </div>
           <div style={s.venueDivider} className="venue-divider">↔</div>
-          <div style={s.venue}>
+          <div style={s.venue} className="venue">
             <a href="https://www.uleam.edu.ec/" target="_blank" rel="noopener"><img src="./LOGO-ULEAM-VERTICAL.png" alt="ULEAM" style={s.venueLogo} /></a>
             <div style={s.venueLabel}>{c.venues.v2label}</div>
             <div style={s.venueName}>{c.venues.v2name}</div>
-            <div style={s.venueDetail}>{c.venues.v2detail}</div>
+            <div style={s.venueDetail} className="venue-detail">{c.venues.v2detail}</div>
           </div>
         </div>
       </section>
@@ -669,16 +673,16 @@ return ({
   ctaText: { color: primary, fontSize: 14, textDecoration: "none" },
 
   heroVenues: {
-    marginTop: 40, padding: "clamp(16px, 3vw, 24px) clamp(16px, 4vw, 32px)",
+    marginTop: 32, padding: "clamp(12px, 2vw, 16px) clamp(16px, 3vw, 24px)",
     background: "#fff", border: "1px solid #E2E8F0", borderRadius: 6,
-    display: "grid", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 32, alignItems: "center",
+    display: "flex", flexWrap: "nowrap", justifyContent: "space-between", gap: 24, alignItems: "center",
   },
-  venue: {},
-  venueLogo: { height: 52, width: "auto", objectFit: "contain", marginBottom: 16, display: "block" },
-  venueLabel: { fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8" },
-  venueName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(22px, 4vw, 28px)", marginTop: 6, color: primary },
-  venueDetail: { fontSize: 14, color: "#475569", marginTop: 4 },
-  venueDivider: { fontFamily: "'Instrument Serif', serif", fontSize: 36, color: "#94A3B8", fontStyle: "italic" },
+  venue: { flex: 1, minWidth: 0 },
+  venueLogo: { height: 36, width: "auto", objectFit: "contain", marginBottom: 8, display: "block" },
+  venueLabel: { fontSize: 10, letterSpacing: 1.2, textTransform: "uppercase", color: "#94A3B8" },
+  venueName: { fontFamily: "'Instrument Serif', serif", fontSize: "clamp(18px, 3vw, 22px)", marginTop: 2, color: primary },
+  venueDetail: { fontSize: 12, color: "#475569", marginTop: 2, lineHeight: 1.4 },
+  venueDivider: { fontFamily: "'Instrument Serif', serif", fontSize: 28, color: "#94A3B8", fontStyle: "italic" },
 
   stats: {
     display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
