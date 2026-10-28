@@ -351,7 +351,7 @@ const CONTENT_EHU = {
         bioClose: "Cerrar",
         conjunta: "Conjunta",
         hybrid: "Híbrido · Bilbao & Manta",
-        join: "Unirse a la sesión",
+        join: "Enlace",
         soloManta: "Solo Manta",
         soloBilbao: "Solo Bilbao",
         day: "Día",
