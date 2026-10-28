@@ -818,7 +818,7 @@ return ({
   agendaColTime: { fontFamily: 'monospace', fontSize: 12, color: '#64748B', paddingTop: 3, lineHeight: 1.5 },
   agendaColSession: { padding: '0 16px' },
   agendaTypeTag: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(15px, 2.5vw, 18px)', lineHeight: 1.2, marginBottom: 2 },
-  agendaJoinLink: { display: 'inline-block', margin: '0 0 8px', fontSize: 12, fontWeight: 600, color: '#fff', background: '#1E40AF', borderRadius: 6, padding: '6px 12px', textDecoration: 'none' },
+  agendaJoinLink: { display: 'inline-block', margin: '0 0 6px', fontSize: 12, color: '#64748B', textDecoration: 'underline', textUnderlineOffset: 2 },
   agendaDesc: { fontSize: 13, color: '#64748B', margin: '4px 0 8px', lineHeight: 1.5 },
   speakerBtns: { display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 8 },
   speakerBtn: { display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fff', border: '1px solid #CBD5E1', borderRadius: 3, padding: '5px 10px', fontSize: 12, color: '#334155', cursor: 'pointer', fontFamily: 'inherit', lineHeight: 1.3, transition: 'background 0.15s, color 0.15s' },
