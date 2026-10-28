@@ -3,7 +3,7 @@
 // timeManta: hora Manta/Ecuador (ECT, UTC-5) — diferencia 6 horas
 // speakers: array de IDs de window.PONENTES
 // type: 'apertura' | 'plenaria' | 'mesa' | 'local' | 'pausa' | 'cierre'
-// link: (opcional) URL para unirse a la sesión online; si existe, la agenda muestra un botón «Unirse». Mismo enlace en las 3 lenguas.
+// link: (opcional) URL de la sesiÃ³n (Teams o transmisiÃ³n); si existe, la agenda muestra un enlace discreto Â«Enlace / Esteka / LinkÂ». Mismo URL en las 3 lenguas.
 // venue: 'conjunta' | 'bilbao' | 'manta'
 
 // Sesiones simultáneas de Bilbao (docx de la dirección, "INEDUS GAZ"): 6 sesiones por día, una por aula.
