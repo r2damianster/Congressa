@@ -354,7 +354,7 @@ const CONTENT_EHU = {
       },
       deadline: "15 de noviembre de 2026 — entrega del trabajo extenso",
       modalidades: [
-        { h: "Modalidad 1 · Comunicación", body: "Trabajo académico o de investigación. Plantilla oficial, 4 000–8 000 palabras (10–20 páginas).", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Descargar plantilla de comunicación" },
+        { h: "Modalidad 1 · Comunicación", body: "Trabajo académico o de investigación. Plantilla oficial, máximo 3 000 palabras.", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Descargar plantilla de comunicación" },
         { h: "Modalidad 2 · Innovación didáctica en Educación Superior", body: "Experiencias y propuestas de innovación educativa en el ámbito universitario. Plantilla específica, máximo 3 000 palabras, referencias incluidas.", plantillaUrl: "Template_Innovacion.docx", plantillaLabel: "Descargar plantilla de innovación didáctica" },
       ],
       plazoNota: "Plazo definitivo: los trabajos recibidos después del 15 de noviembre de 2026 no serán valorados para su publicación.",
@@ -372,7 +372,7 @@ const CONTENT_EHU = {
       },
       norms: {
         formato: "Microsoft Word · plantilla del congreso",
-        extension: "10–20 páginas · 4 000–8 000 palabras",
+        extension: "máx. 3 000 palabras",
         tipografia: "Calibri 10 pt · espaciado sencillo · justificado",
         referencias: "APA 6ª edición · sin notas a pie de página",
         figuras: "Figuras originales en JPG buena resolución, intercaladas. Tablas como texto, no como imagen.",
@@ -506,7 +506,7 @@ const CONTENT_EHU = {
             {
               kind: "DOCX",
               title: "Argitalpen-txantiloia: komunikazioa",
-              desc: "Aukerako argitalpenaren 1. modalitatea (Octaedro argitaletxea): lan akademikoa edo ikerketa-lana, 4.000–8.000 hitz.",
+              desc: "Aukerako argitalpenaren 1. modalitatea (Octaedro argitaletxea): lan akademikoa edo ikerketa-lana, gehienez 3.000 hitz.",
               links: [{ label: "Deskargatu", href: "Template_Extenso.docx" }],
             },
             {
@@ -711,7 +711,7 @@ const CONTENT_EHU = {
       },
       deadline: "2026ko azaroaren 15a — lan osoaren entrega",
       modalidades: [
-        { h: "1. modalitatea · Komunikazioa", body: "Lan akademikoa edo ikerketa-lana. Txantiloi ofiziala, 4.000–8.000 hitz (10–20 orrialde).", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Komunikazioen txantiloia deskargatu" },
+        { h: "1. modalitatea · Komunikazioa", body: "Lan akademikoa edo ikerketa-lana. Txantiloi ofiziala, gehienez 3.000 hitz.", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Komunikazioen txantiloia deskargatu" },
         { h: "2. modalitatea · Goi-mailako Hezkuntzako berrikuntza didaktikoa", body: "Unibertsitate-eremuko hezkuntza-berrikuntzako esperientziak eta proposamenak. Txantiloi espezifikoa, gehienez 3.000 hitz, erreferentziak barne.", plantillaUrl: "Template_Innovacion.docx", plantillaLabel: "Berrikuntza didaktikoaren txantiloia deskargatu" },
       ],
       plazoNota: "Epe behin betikoa: 2026ko azaroaren 15etik aurrera jasotako lanak ez dira argitaratzeko ebaluatuko.",
@@ -729,7 +729,7 @@ const CONTENT_EHU = {
       },
       norms: {
         formato: "Microsoft Word · kongresuaren txantiloia",
-        extension: "10–20 orrialde · 4 000–8 000 hitz",
+        extension: "gehienez 3 000 hitz",
         tipografia: "Calibri 10 pt · lerroartea bakuna · justifikatua",
         referencias: "APA 6. edizioa · ez orri-oineko oharrik",
         figuras: "Jatorrizko irudiak JPG formatuan, behar bezala tartekatuta. Taulak testuan, ez pantaila-argazki gisa.",
@@ -863,7 +863,7 @@ const CONTENT_EHU = {
             {
               kind: "DOCX",
               title: "Publication template: paper",
-              desc: "Type 1 of the optional publication (Editorial Octaedro): academic or research work, 4,000–8,000 words.",
+              desc: "Type 1 of the optional publication (Editorial Octaedro): academic or research work, maximum 3,000 words.",
               links: [{ label: "Download", href: "Template_Extenso.docx" }],
             },
             {
@@ -1068,7 +1068,7 @@ const CONTENT_EHU = {
       },
       deadline: "15 November 2026 — full paper submission",
       modalidades: [
-        { h: "Type 1 · Paper", body: "Academic or research work. Official template, 4,000–8,000 words (10–20 pages).", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Download paper template" },
+        { h: "Type 1 · Paper", body: "Academic or research work. Official template, maximum 3,000 words.", plantillaUrl: "Template_Extenso.docx", plantillaLabel: "Download paper template" },
         { h: "Type 2 · Teaching innovation in Higher Education", body: "Educational innovation experiences and proposals in the university context. Specific template, maximum 3,000 words, references included.", plantillaUrl: "Template_Innovacion.docx", plantillaLabel: "Download teaching innovation template" },
       ],
       plazoNota: "Final deadline: works received after 15 November 2026 will not be considered for publication.",
@@ -1086,7 +1086,7 @@ const CONTENT_EHU = {
       },
       norms: {
         formato: "Microsoft Word · congress template",
-        extension: "10–20 pages · 4,000–8,000 words",
+        extension: "max. 3,000 words",
         tipografia: "Calibri 10 pt · single spacing · justified",
         referencias: "APA 6th edition · no footnotes",
         figuras: "Original figures in JPG, embedded. Tables as text, not screenshots.",

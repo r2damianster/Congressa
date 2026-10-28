@@ -77,7 +77,7 @@ Lana liburu honetan luze eta zabal argitaratu nahi duten egileek azken dokumentu
 
 Argitaratzeko bi modalitate daude, bakoitza bere txantiloi ofizialarekin (kongresuaren webgunean eskuragarri, "Txantiloiak eta fitxategiak" atalean):
 
-* **1. modalitatea. Komunikazioa** (lan akademikoa edo ikerketa-lana): `Template_Extenso.docx` txantiloia, 4.000 eta 8.000 hitz artekoa (10-20 orrialde). Microsoft Word-en idatzi behar da.
+* **1. modalitatea. Komunikazioa** (lan akademikoa edo ikerketa-lana): `Template_Extenso.docx` txantiloia, gehienez 3.000 hitzekoa. Microsoft Word-en idatzi behar da.
 * **2. modalitatea. Goi-mailako Hezkuntzako berrikuntza didaktikoko ekarpena**: `Template_Innovacion.docx` txantiloia, gehienez 3.000 hitz, erreferentzia bibliografikoak barne.
 
 Ezinbestekoa da dagokion txantiloiko egitura-, luzera- eta formatu-jarraibideak errespetatzea.

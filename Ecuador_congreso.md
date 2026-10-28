@@ -87,7 +87,7 @@ El/los autor/es que deseen publicar el trabajo en extenso en este libro deberán
 
 Hay dos modalidades de publicación, cada una con su plantilla oficial (disponibles en la web del congreso, en "Plantillas y archivos"):
 
-- **Modalidad 1. Comunicación** (trabajo académico o de investigación): plantilla `Template_Extenso.docx`, extensión de entre 4.000 y 8.000 palabras (10-20 páginas). Se debe escribir en Microsoft Word.
+- **Modalidad 1. Comunicación** (trabajo académico o de investigación): plantilla `Template_Extenso.docx`, extensión máxima de 3.000 palabras. Se debe escribir en Microsoft Word.
 - **Modalidad 2. Aportación de innovación didáctica en Educación Superior**: plantilla `Template_Innovacion.docx`, extensión máxima de 3.000 palabras, incluidas las referencias bibliográficas.
 
 Es imprescindible respetar las indicaciones de estructura, extensión y formato de la plantilla correspondiente.
