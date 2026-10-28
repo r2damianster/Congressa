@@ -1,6 +1,25 @@
 // V1 EHU — Editorial académico, actualizado al congreso real INEDUS 2026
 // EHU + ULEAM + Colombia + Chile · Educación, innovación y sostenibilidad
 
+// El día del congreso que coincide con la fecha de hoy (oct 2026) se destaca y se lista primero.
+const isCongressDayToday = (dayNumber) => {
+  const now = new Date();
+  return now.getFullYear() === 2026 && now.getMonth() === 9 && now.getDate() === Number(dayNumber);
+};
+
+// Orden de la agenda: hoy primero, luego los días próximos y al final los ya pasados.
+const orderProgramDays = (programDays) => {
+  const now = new Date();
+  const isCongressMonth = now.getFullYear() === 2026 && now.getMonth() === 9;
+  const dayRank = (dayData) => {
+    const dayNumber = Number(dayData.day);
+    if (!isCongressMonth) return dayNumber;
+    if (dayNumber === now.getDate()) return 0;
+    return dayNumber > now.getDate() ? dayNumber : 100 + dayNumber;
+  };
+  return [...programDays].sort((first, second) => dayRank(first) - dayRank(second));
+};
+
 const V1_EHU = ({ primary = "#1A3A6B" }) => {
   const [lang, setLang] = React.useState(window.getInitialLang);
   const [openSpeaker, setOpenSpeaker] = React.useState(null);
@@ -206,6 +225,99 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
         </div>
       </section>
 
+      {/* Programa / Agenda */}
+      <section style={s.section} id="programa">
+        <div style={s.sectionHead} className="section-head">
+          <div style={s.sectionNumber} className="section-number">I</div>
+          <div>
+            <h2 style={s.sectionTitle}>{c.presentacionDia.title}</h2>
+            <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
+          </div>
+        </div>
+
+        {window.PROGRAMA && orderProgramDays(window.PROGRAMA).map((dayData, di) => {
+          const isToday = isCongressDayToday(dayData.day);
+          const al = c.presentacionDia.agendaLabels;
+          const monthLabel = lang === 'eu' ? 'urr.' : 'oct';
+          const typeColors = { apertura: accent, plenaria: primary, mesa: '#2E7D5E', cierre: primary, local: '#64748B', pausa: '#94A3B8' };
+          return (
+            <div key={di} style={s.agendaDay}>
+              <div style={s.agendaDayBar}>
+                <span style={s.agendaDayMeta}>{al.day}</span>
+                <span style={s.agendaDayNum}>{dayData.day} {monthLabel}</span>
+                {isToday && <span style={s.agendaTodayTag}>{al.today}</span>}
+                <span style={{ ...s.agendaDayMeta, marginLeft: 'auto' }}>2026</span>
+              </div>
+              <div style={s.agendaTable}>
+                <div style={s.agendaHeaderRow} className="agenda-hdr">
+                  <div>{al.bilbao}</div>
+                  <div>{al.manta}</div>
+                  <div style={{ paddingLeft: '16px' }}>{al.session}</div>
+                </div>
+                {dayData.sessions.map((session, si) => {
+                  const isPausa = session.type === 'pausa';
+                  const isJoint = session.venue === 'conjunta';
+                  const rowBg = isPausa ? '#F7F8FA' : isJoint ? '#fff' : '#FAFBFC';
+                  const typeColor = typeColors[session.type] || '#64748B';
+                  return (
+                    <React.Fragment key={si}>
+                      <div style={{ ...s.agendaRow, background: rowBg }} className="agenda-row">
+                        <div style={s.agendaColTime}>{session.timeEHU || '—'}</div>
+                        <div style={s.agendaColTime}>{session.timeManta || '—'}</div>
+                        <div style={{ ...s.agendaColSession, paddingLeft: 16 }}>
+                          <div style={{ ...s.agendaTypeTag, color: typeColor }}>{session.title[lang]}</div>
+                          {session.venue === 'conjunta' && session.type !== 'pausa' && (
+                            <span style={{ display:'inline-block', marginTop:4, marginBottom:2, fontSize:10, fontWeight:600, letterSpacing:0.5, color:'#fff', background:'#2E7D5E', borderRadius:4, padding:'2px 7px' }}>{al.hybrid}</span>
+                          )}
+                          {session.description[lang] ? <p style={s.agendaDesc}>{session.description[lang]}</p> : null}
+                          {session.link && (
+                            <a href={session.link} target="_blank" rel="noopener" style={s.agendaJoinLink}>{al.join} →</a>
+                          )}
+                          {session.speakers.length > 0 && (
+                            <div style={s.speakerBtns}>
+                              {session.speakers.map(id => {
+                                const p = window.PONENTES && window.PONENTES[id];
+                                if (!p) return null;
+                                const isOpen = openSpeaker === id;
+                                return (
+                                  <button key={id} style={{ ...s.speakerBtn, ...(isOpen ? s.speakerBtnOn : {}) }}
+                                    onClick={() => setOpenSpeaker(isOpen ? null : id)}>
+                                    <span>{p.name}</span>
+                                    {p.institution && <span style={s.speakerBtnInst}>· {p.institution}</span>}
+                                    <span style={{ fontSize: 9, opacity: 0.55 }}>{isOpen ? '▲' : '▼'}</span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      {session.speakers.map(id => {
+                        if (openSpeaker !== id) return null;
+                        const p = window.PONENTES && window.PONENTES[id];
+                        if (!p) return null;
+                        return (
+                          <div key={id} style={s.speakerBioRow} className="speaker-bio-row">
+                            <img src={p.photo} alt={p.name} style={s.speakerPhoto}
+                              onError={e => { e.target.style.display = 'none'; }} />
+                            <div>
+                              <div style={s.speakerBioName}>{p.name}</div>
+                              {p.institution && <div style={s.speakerBioInst}>{p.institution}</div>}
+                              <p style={s.speakerBioText}>{p.bio}</p>
+                            </div>
+                            <button style={s.speakerBioClose} onClick={() => setOpenSpeaker(null)}>✕</button>
+                          </div>
+                        );
+                      })}
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </section>
+
       {/* Stats */}
       <section style={s.stats}>
         {c.stats.map((st, i) => (
@@ -219,7 +331,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Presentación + objetivos */}
       <section style={s.section} id="presentacion">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">I</div>
+          <div style={s.sectionNumber} className="section-number">II</div>
           <div>
             <h2 style={s.sectionTitle}>{c.presentacion.title}</h2>
             <p style={s.sectionLead}>{c.presentacion.lead}</p>
@@ -239,7 +351,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Destinatarios */}
       <section style={{ ...s.section, background: "#F7F8FA" }} id="destinatarios">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">II</div>
+          <div style={s.sectionNumber} className="section-number">III</div>
           <div>
             <h2 style={s.sectionTitle}>{c.destinatarios.title}</h2>
             <p style={s.sectionLead}>{c.destinatarios.lead}</p>
@@ -258,7 +370,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Líneas temáticas */}
       <section style={s.section}>
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">III</div>
+          <div style={s.sectionNumber} className="section-number">IV</div>
           <div>
             <h2 style={s.sectionTitle}>{c.lineas.title}</h2>
             <p style={s.sectionLead}>{c.lineas.lead}</p>
@@ -278,7 +390,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Formatos */}
       <section style={{ ...s.section, background: "#F7F8FA" }}>
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">IV</div>
+          <div style={s.sectionNumber} className="section-number">V</div>
           <div>
             <h2 style={s.sectionTitle}>{c.formatos.title}</h2>
           </div>
@@ -300,7 +412,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Propuestas / CFP */}
       <section style={{ ...s.section, background: primary, color: "#fff" }} id="propuestas">
         <div style={s.sectionHead} className="section-head">
-          <div className="section-number" style={{ ...s.sectionNumber, color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>V</div>
+          <div className="section-number" style={{ ...s.sectionNumber, color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>VI</div>
           <div>
             <h2 style={{ ...s.sectionTitle, color: "#fff" }}>{c.propuestas.title}</h2>
             <p style={{ ...s.sectionLead, color: "rgba(255,255,255,0.75)" }}>{c.propuestas.lead}</p>
@@ -353,7 +465,7 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
       {/* Matrícula y publicación */}
       <section style={s.section} id="matricula">
         <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VI</div>
+          <div style={s.sectionNumber} className="section-number">VII</div>
           <div>
             <h2 style={s.sectionTitle}>{c.matricula.title}</h2>
             <p style={s.sectionLead}>{c.matricula.lead}</p>
@@ -438,97 +550,6 @@ const V1_EHU = ({ primary = "#1A3A6B" }) => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Programa / Agenda */}
-      <section style={s.section} id="programa">
-        <div style={s.sectionHead} className="section-head">
-          <div style={s.sectionNumber} className="section-number">VII</div>
-          <div>
-            <h2 style={s.sectionTitle}>{c.presentacionDia.title}</h2>
-            <p style={s.sectionLead}>{c.presentacionDia.lead}</p>
-          </div>
-        </div>
-
-        {window.PROGRAMA && window.PROGRAMA.map((dayData, di) => {
-          const al = c.presentacionDia.agendaLabels;
-          const monthLabel = lang === 'eu' ? 'urr.' : 'oct';
-          const typeColors = { apertura: accent, plenaria: primary, mesa: '#2E7D5E', cierre: primary, local: '#64748B', pausa: '#94A3B8' };
-          return (
-            <div key={di} style={s.agendaDay}>
-              <div style={s.agendaDayBar}>
-                <span style={s.agendaDayMeta}>{al.day}</span>
-                <span style={s.agendaDayNum}>{dayData.day} {monthLabel}</span>
-                <span style={{ ...s.agendaDayMeta, marginLeft: 'auto' }}>2026</span>
-              </div>
-              <div style={s.agendaTable}>
-                <div style={s.agendaHeaderRow} className="agenda-hdr">
-                  <div>{al.bilbao}</div>
-                  <div>{al.manta}</div>
-                  <div style={{ paddingLeft: '16px' }}>{al.session}</div>
-                </div>
-                {dayData.sessions.map((session, si) => {
-                  const isPausa = session.type === 'pausa';
-                  const isJoint = session.venue === 'conjunta';
-                  const rowBg = isPausa ? '#F7F8FA' : isJoint ? '#fff' : '#FAFBFC';
-                  const typeColor = typeColors[session.type] || '#64748B';
-                  return (
-                    <React.Fragment key={si}>
-                      <div style={{ ...s.agendaRow, background: rowBg }} className="agenda-row">
-                        <div style={s.agendaColTime}>{session.timeEHU || '—'}</div>
-                        <div style={s.agendaColTime}>{session.timeManta || '—'}</div>
-                        <div style={{ ...s.agendaColSession, paddingLeft: 16 }}>
-                          <div style={{ ...s.agendaTypeTag, color: typeColor }}>{session.title[lang]}</div>
-                          {session.venue === 'conjunta' && session.type !== 'pausa' && (
-                            <span style={{ display:'inline-block', marginTop:4, marginBottom:2, fontSize:10, fontWeight:600, letterSpacing:0.5, color:'#fff', background:'#2E7D5E', borderRadius:4, padding:'2px 7px' }}>{al.hybrid}</span>
-                          )}
-                          {session.description[lang] ? <p style={s.agendaDesc}>{session.description[lang]}</p> : null}
-                          {session.link && (
-                            <a href={session.link} target="_blank" rel="noopener" style={s.agendaJoinLink}>{al.join} →</a>
-                          )}
-                          {session.speakers.length > 0 && (
-                            <div style={s.speakerBtns}>
-                              {session.speakers.map(id => {
-                                const p = window.PONENTES && window.PONENTES[id];
-                                if (!p) return null;
-                                const isOpen = openSpeaker === id;
-                                return (
-                                  <button key={id} style={{ ...s.speakerBtn, ...(isOpen ? s.speakerBtnOn : {}) }}
-                                    onClick={() => setOpenSpeaker(isOpen ? null : id)}>
-                                    <span>{p.name}</span>
-                                    {p.institution && <span style={s.speakerBtnInst}>· {p.institution}</span>}
-                                    <span style={{ fontSize: 9, opacity: 0.55 }}>{isOpen ? '▲' : '▼'}</span>
-                                  </button>
-                                );
-                              })}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      {session.speakers.map(id => {
-                        if (openSpeaker !== id) return null;
-                        const p = window.PONENTES && window.PONENTES[id];
-                        if (!p) return null;
-                        return (
-                          <div key={id} style={s.speakerBioRow} className="speaker-bio-row">
-                            <img src={p.photo} alt={p.name} style={s.speakerPhoto}
-                              onError={e => { e.target.style.display = 'none'; }} />
-                            <div>
-                              <div style={s.speakerBioName}>{p.name}</div>
-                              {p.institution && <div style={s.speakerBioInst}>{p.institution}</div>}
-                              <p style={s.speakerBioText}>{p.bio}</p>
-                            </div>
-                            <button style={s.speakerBioClose} onClick={() => setOpenSpeaker(null)}>✕</button>
-                          </div>
-                        );
-                      })}
-                    </React.Fragment>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
       </section>
 
       {/* Comités */}
@@ -809,6 +830,7 @@ return ({
   comRowFlat: { display: "flex", justifyContent: "space-between", gap: 12, padding: "7px 0", borderBottom: "1px dashed #E2E8F0", alignItems: "baseline", breakInside: "avoid" },
 
   agendaDay: { marginBottom: 40 },
+  agendaTodayTag: { fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: primary, background: '#fff', borderRadius: 999, padding: '2px 9px' },
   agendaDayBar: { display: 'flex', alignItems: 'center', gap: 14, padding: '10px 20px', background: primary, borderRadius: '4px 4px 0 0' },
   agendaDayMeta: { fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', fontFamily: 'monospace' },
   agendaDayNum: { fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(18px, 3vw, 24px)', color: '#fff', fontStyle: 'italic' },
