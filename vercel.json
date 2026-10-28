@@ -4,6 +4,11 @@
       "source": "/",
       "destination": "/home",
       "permanent": false
+    },
+    {
+      "source": "/Programa_Jornada_Manana_INEDUS2026.pdf",
+      "destination": "/home",
+      "permanent": false
     }
   ],
   "rewrites": [
