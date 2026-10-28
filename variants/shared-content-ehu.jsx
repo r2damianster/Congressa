@@ -197,8 +197,8 @@ const CONTENT_EHU = {
       { n: "3", l: "Idiomas aceptados" },
     ],
     ui: {
-      programaComunicacionesTitulo: "Programa de comunicaciones",
-      programaComunicacionesTexto: "Programa de comunicaciones del congreso desde la EHU (Leioa).",
+      programaComunicacionesTitulo: "Programa de INEDUS desde la EHU (Leioa)",
+      programaComunicacionesTexto: "Programa del congreso con los enlaces a las sesiones.",
       programaComunicacionesCta: "Descargar PDF",
       programaEcuadorTitulo: "Programa desde Ecuador",
       programaEcuadorTexto: "Itinerario de ponencias, conferencias y sesiones locales del congreso desde la ULEAM (Manta).",
@@ -567,8 +567,8 @@ const CONTENT_EHU = {
       { n: "3", l: "Onartutako hizkuntzak" },
     ],
     ui: {
-      programaComunicacionesTitulo: "Komunikazioen programa",
-      programaComunicacionesTexto: "Kongresuko komunikazioen programa, EHUtik (Leioa).",
+      programaComunicacionesTitulo: "INEDUS programa EHUtik (Leioa)",
+      programaComunicacionesTexto: "Kongresuko programa, saioetarako estekekin.",
       programaComunicacionesCta: "PDFa deskargatu",
       programaEcuadorTitulo: "Ekuadorreko programa",
       programaEcuadorTexto: "Kongresuko hitzaldien, konferentzien eta tokiko saioen ibilbidea, ULEAMetik (Manta).",
@@ -937,8 +937,8 @@ const CONTENT_EHU = {
       { n: "3", l: "Accepted languages" },
     ],
     ui: {
-      programaComunicacionesTitulo: "Programme of papers",
-      programaComunicacionesTexto: "Programme of papers for the congress from the EHU (Leioa).",
+      programaComunicacionesTitulo: "INEDUS programme from the EHU (Leioa)",
+      programaComunicacionesTexto: "Congress programme with the session links.",
       programaComunicacionesCta: "Download PDF",
       programaEcuadorTitulo: "Programme from Ecuador",
       programaEcuadorTexto: "Itinerary of lectures, talks and local sessions of the congress from ULEAM (Manta).",
