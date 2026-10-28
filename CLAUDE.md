@@ -33,6 +33,7 @@ python -m http.server
 | `index.html` | Hub landing — links to individual congress landings |
 | `Landing INEDUS 2026.html` | INEDUS 2026 landing |
 | `Roll Up INEDUS 2026.html` | Página `/rollup`: roll up de INEDUS descargable en PDF / SVG / PNG (ES/EU/EN, varias medidas) |
+| `Ecuador INEDUS 2026.html` | Página previa `/ecuador` (`ecuador.jsx`): avisa de que `Programa_INEDUS2026.pdf` está en hora de España, muestra la equivalencia con Ecuador (−6 h) y lleva a la agenda. Textos en `ui.ecuadorGate*` (ES/EU/EN). `vercel.json` redirige el PDF antiguo `Programa_Jornada_Manana_INEDUS2026.pdf` (horas erróneas) aquí. Provisional |
 | `Archivos INEDUS 2026.html` | Página pública `/archivos` (★ en el menú): plantillas y archivos descargables. Catálogo en `CONTENT_EHU[lang].files` (`shared-content-ehu.jsx`, ES/EU/EN); render en `archivos.jsx`. Para añadir un archivo: ponerlo en el repo y agregar un ítem al grupo correspondiente en las 3 lenguas |
 
 ### Variants (`variants/`)

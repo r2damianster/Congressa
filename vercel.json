@@ -7,7 +7,7 @@
     },
     {
       "source": "/Programa_Jornada_Manana_INEDUS2026.pdf",
-      "destination": "/home",
+      "destination": "/ecuador",
       "permanent": false
     }
   ],
@@ -23,6 +23,10 @@
     {
       "source": "/archivos",
       "destination": "/Archivos INEDUS 2026.html"
+    },
+    {
+      "source": "/ecuador",
+      "destination": "/Ecuador INEDUS 2026.html"
     }
   ]
 }
