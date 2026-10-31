@@ -911,4 +911,9 @@ const RollUpPage = () => {
   );
 };
 
-Object.assign(window, { RollUpPage, composeRollup, composeLandscape, ROLLUP_SIZES, ROLLUP_SIZES_LANDSCAPE });
+Object.assign(window, {
+  RollUpPage, composeRollup, composeLandscape, ROLLUP_SIZES, ROLLUP_SIZES_LANDSCAPE,
+  // Compartidos con impacto.jsx
+  loadRollupAssets, paragraph, fitTextSize, renderElement, triggerDownload, exportPdfFile,
+  ROLLUP_PRIMARY, ROLLUP_ACCENT, ROLLUP_ACCENT_LIGHT, ROLLUP_PAPER, ROLLUP_INK, ROLLUP_MUTED,
+});
