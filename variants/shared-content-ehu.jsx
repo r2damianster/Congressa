@@ -424,11 +424,12 @@ const CONTENT_EHU = {
       stats: [
         { n: "12", l: "Países representados" },
         { n: "160+", l: "Comunicaciones" },
-        { n: "19", l: "Ponentes invitados" },
+        { n: "19", l: "Conferencistas" },
         { n: "55+", l: "Instituciones" },
         { n: "2", l: "Sedes y sala virtual" },
         { n: "22", l: "Aulas, auditorios y canchas" },
       ],
+      attendance: { n: "4.923", l: "Asistencias en Manta (ULEAM)", detail: "Suma de las 3 jornadas · ~1.641 por día" },
       closing: "Gracias por hacerlo posible",
       web: "www.inedus.net",
       ui: {
@@ -456,7 +457,7 @@ const CONTENT_EHU = {
       kicker: "Congreso internacional",
       stats: [
         { n: "12", l: "Países representados" },
-        { n: "19", l: "Ponentes invitados" },
+        { n: "19", l: "Conferencistas" },
         { n: "160+", l: "Comunicaciones" },
         { n: "55+", l: "Instituciones" },
       ],
@@ -836,11 +837,12 @@ const CONTENT_EHU = {
       stats: [
         { n: "12", l: "Ordezkatutako herrialde" },
         { n: "160+", l: "Komunikazio" },
-        { n: "19", l: "Gonbidatutako hizlari" },
+        { n: "19", l: "Hitzaldilari" },
         { n: "55+", l: "Erakunde" },
         { n: "2", l: "Egoitza eta gela birtuala" },
         { n: "22", l: "Gela, auditorio eta kantxa" },
       ],
+      attendance: { n: "4.923", l: "Bertaratzeak Mantan (ULEAM)", detail: "3 jardunaldien batura · ~1.641 egunean" },
       closing: "Eskerrik asko posible egiteagatik",
       web: "www.inedus.net",
       ui: {
@@ -868,7 +870,7 @@ const CONTENT_EHU = {
       kicker: "Nazioarteko kongresua",
       stats: [
         { n: "12", l: "Ordezkatutako herrialde" },
-        { n: "19", l: "Gonbidatutako hizlari" },
+        { n: "19", l: "Hitzaldilari" },
         { n: "160+", l: "Komunikazio" },
         { n: "55+", l: "Erakunde" },
       ],
@@ -1248,11 +1250,12 @@ const CONTENT_EHU = {
       stats: [
         { n: "12", l: "Countries represented" },
         { n: "160+", l: "Papers" },
-        { n: "19", l: "Invited speakers" },
+        { n: "19", l: "Conference speakers" },
         { n: "55+", l: "Institutions" },
         { n: "2", l: "Venues and a virtual room" },
         { n: "22", l: "Rooms, auditoriums and courts" },
       ],
+      attendance: { n: "4,923", l: "Attendances in Manta (ULEAM)", detail: "Total over the 3 days · ~1,641 per day" },
       closing: "Thank you for making it possible",
       web: "www.inedus.net",
       ui: {
@@ -1280,7 +1283,7 @@ const CONTENT_EHU = {
       kicker: "International congress",
       stats: [
         { n: "12", l: "Countries represented" },
-        { n: "19", l: "Invited speakers" },
+        { n: "19", l: "Conference speakers" },
         { n: "160+", l: "Papers" },
         { n: "55+", l: "Institutions" },
       ],

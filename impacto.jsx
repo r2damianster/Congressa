@@ -16,7 +16,7 @@ const IMPACT_SOFT_TEXT = "#CBD9F0";
 // ── Bloques del diseño ───────────────────────────────────────────────────────
 
 // Kicker + título en dos líneas + subtítulo + fechas. `top` es absoluto.
-const buildImpactHeader = ({ fonts, impact, x, top, maxWidth, anchor, titleMaxSize, bodySize }) => {
+const buildImpactHeader = ({ fonts, impact, x, top, maxWidth, anchor, titleMaxSize, bodySize, showSubtitle = true }) => {
   const elements = [];
   let cursorY = top;
 
@@ -39,9 +39,11 @@ const buildImpactHeader = ({ fonts, impact, x, top, maxWidth, anchor, titleMaxSi
   elements.push({ kind: "rect", x: accentBarX, y: cursorY, width: 80, height: 5, radius: 2.5, fill: ROLLUP_ACCENT });
   cursorY += 5 + 26;
 
-  const subtitle = paragraph(fonts.sans, impact.subtitle, { x, top: cursorY, size: bodySize, fill: IMPACT_SOFT_TEXT, anchor, maxWidth, lineHeight: bodySize * 1.4 });
-  elements.push(...subtitle.elements);
-  cursorY += subtitle.height + 18;
+  if (showSubtitle) {
+    const subtitle = paragraph(fonts.sans, impact.subtitle, { x, top: cursorY, size: bodySize, fill: IMPACT_SOFT_TEXT, anchor, maxWidth, lineHeight: bodySize * 1.4 });
+    elements.push(...subtitle.elements);
+    cursorY += subtitle.height + 18;
+  }
 
   const dates = paragraph(fonts.sansBold, impact.dates, { x, top: cursorY, size: bodySize * 0.82, fill: "#FFFFFF", anchor, maxWidth, lineHeight: bodySize * 1.2 });
   elements.push(...dates.elements);
@@ -87,11 +89,32 @@ const buildImpactGrid = ({ fonts, stats, left, top, gridWidth, gridHeight }) => 
   return elements;
 };
 
+// Bloque destacado de asistencia: cifra grande a la izquierda, etiqueta y detalle a la derecha.
+const buildImpactAttendance = ({ fonts, attendance, left, top, width, height }) => {
+  const padding = height * 0.2;
+  const numberSize = fitTextSize(fonts.serif, [attendance.n], height * 0.72, width * 0.4);
+  const numberWidth = measureText(fonts.serif, attendance.n, numberSize);
+  const number = paragraph(fonts.serif, attendance.n, { x: left + padding, top: top + (height - numberSize) / 2, size: numberSize, fill: "#FFFFFF", anchor: "start", maxWidth: width, lineHeight: numberSize });
+  const textX = left + padding + numberWidth + padding;
+  const textWidth = left + width - padding - textX;
+  const labelSize = Math.max(22, Math.min(40, height * 0.2));
+  const label = paragraph(fonts.sansBold, attendance.l, { x: textX, top: 0, size: labelSize, fill: "#FFFFFF", anchor: "start", maxWidth: textWidth, lineHeight: labelSize * 1.25 });
+  const detail = paragraph(fonts.sans, attendance.detail, { x: textX, top: label.height + 6, size: labelSize * 0.78, fill: ROLLUP_ACCENT_LIGHT, anchor: "start", maxWidth: textWidth, lineHeight: labelSize });
+  const textOffsetY = top + (height - (label.height + 6 + detail.height)) / 2;
+  return [
+    { kind: "rect", x: left, y: top, width, height, radius: height * 0.18, fill: "#FFFFFF", opacity: 0.1 },
+    { kind: "rect", x: left, y: top, width: 8, height: height, radius: 4, fill: ROLLUP_ACCENT },
+    ...number.elements,
+    ...[...label.elements, ...detail.elements].map((element) => ({ ...element, transformY: textOffsetY })),
+  ];
+};
+
 // Frase de cierre + web
-const buildImpactClosing = ({ fonts, impact, x, top, maxWidth, anchor }) => {
-  const closing = paragraph(fonts.serifItalic, impact.closing, { x, top, size: 40, fill: IMPACT_SOFT_TEXT, anchor, maxWidth, lineHeight: 50 });
-  const web = paragraph(fonts.sansBold, impact.web, { x, top: top + closing.height + 8, size: 30, fill: "#FFFFFF", anchor, maxWidth, tracking: 2, lineHeight: 40 });
-  return { height: closing.height + 8 + web.height, elements: [...closing.elements, ...web.elements] };
+const buildImpactClosing = ({ fonts, impact, x, top, maxWidth, anchor, webOnly = false }) => {
+  const closing = webOnly ? { height: 0, elements: [] } : paragraph(fonts.serifItalic, impact.closing, { x, top, size: 40, fill: IMPACT_SOFT_TEXT, anchor, maxWidth, lineHeight: 50 });
+  const webTop = webOnly ? top : top + closing.height + 8;
+  const web = paragraph(fonts.sansBold, impact.web, { x, top: webTop, size: 30, fill: "#FFFFFF", anchor, maxWidth, tracking: 2, lineHeight: 40 });
+  return { height: webTop - top + web.height, elements: [...closing.elements, ...web.elements] };
 };
 
 // Franja blanca con los logos
@@ -139,6 +162,8 @@ const composeImpact = ({ fonts, logos, content, format }) => {
   let headerElements;
   let closingElements;
   let gridElements;
+  let attendanceElements = [];
+  const attendanceGap = 26;
 
   if (isWide) {
     const leftColumnWidth = width * 0.4;
@@ -148,17 +173,28 @@ const composeImpact = ({ fonts, logos, content, format }) => {
     const gridLeft = margin + leftColumnWidth + margin;
     headerElements = header.elements;
     closingElements = closing.elements;
-    gridElements = buildImpactGrid({ fonts, stats: impact.stats, left: gridLeft, top: margin, gridWidth: width - margin - gridLeft, gridHeight: bodyBottom - margin * 2 });
+    const rightWidth = width - margin - gridLeft;
+    const attendanceHeight = impact.attendance ? 150 : 0;
+    if (impact.attendance) {
+      attendanceElements = buildImpactAttendance({ fonts, attendance: impact.attendance, left: gridLeft, top: margin, width: rightWidth, height: attendanceHeight });
+    }
+    const gridTop = margin + (impact.attendance ? attendanceHeight + attendanceGap : 0);
+    gridElements = buildImpactGrid({ fonts, stats: impact.stats, left: gridLeft, top: gridTop, gridWidth: rightWidth, gridHeight: bodyBottom - margin - gridTop });
   } else {
     const centerX = width / 2;
     const contentWidth = width - margin * 2;
     const headerTop = margin * 1.1;
     const isSquare = height <= width * 1.05; // en el cuadrado la cabecera se compacta para dejar sitio a las cifras
-    const header = buildImpactHeader({ fonts, impact, x: centerX, top: headerTop, maxWidth: contentWidth, anchor: "middle", titleMaxSize: width * (isSquare ? 0.085 : 0.11), bodySize: width * (isSquare ? 0.023 : 0.028) });
-    const closingProbe = buildImpactClosing({ fonts, impact, x: centerX, top: 0, maxWidth: contentWidth, anchor: "middle" });
+    const header = buildImpactHeader({ fonts, impact, x: centerX, top: headerTop, maxWidth: contentWidth, anchor: "middle", titleMaxSize: width * (isSquare ? 0.085 : 0.11), bodySize: width * (isSquare ? 0.023 : 0.028), showSubtitle: !isSquare });
+    const closingProbe = buildImpactClosing({ fonts, impact, x: centerX, top: 0, maxWidth: contentWidth, anchor: "middle", webOnly: isSquare });
     const closingTop = bodyBottom - margin * 0.5 - closingProbe.height;
-    const closing = buildImpactClosing({ fonts, impact, x: centerX, top: closingTop, maxWidth: contentWidth, anchor: "middle" });
-    const gridTop = headerTop + header.height + margin * 0.5;
+    const closing = buildImpactClosing({ fonts, impact, x: centerX, top: closingTop, maxWidth: contentWidth, anchor: "middle", webOnly: isSquare });
+    const attendanceTop = headerTop + header.height + margin * 0.5;
+    const attendanceHeight = impact.attendance ? (isSquare ? 100 : height > 1500 ? 190 : 150) : 0;
+    if (impact.attendance) {
+      attendanceElements = buildImpactAttendance({ fonts, attendance: impact.attendance, left: margin, top: attendanceTop, width: contentWidth, height: attendanceHeight });
+    }
+    const gridTop = attendanceTop + (impact.attendance ? attendanceHeight + attendanceGap : 0);
     headerElements = header.elements;
     closingElements = closing.elements;
     gridElements = buildImpactGrid({ fonts, stats: impact.stats, left: margin, top: gridTop, gridWidth: contentWidth, gridHeight: closingTop - gridTop - margin * 0.4 });
@@ -170,6 +206,7 @@ const composeImpact = ({ fonts, logos, content, format }) => {
     placed: [
       { id: "backdrop", elements: backdrop },
       { id: "header", elements: headerElements },
+      { id: "attendance", elements: attendanceElements },
       { id: "grid", elements: gridElements },
       { id: "closing", elements: closingElements },
       { id: "footer", elements: buildImpactFooter({ logos, width, top: bodyBottom, stripHeight, margin }) },
