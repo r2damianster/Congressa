@@ -418,6 +418,12 @@ const CONTENT_EHU = {
     },
     rollup: {
       kicker: "Congreso internacional",
+      stats: [
+        { n: "12", l: "Países representados" },
+        { n: "19", l: "Ponentes invitados" },
+        { n: "160+", l: "Comunicaciones" },
+        { n: "55+", l: "Instituciones" },
+      ],
       dateBig: "28–30",
       dateMonth: "Octubre 2026",
       scan: "Escanea para más información",
@@ -788,6 +794,12 @@ const CONTENT_EHU = {
     },
     rollup: {
       kicker: "Nazioarteko kongresua",
+      stats: [
+        { n: "12", l: "Ordezkatutako herrialde" },
+        { n: "19", l: "Gonbidatutako hizlari" },
+        { n: "160+", l: "Komunikazio" },
+        { n: "55+", l: "Erakunde" },
+      ],
       dateBig: "28–30",
       dateMonth: "Urria 2026",
       scan: "Eskaneatu informazio gehiagorako",
@@ -1158,6 +1170,12 @@ const CONTENT_EHU = {
     },
     rollup: {
       kicker: "International congress",
+      stats: [
+        { n: "12", l: "Countries represented" },
+        { n: "19", l: "Invited speakers" },
+        { n: "160+", l: "Papers" },
+        { n: "55+", l: "Institutions" },
+      ],
       dateBig: "28–30",
       dateMonth: "October 2026",
       scan: "Scan for more information",

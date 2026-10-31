@@ -301,7 +301,7 @@ const buildLayoutBlocks = ({ fonts, logos, content, designWidth, venueLayout = "
 
   // Cifras
   const buildStats = () => {
-    const stats = content.stats;
+    const stats = rollup.stats || content.stats;
     const cellWidth = contentWidth / stats.length;
     const elements = [];
     let rowHeight = 0;
