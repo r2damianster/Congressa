@@ -98,6 +98,8 @@ Es imprescindible respetar las indicaciones de estructura, extensión y formato 
 - Profesorado e investigadores/as universitarios/as: 50 € por persona.
 - Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia: 25 € por persona.
 
+En principio, cada comunicación del congreso tendrá opción de presentar una propuesta de capítulo en cualquiera de las dos modalidades. Si se quieren presentar más propuestas deberán de volver a formalizar la cuota de pago de matrícula de cada uno de sus integrantes por capítulo enviado de más.
+
 La estructura del trabajo en extenso será la siguiente, según el tipo de aportación:
 
 - Trabajos/informes de investigación: introducción, método, resultados, discusión, conclusiones y referencias.

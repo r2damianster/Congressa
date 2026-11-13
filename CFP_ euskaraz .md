@@ -88,6 +88,8 @@ Ezinbestekoa da dagokion txantiloiko egitura-, luzera- eta formatu-jarraibideak 
 * Unibertsitateetako irakasle eta ikertzaileak: 50 € pertsonako.
 * Ipar eta Erdialdeko Amerikako, Afrikako eta Asiako unibertsitateetako irakasle eta ikertzaileak: 25 € pertsonako.
 
+Hasiera batean, kongresuko komunikazio bakoitzak kapitulu-proposamen bat aurkezteko aukera izango du, bi modalitateetako edozeinetan. Proposamen gehiago aurkeztu nahi badira, bidalitako kapitulu gehigarri bakoitzeko, kide guztien matrikula-kuota berriro formalizatu beharko da.
+
 Lanaren egitura zabala honako hau izango da, ekarpen motaren arabera:
 
 * Lanak/ikerketa-txostenak: sarrera, metodoa, emaitzak, eztabaida, ondorioak eta erreferentziak.  

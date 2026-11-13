@@ -381,7 +381,7 @@ const CONTENT_EHU = {
         { who: "Profesorado e investigadores/as universitarios/as", fee: "50 € por persona" },
         { who: "Profesorado e investigadores/as de universidades de América del Norte y Central, África y Asia", fee: "25 € por persona" },
         ],
-        nota: "Todas las personas que figuren como autoras y firmen el trabajo deben haber abonado individualmente su matrícula, sea cual sea el número de autores/as de la contribución.",
+        nota: "Todas las personas que figuren como autoras y firmen el trabajo deben haber abonado individualmente su matrícula, sea cual sea el número de autores/as de la contribución. En principio, cada comunicación del congreso tendrá opción de presentar una propuesta de capítulo en cualquiera de las dos modalidades. Si se quieren presentar más propuestas deberán de volver a formalizar la cuota de pago de matrícula de cada uno de sus integrantes por capítulo enviado de más.",
       },
       norms: {
         formato: "Microsoft Word · plantilla del congreso",
@@ -794,7 +794,7 @@ const CONTENT_EHU = {
         { who: "Unibertsitateetako irakasle eta ikertzaileak", fee: "50 € pertsonako" },
         { who: "Ipar eta Erdialdeko Amerikako, Afrikako eta Asiako unibertsitateetako irakasle eta ikertzaileak", fee: "25 € pertsonako" },
         ],
-        nota: "Lanaren egile gisa agertzen diren eta lana sinatzen duten pertsona guztiek banaka ordaindu behar dute matrikula, ekarpenak egile kopuru zenbatekoa duela ere.",
+        nota: "Lanaren egile gisa agertzen diren eta lana sinatzen duten pertsona guztiek banaka ordaindu behar dute matrikula, ekarpenak egile kopuru zenbatekoa duela ere. Hasiera batean, kongresuko komunikazio bakoitzak kapitulu-proposamen bat aurkezteko aukera izango du, bi modalitateetako edozeinetan. Proposamen gehiago aurkeztu nahi badira, bidalitako kapitulu gehigarri bakoitzeko, kide guztien matrikula-kuota berriro formalizatu beharko da.",
       },
       norms: {
         formato: "Microsoft Word · kongresuaren txantiloia",
@@ -1207,7 +1207,7 @@ const CONTENT_EHU = {
         { who: "University teachers and researchers", fee: "€50 per person" },
         { who: "Teachers and researchers from universities in North and Central America, Africa and Asia", fee: "€25 per person" },
         ],
-        nota: "Every person listed as an author who signs the work must have paid their registration fee individually, regardless of the number of authors of the contribution.",
+        nota: "Every person listed as an author who signs the work must have paid their registration fee individually, regardless of the number of authors of the contribution. In principle, each conference communication may submit one chapter proposal in either of the two modalities. If more proposals are to be submitted, the registration fee must be paid again for each of their members for every additional chapter submitted.",
       },
       norms: {
         formato: "Microsoft Word · congress template",
